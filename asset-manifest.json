@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/role_cards/static/css/main.c4c2d56f.css",
+    "main.js": "/role_cards/static/js/main.307322d5.js",
+    "static/js/787.f0527e05.chunk.js": "/role_cards/static/js/787.f0527e05.chunk.js",
+    "static/media/logo.svg": "/role_cards/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/role_cards/index.html",
+    "main.c4c2d56f.css.map": "/role_cards/static/css/main.c4c2d56f.css.map",
+    "main.307322d5.js.map": "/role_cards/static/js/main.307322d5.js.map",
+    "787.f0527e05.chunk.js.map": "/role_cards/static/js/787.f0527e05.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c4c2d56f.css",
+    "static/js/main.307322d5.js"
+  ]
+}
