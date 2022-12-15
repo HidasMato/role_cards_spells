@@ -1,0 +1,19 @@
+.Main {
+    width: 100%;
+    display: flex;
+    Input {
+        width: 8vh;
+        bottom: 0;
+        background-color: var(--color1);
+        margin-bottom: 1vh;
+        color: var(--color6);
+        border-radius: 1vh;
+    }
+    Input:focus {
+        outline-width: 0;
+        background-color: var(--color4);
+    }
+    .Text {
+        padding: 0 1vh;
+    }
+}

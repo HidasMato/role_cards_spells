@@ -1,0 +1,72 @@
+.Main {
+    font-size: 3vh;
+    color: var(--color6);
+    height: 100%;
+    .TypesList{
+        position: absolute;
+        z-index: 4;
+        max-height: 20vh;
+        background-color: var(--color1);
+        width: 37vh;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        border-radius: 0 0 2vh 2vh;
+        padding-bottom: 0.5vh;
+        .Type {
+            margin: 0.5vh 0.5vh 0.5vh 0.5vh;
+            padding: 0.5vh 0.5vh 0.5vh 0.5vh;
+            border-radius: 1vh 1vh 1vh 1vh;
+            white-space: nowrap;
+            overflow-x: hidden;
+            background-color: var(--color3);
+        }
+        .Type:hover {
+            background-color: var(--color4);
+            cursor: pointer;
+        }
+    }
+    .Block {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        .Chose {
+            width: 32vh;
+            height: 80%;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            background-color:var(--color3);
+            border-radius: 40vh 12vh 56vh 20vh;
+            border: 0.1vh solid var(--color6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .ChoseIn {
+                overflow-x: hidden;
+                overflow-y: hidden;
+                white-space: nowrap;
+                display: flex;
+                align-items: center;
+                height: 100%;
+                width: 29vh;
+            }
+        }
+        .Change {
+            height: 80%;
+            width: 10vh;
+            background-color: var(--color3);
+            margin-right: -5vh;
+            border: 0.1vh solid var(--color6);
+            border-radius: 10vh 0vh 0vh 5vh;
+            padding-left: 0.7vh;
+            display: flex;
+            align-items: center;
+            img {
+                height: 80%;
+            }
+        }
+        .Change:hover {
+            background-color: var(--color4);
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+.Main {
+    width: 100%;
+    display: flex;
+    padding: 1vh 0;
+    input {
+        width: 0;
+        color: transparent;
+        border: transparent;
+        height: 0;
+        position: absolute;
+        top: 0;
+        left: 9vh;
+    }
+    label {
+        border: 0.2vh solid var(--color6);
+        color: transparent;
+        border-radius: 10vh;
+        overflow: hidden;
+    }
+    label:hover {
+        cursor: pointer;;
+    }
+    .As {
+        background: var(--color1);
+        border: 0.2vh solid var(--color6);
+        border-radius: 4vh;
+        padding: 0 1vh;
+    }
+    .As:hover {
+        cursor: pointer;
+        background: var(--color5)
+    }
+    .AsTarget {
+        background: var(--color4);
+    }
+    .Text {
+        padding: 0 1vh;
+    }
+}

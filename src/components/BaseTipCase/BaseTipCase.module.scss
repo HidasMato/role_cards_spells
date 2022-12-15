@@ -1,0 +1,39 @@
+.Main {
+    font-size: 1.5vh;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: start;
+    padding: 0.5vh;
+    .Children {
+        width: 100%;
+        padding-left: 2vh;
+    }
+    .Name {
+        border-radius: 2vh;
+        height: 2.5vh;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        background: var(--color1);
+        border: 0.2vh solid var(--color6);
+        .Text {
+            width: 100%;
+        }
+        img {
+            height: 2vh;
+            padding-right: 0.5vh;
+            padding-left: 0.5vh;
+        }
+    }
+    .Name:hover {
+        cursor: pointer;
+        background-color: var(--color5);
+    }
+    .Target {
+        img {
+            transform: rotate(180deg);
+        }
+    }
+}

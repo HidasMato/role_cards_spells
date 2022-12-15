@@ -1,3 +1,42 @@
+.Main {
+    font: menu;
+    vertical-align: baseline;
+    font-weight: 700;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--color2);
+    .Window {
+        height: 93%;
+        width: 100%;
+        overflow-y: hidden;
+        overflow-y: hidden;
+    }
+    .Up {
+        height: 7vh;
+        width: 100%;
+        background-color: var(--color1);
+        border-bottom: 0.2vh solid var(--color6);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1vh;
+        .Slk {
+            height: 100%;
+            align-items: center;
+            display: flex;
+            img {
+                height: 80%;
+            }
+        }
+    }
+    --color1: #E1CDC6;
+    --color2: #F1E9E6;
+    --color3: #F8E3CF;
+    --color4: #F2B892;
+    --color5: #F19A71;
+    --color6: #AA796C;
+}
+
 .App {
   text-align: center;
 }

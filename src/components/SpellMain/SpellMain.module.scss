@@ -1,0 +1,362 @@
+.Main {
+    width: 100%;
+    height: 100%;
+    background-color:var(--color2);
+    color: var(--color6);
+    position: relative;
+    .HideWindow {
+        display: none;
+    }
+    .OptionsSetting {
+        position: absolute;
+        height: 3vh;
+        right: 2vh;
+        top: 2vh;
+    }
+    .OptionsSetting:hover {
+        cursor: pointer;
+    }
+    .Options {
+        overflow-y: hidden;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 50vh;
+        height: calc(100% - 2vh);
+        margin: 1vh;
+        background-color: var(--color1);
+        border: 0.1vh solid var(--color6);
+        border-radius: 4vh;
+        padding: 0 1vh;
+        .Hide {
+            padding-right: 1vh;
+            font-size: 1.5vh;
+            display: flex;
+            justify-content: end;
+            .Text:hover {
+                cursor: pointer;
+            }
+        }
+        .OpionsCase {
+            overflow-y: scroll;
+            height: 100%;
+            width: 100%;
+            padding: 0 1vh 4vh 1vh;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            .LineSetting {
+                .Uzok {
+                    height: 90%;
+                    width: 60%;
+                }
+                display: flex;
+                justify-content: space-between;
+                padding: 0.7vh 0;
+            }
+            .InputFile {
+                overflow: hidden;
+                display: flex;
+                align-items: baseline;
+                white-space: nowrap;
+                margin-bottom: 1vh;
+                label {
+                    padding: 0vh 0.5vh;
+                    margin-right: 0.5vh;
+                    color: var(--color6);
+                    background-color: var(--color1);
+                    border: 0.1vh solid var(--color6);
+                }
+                input {
+                    display: none;
+                }
+                label:hover {
+                    cursor: pointer;
+                    background-color: var(--color5);
+                }
+                label:active {
+                    cursor: pointer;
+                    background-color: var(--color4);
+                }
+            }
+        }
+        ::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
+    }
+    .RedactorSetting {
+        position: absolute;
+        height: 3vh;
+        bottom: 2vh;
+        left: 2vh;
+    }
+    .RedactorSetting:hover {
+        cursor: pointer;
+    }
+    .Redactor {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: calc(100vw - 50vh - 3vh);
+        border-radius: 4vh;
+        border: 0.1vh solid var(--color6);
+        margin: 1vh;
+        height: 20vh;
+        background-color: var(--color1);
+        padding: 0 1vh;
+        .Hide {
+            padding-right: 1vh;
+            font-size: 1.5vh;
+            display: flex;
+            justify-content: end;
+            .Text:hover {
+                cursor: pointer;
+            }
+        }
+        .RedactorCase {
+            display: flex;
+            .Buttons {
+                font-size: 1.8vh;
+                padding-left: 16vh;
+                bottom: 1vh;
+                width: 100%;
+                position: absolute;
+                display: flex;
+                justify-content: space-around;
+                .DownloadInput {
+                    display:none;
+                }
+                .Download {
+                    border: 0.1vh solid var(--color6);
+                    background-color: var(--color1);
+                    border-radius: 2vh;
+                    padding: 0 1vh;
+                }
+                .Download:hover {
+                    cursor: pointer;
+                    background-color: var(--color5);
+                }
+            }
+            .Base {
+                background-color: var(--color3);
+                border: 0.1vh solid var(--color6);
+                border-radius: 4vh;
+                height: 16vh;
+                width: 16vh;
+                .Title {
+                    font-size: 2vh;
+                    position: fixed;
+                    width: 16vh;
+                    text-align: center;
+                }
+                .BaseTips {
+                    border-radius:  1.5vh 1.5vh 4vh 4vh;
+                    padding: 1vh 1vh 1vh 1vh;
+                    margin-top: 2vh;
+                    height: calc(100% - 2vh);
+                    width: 100%;
+                    overflow-y: scroll;
+                    overflow-x: hidden;
+                }
+            }
+            .InputPlace {
+                background-color: var(--color3);
+                border: 0.1vh solid var(--color6);
+                border-radius: 4vh;
+                height: 16vh;
+                margin-left: 1vh;
+                width: calc(100% - 16vh - 1vh);
+                .Title {
+                    font-size: 2vh;
+                    position: fixed;
+                    width: calc(100vw - 69vh - 3.5vh);
+                    text-align: center;
+                }
+                .CSVText {
+                    border-radius:  1.5vh 1.5vh 4vh 4vh;
+                    padding: 1vh 1vh 1vh 1vh;
+                    margin-top: 2vh;
+                    height: calc(100% - 2vh);
+                    width: 100%;
+                    overflow-y: scroll;
+                    overflow-x: hidden;
+                    textarea {
+                        font-size: 1.5vh;
+                        resize: none;
+                        background-color: var(--color1);
+                        border-radius: 2vh;
+                        height: calc(100% - 1vh);
+                        width: calc(100% - 0.5vh);
+                        outline: none !important;
+                        border: 0.1vh solid var(--color6);
+                        color: var(--color6);
+                        padding: 0 1vh;
+                    }
+                    textarea:focus {
+                        outline: none !important;
+                    }
+                }
+            }
+            ::-webkit-scrollbar {
+                width: 0;
+                height: 0;
+            }
+        }
+    }
+    .BigWidth {
+        width: calc(100% - 2vh);
+    }
+    .Lists {
+        height: 100%;
+        width: 100%;
+        overflow-y: scroll;
+        .List{
+            margin: 2vh;
+            height: 297mm;
+            width: 210mm;
+            background-color: var(--ListColor);
+            padding: var(--ListPadding);
+            .LineCards {
+                width: 100%;
+                display: flex;
+                .Card {
+                    height: 100%;
+                }
+                .Card4 {
+                    width: calc(100% / 4);
+                }
+                .Card3 {
+                    width: calc(100% / 3);
+                }
+                .Card2 {
+                    width: calc(100% / 2);
+                }
+                .Card1 {
+                    width: calc(100% / 1);
+                }
+            }
+            .LineCard4 {
+                height: calc(100% / 4);
+            }
+            .LineCard3 {
+                height: calc(100% / 3);
+            }
+            .LineCard2 {
+                height: calc(100% / 2);
+            }
+            .LineCard1 {
+                height: calc(100% / 1);
+            }
+        }
+        .ListHorisont {
+            width: 297mm;
+            height: 210mm;
+        }
+    }
+    .ListDown {
+        padding-bottom: 20vh;
+    }
+    .ListRigth {
+        padding-right: 50vh;
+    }
+    --ListPadding: 2mm;
+
+    //Colors
+    --ListColor: rgb(255, 255, 255);
+    --CardColorBackcground: rgb(0, 0, 0);
+    --CardZagolovokBackgroundColor: rgb(255, 255, 255);
+    --CardZagolovokTextColor: rgb(0, 0, 0);
+    --CardPer1BackgroundColor: rgb(0, 0, 0);
+    --CardPer1TextColor: rgb(255, 255, 255);
+    --CardPer2BackgroundColor: rgb(0, 0, 0);
+    --CardPer2TextColor: rgb(255, 255, 255);
+    --CardPer3BackgroundColor: rgb(0, 0, 0);
+    --CardPer3TextColor: rgb(255, 255, 255);
+    --CardOptionPalki: rgb(0, 0, 0);
+    --CardOption1Background: rgb(255, 255, 255);
+    --CardOption2Background: rgb(255, 255, 255);
+    --CardOption3Background: rgb(255, 255, 255);
+    --CardOption4Background: rgb(255, 255, 255);
+    --CardOption1ZColor: rgb(0, 0, 0);
+    --CardOption2ZColor: rgb(0, 0, 0);
+    --CardOption3ZColor: rgb(0, 0, 0);
+    --CardOption4ZColor: rgb(0, 0, 0);
+    --CardOption1TColor: rgb(0, 0, 0);
+    --CardOption2TColor: rgb(0, 0, 0);
+    --CardOption3TColor: rgb(0, 0, 0);
+    --CardOption4TColor: rgb(0, 0, 0);
+    --CardMainTextColor: rgb(0, 0, 0);
+    --CardDopTextColor: rgb(0, 0, 0);
+    --CardMainBackgroundColor: rgb(255, 255, 255);
+    --CardDopBackgroundColor: rgb(255, 255, 255);
+    --CardDownTextColor: rgb(255, 255, 255);
+
+    --CardPadding: 7px;
+    --CardBorderWhite: 10px;
+    --CardDownTextSize: 4mm;
+    --CardDownTextFont: 4mm;
+    --CardZagolovokTextSize: 4mm;
+    --CardZagolovokTextFont: 4mm;
+    --CardZagolovokTextPadding: 1mm;
+    --CardZagolovokTextAlign: center;
+    --CardOptionTextTextSize: 4mm;
+    --CardOptionTextTextFont: 4mm;
+    --CardOptionTextTextPadding: 1mm;
+    --CardOptionTextTextAlign: center;
+    --CardOptionZagolovokTextSize: 4mm;
+    --CardOptionZagolovokTextFont: 4mm;
+    --CardOptionZagolovokTextPadding: 1mm;
+    --CardOptionZagolovokTextAlign: center;
+    --CardOptionBorder: 1mm;
+    --CardOptionHeigth: 20mm;
+    --CardPer1H: 3mm;
+    --CardPer2H: 3mm;
+    --CardPer3H: 3mm;
+    --CardPer1TextAlign: center;
+    --CardPer2TextAlign: center;
+    --CardPer3TextAlign: center;
+    --CardPer1TextFont: 3mm;
+    --CardPer2TextFont: 3mm;
+    --CardPer3TextFont: 3mm;
+    --CardPer1TextPadding: 1mm;
+    --CardPer2TextPadding: 1mm;
+    --CardPer3TextPadding: 1mm;
+
+    // 
+    // --Backcground: rgb(255, 255, 255);
+    // --InCard: rgb(255, 255, 255);
+    // --Text1Card: rgb(0, 0, 0);
+    // --Text2Card: rgb(255, 255, 255);
+    // --Text3Card: rgb(39 152 77);
+    // --Text4Card: rgb(0, 0, 0);
+    // --Text5Card: rgb(0, 0, 0);
+    // --Oblogka1: rgb(39 152 77);
+    // --Oblogka2: rgb(255, 255, 255);
+    // --padding: 2mm;
+    // --small: 54mm;
+    // --big: 63mm;
+    // --h: 296mm;
+    // --w: 210mm;
+    // --keglTitl: 16px;
+    // --keglFon: 9px;
+    // --keglPerem: 9px;
+    // --keglVys: 9px;
+    // --keglOsobTitl: 9px;
+    // --keglOsobText: 9px;
+    // --paddingCard: 10px;
+    // --keglTitleNis: 16px;
+    // --rigthTopV: 25px;
+    // --rigthTopH: 27px;
+    // --leftTopV: 25px;
+    // --leftTopH: 27px;
+    // --rigthDownV: 25px;
+    // --rigthDownH: 27px;
+    // --leftDownV: 25px;
+    // --leftDownH: 27px;
+    // --keglNumber: 60px;
+    // --Num1: rgb(0, 0, 0);
+    // --Num2: rgb(0, 0, 0);
+    // --Num3: rgb(0, 0, 0);
+    // --Num4: rgb(0, 0, 0);
+}

@@ -1,0 +1,32 @@
+.Main {
+    font-size: 2vh;
+    background: var(--color1);
+    border: 0.2vh solid var(--color6);
+    border-radius: 4vh;
+    display: flex;
+    width: 20vh;
+    height: 20vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.5vh;
+    img {
+        padding-top: 1vh;
+        max-height: 80%;
+        max-width: 90%;
+    }
+    .Children {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: calc(100% - 2vh);
+        width: 100%;
+    }
+}
+.Target {
+    background-color: var(--color4);
+}
+.Main:hover {
+    cursor: pointer;
+    background-color: var(--color5);
+}

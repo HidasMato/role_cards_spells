@@ -1,0 +1,19 @@
+.Main {
+    margin-top: 1vh;
+    padding: 0 2vh;
+    width: 100%;
+    height: min-content;
+    background: var(--color3);
+    border: 0.1vh solid var(--color6);
+    border-radius: 4vh;
+    font-size: 2vh;
+    .Title {
+        font-size: 3vh;
+        padding: 1vh 0;
+        display: flex;
+        justify-content: center;
+    }
+    .Title:hover {
+        cursor: pointer;
+    }
+}

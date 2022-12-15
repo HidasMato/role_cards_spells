@@ -1,0 +1,217 @@
+.Main {
+    white-space: pre;
+    width: 100%;
+    height: 100%;
+    background-color: var(--CardColorBackcground);
+    border-right: 1px solid var(--ListColor);
+    border-bottom: 1px solid var(--ListColor);
+    padding: var(--CardPadding);
+    .Zagolovok {
+        background-color: var(--CardZagolovokBackgroundColor);
+        border-top-right-radius: var(--CardBorderWhite);
+        border-top-left-radius: var(--CardBorderWhite);
+        height: var(--CardZagolovokTextSize);
+        font-size: var(--CardZagolovokTextFont);
+        color: var(--CardZagolovokTextColor);
+        padding: 0 var(--CardZagolovokTextPadding);
+        display: flex;
+        justify-content: var(--CardZagolovokTextAlign);
+        align-items: center;
+    }
+    .School {
+        height: var(--CardPer1H);
+        font-size: var(--CardPer1TextFont);
+        color: var(--CardPer1TextColor);
+        padding: 0 var(--CardPer1TextPadding);
+        background-color: var(--CardPer1BackgroundColor);
+        display: flex;
+        justify-content: var(--CardPer1TextAlign);
+        align-items: center;
+    }
+    .BigDescription {
+        height: calc(100% - var(--CardZagolovokTextSize) - var(--CardPer1H) - var(--CardDownTextSize));
+        display: flex;
+        .Per1 {
+            height: 100%;
+            width: var(--CardPer2H);
+            .A {
+                transform: rotate(270deg);
+            }
+        }
+        .AllText {
+            width: calc(100% - var(--CardPer2H) - var(--CardOptionHeigth));
+            height: 100%;
+        }
+    }
+    .Per1 {
+        width: 100%;
+        color: var(--CardPer2TextColor);
+        padding: 0 var(--CardPer2TextPadding);
+        height: var(--CardPer2H);
+        font-size: var(--CardPer2TextFont);
+        background-color: var(--CardPer2BackgroundColor);
+        justify-content: var(--CardPer2TextAlign);
+        display: flex;
+        align-items: center;
+    }
+    .AllText {
+        white-space: pre-wrap;
+        width: 100%;
+        height: calc(100% - var(--CardZagolovokTextSize) - var(--CardPer3H) - var(--CardPer1H) - var(--CardOptionHeigth) - var(--CardDownTextSize));
+        background-color: var(--CardMainBackgroundColor);
+        border-bottom-right-radius: var(--CardBorderWhite);
+        border-bottom-left-radius: var(--CardBorderWhite);
+        overflow: hidden;
+        .TextSizeControll {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .MainText {
+                width: 100%;
+                color: var(--CardMainTextColor);
+            }
+            .Dop {
+                .DopText {
+                    color: var(--CardDopTextColor);
+                    width: 100%;
+                    background-color: var(--CardDopBackgroundColor);
+                }
+                .Per2 {
+                    width: 100%;
+                    color: var(--CardPer3TextColor);
+                    padding: 0 var(--CardPer3TextPadding);
+                    height: var(--CardPer3H);
+                    font-size: var(--CardPer3TextFont);
+                    background-color: var(--CardPer3BackgroundColor);
+                    justify-content: var(--CardPer3TextAlign);
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+    }
+    .Options41ver {
+        background-color: var(--CardOptionPalki);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: var(--CardOptionHeigth);
+        justify-content: space-between;
+    }
+    .Options14ver {
+        background-color: var(--CardOptionPalki);
+        width: var(--CardOptionHeigth);
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-between;
+    }
+    .Options41hor {
+        background-color: var(--CardOptionPalki);
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        height: var(--CardOptionHeigth);
+        justify-content: space-between;
+    }
+    .Options22 {
+        display: flex;
+        flex-direction: column;
+        height: var(--CardOptionHeigth);
+        justify-content: space-between;
+        background-color: var(--CardOptionPalki);
+        .Options2hor {
+            display: flex;
+            justify-content: space-between;
+            height: calc(var(--CardOptionHeigth)/2 - var(--CardOptionBorder)/2);
+            width: 100%;
+            overflow: hidden;
+        }
+    }
+    .Options1d1Line {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: calc(var(--CardOptionHeigth)/4 - var(--CardOptionBorder) / 4 * 3);
+        width: 100%;
+    }
+    .Options1d2Line {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: calc(var(--CardOptionHeigth)/2 - var(--CardOptionBorder) / 2);
+        width: calc(50% - var(--CardOptionBorder)/2);
+    }
+    .Options1d1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: calc(25% - var(--CardOptionBorder) / 4 * 3);
+    }
+    .Options1d2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: calc(50% - var(--CardOptionBorder) / 2);
+    }
+    .Options1d4 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: calc(25% - var(--CardOptionBorder) / 4 * 3);
+    }
+    .OptionZagolovok {
+        height: var(--CardOptionZagolovokTextSize);
+        font-size: var(--CardOptionZagolovokTextFont);
+        padding: 0 var(--CardOptionZagolovokTextPadding);
+        justify-content: var(--CardOptionZagolovokTextAlign);
+        display: flex;
+        align-items: center;
+        width: 100%;
+        overflow: hidden;
+    }
+    .OptionText {
+        height: var(--CardOptionTextTextSize);
+        font-size: var(--CardOptionTextTextFont);
+        padding: 0 var(--CardOptionTextTextPadding);
+        justify-content: var(--CardOptionTextTextAlign);
+        display: flex;
+        align-items: center;
+    }
+    .DowtText {
+        height: var(--CardDownTextSize);
+        font-size: var(--CardDownTextFont);
+        color: var(--CardDownTextColor);
+    }
+    .BcgrOpt1 {
+        background-color: var(--CardOption1Background);
+        color: var(--CardOption1ZColor);
+    }
+    .BcgrOpt2 {
+        background-color: var(--CardOption2Background);
+        color: var(--CardOption2ZColor);
+    }
+    .BcgrOpt3 {
+        background-color: var(--CardOption3Background);
+        color: var(--CardOption3ZColor);
+    }
+    .BcgrOpt4 {
+        background-color: var(--CardOption4Background);
+        color: var(--CardOption4ZColor);
+    }
+    .Option1TextColor {
+        color: var(--CardOption1TColor);
+    }
+    .Option2TextColor {
+        color: var(--CardOption2TColor);
+    }
+    .Option3TextColor {
+        color: var(--CardOption3TColor);
+    }
+    .Option4TextColor {
+        color: var(--CardOption4TColor);
+    }
+}
