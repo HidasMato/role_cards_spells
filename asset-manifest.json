@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/role_cards/static/css/main.1409f57e.css",
-    "main.js": "/role_cards/static/js/main.15ae56ee.js",
-    "static/media/Жрец.svg": "/role_cards/static/media/Жрец.3174bba39b57aa1417cdbb78b4b6845b.svg",
-    "static/media/Волшебник.svg": "/role_cards/static/media/Волшебник.253fe2ca509820f644414092681fb44d.svg",
-    "static/media/Колдун.svg": "/role_cards/static/media/Колдун.482740885a94a32dc707e26d9a9e360d.svg",
+    "main.css": "/role_cards/static/css/main.eb4b8d0c.css",
+    "main.js": "/role_cards/static/js/main.c6495ac4.js",
+    "static/media/Жрец.svg": "/role_cards/static/media/Жрец.351f4b4717a6a3589144bf4e0675987d.svg",
+    "static/media/Волшебник.svg": "/role_cards/static/media/Волшебник.7fe3763dc9ee2fc59e45556048e54953.svg",
+    "static/media/Колдун.svg": "/role_cards/static/media/Колдун.5058a1f35ea98d441b4251f680c81f5a.svg",
     "static/media/6.svg": "/role_cards/static/media/6.856a8676bfe1ad5237111f677a9f9d2c.svg",
     "static/media/5.svg": "/role_cards/static/media/5.fe0a8896941a0a655af9670070e7a673.svg",
     "static/media/3.svg": "/role_cards/static/media/3.2024cb568eff3a8ca4c9437645199d05.svg",
@@ -15,21 +15,26 @@
     "static/media/10.svg": "/role_cards/static/media/10.9a8b2aa379da78f34aba317e7c03ef12.svg",
     "static/media/1.svg": "/role_cards/static/media/1.2609e2cff0a5f4203687620786d4946f.svg",
     "static/media/2.svg": "/role_cards/static/media/2.db918d70364638adf1c0a33947f43b08.svg",
-    "static/media/Бард.svg": "/role_cards/static/media/Бард.ac39859cb1fddc9bd1993231c526421b.svg",
-    "static/media/Военка.svg": "/role_cards/static/media/Военка.908d13c4e8987bf256cd483275dd4f8f.svg",
-    "static/media/Друид.svg": "/role_cards/static/media/Друид.b9e60fdca83660679b7ad06c5d7b2946.svg",
-    "static/media/Setting.svg": "/role_cards/static/media/Setting.75a3180d77f0a896d014cab3f451eb6e.svg",
-    "static/media/GH.svg": "/role_cards/static/media/GH.17910e64349495f7cf2681ed5fab5f62.svg",
-    "static/media/YD.svg": "/role_cards/static/media/YD.3381d1a012b2d192f703c4ffe9910340.svg",
-    "static/media/VK.svg": "/role_cards/static/media/VK.568b8e0c78f73823ef0c51f8503c4278.svg",
-    "static/media/Change.svg": "/role_cards/static/media/Change.3878a937654060011d6cb950e72539fb.svg",
-    "static/media/ArrowDown.svg": "/role_cards/static/media/ArrowDown.698a9a6d95cf00081af79faab5f882d0.svg",
+    "static/media/Бард.svg": "/role_cards/static/media/Бард.8554b032012d0e0162960e641e516b35.svg",
+    "static/media/Военка.svg": "/role_cards/static/media/Военка.73f1f04cc6284e0e6d570a38ae98d41d.svg",
+    "static/media/Друид.svg": "/role_cards/static/media/Друид.4bc79a15830b444484185395c5f44583.svg",
+    "static/media/Setting.svg": "/role_cards/static/media/Setting.c5293a91e0900a696f9d2652eab11712.svg",
+    "static/media/GH.svg": "/role_cards/static/media/GH.eb56b18895192763c96f0129ffb9d85f.svg",
+    "static/media/YD.svg": "/role_cards/static/media/YD.37a58d66815c3f5ea1a3580d4598ef99.svg",
+    "static/media/Align_left_font_awesome.svg": "/role_cards/static/media/Align_left_font_awesome.98c444073a0efd6c859d7b069e4df7d6.svg",
+    "static/media/Align_justify_font_awesome.svg": "/role_cards/static/media/Align_justify_font_awesome.cb77a8ea0753940ba8168e671a2a9a56.svg",
+    "static/media/Align_right_font_awesome.svg": "/role_cards/static/media/Align_right_font_awesome.028e32418259a88d363ba238664af667.svg",
+    "static/media/Align_center_font_awesome.svg": "/role_cards/static/media/Align_center_font_awesome.0546fb31467219258d649f43d30ae2d7.svg",
+    "static/media/VK.svg": "/role_cards/static/media/VK.3e60d4ac6239f020fcab393903993970.svg",
+    "static/media/ArrowDown.svg": "/role_cards/static/media/ArrowDown.7e95e35bfc2bfb025c34f4fe7e99a5f4.svg",
+    "static/media/Download.svg": "/role_cards/static/media/Download.439d90428e9ea3005c18ab6fa9b8a87e.svg",
+    "static/media/Change.svg": "/role_cards/static/media/Change.d2ee68cc10dd187f05c77dcb242a8ce6.svg",
     "index.html": "/role_cards/index.html",
-    "main.1409f57e.css.map": "/role_cards/static/css/main.1409f57e.css.map",
-    "main.15ae56ee.js.map": "/role_cards/static/js/main.15ae56ee.js.map"
+    "main.eb4b8d0c.css.map": "/role_cards/static/css/main.eb4b8d0c.css.map",
+    "main.c6495ac4.js.map": "/role_cards/static/js/main.c6495ac4.js.map"
   },
   "entrypoints": [
-    "static/css/main.1409f57e.css",
-    "static/js/main.15ae56ee.js"
+    "static/css/main.eb4b8d0c.css",
+    "static/js/main.c6495ac4.js"
   ]
 }
