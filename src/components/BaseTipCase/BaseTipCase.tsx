@@ -1,5 +1,5 @@
 import React from 'react';
-import arrowDown from '../../images/ArrowDown.svg';
+import { ReactComponent as ArrowDown } from '../../images/ArrowDown.svg';
 import style from './BaseTipCase.module.scss';
 type AlertProps = {
     openThis: boolean;
@@ -11,7 +11,9 @@ type AlertProps = {
 const BaseTipCase = ({name, openThis, setOpenThis, number, children}: AlertProps): JSX.Element => {
     return (
             <div className={style.Main}>
-                <div className={style.Name  + ' ' + (openThis ? style.Target : '')} onClick={() => { setOpenThis(number) }}> <div className={style.Text}>{name}</div> <img src={arrowDown} alt="˅" /></div>
+            <div className={style.Name + ' ' + (openThis ? style.Target : '')} onClick={() => { setOpenThis(number) }}> <div className={style.Text}>{name}</div>
+                <ArrowDown className={style.IMG} />
+            </div>
                 {openThis && <div className={style.Children}>{children}</div>}
             </div>
     );

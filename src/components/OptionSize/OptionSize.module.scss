@@ -1,11 +1,12 @@
 .Main {
     width: 100%;
     display: flex;
+    padding: 1vh 0;
+    font-size: 100%;
     Input {
-        width: 8vh;
+        width: 6vh;
         bottom: 0;
         background-color: var(--color1);
-        margin-bottom: 1vh;
         color: var(--color6);
         border-radius: 1vh;
     }
@@ -15,5 +16,18 @@
     }
     .Text {
         padding: 0 1vh;
+    }
+    .As {
+        background: var(--color1);
+        border: 0.2vh solid var(--color6);
+        border-radius: 4vh;
+        padding: 0 1vh;
+    }
+    .As:hover {
+        cursor: pointer;
+        background: var(--color5)
+    }
+    .AsTarget {
+        background: var(--color4);
     }
 }

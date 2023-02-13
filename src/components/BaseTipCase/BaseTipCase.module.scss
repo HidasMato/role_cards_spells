@@ -21,8 +21,9 @@
         .Text {
             width: 100%;
         }
-        img {
+        .IMG {
             height: 2vh;
+            width: 2vh;
             padding-right: 0.5vh;
             padding-left: 0.5vh;
         }
@@ -32,7 +33,7 @@
         background-color: var(--color5);
     }
     .Target {
-        img {
+        .IMG {
             transform: rotate(180deg);
         }
     }

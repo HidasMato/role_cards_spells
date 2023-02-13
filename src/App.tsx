@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import style from './App.module.scss';
 import ChoseType from './components/ChoseType/ChoseType';
 import SpellMain from './components/SpellMain/SpellMain';
-import GH from './images/GH.svg';
-import YD from './images/YD.svg';
-import VK from './images/VK.svg';
 import SpellCSV from './components/SpellCSV/SpellCSV';
+import { ReactComponent as GH } from './images/GH.svg';
+import { ReactComponent as YD } from './images/YD.svg';
+import { ReactComponent as VK } from './images/VK.svg';
 
 const App = () => {
     const [choseType, setChoseType] = useState(0);
@@ -27,9 +27,9 @@ const App = () => {
             <div className={style.Up}>
                 <ChoseType choseType={choseType} setChoseType={setChoseType}  />
                 <div className={style.Slk}>
-                    <img src={VK} alt="VK" />
-                    <img src={GH} alt="GH" />
-                    <img src={YD} alt="YD" />
+                    <a href=""><VK className={style.Icon1}/></a>
+                    <a href=""><GH className={style.Icon2}/></a>
+                    <a href=""><YD className={style.Icon3}/></a>
                 </div>
             </div>
             <div className={style.Window}>

@@ -1,5 +1,5 @@
 import React from 'react';
-import arrowDown from '../../images/ArrowDown.svg';
+import { ReactComponent as ArrowDown } from '../../images/ArrowDown.svg';
 import style from './BaseTip.module.scss';
 type AlertProps = {
     targetThis: boolean;
@@ -11,7 +11,7 @@ const BaseTip = ({name, targetThis, setTargetBase, number}: AlertProps): JSX.Ele
     return (
         <div className={style.Main + ' ' + (targetThis ? style.Target : '')} onClick={()=>{setTargetBase(number)}}>
             <div className={style.Name}>{name}</div>
-            <img src={arrowDown} alt="˅" />
+            <ArrowDown className={style.IMG} />
         </div>
     );
 }

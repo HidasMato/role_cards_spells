@@ -22,10 +22,19 @@
         padding: 0 1vh;
         .Slk {
             height: 100%;
-            align-items: center;
+            padding-top: 1vh;
             display: flex;
-            img {
-                height: 80%;
+            .Icon1 {
+                height: 5vh;
+                width:8vh;
+            }
+            .Icon2 {
+                height: 5vh;
+                width: 5.5vh;
+            }
+            .Icon3 {
+                height: 5vh;
+                width: 8vh;
             }
         }
     }
@@ -35,8 +44,15 @@
     --color4: #F2B892;
     --color5: #F19A71;
     --color6: #AA796C;
+    @media print {
+        .Up {
+            display: none;
+        }
+        .Window {
+            height: auto;
+        }
+    }
 }
-
 .App {
   text-align: center;
 }

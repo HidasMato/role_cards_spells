@@ -1,0 +1,49 @@
+.Main {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1vh 0;
+    font-size: 100%;
+    .TextBlock {
+        display: flex;
+        .Text {
+            padding: 0 1vh;
+        }
+        .As {
+            background: var(--color1);
+            border: 0.2vh solid var(--color6);
+            border-radius: 4vh;
+            padding: 0 1vh;
+            margin-right: 1vh;
+        }
+        .As:hover {
+            cursor: pointer;
+            background: var(--color5)
+        }
+        .AsTarget {
+            background: var(--color4);
+        }
+    }
+    .Aligns {
+        display: flex;
+
+        .Align {
+            background: var(--color1);
+            border: 0.2vh solid var(--color6);
+            border-radius: 4vh;
+            padding: 0 1vh;
+            .IMG {
+                padding-top: 0.5vh;
+                height: 1.5vh;
+                width: 1.5vh;
+            }
+        }
+        .AlignTarget {
+            background-color: var(--color4);
+        }
+        .AlignHover:hover {
+            cursor: pointer;
+            background: var(--color5)
+        }
+    }
+}

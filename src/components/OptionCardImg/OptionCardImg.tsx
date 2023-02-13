@@ -9,13 +9,16 @@ type AlertProps = {
     img?: string;
     name: string;
     children?: JSX.Element;
+    d?: boolean;
 };
-const OptionCardImg = ({img, name, targetThis, setTarget, number,children}: AlertProps): JSX.Element => {
+const OptionCardImg = ({ d, img, name, targetThis, setTarget, number, children }: AlertProps): JSX.Element => {
     return (
-        <div className={style.Main + ' ' + (targetThis ? style.Target : '')} onClick={()=>{setTarget(number)}}>
-            {name}
-            {(img != undefined) ? <img src={img} alt="" /> : null}
-            {(children  != undefined)? <div className={style.Children}>{children}</div> : null}
+        <div>
+            <div className={style.NameDownload}> {name} {(d) ? children : null} </div>
+            <div className={style.Main + ' ' + (targetThis ? style.Target : '')} onClick={(e) => {  setTarget(number); }} >
+                {img != undefined  ? <img src={img} alt="" /> : null}
+                {children != undefined  && !d ? <div className={style.Children}>{children}</div> : null}
+            </div>
         </div>
     );
 }

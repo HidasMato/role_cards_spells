@@ -1,4 +1,47 @@
+.BackMain {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    img {
+        height: 100%;
+        width: 100%;   
+    }
+    svg {
+        height: 100%;
+        width: 100%;   
+    }
+    .Num1 {
+        position: absolute;
+        top: var(--Number1V);
+        right: var(--Number1H);
+        font-size: var(--Number1Kegl);
+        color: var(--Number1);
+    }
+    .Num2 {
+        position: absolute;
+        top: var(--Number2V);
+        right: var(--Number2H);
+        font-size: var(--Number2Kegl);
+        color: var(--Number2);
+    }
+    .Num3 {
+        position: absolute;
+        top: var(--Number3V);
+        right: var(--Number3H);
+        font-size: var(--Number3Kegl);
+        color: var(--Number3);
+    }
+    .Num4 {
+        position: absolute;
+        top: var(--Number4V);
+        right: var(--Number4H);
+        font-size: var(--Number4Kegl);
+        color: var(--Number4);
+    }
+}
 .Main {
+    line-height: 1;
+    overflow:hidden;
     white-space: pre;
     width: 100%;
     height: 100%;
@@ -7,11 +50,15 @@
     border-bottom: 1px solid var(--ListColor);
     padding: var(--CardPadding);
     .Zagolovok {
+        overflow: hidden;
         background-color: var(--CardZagolovokBackgroundColor);
-        border-top-right-radius: var(--CardBorderWhite);
-        border-top-left-radius: var(--CardBorderWhite);
+        border-top-right-radius: var(--CardZagolovok┐);
+        border-top-left-radius: var(--CardZagolovok┌);
+        border-bottom-right-radius: var(--CardZagolovok┘);
+        border-bottom-left-radius: var(--CardZagolovok└);
         height: var(--CardZagolovokTextSize);
         font-size: var(--CardZagolovokTextFont);
+        text-align: var(--CardZagolovokTextAlign);
         color: var(--CardZagolovokTextColor);
         padding: 0 var(--CardZagolovokTextPadding);
         display: flex;
@@ -19,6 +66,7 @@
         align-items: center;
     }
     .School {
+        overflow:hidden;
         height: var(--CardPer1H);
         font-size: var(--CardPer1TextFont);
         color: var(--CardPer1TextColor);
@@ -27,11 +75,27 @@
         display: flex;
         justify-content: var(--CardPer1TextAlign);
         align-items: center;
+        text-align: var(--CardPer1TextAlign);
+    }
+    .Per1 {
+        white-space: pre;
+        overflow:hidden;
+        width: 100%;
+        color: var(--CardPer2TextColor);
+        padding: 0 var(--CardPer2TextPadding);
+        height: var(--CardPer2H);
+        font-size: var(--CardPer2TextFont);
+        background-color: var(--CardPer2BackgroundColor);
+        justify-content: var(--CardPer2TextAlign);
+        display: flex;
+        align-items: center;
+        text-align: var(--CardPer2TextAlign);
     }
     .BigDescription {
         height: calc(100% - var(--CardZagolovokTextSize) - var(--CardPer1H) - var(--CardDownTextSize));
         display: flex;
         .Per1 {
+            padding: var(--CardPer2TextPadding) 0;
             height: 100%;
             width: var(--CardPer2H);
             .A {
@@ -43,24 +107,15 @@
             height: 100%;
         }
     }
-    .Per1 {
-        width: 100%;
-        color: var(--CardPer2TextColor);
-        padding: 0 var(--CardPer2TextPadding);
-        height: var(--CardPer2H);
-        font-size: var(--CardPer2TextFont);
-        background-color: var(--CardPer2BackgroundColor);
-        justify-content: var(--CardPer2TextAlign);
-        display: flex;
-        align-items: center;
-    }
     .AllText {
+        border-top-right-radius: var(--CardAllText┐);
+        border-top-left-radius: var(--CardAllText┌);
+        border-bottom-right-radius: var(--CardAllText┘);
+        border-bottom-left-radius: var(--CardAllText└);
         white-space: pre-wrap;
         width: 100%;
-        height: calc(100% - var(--CardZagolovokTextSize) - var(--CardPer3H) - var(--CardPer1H) - var(--CardOptionHeigth) - var(--CardDownTextSize));
+        height: calc(100% - var(--CardZagolovokTextSize) - var(--CardPer2H) - var(--CardPer1H) - var(--CardOptionHeigth) - var(--CardDownTextSize));
         background-color: var(--CardMainBackgroundColor);
-        border-bottom-right-radius: var(--CardBorderWhite);
-        border-bottom-left-radius: var(--CardBorderWhite);
         overflow: hidden;
         .TextSizeControll {
             width: 100%;
@@ -71,14 +126,20 @@
             .MainText {
                 width: 100%;
                 color: var(--CardMainTextColor);
+                text-align: var(--CardMainTextTextAlign);
+                padding: var(--CardMainTextTextPadding);
             }
             .Dop {
                 .DopText {
                     color: var(--CardDopTextColor);
                     width: 100%;
+                    text-align: var(--CardDopTextTextAlign);
                     background-color: var(--CardDopBackgroundColor);
+                    padding: var(--CardDopTextTextPadding);
                 }
                 .Per2 {
+                    white-space: pre;
+                    overflow:hidden;
                     width: 100%;
                     color: var(--CardPer3TextColor);
                     padding: 0 var(--CardPer3TextPadding);
@@ -88,6 +149,7 @@
                     justify-content: var(--CardPer3TextAlign);
                     display: flex;
                     align-items: center;
+                    text-align: var(--CardPer3TextAlign);
                 }
             }
         }
@@ -130,17 +192,27 @@
             overflow: hidden;
         }
     }
+    .OptionZagolovok {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        overflow: hidden;
+    }
     .Options1d1Line {
         display: flex;
         flex-direction: row;
-        justify-content: center;
         height: calc(var(--CardOptionHeigth)/4 - var(--CardOptionBorder) / 4 * 3);
         width: 100%;
+        div {
+            width: auto;
+        }
     }
     .Options1d2Line {
+        div {
+            width: auto;
+        }
         display: flex;
         flex-direction: row;
-        justify-content: center;
         height: calc(var(--CardOptionHeigth)/2 - var(--CardOptionBorder) / 2);
         width: calc(50% - var(--CardOptionBorder)/2);
     }
@@ -163,55 +235,136 @@
         justify-content: center;
         width: calc(25% - var(--CardOptionBorder) / 4 * 3);
     }
-    .OptionZagolovok {
-        height: var(--CardOptionZagolovokTextSize);
-        font-size: var(--CardOptionZagolovokTextFont);
-        padding: 0 var(--CardOptionZagolovokTextPadding);
-        justify-content: var(--CardOptionZagolovokTextAlign);
-        display: flex;
-        align-items: center;
-        width: 100%;
-        overflow: hidden;
-    }
     .OptionText {
-        height: var(--CardOptionTextTextSize);
-        font-size: var(--CardOptionTextTextFont);
         padding: 0 var(--CardOptionTextTextPadding);
         justify-content: var(--CardOptionTextTextAlign);
         display: flex;
         align-items: center;
+        overflow: hidden;
+    }
+    .OptionText1 {
+        height: var(--CardOptionTextTextSize1);
+    }
+    .OptionText2 {
+        height: var(--CardOptionTextTextSize2);
+    }
+    .OptionText3 {
+        height: var(--CardOptionTextTextSize3);
+    }
+    .OptionText4 {
+        height: var(--CardOptionTextTextSize4);
     }
     .DowtText {
         height: var(--CardDownTextSize);
         font-size: var(--CardDownTextFont);
         color: var(--CardDownTextColor);
+        text-align: var(--CardDownTextTextAlign);
+        display: flex;
+        align-items: center;
+        padding: 0 var(--CardDownTextTextPadding);
+        width:100%;
+        div {
+            width: 100%;
+        }
     }
     .BcgrOpt1 {
+        border-top-right-radius: var(--CardOption1┐);
+        border-top-left-radius: var(--CardOption1┌);
+        border-bottom-right-radius: var(--CardOption1┘);
+        border-bottom-left-radius: var(--CardOption1└);
         background-color: var(--CardOption1Background);
         color: var(--CardOption1ZColor);
+        font-size: var(--CardOptionZagolovokTextFont1);
+        .OptionZagolovok {
+            div {
+                text-align: var(--CardOption1ZagolovokTextAlign);
+                padding: 0 var(--CardOption1ZagolovokTextPadding);
+                width: 100%;
+            }
+        }
     }
     .BcgrOpt2 {
+        border-top-right-radius: var(--CardOption2┐);
+        border-top-left-radius: var(--CardOption2┌);
+        border-bottom-right-radius: var(--CardOption2┘);
+        border-bottom-left-radius: var(--CardOption2└);
         background-color: var(--CardOption2Background);
         color: var(--CardOption2ZColor);
+        font-size: var(--CardOptionZagolovokTextFont2);
+        .OptionZagolovok {
+            div {
+                text-align: var(--CardOption2ZagolovokTextAlign);
+                padding: 0 var(--CardOption2ZagolovokTextPadding);
+                width: 100%;
+            }
+        }
     }
     .BcgrOpt3 {
+        border-top-right-radius: var(--CardOption3┐);
+        border-top-left-radius: var(--CardOption3┌);
+        border-bottom-right-radius: var(--CardOption3┘);
+        border-bottom-left-radius: var(--CardOption3└);
         background-color: var(--CardOption3Background);
         color: var(--CardOption3ZColor);
+        font-size: var(--CardOptionZagolovokTextFont3);
+        .OptionZagolovok {
+            div {
+                text-align: var(--CardOption3ZagolovokTextAlign);
+                padding: 0 var(--CardOption3ZagolovokTextPadding);
+                width: 100%;
+            }
+        }
     }
     .BcgrOpt4 {
+        border-top-right-radius: var(--CardOption4┐);
+        border-top-left-radius: var(--CardOption4┌);
+        border-bottom-right-radius: var(--CardOption4┘);
+        border-bottom-left-radius: var(--CardOption4└);
         background-color: var(--CardOption4Background);
         color: var(--CardOption4ZColor);
+        font-size: var(--CardOptionZagolovokTextFont4);
+        .OptionZagolovok {
+            div {
+                text-align: var(--CardOption4ZagolovokTextAlign);
+                padding: 0 var(--CardOption4ZagolovokTextPadding);
+                width: 100%;
+            }
+        }
     }
     .Option1TextColor {
         color: var(--CardOption1TColor);
+        font-size: var(--CardOptionTextTextFont1);
+        div {
+            width: 100%;
+            text-align: var(--CardOption1TextTextAlign);
+            padding: 0 var(--CardOption1TextTextPadding);
+        }
     }
     .Option2TextColor {
         color: var(--CardOption2TColor);
+        font-size: var(--CardOptionTextTextFont2);
+        div {
+            width: 100%;
+            text-align: var(--CardOption2TextTextAlign);
+            padding: 0 var(--CardOption2TextTextPadding);
+        }
     }
     .Option3TextColor {
         color: var(--CardOption3TColor);
+        font-size: var(--CardOptionTextTextFont3);
+        div {
+            width: 100%;
+            text-align: var(--CardOption3TextTextAlign);
+            padding: 0 var(--CardOption3TextTextPadding);
+        }
     }
     .Option4TextColor {
         color: var(--CardOption4TColor);
+        font-size: var(--CardOptionTextTextFont4);
+        div {
+            width: 100%;
+            text-align: var(--CardOption4TextTextAlign);
+            padding: 0 var(--CardOption4TextTextPadding);
+        }
     }
 }

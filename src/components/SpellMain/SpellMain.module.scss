@@ -1,3 +1,4 @@
+
 .Main {
     width: 100%;
     height: 100%;
@@ -10,13 +11,16 @@
     .OptionsSetting {
         position: absolute;
         height: 3vh;
+        width: 3vh;
         right: 2vh;
         top: 2vh;
+        z-index: 3;
     }
     .OptionsSetting:hover {
         cursor: pointer;
     }
     .Options {
+        z-index: 3;
         overflow-y: hidden;
         position: absolute;
         right: 0;
@@ -61,11 +65,14 @@
                 white-space: nowrap;
                 margin-bottom: 1vh;
                 label {
-                    padding: 0vh 0.5vh;
+                    padding: 0.5vh;
                     margin-right: 0.5vh;
                     color: var(--color6);
                     background-color: var(--color1);
                     border: 0.1vh solid var(--color6);
+                    border-radius: 50%;
+                    height: 4vh;
+                    width: 4vh;
                 }
                 input {
                     display: none;
@@ -79,15 +86,35 @@
                     background-color: var(--color4);
                 }
             }
+            .Perepolnen {
+                white-space: pre;
+            }
         }
         ::-webkit-scrollbar {
             width: 0;
             height: 0;
         }
+        .ButtonMinMax {
+            display: flex;
+            justify-content: center;
+            padding: 1vh 0;
+            div {
+                background: var(--color1);
+                border: 0.2vh solid var(--color6);
+                border-radius: 4vh;
+                padding: 0 1vh;
+            }
+            div:hover {
+                cursor: pointer;
+                background: var(--color5)
+            }
+        }
     }
     .RedactorSetting {
+        z-index: 3;
         position: absolute;
         height: 3vh;
+        width: 3vh;
         bottom: 2vh;
         left: 2vh;
     }
@@ -95,6 +122,7 @@
         cursor: pointer;
     }
     .Redactor {
+        z-index: 3;
         position: absolute;
         bottom: 0;
         left: 0;
@@ -213,7 +241,8 @@
         overflow-y: scroll;
         .List{
             margin: 2vh;
-            height: 297mm;
+            margin-right: 14vh;
+            height: 296.5mm;
             width: 210mm;
             background-color: var(--ListColor);
             padding: var(--ListPadding);
@@ -249,6 +278,12 @@
                 height: calc(100% / 1);
             }
         }
+        @media print {
+            .List {
+                margin: 0;
+                break-inside: avoid;
+            }
+        }
         .ListHorisont {
             width: 297mm;
             height: 210mm;
@@ -258,11 +293,67 @@
         padding-bottom: 20vh;
     }
     .ListRigth {
-        padding-right: 50vh;
+        padding-right: 46vh;
     }
-    --ListPadding: 2mm;
-
-    //Colors
+    .ChangeCardViu {
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        height: 8vh;
+        width: 8vh;
+        right: 6vh;
+        top: 1vh;
+        background-color: var(--color1);
+        border: 0.1vh solid var(--color6);
+        border-radius: 2vh;
+        overflow: hidden;
+        .RubahaViu {
+            font-size: 2vh;
+            height: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .RubahaViu:hover {
+            cursor: pointer;
+            background-color: var(--color5);
+        }
+        .OnHover {
+            background-color: var(--color4);
+        }
+    }
+    .OpenOptionViu {
+        right: 52vh;
+    }
+    .NumbersExists {
+        display: flex;
+        align-items: center;
+        padding: 1vh 0;
+        .Exists {
+            background-color: var(--color1);
+            border: 0.1vh solid var(--color6);
+            overflow: hidden;
+            color: transparent;
+            position: relative;
+            div {
+                position: absolute;
+                right: 0.2vh;
+                bottom: 0.2vh;
+                height: 2vh;
+                width: 2vh;
+                background-color: var(--color6);
+            }
+        }
+        .Exists:hover {
+            cursor: pointer;
+            background-color: var(--color5);
+        }
+        p {
+            padding: 0 1vh;
+        }
+    }
     --ListColor: rgb(255, 255, 255);
     --CardColorBackcground: rgb(0, 0, 0);
     --CardZagolovokBackgroundColor: rgb(255, 255, 255);
@@ -291,72 +382,150 @@
     --CardMainBackgroundColor: rgb(255, 255, 255);
     --CardDopBackgroundColor: rgb(255, 255, 255);
     --CardDownTextColor: rgb(255, 255, 255);
-
-    --CardPadding: 7px;
-    --CardBorderWhite: 10px;
-    --CardDownTextSize: 4mm;
-    --CardDownTextFont: 4mm;
-    --CardZagolovokTextSize: 4mm;
-    --CardZagolovokTextFont: 4mm;
-    --CardZagolovokTextPadding: 1mm;
+    --CardZagolovokTextSize: 15px;
+    --CardPer1H: 10px;
+    --CardPer2H: 10px;
+    --CardPer3H: 10px;
+    --CardOptionBorder: 10px;
+    --CardOptionHeigth: 80px;
+    --CardDownTextSize: 20px;
+    --CardZagolovokTextFont: 18px;
+    --CardPer1TextFont: 14px;
+    --CardPer2TextFont: 14px;
+    --CardPer3TextFont: 14px;
+    --CardOptionTextTextFont1: 15px;
+    --CardOptionTextTextFont2: 15px;
+    --CardOptionTextTextFont3: 15px;
+    --CardOptionTextTextFont4: 15px;
+    --CardOptionZagolovokTextFont1: 15px;
+    --CardOptionZagolovokTextFont2: 15px;
+    --CardOptionZagolovokTextFont3: 15px;
+    --CardOptionZagolovokTextFont4: 15px;
+    --CardDownTextFont: 15px;
     --CardZagolovokTextAlign: center;
-    --CardOptionTextTextSize: 4mm;
-    --CardOptionTextTextFont: 4mm;
-    --CardOptionTextTextPadding: 1mm;
-    --CardOptionTextTextAlign: center;
-    --CardOptionZagolovokTextSize: 4mm;
-    --CardOptionZagolovokTextFont: 4mm;
-    --CardOptionZagolovokTextPadding: 1mm;
-    --CardOptionZagolovokTextAlign: center;
-    --CardOptionBorder: 1mm;
-    --CardOptionHeigth: 20mm;
-    --CardPer1H: 3mm;
-    --CardPer2H: 3mm;
-    --CardPer3H: 3mm;
     --CardPer1TextAlign: center;
     --CardPer2TextAlign: center;
     --CardPer3TextAlign: center;
-    --CardPer1TextFont: 3mm;
-    --CardPer2TextFont: 3mm;
-    --CardPer3TextFont: 3mm;
+    --CardOption1ZagolovokTextAlign: center;
+    --CardOption2ZagolovokTextAlign: center;
+    --CardOption3ZagolovokTextAlign: center;
+    --CardOption4ZagolovokTextAlign: center;
+    --CardOption1TextTextAlign: center;
+    --CardOption2TextTextAlign: center;
+    --CardOption3TextTextAlign: center;
+    --CardOption4TextTextAlign: center;
+    --CardMainTextTextAlign: center;
+    --CardDopTextTextAlign: center;
+    --CardDownTextTextAlign: center;
+
+    --ListPadding: 14px;
+    --CardPadding: 14px;
+    --CardZagolovokTextPadding: 1mm;
     --CardPer1TextPadding: 1mm;
     --CardPer2TextPadding: 1mm;
     --CardPer3TextPadding: 1mm;
+    --CardOption1ZagolovokTextPadding: 1mm;
+    --CardOption2ZagolovokTextPadding: 1mm;
+    --CardOption3ZagolovokTextPadding: 1mm;
+    --CardOption4ZagolovokTextPadding: 1mm;
+    --CardOption1TextTextPadding: 1mm;
+    --CardOption2TextTextPadding: 1mm;
+    --CardOption3TextTextPadding: 1mm;
+    --CardOption4TextTextPadding: 1mm;
+    --CardMainTextTextPadding: 1mm;
+    --CardDopTextTextPadding: 1mm;
+    --CardDownTextTextPadding: 1mm;
 
-    // 
-    // --Backcground: rgb(255, 255, 255);
-    // --InCard: rgb(255, 255, 255);
-    // --Text1Card: rgb(0, 0, 0);
-    // --Text2Card: rgb(255, 255, 255);
-    // --Text3Card: rgb(39 152 77);
-    // --Text4Card: rgb(0, 0, 0);
-    // --Text5Card: rgb(0, 0, 0);
-    // --Oblogka1: rgb(39 152 77);
-    // --Oblogka2: rgb(255, 255, 255);
-    // --padding: 2mm;
-    // --small: 54mm;
-    // --big: 63mm;
-    // --h: 296mm;
-    // --w: 210mm;
-    // --keglTitl: 16px;
-    // --keglFon: 9px;
-    // --keglPerem: 9px;
-    // --keglVys: 9px;
-    // --keglOsobTitl: 9px;
-    // --keglOsobText: 9px;
-    // --paddingCard: 10px;
-    // --keglTitleNis: 16px;
-    // --rigthTopV: 25px;
-    // --rigthTopH: 27px;
-    // --leftTopV: 25px;
-    // --leftTopH: 27px;
-    // --rigthDownV: 25px;
-    // --rigthDownH: 27px;
-    // --leftDownV: 25px;
-    // --leftDownH: 27px;
-    // --keglNumber: 60px;
-    // --Num1: rgb(0, 0, 0);
-    // --Num2: rgb(0, 0, 0);
-    // --Num3: rgb(0, 0, 0);
-    // --Num4: rgb(0, 0, 0);
+    --CardZagolovok┌: 1px;
+    --CardZagolovok┐: 1px;
+    --CardZagolovok┘: 1px;
+    --CardZagolovok└: 1px;
+    --CardOption1┌: 1px;
+    --CardOption1┐: 1px;
+    --CardOption1┘: 1px;
+    --CardOption1└: 1px;
+    --CardOption2┌: 1px;
+    --CardOption2┐: 1px;
+    --CardOption2┘: 1px;
+    --CardOption2└: 1px;
+    --CardOption3┌: 1px;
+    --CardOption3┐: 1px;
+    --CardOption3┘: 1px;
+    --CardOption3└: 1px;
+    --CardOption4┌: 1px;
+    --CardOption4┐: 1px;
+    --CardOption4┘: 1px;
+    --CardOption4└: 1px;
+    --CardAllText┌: 1px;
+    --CardAllText┐: 1px;
+    --CardAllText┘: 1px;
+    --CardAllText└: 1px;
+    --CardBorderWhite: 10px;
+    --Rubaha1: rgb(0, 0, 0);
+    --Rubaha2: rgb(255, 255, 255);
+    --Rubaha3: rgb(0, 0, 0);
+    --Rubaha4: rgb(255, 255, 255);
+    --Rubaha5: rgb(255, 25, 25);
+    --Number1: rgb(0, 0, 0);
+    --Number2: rgb(0, 0, 0);
+    --Number3: rgb(0, 0, 0);
+    --Number4: rgb(0, 0, 0);
+    --Number1H: 40px;
+    --Number1V: 40px;
+    --Number2H: 40px;
+    --Number2V: 40px;
+    --Number3H: 40px;
+    --Number3V: 40px;
+    --Number4H: 40px;
+    --Number4V: 40px;
+    --Number1Kegl: 40px;
+    --Number2Kegl: 40px;
+    --Number3Kegl: 40px;
+    --Number4Kegl: 40px;
+    @media print {    
+        .Lists {
+            height: max-content;
+            margin: 0;
+            padding: 0;
+            overflow: auto;
+        }
+        .OptionsSetting {
+            display: none;
+        }
+        .Options {
+            display: none;
+        }
+        .RedactorSetting {
+            display: none;
+        }
+        .Redactor {
+            display: none;
+        }
+    }
+}
+@page {
+    size: A4;
+    margin: 0;
+}
+@media print { 
+    .Main {
+        width: auto;
+        height: max-content;
+        padding: 0;
+    }
+    // .Menu {
+    //     display: none;
+    // }
+    // .AllCards {
+    //     margin: 0px;
+    //     -webkit-print-color-adjust:exact !important;
+    //     print-color-adjust:exact !important;
+    // }
+    // .CardsLine {
+    //     break-inside: avoid;
+    // }
+    ::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
 }

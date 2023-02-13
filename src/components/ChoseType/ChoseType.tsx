@@ -1,6 +1,6 @@
 import React, { Dispatch, SetStateAction, useEffect, useRef, useState } from 'react';
 import style from './ChoseType.module.scss';
-import change from '../../images/Change.svg'
+import { ReactComponent as Change } from '../../images/Change.svg';
 type AlertProps = {
     setChoseType: Dispatch<SetStateAction<number>>;
     choseType: number;
@@ -35,7 +35,7 @@ const ChoseType = ({choseType, setChoseType }: AlertProps): JSX.Element => {
                 <div className={style.Change} onClick={() => {
                     setShowTypes(!showTypes);
                 }}>
-                    <img src={change} alt="->\n<-" />
+                    <Change className={style.IMG} />
                 </div>
                 <div className={style.Chose}>
                     <div className={style.ChoseIn}>
