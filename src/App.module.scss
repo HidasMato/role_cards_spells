@@ -91,3 +91,112 @@
     transform: rotate(360deg);
   }
 }
+@font-face {
+    font-family: "BookerlyBold";
+    src: local("BookerlyBold"),url("./fonts/Bookerly\ Bold.ttf") format("truetype");
+    font-weight: bold;
+}
+@font-face {
+    font-family: "BookerlyBoldItalic";
+    src: local("BookerlyBoldItalic"),url("./fonts/Bookerly\ Bold\ Italic.ttf") format("truetype");
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: "BookerlyDisplayBoldItalic";
+    src: local("BookerlyDisplayBoldItalic"),url("./fonts/Bookerly\ Display\ Bold\ Italic.ttf") format("truetype");
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: "BookerlyDisplayBold";
+    src: local("BookerlyDisplayBold"),url("./fonts/Bookerly\ Display\ Bold.ttf") format("truetype");
+    font-weight: bold;
+}
+@font-face {
+    font-family: "BookerlyDisplayItalic";
+    src: local("BookerlyDisplayItalic"),url("./fonts/Bookerly\ Display\ Italic.ttf") format("truetype");
+    font-style: italic;
+}
+@font-face {
+    font-family: "BookerlyDisplay";
+    src: local("BookerlyDisplay"),url("./fonts/Bookerly\ Display.ttf") format("truetype");
+}
+@font-face {
+    font-family: "BookerlyItalic";
+    src: local("BookerlyItalic"),url("./fonts/Bookerly\ Italic.ttf") format("truetype");
+    font-style: italic;
+}
+@font-face {
+    font-family: "BookerlyLCDItalic";
+    src: local("BookerlyLCDItalic"),url("./fonts/Bookerly\ LCD\ Italic.ttf") format("truetype");
+    font-style: italic;
+}
+@font-face {
+    font-family: "BookerlyLCDLightItalic";
+    src: local("BookerlyLCDLightItalic"),url("./fonts/Bookerly\ LCD \Light\ Italic.ttf") format("truetype");
+    font-style: italic;
+}
+@font-face {
+    font-family: "BookerlyLightItalic";
+    src: local("BookerlyLightItalic"),url("./fonts/Bookerly\ Light\ Italic.ttf") format("truetype");
+    font-style: italic;
+}
+@font-face {
+    font-family: "BookerlyLight";
+    src: local("BookerlyLight"),url("./fonts/Bookerly\ Light.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Bookerly";
+    src: local("Bookerly"),url("./fonts/Bookerly.ttf") format("truetype");
+}
+@font-face {
+    font-family: "EtnaFreeFont";
+    src: local("EtnaFreeFont"),url("./fonts/etna-free-font.otf") format("opentype");
+}
+@font-face {
+    font-family: "GogonoCocoaMochiCyrillic";
+    src: local("GogonoCocoaMochiCyrillic"),url("./fonts/gogono-cocoa-mochi-cyrillic.otf") format("opentype");
+}
+@font-face {
+    font-family: "GULAGPavljenko";
+    src: local("GULAGPavljenko"),url("./fonts/GULAG\ Pavljenko.otf") format("opentype");
+}
+@font-face {
+    font-family: "HellasDustCyrillic";
+    src: local("HellasDustCyrillic"),url("./fonts/HellasDustCyrillic.otf") format("opentype");
+}
+@font-face {
+    font-family: "MorningBreezeBold";
+    src: local("MorningBreezeBold"),url("./fonts/MorningBreeze-Bold.otf") format("opentype");
+    font-weight: bold;
+}
+@font-face {
+    font-family: "MorningBreezeItalic";
+    src: local("MorningBreezeItalic"),url("./fonts/MorningBreeze-Italic.otf") format("opentype");
+    font-style: italic;
+}
+@font-face {
+    font-family: "MorningBreezeLight";
+    src: local("MorningBreezeLight"),url("./fonts/MorningBreeze-Light.otf") format("opentype");
+}
+@font-face {
+    font-family: "MorningBreeze";
+    src: local("MorningBreeze"),url("./fonts/MorningBreeze.otf") format("opentype");
+}
+@font-face {
+    font-family: "OldSoviet";
+    src: local("OldSoviet"),url("./fonts/Old-Soviet.otf") format("opentype");
+}
+@font-face {
+    font-family: "SquareMeal";
+    src: local("SquareMeal"),url("./fonts/Square_Meal_RUS_by_Slavchansky.ttf") format("truetype");
+}
+@font-face {
+    font-family: "ZarubkaTypeRegular";
+    src: local("ZarubkaTypeRegular"),url("./fonts/zarubkaType-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "ZaychikRegular";
+    src: local("ZaychikRegular"),url("./fonts/Zaychik-Regular.ttf") format("truetype");
+}

@@ -1,3 +1,64 @@
+
+.BookerlyBold {
+    font-family: "BookerlyBold";
+}
+.BookerlyBoldItalic {
+    font-family: "BookerlyBoldItalic";
+}
+.BookerlyDisplayBoldItalic {
+    font-family: "BookerlyDisplayBoldItalic";
+}
+.BookerlyDisplay {
+    font-family: "BookerlyDisplay";
+}
+.BookerlyItalic {
+    font-family: "BookerlyItalic";
+}
+.BookerlyLightItalic {
+    font-family: "BookerlyLightItalic";
+}
+.BookerlyLight {
+    font-family: "BookerlyLight";
+}
+.Bookerly {
+    font-family: "Bookerly";
+}
+.EtnaFreeFont {
+    font-family: "EtnaFreeFont";
+}
+.GogonoCocoaMochiCyrillic {
+    font-family: "GogonoCocoaMochiCyrillic";
+}
+.GULAGPavljenko {
+    font-family: "GULAGPavljenko";
+}
+.HellasDustCyrillic {
+    font-family: "HellasDustCyrillic";
+}
+.MorningBreezeBold {
+    font-family: "MorningBreezeBold";
+}
+.MorningBreezeItalic {
+    font-family: "MorningBreezeItalic";
+}
+.MorningBreezeLight {
+    font-family: "MorningBreezeLight";
+}
+.MorningBreeze {
+    font-family: "MorningBreeze";
+}
+.OldSoviet {
+    font-family: "OldSoviet";
+}
+.SquareMeal {
+    font-family: "SquareMeal";
+}
+.ZarubkaTypeRegular {
+    font-family: "ZarubkaTypeRegular";
+}
+.ZaychikRegular {
+    font-family: "ZaychikRegular";
+}
 .BackMain {
     height: 100%;
     width: 100%;
@@ -13,31 +74,47 @@
     .Num1 {
         position: absolute;
         top: var(--Number1V);
-        right: var(--Number1H);
+        left: var(--Number1H);
         font-size: var(--Number1Kegl);
         color: var(--Number1);
     }
     .Num2 {
         position: absolute;
         top: var(--Number2V);
-        right: var(--Number2H);
+        left: var(--Number2H);
         font-size: var(--Number2Kegl);
         color: var(--Number2);
     }
     .Num3 {
         position: absolute;
         top: var(--Number3V);
-        right: var(--Number3H);
+        left: var(--Number3H);
         font-size: var(--Number3Kegl);
         color: var(--Number3);
     }
     .Num4 {
         position: absolute;
         top: var(--Number4V);
-        right: var(--Number4H);
+        left: var(--Number4H);
         font-size: var(--Number4Kegl);
         color: var(--Number4);
     }
+}
+input {
+    background-color: inherit;
+    color: inherit;
+    text-align: inherit;
+    width: inherit;
+    height: inherit;
+}
+textarea {
+    background-color: inherit;
+    color: inherit;
+    text-align: inherit;
+    width: inherit;
+    min-height: calc(100% - var(--CardZagolovokTextSize) - var(--CardPer2H) - var(--CardPer1H) - var(--CardOptionHeigth) - var(--CardDownTextSize));
+    resize: none;
+    outline: none !important;
 }
 .Main {
     line-height: 1;
@@ -66,6 +143,7 @@
         align-items: center;
     }
     .School {
+        width: 100%;
         overflow:hidden;
         height: var(--CardPer1H);
         font-size: var(--CardPer1TextFont);
@@ -219,20 +297,20 @@
     .Options1d1 {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-evenly;
         width: 100%;
         height: calc(25% - var(--CardOptionBorder) / 4 * 3);
     }
     .Options1d2 {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-evenly;
         width: calc(50% - var(--CardOptionBorder) / 2);
     }
     .Options1d4 {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-evenly;
         width: calc(25% - var(--CardOptionBorder) / 4 * 3);
     }
     .OptionText {

@@ -10,8 +10,11 @@ type AlertProps = {
     isBack?: boolean;
     children?: JSX.Element;
     NumbersExist?: boolean[];
+    targetFont: string;
+    myChangesParametrs?: boolean;
+    setPole?: (text: string[]) => void;
 };
-const Card = ({NumbersExist, isBack, keyt, cardType, Pole, minMax, plusPerepolnen, startPerepolnen, children }: AlertProps): JSX.Element => {
+const Card = ({setPole, targetFont, NumbersExist, isBack, keyt, cardType, Pole, minMax, plusPerepolnen, startPerepolnen, children, myChangesParametrs}: AlertProps): JSX.Element => {
     let descriptionMain, descriptionText;
     useEffect(() => {
         descriptionMain = document.getElementById("Card " + keyt);
@@ -31,21 +34,48 @@ const Card = ({NumbersExist, isBack, keyt, cardType, Pole, minMax, plusPerepolne
             }
         }
     }, [startPerepolnen]);
+    const getPole = (num: number) => {
+        if (myChangesParametrs && setPole) {
+            if (num == 11 || num == 13) {
+                return (
+                    <textarea rows={1} value={Pole[num]} wrap='soft' onChange={(e) => { 
+                        const T = [...Pole];
+                        T[num] = e.target.value;
+                        setPole(T);
+                        let kolvo = 0, point=0;
+                        while (point != -1) {
+                            kolvo = kolvo + 1 + Math.floor((T[num].indexOf('\n', point + 1) == -1 ? T[num].length : T[num].indexOf('\n', point + 1)  - point) / 45);
+                            point = T[num].indexOf('\n', point + 1);
+                        }
+                        //e.target.rows = kolvo == 0 ? 1 : kolvo;
+                        e.target.rows = 15;
+                    }} />
+                );
+            }
+            return (
+                <input type="text" value={Pole[num]} onChange={(e) => {
+                    const T = [...Pole];
+                    T[num] = e.target.value;
+                    setPole(T);
+                }} />
+            );
+        } else return (Pole[num]);
+    };
     if (isBack) {
         if (cardType == 0 || cardType == 1 || cardType == 2 || cardType == 3) {
             return (
-                <div className={style.BackMain}>
+                <div className={style.BackMain + ' ' + style[targetFont]}>
                     {children}
-                    {NumbersExist?.[0]? <div className={style.Num1}>{Pole[15]}</div> : null}
-                    {NumbersExist?.[1]? <div className={style.Num2}>{Pole[15]}</div> : null}
-                    {NumbersExist?.[2]? <div className={style.Num3}>{Pole[15]}</div> : null}
-                    {NumbersExist?.[3]? <div className={style.Num4}>{Pole[15]}</div> : null}
+                    {NumbersExist?.[0]? <div className={style.Num1}>{getPole(15)}</div> : null}
+                    {NumbersExist?.[1]? <div className={style.Num2}>{getPole(15)}</div> : null}
+                    {NumbersExist?.[2]? <div className={style.Num3}>{getPole(15)}</div> : null}
+                    {NumbersExist?.[3]? <div className={style.Num4}>{getPole(15)}</div> : null}
                 </div>
             )
         }
         else if (cardType == 4 || cardType == 5 || cardType == 6 || cardType == 7 || cardType == 8 || cardType == 9) {
             return (
-                <div className={style.BackMain}>
+                <div className={style.BackMain + ' ' + style[targetFont]}>
                     {children}
                 </div>
             )
@@ -58,22 +88,22 @@ const Card = ({NumbersExist, isBack, keyt, cardType, Pole, minMax, plusPerepolne
                 <div className={style.Options22}>
                     <div className={style.Options2hor}>
                         <div className={style.Options1d2 + ' ' + style.BcgrOpt1}>
-                            <div className={style.OptionZagolovok}><div>{Pole[2]}</div></div>
-                            <div className={style.OptionText + ' ' + style.Option1TextColor}><div>{Pole[3]}</div></div>
+                            <div className={style.OptionZagolovok}><div>{getPole(2)}</div></div>
+                            <div className={style.OptionText + ' ' + style.Option1TextColor}><div>{getPole(3)}</div></div>
                         </div>
                         <div className={style.Options1d2 + ' ' + style.BcgrOpt2}>
-                            <div className={style.OptionZagolovok}><div>{Pole[4]}</div></div>
-                            <div className={style.OptionText + ' ' + style.Option2TextColor}><div>{Pole[5]}</div></div>
+                            <div className={style.OptionZagolovok}><div>{getPole(4)}</div></div>
+                            <div className={style.OptionText + ' ' + style.Option2TextColor}><div>{getPole(5)}</div></div>
                         </div>
                     </div>
                     <div className={style.Options2hor}>
                         <div className={style.Options1d2 + ' ' + style.BcgrOpt3}>
-                            <div className={style.OptionZagolovok}><div>{Pole[6]}</div></div>
-                            <div className={style.OptionText + ' ' + style.Option3TextColor}><div>{Pole[7]}</div></div>
+                            <div className={style.OptionZagolovok}><div>{getPole(6)}</div></div>
+                            <div className={style.OptionText + ' ' + style.Option3TextColor}><div>{getPole(7)}</div></div>
                         </div>
                         <div className={style.Options1d2 + ' ' + style.BcgrOpt4}>
-                            <div className={style.OptionZagolovok}><div>{Pole[8]}</div></div>
-                            <div className={style.OptionText + ' ' + style.Option4TextColor}><div>{Pole[9]}</div></div>
+                            <div className={style.OptionZagolovok}><div>{getPole(8)}</div></div>
+                            <div className={style.OptionText + ' ' + style.Option4TextColor}><div>{getPole(9)}</div></div>
                         </div>
                     </div>
                 </div>
@@ -83,20 +113,20 @@ const Card = ({NumbersExist, isBack, keyt, cardType, Pole, minMax, plusPerepolne
             return (
                 <div className={style.Options41ver}>
                     <div className={style.Options1d1Line + ' ' + style.BcgrOpt1}>
-                        <div className={style.OptionZagolovok}><div>{Pole[2]}</div></div>
-                        <div className={style.OptionText + ' ' + style.Option1TextColor}><div>{Pole[3]}</div></div>
+                        <div className={style.OptionZagolovok}><div>{getPole(2)}</div></div>
+                        <div className={style.OptionText + ' ' + style.Option1TextColor}><div>{getPole(3)}</div></div>
                     </div>
                     <div className={style.Options1d1Line + ' ' + style.BcgrOpt2}>
-                        <div className={style.OptionZagolovok}><div>{Pole[4]}</div></div>
-                        <div className={style.OptionText + ' ' + style.Option2TextColor}><div>{Pole[5]}</div></div>
+                        <div className={style.OptionZagolovok}><div>{getPole(4)}</div></div>
+                        <div className={style.OptionText + ' ' + style.Option2TextColor}><div>{getPole(5)}</div></div>
                     </div>
                     <div className={style.Options1d1Line + ' ' + style.BcgrOpt3}>
-                        <div className={style.OptionZagolovok}><div>{Pole[6]}</div></div>
-                        <div className={style.OptionText + ' ' + style.Option3TextColor}><div>{Pole[7]}</div></div>
+                        <div className={style.OptionZagolovok}><div>{getPole(6)}</div></div>
+                        <div className={style.OptionText + ' ' + style.Option3TextColor}><div>{getPole(7)}</div></div>
                     </div>
                     <div className={style.Options1d1Line + ' ' + style.BcgrOpt4}>
-                        <div className={style.OptionZagolovok}><div>{Pole[8]}</div></div>
-                        <div className={style.OptionText + ' ' + style.Option4TextColor}><div>{Pole[9]}</div></div>
+                        <div className={style.OptionZagolovok}><div>{getPole(8)}</div></div>
+                        <div className={style.OptionText + ' ' + style.Option4TextColor}><div>{getPole(9)}</div></div>
                     </div>
                 </div>
             );
@@ -105,20 +135,20 @@ const Card = ({NumbersExist, isBack, keyt, cardType, Pole, minMax, plusPerepolne
             return (
                 <div className={style.Options41hor}>
                     <div className={style.Options1d4 + ' ' + style.BcgrOpt1}>
-                        <div className={style.OptionZagolovok}><div>{Pole[2]}</div></div>
-                        <div className={style.OptionText + ' ' + style.Option1TextColor}><div>{Pole[3]}</div></div>
+                        <div className={style.OptionZagolovok}><div>{getPole(2)}</div></div>
+                        <div className={style.OptionText + ' ' + style.Option1TextColor}><div>{getPole(3)}</div></div>
                     </div>
                     <div className={style.Options1d4 + ' ' + style.BcgrOpt2}>
-                        <div className={style.OptionZagolovok}><div>{Pole[4]}</div></div>
-                        <div className={style.OptionText + ' ' + style.Option2TextColor}><div>{Pole[5]}</div></div>
+                        <div className={style.OptionZagolovok}><div>{getPole(4)}</div></div>
+                        <div className={style.OptionText + ' ' + style.Option2TextColor}><div>{getPole(5)}</div></div>
                     </div>
                     <div className={style.Options1d4 + ' ' + style.BcgrOpt3}>
-                        <div className={style.OptionZagolovok}><div>{Pole[6]}</div></div>
-                        <div className={style.OptionText + ' ' + style.Option3TextColor}><div>{Pole[7]}</div></div>
+                        <div className={style.OptionZagolovok}><div>{getPole(6)}</div></div>
+                        <div className={style.OptionText + ' ' + style.Option3TextColor}><div>{getPole(7)}</div></div>
                     </div>
                     <div className={style.Options1d4 + ' ' + style.BcgrOpt4}>
-                        <div className={style.OptionZagolovok}><div>{Pole[8]}</div></div>
-                        <div className={style.OptionText + ' ' + style.Option4TextColor}><div>{Pole[9]}</div></div>
+                        <div className={style.OptionZagolovok}><div>{getPole(8)}</div></div>
+                        <div className={style.OptionText + ' ' + style.Option4TextColor}><div>{getPole(9)}</div></div>
                     </div>
                 </div>
             );
@@ -127,20 +157,20 @@ const Card = ({NumbersExist, isBack, keyt, cardType, Pole, minMax, plusPerepolne
             return (
                 <div className={style.Options14ver}>
                     <div className={style.Options1d1 + ' ' + style.BcgrOpt1}>
-                        <div className={style.OptionZagolovok}><div>{Pole[2]}</div></div>
-                        <div className={style.OptionText + ' ' + style.Option1TextColor}><div>{Pole[3]}</div></div>
+                        <div className={style.OptionZagolovok}><div>{getPole(2)}</div></div>
+                        <div className={style.OptionText + ' ' + style.Option1TextColor}><div>{getPole(3)}</div></div>
                     </div>
                     <div className={style.Options1d1 + ' ' + style.BcgrOpt2}>
-                        <div className={style.OptionZagolovok}><div>{Pole[4]}</div></div>
-                        <div className={style.OptionText + ' ' + style.Option2TextColor}><div>{Pole[5]}</div></div>
+                        <div className={style.OptionZagolovok}><div>{getPole(4)}</div></div>
+                        <div className={style.OptionText + ' ' + style.Option2TextColor}><div>{getPole(5)}</div></div>
                     </div>
                     <div className={style.Options1d1 + ' ' + style.BcgrOpt3}>
-                        <div className={style.OptionZagolovok}><div>{Pole[6]}</div></div>
-                        <div className={style.OptionText + ' ' + style.Option3TextColor}><div>{Pole[7]}</div></div>
+                        <div className={style.OptionZagolovok}><div>{getPole(6)}</div></div>
+                        <div className={style.OptionText + ' ' + style.Option3TextColor}><div>{getPole(7)}</div></div>
                     </div>
                     <div className={style.Options1d1 + ' ' + style.BcgrOpt4}>
-                        <div className={style.OptionZagolovok}><div>{Pole[8]}</div></div>
-                        <div className={style.OptionText + ' ' + style.Option4TextColor}><div>{Pole[9]}</div></div>
+                        <div className={style.OptionZagolovok}><div>{getPole(8)}</div></div>
+                        <div className={style.OptionText + ' ' + style.Option4TextColor}><div>{getPole(9)}</div></div>
                     </div>
                 </div>
             );
@@ -150,79 +180,79 @@ const Card = ({NumbersExist, isBack, keyt, cardType, Pole, minMax, plusPerepolne
                 <div className={style.Options22}>
                     <div className={style.Options2hor}>
                         <div className={style.Options1d2Line + ' ' + style.BcgrOpt1}>
-                            <div className={style.OptionZagolovok}><div>{Pole[2]}</div></div>
-                            <div className={style.OptionText + ' ' + style.Option1TextColor}><div>{Pole[3]}</div></div>
+                            <div className={style.OptionZagolovok}><div>{getPole(2)}</div></div>
+                            <div className={style.OptionText + ' ' + style.Option1TextColor}><div>{getPole(3)}</div></div>
                         </div>
                         <div className={style.Options1d2Line + ' ' + style.BcgrOpt2}>
-                            <div className={style.OptionZagolovok}><div>{Pole[4]}</div></div>
-                            <div className={style.OptionText + ' ' + style.Option2TextColor}><div>{Pole[5]}</div></div>
+                            <div className={style.OptionZagolovok}><div>{getPole(4)}</div></div>
+                            <div className={style.OptionText + ' ' + style.Option2TextColor}><div>{getPole(5)}</div></div>
                         </div>
                     </div>
                     <div className={style.Options2hor}>
                         <div className={style.Options1d2Line + ' ' + style.BcgrOpt3}>
-                            <div className={style.OptionZagolovok}><div>{Pole[6]}</div></div>
-                            <div className={style.OptionText + ' ' + style.Option3TextColor}><div>{Pole[7]}</div></div>
+                            <div className={style.OptionZagolovok}><div>{getPole(6)}</div></div>
+                            <div className={style.OptionText + ' ' + style.Option3TextColor}><div>{getPole(7)}</div></div>
                         </div>
                         <div className={style.Options1d2Line + ' ' + style.BcgrOpt4}>
-                            <div className={style.OptionZagolovok}><div>{Pole[8]}</div></div>
-                            <div className={style.OptionText + ' ' + style.Option4TextColor}><div>{Pole[9]}</div></div>
+                            <div className={style.OptionZagolovok}><div>{getPole(8)}</div></div>
+                            <div className={style.OptionText + ' ' + style.Option4TextColor}><div>{getPole(9)}</div></div>
                         </div>
                     </div>
                 </div>
             );
         };
         if (cardType == 0 || cardType == 1 || cardType == 2 || cardType == 3 || cardType == 6 || cardType == 7 || cardType == 8 || cardType == 9) {
-            return (
-                <div className={style.Main}>
-                    <div className={style.Zagolovok}><div>{Pole[0]}</div></div>
-                    <div className={style.School}>{Pole[1]}</div>
-                    {cardType == 0 ? getOptions12() : null}
-                    {cardType == 2 ? getOptions34() : null}
-                    {cardType == 6 ? getOptions78() : null}
-                    {cardType == 8 ? getOptions910() : null}
-                    {cardType == 0 || cardType == 2 || cardType == 6 || cardType == 8 ? <div className={style.Per1}>{Pole[10]}</div> : null}
-                    <div className={style.AllText} id={"Card " + keyt}>
-                        <div className={style.TextSizeControll} id={"CardControl " + keyt}>
-                            <div className={style.MainText}>{Pole[11]}</div>
-                            {Pole[13] != "" ? 
-                                <div className={style.Dop}>
-                                <div className={style.Per2}>{Pole[12]}</div>
-                                <div className={style.DopText}>{Pole[13]}</div>
-                                    </div>
-                            : null}
-                        </div>
-                    </div>
-                    {cardType == 1 || cardType == 3|| cardType == 7|| cardType == 9 ? <div className={style.Per1}>{Pole[10]}</div> : null}
-                    {cardType == 3 ? getOptions34() : null}
-                    {cardType == 1 ? getOptions12() : null}
-                    {cardType == 7 ? getOptions78() : null}
-                    {cardType == 9 ? getOptions910() : null}
-                    <div className={style.DowtText}><div>{Pole[14]}</div></div>
-                </div>
-            );
-        } else if (cardType == 4 || cardType == 5) {
-            return (
-                <div className={style.Main}>
-                    <div className={style.Zagolovok}><div>{Pole[0]}</div></div>
-                    <div className={style.School}>{Pole[1]}</div>
-                    <div className={style.BigDescription}>
-                        {cardType == 4 ? getOptions56() : null}
-                        {cardType == 4 ? <div className={style.Per1}><div className={style.A}>{Pole[10]}</div></div> : null}
+                return (
+                    <div className={style.Main + ' ' + style[targetFont]}>
+                        <div className={style.Zagolovok}>{getPole(0)}</div>
+                        <div className={style.School}>{getPole(1)}</div>
+                        {cardType == 0 ? getOptions12() : null}
+                        {cardType == 2 ? getOptions34() : null}
+                        {cardType == 6 ? getOptions78() : null}
+                        {cardType == 8 ? getOptions910() : null}
+                        {cardType == 0 || cardType == 2 || cardType == 6 || cardType == 8 ? <div className={style.Per1}>{getPole(10)}</div> : null}
                         <div className={style.AllText} id={"Card " + keyt}>
                             <div className={style.TextSizeControll} id={"CardControl " + keyt}>
-                                <div className={style.MainText}>{Pole[11]}</div>
+                                <div className={style.MainText}>{getPole(11)}</div>
+                                {Pole[13] != "" ? 
+                                    <div className={style.Dop}>
+                                        <div className={style.Per2}>{getPole(12)}</div>
+                                        <div className={style.DopText}>{getPole(13)}</div>
+                                    </div>
+                                : null}
+                            </div>
+                        </div>
+                        {cardType == 1 || cardType == 3|| cardType == 7|| cardType == 9 ? <div className={style.Per1}>{getPole(10)}</div> : null}
+                        {cardType == 3 ? getOptions34() : null}
+                        {cardType == 1 ? getOptions12() : null}
+                        {cardType == 7 ? getOptions78() : null}
+                        {cardType == 9 ? getOptions910() : null}
+                        <div className={style.DowtText}><div>{getPole(14)}</div></div>
+                    </div>
+                );
+        } else if (cardType == 4 || cardType == 5) {
+            return (
+                <div className={style.Main + ' ' + style[targetFont]}>
+                    <div className={style.Zagolovok}><div>{getPole(0)}</div></div>
+                    <div className={style.School}>{getPole(1)}</div>
+                    <div className={style.BigDescription}>
+                        {cardType == 4 ? getOptions56() : null}
+                        {cardType == 4 ? <div className={style.Per1}><div className={style.A}>{getPole(10)}</div></div> : null}
+                        <div className={style.AllText} id={"Card " + keyt}>
+                            <div className={style.TextSizeControll} id={"CardControl " + keyt}>
+                                <div className={style.MainText}>{getPole(11)}</div>
                                 {Pole[13] != "" ? 
                                 <div className={style.Dop}>
-                                <div className={style.Per2}>{Pole[12]}</div>
-                                <div className={style.DopText}>{Pole[13]}</div>
+                                <div className={style.Per2}>{getPole(12)}</div>
+                                <div className={style.DopText}>{getPole(13)}</div>
                                     </div>
                             : null}
                             </div>
                         </div>
-                        {cardType == 5? <div className={style.Per1}>{Pole[10]}</div> : null}
+                        {cardType == 5? <div className={style.Per1}>{getPole(10)}</div> : null}
                         {cardType == 5 ? getOptions56() : null}
                     </div>
-                    <div className={style.DowtText}><div>{Pole[14]}</div></div>
+                    <div className={style.DowtText}><div>{getPole(14)}</div></div>
                 </div>
             );
         }
