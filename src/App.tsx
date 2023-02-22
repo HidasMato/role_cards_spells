@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React, { Dispatch, SetStateAction, useEffect, useRef, useState } from 'react';
+import { ReactComponent as Change } from './images/Change.svg';
 import style from './App.module.scss';
-import ChoseType from './components/ChoseType/ChoseType';
 import SpellMain from './components/SpellMain/SpellMain';
-import SpellCSV from './components/SpellCSV/SpellCSV';
 import { ReactComponent as GH } from './images/GH.svg';
 import { ReactComponent as YD } from './images/YD.svg';
 import { ReactComponent as VK } from './images/VK.svg';
@@ -29,23 +28,42 @@ import './fonts/Zaychik-Regular.ttf';
 
 const App = () => {
     const [choseType, setChoseType] = useState(0);
-    const getWindow = () => {
-        switch (choseType) {
-            case 0: {
-                return <SpellMain />;
+    const [showTypes, setShowTypes] = useState(false);
+    const ref = useRef<HTMLDivElement>(null);
+    useEffect(() => {
+        const checkIfClickedOutside = (e: any) => {
+            if (ref.current && !ref.current.contains(e.target)) {
+                setShowTypes(false);
             }
-            case 1: {
-                return <SpellCSV />;
-            }
-            default: {
-                return <SpellMain />;
-            }
-        }
-    }
+        };
+        document.addEventListener('mousedown', checkIfClickedOutside);
+        return () => {
+            document.removeEventListener('mousedown', checkIfClickedOutside);
+        };
+    }, [showTypes]);
     return (
         <div className={style.Main} id={"App"}>
             <div className={style.Up}>
-                <ChoseType choseType={choseType} setChoseType={setChoseType}  />
+                <div className={style.MainChose} ref={ref}>
+                    <div className={style.Block}>
+                        <div className={style.Change} onClick={() => {
+                            setShowTypes(!showTypes);
+                        }}>
+                            <Change className={style.IMG} />
+                        </div>
+                        <div className={style.Chose}>
+                            <div className={style.ChoseIn}>
+                                {"Заклинания"}
+                            </div>
+                        </div>
+                    </div>
+                    {
+                        showTypes &&
+                        <div className={style.TypesList}>
+                                <div className={style.Type} onClick={() => { setChoseType(0); setShowTypes(false)}}>Заклинания</div>
+                        </div>
+                    }
+                </div>
                 <div className={style.Slk}>
                     <a href=""><VK className={style.Icon1}/></a>
                     <a href=""><GH className={style.Icon2}/></a>
@@ -53,7 +71,7 @@ const App = () => {
                 </div>
             </div>
             <div className={style.Window}>
-                {getWindow()}
+                <SpellMain />
             </div>
         </div>
     );

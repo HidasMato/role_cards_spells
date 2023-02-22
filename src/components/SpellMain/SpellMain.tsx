@@ -86,17 +86,17 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
     const alignNames = ["--CardZagolovokTextAlign", "--CardPer1TextAlign", "--CardPer2TextAlign", "--CardPer3TextAlign", "--CardOption1ZagolovokTextAlign", "--CardOption2ZagolovokTextAlign", "--CardOption3ZagolovokTextAlign", "--CardOption4ZagolovokTextAlign", "--CardOption1TextTextAlign", "--CardOption2TextTextAlign", "--CardOption3TextTextAlign", "--CardOption4TextTextAlign", "--CardMainTextTextAlign", "--CardDopTextTextAlign", "--CardDownTextTextAlign"];
     const paddingNames = ["--CardZagolovokTextPadding", "--CardPer1TextPadding", "--CardPer2TextPadding", "--CardPer3TextPadding", "--CardOption1ZagolovokTextPadding", "--CardOption2ZagolovokTextPadding", "--CardOption3ZagolovokTextPadding", "--CardOption4ZagolovokTextPadding", "--CardOption1TextTextPadding", "--CardOption2TextTextPadding", "--CardOption3TextTextPadding", "--CardOption4TextTextPadding", "--CardMainTextTextPadding", "--CardDopTextTextPadding", "--CardDownTextTextPadding", "--ListPadding", "--CardPadding", "--", "--", "--", "--", "--", "--", "--"];
     const bordwrRadiusNames = ["--CardZagolovok┌", "--CardZagolovok┐", "--CardZagolovok┘", "--CardZagolovok└", "--CardOption1┌", "--CardOption1┐", "--CardOption1┘", "--CardOption1└", "--CardOption2┌", "--CardOption2┐", "--CardOption2┘", "--CardOption2└", "--CardOption3┌", "--CardOption3┐", "--CardOption3┘", "--CardOption3└", "--CardOption4┌", "--CardOption4┐", "--CardOption4┘", "--CardOption4└", "--CardAllText┌", "--CardAllText┐", "--CardAllText┘", "--CardAllText└", "--", "--", "--", "--", "--", "--", "--", "--", "--", "--", "--", "--", "--", "--", "--", "--", "--", "--", "--", "--", "--", "--", "--", "--", "--", "--", "--", "--"];
-    const [blockColor, setBlockColor] = useState([false, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, false, false, false, false, false, false, true, true, true, true]);
+    const [blockColor, setBlockColor] = useState([false, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, false, false, false, true, true, true, true, true]);
     const [blockSizePole, setBlockSizePole] = useState([false, false, true, true, false, false, false, false, false, false, false, false, false, false]);
-    const [blockSizeText, setBlockSizeText] = useState([false, false, true, true, false, true, true, true, true, true, true, true, true, false, false, false, false, false, false, false, false, false, false, false]);
+    const [blockSizeText, setBlockSizeText] = useState([false, false, true, true, false, true, true, true, false, true, true, true, true, false, false, false, false, false, false, false, false, false, false, false]);
     const [blockPaddingText, setBlockPaddingText] = useState([false, false, true, true, false, true, true, true, true, true, true, true, false, true, true, false, false, false, true, true, true, true, true, true, true, true, true, false]);
     const [blockAlignValue, setBlockAlignValue] = useState([false, false, true, true, false, true, true, true, true, true, true, true, false, true, false, false, false, false, false, false, false, false, false, false, false]);
     const [blockBorderRadius, setBlockBorderRadius] = useState([false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]);
     const [sizePole, setSizesPole] = useState([18,15,15,15,80,2,15]);
-    const [minMax, setMinMax] = useState([10, 13]);
+    const [minMax, setMinMax] = useState([8, 12]);
     const [blockMinMax, setBlockMinMax] = useState(false);
-    const [sizeText, setSizesText] = useState([14, 11, 11, 11, 10, 10, 10, 10, 14, 14, 14, 14, 14, 20, 5, 200, 5, 200, 264, 20, 264, 70, 70, 70, 70]);
-    const [paddingText, setPaddingText] = useState([4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 2, 2, 4, 10, 9]);
+    const [sizeText, setSizesText] = useState([14, 11, 11, 11, 10, 10, 10, 10, 11, 11, 11, 11, 14, 20, 5, 200, 5, 200, 264, 20, 264, 70, 70, 70, 70]);
+    const [paddingText, setPaddingText] = useState([2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 10, 9]);
     const [alignValue, setAlignValue] = useState([2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 1]);
     const [borderRadiusValue, setBorderRadiusValue] = useState([11, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 11]);
     const [kolvo, setKolvo] = useState(3);
@@ -111,6 +111,7 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
     const [targetFont1, setTargetFont1] = useState(7);
     const [targetFont2, setTargetFont2] = useState(7);
     const [isCSVRedactor, setIsCSVRedactor] = useState(false);
+    const [settingString, setSettingString] = useState("");
     const setTarget = (a: number, b: boolean) => {
         const M = [];
         for (let i = 0; i < targetOption.length; i++) M[i] = false;
@@ -120,6 +121,23 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
     const setKolv = (a: number) => {
         setKolvo(a);
     };
+    useEffect(() => {
+        let r = '';
+        for (let i = 0; i < colors.length; i++) r = r + colors[i] + ',';
+        for (let i = 0; i < sizePole.length; i++) r = r + sizePole[i] + ',';
+        for (let i = 0; i < minMax.length; i++) r = r + minMax[i] + ',';
+        for (let i = 0; i < sizeText.length; i++) r = r + sizeText[i] + ',';
+        for (let i = 0; i < paddingText.length; i++) r = r + paddingText[i] + ',';
+        for (let i = 0; i < alignValue.length; i++) r = r + alignValue[i] + ',';
+        for (let i = 0; i < borderRadiusValue.length; i++) r = r + borderRadiusValue[i] + ',';
+        r = r + kolvo + ',';
+        r = r + targetBackgroundNumber + ',';
+        r = r + targetTypeCardNumber + ',';
+        for (let i = 0; i < myNumbers.length; i++) r = r + myNumbers[i] + ',';
+        r = r + targetFont1 + ',';
+        r = r + targetFont2 + ',';
+        setSettingString(r);
+    }, [colors, sizePole, minMax, sizeText, paddingText, alignValue, borderRadiusValue, kolvo, targetBackgroundNumber, targetTypeCardNumber, myNumbers, targetFont1, targetFont2]);
     useEffect(() => {
         let Car :string[] = [];
         getCardFromCSVLine(newCSV, Car, 0, newCSV.length - 1, '');
@@ -401,7 +419,7 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                         flag = false;
                         perText = "Переполнение в: ";
                     }
-                    perText = perText + '\n' + (i == 0 ? 'Тестовой карточке' : cards[i + 1][0]);
+                    perText = perText + '\n' + (i == 0 ? 'Тестовой карточке' : cards[i - 1][0]);
                 }
             setPerepolnenText(perText);
         }
@@ -684,6 +702,83 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
             <div className={style.Options + ' ' + (showOptions ? '' : style.HideWindow)}>
                 <div className={style.Hide}> <div className={style.Text} onClick={() => { setShowOptions(false); }}>Скрыть</div> </div>
                 <div className={style.OpionsCase}>
+                    <input className={style.MyOptionSetting} type="text" value={settingString} onChange={(e) => {
+                        let points = 0, pointe = -1;
+                        const r: string = e.target.value;
+                        let colorsN = [''];
+                        for (let i = 0; i < colors.length; i++) {
+                            points = pointe + 1;
+                            pointe = r.indexOf(',', points);
+                            colorsN[i] =r.slice(points, pointe);
+                        }
+                        setColors(colorsN);
+                        let sizePoleN: number[] = [];
+                        for (let i = 0; i < sizePole.length; i++) {
+                            points = pointe + 1;
+                            pointe = r.indexOf(',', points);
+                            sizePoleN[i] =Number(r.slice(points, pointe));
+                        }
+                        setSizesPole(sizePoleN);
+                        let minMaxN: number[] = [];
+                        for (let i = 0; i < minMax.length; i++) {
+                            points = pointe + 1;
+                            pointe = r.indexOf(',', points);
+                            minMaxN[i] =Number(r.slice(points, pointe));
+                        }
+                        setMinMax(minMaxN);
+                        let sizeTextN: number[] = [];
+                        for (let i = 0; i < sizeText.length; i++) {
+                            points = pointe + 1;
+                            pointe = r.indexOf(',', points);
+                            sizeTextN[i] =Number(r.slice(points, pointe));
+                        }
+                        setSizesText(sizeTextN);
+                        let paddingTextN: number[] = [];
+                        for (let i = 0; i < paddingText.length; i++) {
+                            points = pointe + 1;
+                            pointe = r.indexOf(',', points);
+                            paddingTextN[i] =Number(r.slice(points, pointe));
+                        }
+                        setPaddingText(paddingTextN);
+                        let alignValueN: number[] = [];
+                        for (let i = 0; i < alignValue.length; i++) {
+                            points = pointe + 1;
+                            pointe = r.indexOf(',', points);
+                            alignValueN[i] =Number(r.slice(points, pointe));
+                        }
+                        setAlignValue(alignValueN);
+                        let borderRadiusValueN: number[] = [];
+                        console.log(borderRadiusValue);
+                        for (let i = 0; i < borderRadiusValue.length; i++) {
+                            points = pointe + 1;
+                            pointe = r.indexOf(',', points);
+                            borderRadiusValueN[i] =Number(r.slice(points, pointe));
+                            console.log(r.slice(points, pointe));
+                        }
+                        setBorderRadiusValue(borderRadiusValueN);
+                        points = pointe + 1;
+                        pointe = r.indexOf(',', points);
+                        setKolvo(Number(r.slice(points, pointe)));
+                        points = pointe + 1;
+                        pointe = r.indexOf(',', points);
+                        setTargetBackgroundNumber(Number(r.slice(points, pointe)));
+                        points = pointe + 1;
+                        pointe = r.indexOf(',', points);
+                        setTargetTypeCardNumber(Number(r.slice(points, pointe)));
+                        let myNumbersN: boolean[] = [];
+                        for (let i = 0; i < myNumbers.length; i++) {
+                            points = pointe + 1;
+                            pointe = r.indexOf(',', points);
+                            myNumbersN[i] = r.slice(points, pointe) == 'true' ? true : false;
+                        }
+                        setMyNumbers(myNumbersN);
+                        points = pointe + 1;
+                        pointe = r.indexOf(',', points);
+                        setTargetFont1(Number(r.slice(points, pointe)));
+                        points = pointe + 1;
+                        pointe = r.indexOf(',', points);
+                        setTargetFont2(Number(r.slice(points, pointe)));
+                    }} />
                     <OptionCase nameSetting={'Вид карточек'} targetThis={targetOption[0]} setTarget={setTarget} number={0}>
                         <>
                             <div className={style.LineSetting}>

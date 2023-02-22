@@ -20,6 +20,12 @@
         cursor: pointer;
     }
     .Options {
+        ::selection {
+            background: #704c35;
+        }
+        ::-moz-selection {
+            background: #704c35;
+        }
         z-index: 3;
         overflow-y: hidden;
         position: absolute;
@@ -49,6 +55,23 @@
             display: flex;
             align-items: center;
             flex-direction: column;
+            .MyOptionSetting {
+                width: 100%;
+                min-height: 5vh;
+                max-height: 5vh;
+                bottom: 0;
+                background-color: var(--color1);
+                color: var(--color6);
+                margin-bottom: 1vh;
+                border: 0.1vh solid var(--color6);
+                border-radius: 2vh;
+                font-size: 2vh;
+            }
+            .MyOptionSetting:focus {
+                margin-bottom: 1vh;
+                outline-width: 0;
+                background-color: var(--color4);
+            }
             .FontChose {
                 input {
                     width: 6vh;
@@ -137,6 +160,12 @@
         cursor: pointer;
     }
     .RedactorAll {
+        ::selection {
+            background: #704c35;
+        }
+        ::-moz-selection {
+            background: #704c35;
+        }
         z-index: 3;
         position: absolute;
         bottom: 0;
@@ -353,6 +382,12 @@
         padding-right: 54vh;
     }
     .AroundTwoCards {
+        ::selection {
+            background: #704c35;
+        }
+        ::-moz-selection {
+            background: #704c35;
+        }
         height: 100%;
         width: 100%;
         overflow-y: scroll;
@@ -374,6 +409,12 @@
         }
     }
     .Viu {
+        ::selection {
+            background: #704c35;
+        }
+        ::-moz-selection {
+            background: #704c35;
+        }
         position: absolute;
         z-index: 3;
         right: 6vh;
@@ -585,10 +626,13 @@
         .RedactorSetting {
             display: none;
         }
-        .RedactorCase {
+        .RedactorAll {
             display: none;
         }
         .ChangeCardViu {
+            display: none;
+        }
+        .Viu {
             display: none;
         }
     }
