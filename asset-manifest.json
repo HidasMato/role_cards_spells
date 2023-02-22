@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/role_cards/static/css/main.c6d2f7aa.css",
-    "main.js": "/role_cards/static/js/main.19a8cf32.js",
+    "main.css": "/role_cards/static/css/main.f4478c8f.css",
+    "main.js": "/role_cards/static/js/main.f3de54ad.js",
     "static/media/Волк.svg": "/role_cards/static/media/Волк.a58ab45a39fb7867c23367c14fe59222.svg",
     "static/media/Zaychik-Regular.ttf": "/role_cards/static/media/Zaychik-Regular.173a33b768ea315638ad.ttf",
     "static/media/MorningBreeze-Light.otf": "/role_cards/static/media/MorningBreeze-Light.823ad7a2f9b297e86b3b.otf",
@@ -91,11 +91,11 @@
     "static/media/Download.svg": "/role_cards/static/media/Download.439d90428e9ea3005c18ab6fa9b8a87e.svg",
     "static/media/Change.svg": "/role_cards/static/media/Change.d2ee68cc10dd187f05c77dcb242a8ce6.svg",
     "index.html": "/role_cards/index.html",
-    "main.c6d2f7aa.css.map": "/role_cards/static/css/main.c6d2f7aa.css.map",
-    "main.19a8cf32.js.map": "/role_cards/static/js/main.19a8cf32.js.map"
+    "main.f4478c8f.css.map": "/role_cards/static/css/main.f4478c8f.css.map",
+    "main.f3de54ad.js.map": "/role_cards/static/js/main.f3de54ad.js.map"
   },
   "entrypoints": [
-    "static/css/main.c6d2f7aa.css",
-    "static/js/main.19a8cf32.js"
+    "static/css/main.f4478c8f.css",
+    "static/js/main.f3de54ad.js"
   ]
 }
