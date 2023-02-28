@@ -88,7 +88,7 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
     const bordwrRadiusNames = ["--CardZagolovok┌", "--CardZagolovok┐", "--CardZagolovok┘", "--CardZagolovok└", "--CardOption1┌", "--CardOption1┐", "--CardOption1┘", "--CardOption1└", "--CardOption2┌", "--CardOption2┐", "--CardOption2┘", "--CardOption2└", "--CardOption3┌", "--CardOption3┐", "--CardOption3┘", "--CardOption3└", "--CardOption4┌", "--CardOption4┐", "--CardOption4┘", "--CardOption4└", "--CardAllText┌", "--CardAllText┐", "--CardAllText┘", "--CardAllText└", "--", "--", "--", "--", "--", "--", "--", "--", "--", "--", "--", "--", "--", "--", "--", "--", "--", "--", "--", "--", "--", "--", "--", "--", "--", "--", "--", "--"];
     const [blockColor, setBlockColor] = useState([false, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, false, false, false, true, true, true, true, true]);
     const [blockSizePole, setBlockSizePole] = useState([false, false, true, true, false, false, false, false, false, false, false, false, false, false]);
-    const [blockSizeText, setBlockSizeText] = useState([false, false, true, true, false, true, true, true, false, true, true, true, true, false, false, false, false, false, false, false, false, false, false, false]);
+    const [blockSizeText, setBlockSizeText] = useState([false, false, true, true, false, true, true, true, false, true, true, true, true, false, false, false, false, false, false, false, false, false, true, true, true]);
     const [blockPaddingText, setBlockPaddingText] = useState([false, false, true, true, false, true, true, true, true, true, true, true, false, true, true, false, false, false, true, true, true, true, true, true, true, true, true, false]);
     const [blockAlignValue, setBlockAlignValue] = useState([false, false, true, true, false, true, true, true, true, true, true, true, false, true, false, false, false, false, false, false, false, false, false, false, false]);
     const [blockBorderRadius, setBlockBorderRadius] = useState([false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]);
@@ -100,7 +100,7 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
     const [alignValue, setAlignValue] = useState([2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 1]);
     const [borderRadiusValue, setBorderRadiusValue] = useState([11, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 11]);
     const [kolvo, setKolvo] = useState(3);
-    const [targetBackgroundNumber, setTargetBackgroundNumber] = useState(1);
+    const [targetBackgroundNumber, setTargetBackgroundNumber] = useState(5);
     const [targetTypeCardNumber, setTargetTypeCardNumber] = useState(0);
     const perepolnen: boolean[] = [];
     const [perepolnenText, setPerepolnenText] = useState('');
@@ -844,6 +844,7 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                             <OptionColor text={"Фон доп текста"} textAs={"Как главный"} color={colors[24]} number={24} setColor={setColor} block={blockColor[24]} setBlock={setBlocColor} name={colorsNames[24]} />
                             <OptionColor text={"Доп текст"} textAs={"Как главный"} color={colors[25]} number={25} setColor={setColor} block={blockColor[25]} setBlock={setBlocColor} name={colorsNames[25]} />
                             <OptionColor text={"Текст подписи"} textAs={"Как фон заголовка"} color={colors[26]} number={26} setColor={setColor} block={blockColor[26]} setBlock={setBlocColor} name={colorsNames[26]} />
+                            <OptionColor text={"Фон листа"} textAs={"Как рубаха 1"} color={colors[27]} number={27} setColor={setColor} block={blockColor[27]} setBlock={setBlocColor} name={colorsNames[27]} />
                         </div>
                     </OptionCase>
                     <OptionCase nameSetting={'Размеры полей'} targetThis={targetOption[3]} setTarget={setTarget} number={3}>
@@ -1082,13 +1083,13 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                             <div className={style.NumbersExists}><div className={style.Exists} onClick={() => {setMyNumbers([myNumbers[0],myNumbers[1],!myNumbers[2],myNumbers[3]])}}> {"___"} {myNumbers[2] && <div/>}</div> <p>{"Цифра 3"}</p> </div>
                             <div className={style.NumbersExists}><div className={style.Exists} onClick={() => { setMyNumbers([myNumbers[0], myNumbers[1], myNumbers[2], !myNumbers[3]]) }}> {"___"} {myNumbers[3] && <div />}</div> <p>{"Цифра 4"}</p> </div>
                             <div className={style.FontChose}><div>№ <input type="number" name="" id="" value={targetFont2} min={0} max={19} onChange={(e)=>{setTargetFont2(Number(e.target.value))}} />{"Шрифта "}</div>{fontMas[targetFont2]}</div>
-                            <OptionSize text={"Цифра 1 горизонталь"} size={sizeText[13]} number={13} setSize={setSizeText} min={-100} max={750/kolvo} block={blockSizeText[13]} setBlock={setBlocSizeText} />
+                            <OptionSize text={"Цифра 1 горизонталь"} size={sizeText[13]} number={13} setSize={setSizeText} min={-100} max={996/kolvo} block={blockSizeText[13]} setBlock={setBlocSizeText} />
                             <OptionSize text={"Цифра 1 вертикаль"} size={sizeText[14]} number={14} setSize={setSizeText} min={-100} max={996/kolvo} block={blockSizeText[14]} setBlock={setBlocSizeText} />
-                            <OptionSize text={"Цифра 2 горизонталь"} size={sizeText[15]} number={15} setSize={setSizeText} min={-100} max={750/kolvo} block={blockSizeText[15]} setBlock={setBlocSizeText} />
+                            <OptionSize text={"Цифра 2 горизонталь"} size={sizeText[15]} number={15} setSize={setSizeText} min={-100} max={996/kolvo} block={blockSizeText[15]} setBlock={setBlocSizeText} />
                             <OptionSize text={"Цифра 2 вертикаль"} size={sizeText[16]} number={16} setSize={setSizeText} min={-100} max={996/kolvo} block={blockSizeText[16]} setBlock={setBlocSizeText} />
-                            <OptionSize text={"Цифра 3 горизонталь"} size={sizeText[17]} number={17} setSize={setSizeText} min={-100} max={750/kolvo} block={blockSizeText[17]} setBlock={setBlocSizeText} />
+                            <OptionSize text={"Цифра 3 горизонталь"} size={sizeText[17]} number={17} setSize={setSizeText} min={-100} max={996/kolvo} block={blockSizeText[17]} setBlock={setBlocSizeText} />
                             <OptionSize text={"Цифра 3 вертикаль"} size={sizeText[18]} number={18} setSize={setSizeText} min={-100} max={996/kolvo} block={blockSizeText[18]} setBlock={setBlocSizeText} />
-                            <OptionSize text={"Цифра 4 горизонталь"} size={sizeText[19]} number={19} setSize={setSizeText} min={-100} max={750/kolvo} block={blockSizeText[19]} setBlock={setBlocSizeText} />
+                            <OptionSize text={"Цифра 4 горизонталь"} size={sizeText[19]} number={19} setSize={setSizeText} min={-100} max={996/kolvo} block={blockSizeText[19]} setBlock={setBlocSizeText} />
                             <OptionSize text={"Цифра 4 вертикаль"} size={sizeText[20]} number={20} setSize={setSizeText} min={-100} max={996/kolvo} block={blockSizeText[20]} setBlock={setBlocSizeText} />
                             <OptionSize text={"Цифра 1 размер"} size={sizeText[21]} number={21} setSize={setSizeText} min={0} max={300} block={blockSizeText[21]} setBlock={setBlocSizeText} />
                             <OptionSize text={"Цифра 2 размер"} textAs={"Как цифра 1"} size={sizeText[22]} number={22} setSize={setSizeText} min={0} max={300} block={blockSizeText[22]} setBlock={setBlocSizeText} />
@@ -1188,8 +1189,29 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                     ? <div className={style.Lists + ' ' + (showRedactor ? style.ListDown : '') + ' ' + (showOptions ? style.ListRigth : '')}> {getCards()} </div>
                     : <div className={style.AroundTwoCards}>
                         <div className={style.TwoCards}>
-                            <div className={style.OneCard + ' ' + (targetTypeCardNumber == 0 ||targetTypeCardNumber == 1 ||targetTypeCardNumber == 2 ||targetTypeCardNumber == 3 ? null : style.Horisont)}><CardSpell targetFont={String(fontMas[targetFont1])} startPerepolnen={startPerepolnen} keyt={-1} plusPerepolnen={plusPerepolnen} minMax={minMax} cardType={targetTypeCardNumber} Pole={newCard} myChangesParametrs={true} setPole={setPoles}/></div>
-                            <div className={style.OneCard + ' ' + (targetTypeCardNumber == 0 ||targetTypeCardNumber == 1 ||targetTypeCardNumber == 2 ||targetTypeCardNumber == 3 ? null : style.Horisont)}><CardSpell targetFont={String(fontMas[targetFont2])} NumbersExist={myNumbers} isBack={true} keyt={-1} cardType={targetTypeCardNumber} Pole={newCard} myChangesParametrs={true} setPole={setPoles}>{getBackCardImg(newCard[16])}</CardSpell></div>
+                            <div className={style.OneCard + ' ' + (targetTypeCardNumber == 0 ||targetTypeCardNumber == 1 ||targetTypeCardNumber == 2 ||targetTypeCardNumber == 3 ? null : style.Horisont)}><CardSpell targetFont={String(fontMas[targetFont1])} startPerepolnen={startPerepolnen} keyt={-1} plusPerepolnen={plusPerepolnen} minMax={minMax} cardType={targetTypeCardNumber} Pole={newCard} setPole={setPoles}/></div>
+                            <div className={style.OneCard + ' ' + (targetTypeCardNumber == 0 ||targetTypeCardNumber == 1 ||targetTypeCardNumber == 2 ||targetTypeCardNumber == 3 ? null : style.Horisont)}><CardSpell targetFont={String(fontMas[targetFont2])} NumbersExist={myNumbers} isBack={true} keyt={-1} cardType={targetTypeCardNumber} Pole={newCard} setPole={setPoles}>{getBackCardImg(newCard[16])}</CardSpell></div>
+                            <div className={style.CardSelection}>
+                                <div>
+                                    <input placeholder='Заголовок' type="text" value={newCard[0]} onChange={(e) => { const A = newCard; A[0] = e.target.value;  setPoles(A)}} />
+                                    <input placeholder='Школа-уровень' type="text" value={newCard[1]} onChange={(e) => { const A = newCard; A[1] = e.target.value;  setPoles(A)}} />
+                                    <input placeholder='Опция 1' type="text" value={newCard[2]} onChange={(e) => { const A = newCard; A[2] = e.target.value;  setPoles(A)}} />
+                                    <input placeholder='Текст опции 1' type="text" value={newCard[3]} onChange={(e) => { const A = newCard; A[3] = e.target.value;  setPoles(A)}} />
+                                    <input placeholder='Опция 2' type="text" value={newCard[4]} onChange={(e) => { const A = newCard; A[4] = e.target.value;  setPoles(A)}} />
+                                    <input placeholder='Текст опции 2' type="text" value={newCard[5]} onChange={(e) => { const A = newCard; A[5] = e.target.value;  setPoles(A)}} />
+                                    <input placeholder='Опция 3' type="text" value={newCard[6]} onChange={(e) => { const A = newCard; A[6] = e.target.value;  setPoles(A)}} />
+                                    <input placeholder='Текст опции 3' type="text" value={newCard[7]} onChange={(e) => { const A = newCard; A[7] = e.target.value;  setPoles(A)}} />
+                                    <input placeholder='Опция 4' type="text" value={newCard[8]} onChange={(e) => { const A = newCard; A[8] = e.target.value;  setPoles(A)}} />
+                                    <input placeholder='Текст опции 4' type="text" value={newCard[9]} onChange={(e) => { const A = newCard; A[9] = e.target.value;  setPoles(A)}} />
+                                    <input placeholder='///' type="text" value={newCard[10]} onChange={(e) => { const A = newCard; A[10] = e.target.value;  setPoles(A)}} />
+                                    <textarea placeholder='Главный текст' rows={6} value={newCard[11]} onChange={(e) => { const A = newCard; A[11] = e.target.value;  setPoles(A)}} />
+                                    <input placeholder='На более высоком уровне' type="text" value={newCard[12]} onChange={(e) => { const A = newCard; A[12] = e.target.value;  setPoles(A)}} />
+                                    <textarea placeholder='Доп текст' rows={6} value={newCard[13]} onChange={(e) => { const A = newCard; A[13] = e.target.value;  setPoles(A)}} />
+                                    <input placeholder='Подпись' type="text" value={newCard[14]} onChange={(e) => { const A = newCard; A[14] = e.target.value;  setPoles(A)}} />
+                                    <input placeholder='Номер на рубахе' type="text" value={newCard[15]} onChange={(e) => { const A = newCard; A[15] = e.target.value;  setPoles(A)}} />
+                                    <input placeholder='Номер рубахи' type="text" value={newCard[16]} onChange={(e) => { const A = newCard; A[16] = e.target.value;  setPoles(A)}} />
+                                </div>
+                            </div>
                         </div>
                     </div>
             }

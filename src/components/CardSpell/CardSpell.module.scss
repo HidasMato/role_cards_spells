@@ -100,6 +100,18 @@
         color: var(--Number4);
     }
 }
+.Round {
+    svg {
+        transform: rotate(90deg);
+        transform-origin: 0% 0%;
+        position: absolute;
+        top: 0;
+        left: calc((297mm - 2 * var(--ListPadding)) / var(--h));
+        width: calc((210mm - 2 * var(--ListPadding)) / var(--w));
+        height: calc((297mm - 2 * var(--ListPadding)) / var(--h));
+        
+    }
+}
 input {
     background-color: inherit;
     color: inherit;

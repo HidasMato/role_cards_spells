@@ -406,6 +406,43 @@
                 height: calc((210mm - var(--ListPadding) * 2 ) / var(--h));
                 width: calc((296.5mm - var(--ListPadding) * 2 ) / var(--w));
             }
+            .CardSelection {
+                margin-left: calc(2vh + var(--ListPadding) );
+                width: 40vh;
+                height: max-content;
+                background-color: var(--color1);
+                border: 0.1vh solid var(--color6);
+                border-radius: 2vh;
+                padding:1vh;
+                font-size: 2vh;
+                div {
+                    height: max-content;
+                    background-color: var(--color3);
+                    border: 0.1vh solid var(--color6);
+                    border-radius: 2vh;
+                    width: 100%;
+                    padding: 1vh;
+                    input, textarea {
+                        width: 100%;
+                        background-color: var(--color1);
+                        border-radius: 2vh;
+                        margin-bottom: 0.5vh;
+                        padding: 0 0.5vh;
+                    }
+                    ::-webkit-input-placeholder {
+                        color: var(--color3);
+                    }
+                    input:hover, textarea:hover {
+                        cursor: pointer;
+                        background-color: var(--color5);
+                    }
+                    input:active, textarea:active {
+                        cursor: pointer;
+                        background-color: var(--color4);
+                    }
+                    
+                }
+            }
         }
     }
     .Viu {
@@ -616,6 +653,9 @@
             margin: 0;
             padding: 0;
             overflow: auto;
+        }
+        .CardSelection {
+            display: none;
         }
         .OptionsSetting {
             display: none;

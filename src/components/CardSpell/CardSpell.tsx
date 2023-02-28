@@ -11,10 +11,9 @@ type AlertProps = {
     children?: JSX.Element;
     NumbersExist?: boolean[];
     targetFont: string;
-    myChangesParametrs?: boolean;
     setPole?: (text: string[]) => void;
 };
-const Card = ({setPole, targetFont, NumbersExist, isBack, keyt, cardType, Pole, minMax, plusPerepolnen, startPerepolnen, children, myChangesParametrs}: AlertProps): JSX.Element => {
+const Card = ({setPole, targetFont, NumbersExist, isBack, keyt, cardType, Pole, minMax, plusPerepolnen, startPerepolnen, children}: AlertProps): JSX.Element => {
     let descriptionMain, descriptionText;
     useEffect(() => {
         descriptionMain = document.getElementById("Card " + keyt);
@@ -35,31 +34,7 @@ const Card = ({setPole, targetFont, NumbersExist, isBack, keyt, cardType, Pole, 
         }
     }, [startPerepolnen]);
     const getPole = (num: number) => {
-        if (myChangesParametrs && setPole) {
-            if (num == 11 || num == 13) {
-                return (
-                    <textarea rows={1} value={Pole[num]} wrap='soft' onChange={(e) => { 
-                        const T = [...Pole];
-                        T[num] = e.target.value;
-                        setPole(T);
-                        let kolvo = 0, point=0;
-                        while (point != -1) {
-                            kolvo = kolvo + 1 + Math.floor((T[num].indexOf('\n', point + 1) == -1 ? T[num].length : T[num].indexOf('\n', point + 1)  - point) / 45);
-                            point = T[num].indexOf('\n', point + 1);
-                        }
-                        //e.target.rows = kolvo == 0 ? 1 : kolvo;
-                        e.target.rows = 15;
-                    }} />
-                );
-            }
-            return (
-                <input type="text" value={Pole[num]} onChange={(e) => {
-                    const T = [...Pole];
-                    T[num] = e.target.value;
-                    setPole(T);
-                }} />
-            );
-        } else return (Pole[num]);
+        return (Pole[num]);
     };
     if (isBack) {
         if (cardType == 0 || cardType == 1 || cardType == 2 || cardType == 3) {
@@ -75,8 +50,12 @@ const Card = ({setPole, targetFont, NumbersExist, isBack, keyt, cardType, Pole, 
         }
         else if (cardType == 4 || cardType == 5 || cardType == 6 || cardType == 7 || cardType == 8 || cardType == 9) {
             return (
-                <div className={style.BackMain + ' ' + style[targetFont]}>
+                <div className={style.BackMain + ' ' + style[targetFont] + ' ' + style.Round}>
                     {children}
+                    {NumbersExist?.[0]? <div className={style.Num1}>{getPole(15)}</div> : null}
+                    {NumbersExist?.[1]? <div className={style.Num2}>{getPole(15)}</div> : null}
+                    {NumbersExist?.[2]? <div className={style.Num3}>{getPole(15)}</div> : null}
+                    {NumbersExist?.[3]? <div className={style.Num4}>{getPole(15)}</div> : null}
                 </div>
             )
         }
