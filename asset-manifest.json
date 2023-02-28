@@ -1,8 +1,7 @@
 {
   "files": {
-    "main.css": "/role_cards/static/css/main.f4478c8f.css",
-    "main.js": "/role_cards/static/js/main.f3de54ad.js",
-    "static/media/Волк.svg": "/role_cards/static/media/Волк.a58ab45a39fb7867c23367c14fe59222.svg",
+    "main.css": "/role_cards/static/css/main.8e20a3bf.css",
+    "main.js": "/role_cards/static/js/main.6d23e1d7.js",
     "static/media/Zaychik-Regular.ttf": "/role_cards/static/media/Zaychik-Regular.173a33b768ea315638ad.ttf",
     "static/media/MorningBreeze-Light.otf": "/role_cards/static/media/MorningBreeze-Light.823ad7a2f9b297e86b3b.otf",
     "static/media/Bookerly Italic.ttf": "/role_cards/static/media/Bookerly Italic.e10808b250fc36b9d0b9.ttf",
@@ -23,6 +22,7 @@
     "static/media/Валькирия.svg": "/role_cards/static/media/Валькирия.278f0fdd738b1ebf63ed5c7d5cde7f8f.svg",
     "static/media/Совушка.svg": "/role_cards/static/media/Совушка.dfd4ab22e78269ca6a9e5590382a2463.svg",
     "static/media/Иллюзия.svg": "/role_cards/static/media/Иллюзия.bc38bbe92aacb49cd82730d04e11d635.svg",
+    "static/media/Волк.svg": "/role_cards/static/media/Волк.9d0cecd297964e53e4b421d852d9fca4.svg",
     "static/media/Мужик с барабанами.svg": "/role_cards/static/media/Мужик с барабанами.aa92f9250a0f4fda9dda0f5d7aa0fc95.svg",
     "static/media/Дракон.svg": "/role_cards/static/media/Дракон.c2d00df44dd431d2932ead31cc0642f5.svg",
     "static/media/Вызов.svg": "/role_cards/static/media/Вызов.9d3b70c2d7979f3b402e5df24e17cdab.svg",
@@ -91,11 +91,11 @@
     "static/media/Download.svg": "/role_cards/static/media/Download.439d90428e9ea3005c18ab6fa9b8a87e.svg",
     "static/media/Change.svg": "/role_cards/static/media/Change.d2ee68cc10dd187f05c77dcb242a8ce6.svg",
     "index.html": "/role_cards/index.html",
-    "main.f4478c8f.css.map": "/role_cards/static/css/main.f4478c8f.css.map",
-    "main.f3de54ad.js.map": "/role_cards/static/js/main.f3de54ad.js.map"
+    "main.8e20a3bf.css.map": "/role_cards/static/css/main.8e20a3bf.css.map",
+    "main.6d23e1d7.js.map": "/role_cards/static/js/main.6d23e1d7.js.map"
   },
   "entrypoints": [
-    "static/css/main.f4478c8f.css",
-    "static/js/main.f3de54ad.js"
+    "static/css/main.8e20a3bf.css",
+    "static/js/main.6d23e1d7.js"
   ]
 }
