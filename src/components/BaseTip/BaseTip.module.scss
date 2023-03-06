@@ -1,4 +1,5 @@
 .Main {
+    white-space: nowrap;
     font-size: 1.5vh;
     background: var(--color1);
     border: 0.2vh solid var(--color6);
@@ -10,7 +11,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    padding: 0.5vh;
+    padding: 0 0.5vh;
     .Name {
         width: 100%;
         text-align: center;

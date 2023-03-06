@@ -9,7 +9,7 @@ type AlertProps = {
     min: number;
     max: number;
     block: boolean;
-    setBlock: (a: number, b: number, bloc: boolean) => void;
+    setBlock?: (a: number, b: number, bloc: boolean) => void;
 };
 const OptionSize = ({ textAs, block, setBlock, text, size, number, setSize, min, max }: AlertProps): JSX.Element => {
     return (
@@ -22,7 +22,7 @@ const OptionSize = ({ textAs, block, setBlock, text, size, number, setSize, min,
                 setSize(number, Number(e.target.value));
             }} />
             <div className={style.Text}>{text}</div>
-            {textAs != undefined ? <div className={style.As + ' ' + (block ? style.AsTarget : "")}
+            {textAs != undefined && setBlock != undefined ? <div className={style.As + ' ' + (block ? style.AsTarget : "")}
                 onClick={() => {
                     setBlock(number, size, !block);
                 }}

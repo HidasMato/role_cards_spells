@@ -65,9 +65,9 @@ const App = () => {
                     }
                 </div>
                 <div className={style.Slk}>
-                    <a href=""><VK className={style.Icon1}/></a>
-                    <a href=""><GH className={style.Icon2}/></a>
-                    <a href=""><YD className={style.Icon3}/></a>
+                    <a target="_blank" href="https://vk.com/dnd_card"><VK className={style.Icon1}/></a>
+                    <a target="_blank" href="https://github.com/HidasMato/role_cards_spells"><GH className={style.Icon2}/></a>
+                    <a target="_blank" href="https://disk.yandex.ru/d/KOAY4OmjDpAmQg"><YD className={style.Icon3}/></a>
                 </div>
             </div>
             <div className={style.Window}>

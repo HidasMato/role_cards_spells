@@ -102,6 +102,10 @@
                 align-items: baseline;
                 white-space: nowrap;
                 margin-bottom: 1vh;
+                svg {
+                    height: 90%;
+                    width: 90%;
+                }
                 label {
                     padding: 0.5vh;
                     margin-right: 0.5vh;
@@ -264,7 +268,7 @@
             width: 100%;
             border-radius: 4vh;
             border: 0.1vh solid var(--color6);
-            height: 20vh;
+            height: 25vh;
             background-color: var(--color1);
             padding: 0 1vh;
             .Hide {
@@ -282,10 +286,10 @@
                     background-color: var(--color3);
                     border: 0.1vh solid var(--color6);
                     border-radius: 4vh;
-                    height: 16vh;
-                    width: 16vh;
+                    height: 21vh;
+                    width: 25vh;
                     .Title {
-                        width: 16vh;
+                        width: 22vh;
                     }
                     .BaseTips {
                         border-radius:  1.5vh 1.5vh 4vh 4vh;
@@ -301,7 +305,7 @@
                     background-color: var(--color3);
                     border: 0.1vh solid var(--color6);
                     border-radius: 4vh;
-                    height: 16vh;
+                    height: 21vh;
                     margin-left: 1vh;
                     width: calc(100% - 16vh - 1vh);
                     position: relative;
@@ -353,7 +357,7 @@
             height: 296.5mm;
             width: 210mm;
             background-color: var(--ListColor);
-            padding: var(--ListPadding);
+            padding: var(--ListPaddingT) var(--ListPaddingR) var(--ListPaddingB) var(--ListPaddingL);
             .LineCards {
                 width: 100%;
                 display: flex;
@@ -394,20 +398,20 @@
         padding-right: 50vh;
         padding-bottom: 33vh;
         .TwoCards {
-            padding: calc(2vh + var(--ListPadding) );
+            padding: calc(2vh + var(--ListPaddingT)) calc(2vh + var(--ListPaddingR)) calc(2vh + var(--ListPaddingB)) calc(2vh + var(--ListPaddingL));
             display: flex;
             height: max-content;
             width: max-content;
             .OneCard {
-                height: calc((296.5mm - var(--ListPadding) * 2 ) / var(--h));
-                width: calc((210mm - var(--ListPadding) * 2 ) / var(--w));
+                height: calc((296.5mm - var(--ListPaddingT) - var(--ListPaddingB) ) / var(--h));
+                width: calc((210mm - var(--ListPaddingR) - var(--ListPaddingL) ) / var(--w));
             }
             .Horisont {
-                height: calc((210mm - var(--ListPadding) * 2 ) / var(--h));
-                width: calc((296.5mm - var(--ListPadding) * 2 ) / var(--w));
+                height: calc((210mm - var(--ListPaddingT) - var(--ListPaddingB)) / var(--h));
+                width: calc((296.5mm - var(--ListPaddingR) - var(--ListPaddingL) ) / var(--w));
             }
             .CardSelection {
-                margin-left: calc(2vh + var(--ListPadding) );
+                margin-left: calc(2vh + var(--ListPaddingR) );
                 width: 40vh;
                 height: max-content;
                 background-color: var(--color1);
@@ -581,7 +585,11 @@
     --CardDopTextTextAlign: center;
     --CardDownTextTextAlign: center;
 
-    --ListPadding: 14px;
+    --LineCut: 1px;
+    --ListPaddingT: 14px;
+    --ListPaddingR: 14px;
+    --ListPaddingB: 14px;
+    --ListPaddingL: 14px;
     --CardPadding: 14px;
     --CardZagolovokTextPadding: 1mm;
     --CardPer1TextPadding: 1mm;

@@ -106,9 +106,9 @@
         transform-origin: 0% 0%;
         position: absolute;
         top: 0;
-        left: calc((297mm - 2 * var(--ListPadding)) / var(--h));
-        width: calc((210mm - 2 * var(--ListPadding)) / var(--w));
-        height: calc((297mm - 2 * var(--ListPadding)) / var(--h));
+        left: calc((297mm - var(--ListPaddingT) - var(--ListPaddingB)) / var(--h));
+        width: calc((210mm - var(--ListPaddingR) - var(--ListPaddingL)) / var(--w));
+        height: calc((297mm - var(--ListPaddingT) - var(--ListPaddingB)) / var(--h));
         
     }
 }
@@ -135,8 +135,8 @@ textarea {
     width: 100%;
     height: 100%;
     background-color: var(--CardColorBackcground);
-    border-right: 1px solid var(--ListColor);
-    border-bottom: 1px solid var(--ListColor);
+    border-right: var(--LineCut) solid var(--ListColor);
+    border-bottom: var(--LineCut) solid var(--ListColor);
     padding: var(--CardPadding);
     .Zagolovok {
         overflow: hidden;
