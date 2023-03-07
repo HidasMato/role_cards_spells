@@ -2,14 +2,15 @@ import React from 'react';
 import { ReactComponent as ArrowDown } from '../../images/ArrowDown.svg';
 import style from './BaseTip.module.scss';
 type AlertProps = {
-    targetThis: boolean;
-    setTargetBase: (a: number) => void;
-    number: number;
+    setTargetBase: ( level: number, numbers: number[], name: string) => void;
     name: string;
+    level: number;
+    numbers: number[];
+    nameCard: string;
 };
-const BaseTip = ({name, targetThis, setTargetBase, number}: AlertProps): JSX.Element => {
+const BaseTip = ({setTargetBase, name, level, numbers, nameCard}: AlertProps): JSX.Element => {
     return (
-        <div className={style.Main + ' ' + (targetThis ? style.Target : '')} onClick={()=>{setTargetBase(number)}}>
+        <div className={style.Main} onClick={()=>{setTargetBase(level, numbers, nameCard)}}>
             <div className={style.Name}>{name}</div>
             <ArrowDown className={style.IMG} />
         </div>

@@ -63,6 +63,7 @@
     height: 100%;
     width: 100%;
     position: relative;
+    white-space: pre;
     img {
         height: 100%;
         width: 100%;   
@@ -214,10 +215,11 @@ textarea {
             flex-direction: column;
             justify-content: space-between;
             .MainText {
+                line-height: 10px;
                 width: 100%;
                 color: var(--CardMainTextColor);
                 text-align: var(--CardMainTextTextAlign);
-                padding: var(--CardMainTextTextPadding);
+                padding: var(--CardMainTextTextPaddingT) var(--CardMainTextTextPaddingR) var(--CardMainTextTextPaddingB) var(--CardMainTextTextPaddingL);
             }
             .Dop {
                 .DopText {
@@ -225,7 +227,7 @@ textarea {
                     width: 100%;
                     text-align: var(--CardDopTextTextAlign);
                     background-color: var(--CardDopBackgroundColor);
-                    padding: var(--CardDopTextTextPadding);
+                    padding: var(--CardDopTextTextPaddingT) var(--CardDopTextTextPaddingR) var(--CardDopTextTextPaddingB) var(--CardDopTextTextPaddingL);
                 }
                 .Per2 {
                     white-space: pre;

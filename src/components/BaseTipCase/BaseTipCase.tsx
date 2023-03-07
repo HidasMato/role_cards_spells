@@ -2,7 +2,7 @@ import React from 'react';
 import { ReactComponent as ArrowDown } from '../../images/ArrowDown.svg';
 import style from './BaseTipCase.module.scss';
 type AlertProps = {
-    openThis: boolean;
+    openThis: boolean[];
     setOpenThis: (a: number) => void;
     number: number;
     name: string;
@@ -11,10 +11,10 @@ type AlertProps = {
 const BaseTipCase = ({name, openThis, setOpenThis, number, children}: AlertProps): JSX.Element => {
     return (
             <div className={style.Main}>
-            <div className={style.Name + ' ' + (openThis ? style.Target : '')} onClick={() => { setOpenThis(number) }}> <div className={style.Text}>{name}</div>
+            <div className={style.Name + ' ' + (openThis[number] ? style.Target : '')} onClick={() => { setOpenThis(number) }}> <div className={style.Text}>{name}</div>
                 <ArrowDown className={style.IMG} />
             </div>
-                {openThis && <div className={style.Children}>{children}</div>}
+                {openThis[number] && <div className={style.Children}>{children}</div>}
             </div>
     );
 }

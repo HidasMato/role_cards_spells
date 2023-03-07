@@ -55,6 +55,28 @@
             display: flex;
             align-items: center;
             flex-direction: column;
+            .RubahaBackNext {
+                display: flex;
+                p {
+                    width: 30%;
+                }
+                div {
+                    width: 35%;
+                    display: flex;
+                    justify-content: center;
+                    button {
+                        width: 80%;
+                        background-color: var(--color1);
+                        border: 0.1vh solid var(--color6);
+                        border-radius: 4vh;
+                        padding: 0 2vh;
+                    }
+                    button:hover {
+                        cursor: pointer;
+                        background-color: var(--color5);
+                    }
+                }
+            }
             .MyOptionSetting {
                 width: 100%;
                 min-height: 5vh;
@@ -380,7 +402,7 @@
         }
     }
     .ListDown {
-        padding-bottom: 20vh;
+        padding-bottom: 26vh;
     }
     .ListRigth {
         padding-right: 54vh;
@@ -396,7 +418,7 @@
         width: 100%;
         overflow-y: scroll;
         padding-right: 50vh;
-        padding-bottom: 33vh;
+        padding-bottom: 38vh;
         .TwoCards {
             padding: calc(2vh + var(--ListPaddingT)) calc(2vh + var(--ListPaddingR)) calc(2vh + var(--ListPaddingB)) calc(2vh + var(--ListPaddingL));
             display: flex;
@@ -603,8 +625,14 @@
     --CardOption2TextTextPadding: 1mm;
     --CardOption3TextTextPadding: 1mm;
     --CardOption4TextTextPadding: 1mm;
-    --CardMainTextTextPadding: 1mm;
-    --CardDopTextTextPadding: 1mm;
+    --CardMainTextTextPaddingT: 1mm;
+    --CardMainTextTextPaddingR: 1mm;
+    --CardMainTextTextPaddingB: 1mm;
+    --CardMainTextTextPaddingL: 1mm;
+    --CardDopTextTextPaddingT: 1mm;
+    --CardDopTextTextPaddingR: 1mm;
+    --CardDopTextTextPaddingB: 1mm;
+    --CardDopTextTextPaddingL: 1mm;
     --CardDownTextTextPadding: 1mm;
 
     --CardZagolovok┌: 1px;
