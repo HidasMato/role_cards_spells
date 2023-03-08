@@ -8,7 +8,7 @@ type AlertProps = {
     minMax?: number[];
     startPerepolnen?: number;
     isBack?: boolean;
-    children?: JSX.Element;
+    children?: JSX.Element[];
     NumbersExist?: boolean[];
     targetFont: string;
     setPole?: (text: string[]) => void;
@@ -37,29 +37,27 @@ const Card = ({setPole, targetFont, NumbersExist, isBack, keyt, cardType, Pole, 
         return (Pole[num]);
     };
     if (isBack) {
-        if (cardType == 0 || cardType == 1 || cardType == 2 || cardType == 3) {
-            return (
-                <div className={style.BackMain + ' ' + style[targetFont]}>
-                    {children}
-                    {NumbersExist?.[0]? <div className={style.Num1}>{getPole(15)}</div> : null}
-                    {NumbersExist?.[1]? <div className={style.Num2}>{getPole(15)}</div> : null}
-                    {NumbersExist?.[2]? <div className={style.Num3}>{getPole(15)}</div> : null}
-                    {NumbersExist?.[3]? <div className={style.Num4}>{getPole(15)}</div> : null}
-                </div>
-            )
-        }
-        else if (cardType == 4 || cardType == 5 || cardType == 6 || cardType == 7 || cardType == 8 || cardType == 9) {
-            return (
-                <div className={style.BackMain + ' ' + style[targetFont] + ' ' + style.Round}>
-                    {children}
-                    {NumbersExist?.[0]? <div className={style.Num1}>{getPole(15)}</div> : null}
-                    {NumbersExist?.[1]? <div className={style.Num2}>{getPole(15)}</div> : null}
-                    {NumbersExist?.[2]? <div className={style.Num3}>{getPole(15)}</div> : null}
-                    {NumbersExist?.[3]? <div className={style.Num4}>{getPole(15)}</div> : null}
-                </div>
-            )
-        }
-        return <div />;
+        return (
+            <div className={style.BackMain + ' ' + style[targetFont]}>
+                {children ? children[0] : null}
+                {children ? children[1] : null}
+                {NumbersExist?.[0] ? <div className={style.Num1}>{getPole(15)}</div> : null}
+                {NumbersExist?.[1] ? <div className={style.Num2}>{getPole(15)}</div> : null}
+                {NumbersExist?.[2] ? <div className={style.Num3}>{getPole(15)}</div> : null}
+                {NumbersExist?.[3] ? <div className={style.Num4}>{getPole(15)}</div> : null}
+            </div>
+        );
+        // else if (cardType == 4 || cardType == 5 || cardType == 6 || cardType == 7 || cardType == 8 || cardType == 9) {
+        //     return (
+        //         <div className={style.BackMain + ' ' + style[targetFont] + ' ' + style.Round}>
+        //             {children}
+        //             {NumbersExist?.[0]? <div className={style.Num1}>{getPole(15)}</div> : null}
+        //             {NumbersExist?.[1]? <div className={style.Num2}>{getPole(15)}</div> : null}
+        //             {NumbersExist?.[2]? <div className={style.Num3}>{getPole(15)}</div> : null}
+        //             {NumbersExist?.[3]? <div className={style.Num4}>{getPole(15)}</div> : null}
+        //         </div>
+        //     )
+        // }
     }
     else {
         const getOptions12 = () => {

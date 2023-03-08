@@ -15,6 +15,13 @@ import OptionCase from '../OptionCase/OptionCase';
 import OptionCardImg from '../OptionCardImg/OptionCardImg';
 import OptionColor from '../OptionColor/OptionColor';
 import OptionSize from '../OptionSize/OptionSize';
+import { ReactComponent as RamkaBase } from '../../BackRamka/Базовая.svg';
+import { ReactComponent as RamkaGolovastic } from '../../BackRamka/Головастики.svg';
+import { ReactComponent as RamkaNebrejnaja } from '../../BackRamka/Небрежная.svg';
+import { ReactComponent as RamkaPazl } from '../../BackRamka/Пазлы.svg';
+import { ReactComponent as RamkaUzor1 } from '../../BackRamka/Рамка с узорами.svg';
+import { ReactComponent as RamkaUzor2 } from '../../BackRamka/Рамка с узорами2.svg';
+import { ReactComponent as RamkaCvety } from '../../BackRamka/Рамка с цветами.svg';
 import { ReactComponent as Download } from '../../images/Download.svg';
 import { ReactComponent as Druid } from '../../BackSvg/Друид.svg';
 import {ReactComponent as Bard} from '../../BackSvg/Бард.svg';
@@ -79,12 +86,13 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
     const [showOptions, setShowOptions] = useState(true);
     const [showRedactor, setShowRedactor] = useState(true);
     const [pyt, setPyt] = useState<File[]|undefined[]>([]);
+    const [pytRamka, setPytRamka] = useState<File[]|undefined[]>([]);
     const [openThisBaseCase, setOpenThisBaseCase] = useState([false, false, false, false, false, false, false, false]);
     const [targetOption, setTargetOptions] = useState([false, false, false, false, false, false, false, false, false, false, false]);
-    const [colors, setColors] = useState(["#000000","#ffffff","#000000","#000000","#ffffff","#000000","#ffffff","#000000","#ffffff","#000000","#ffffff","#ffffff","#ffffff","#ffffff","#000000","#000000","#000000","#000000","#000000","#000000","#000000","#000000","#ffffff","#000000","#ffffff","#000000","#ffffff","#ffffff","#000000","#ffffff","#000000","#ffffff","#000000","#000000","#000000","#000000","#000000","#000000","#000000","#000000","#000000"]);
+    const [colors, setColors] = useState(["#000000","#ffffff","#000000","#000000","#ffffff","#000000","#ffffff","#000000","#ffffff","#000000","#ffffff","#ffffff","#ffffff","#ffffff","#000000","#000000","#000000","#000000","#000000","#000000","#000000","#000000","#ffffff","#000000","#ffffff","#000000","#ffffff","#ffffff","#000000","#ffffff","#000000","#ffffff","#000000","#000000","#000000","#000000","#000000","#000000","#5266ff","#ff4747","#6aff57","#000000"]);
     const sizePoleNames = ["--CardZagolovokTextSize","--CardPer1H","--CardPer2H","--CardPer3H","--CardOptionHeigth","--CardOptionBorder","--CardDownTextSize"];
     const sizeTextNames = ["--CardZagolovokTextFont","--CardPer1TextFont","--CardPer2TextFont","--CardPer3TextFont","--CardOptionZagolovokTextFont1","--CardOptionZagolovokTextFont2","--CardOptionZagolovokTextFont3","--CardOptionZagolovokTextFont4","--CardOptionTextTextFont1","--CardOptionTextTextFont2","--CardOptionTextTextFont3","--CardOptionTextTextFont4","--CardDownTextFont","--Number1H","--Number1V","--Number2H","--Number2V","--Number3H","--Number3V","--Number4H","--Number4V", "--Number1Kegl", "--Number2Kegl", "--Number3Kegl", "--Number4Kegl", "--LineHeight"];
-    const colorsNames = ["--CardColorBackcground", "--CardZagolovokBackgroundColor", "--CardZagolovokTextColor", "--CardPer1BackgroundColor", "--CardPer1TextColor", "--CardPer2BackgroundColor", "--CardPer2TextColor", "--CardPer3BackgroundColor", "--CardPer3TextColor", "--CardOptionPalki", "--CardOption1Background", "--CardOption2Background", "--CardOption3Background", "--CardOption4Background", "--CardOption1ZColor", "--CardOption2ZColor", "--CardOption3ZColor", "--CardOption4ZColor", "--CardOption1TColor", "--CardOption2TColor", "--CardOption3TColor", "--CardOption4TColor", "--CardMainBackgroundColor", "--CardMainTextColor", "--CardDopBackgroundColor", "--CardDopTextColor", "--CardDownTextColor", "--ListColor", "--Rubaha1", "--Rubaha2", "--Rubaha3", "--Rubaha4", "--Rubaha5", "--Number1", "--Number2", "--Number3", "--Number4"];
+    const colorsNames = ["--CardColorBackcground", "--CardZagolovokBackgroundColor", "--CardZagolovokTextColor", "--CardPer1BackgroundColor", "--CardPer1TextColor", "--CardPer2BackgroundColor", "--CardPer2TextColor", "--CardPer3BackgroundColor", "--CardPer3TextColor", "--CardOptionPalki", "--CardOption1Background", "--CardOption2Background", "--CardOption3Background", "--CardOption4Background", "--CardOption1ZColor", "--CardOption2ZColor", "--CardOption3ZColor", "--CardOption4ZColor", "--CardOption1TColor", "--CardOption2TColor", "--CardOption3TColor", "--CardOption4TColor", "--CardMainBackgroundColor", "--CardMainTextColor", "--CardDopBackgroundColor", "--CardDopTextColor", "--CardDownTextColor", "--ListColor", "--Rubaha1", "--Rubaha2", "--Rubaha3", "--Rubaha4", "--Rubaha5", "--Number1", "--Number2", "--Number3", "--Number4", "--Ramka1", "--Ramka2", "--Ramka3", "--Ramka4", "--Ramka5"];
     const alignNames = ["--CardZagolovokTextAlign", "--CardPer1TextAlign", "--CardPer2TextAlign", "--CardPer3TextAlign", "--CardOption1ZagolovokTextAlign", "--CardOption2ZagolovokTextAlign", "--CardOption3ZagolovokTextAlign", "--CardOption4ZagolovokTextAlign", "--CardOption1TextTextAlign", "--CardOption2TextTextAlign", "--CardOption3TextTextAlign", "--CardOption4TextTextAlign", "--CardMainTextTextAlign", "--CardDopTextTextAlign", "--CardDownTextTextAlign"];
     const paddingNames = ["--CardZagolovokTextPadding", "--CardPer1TextPadding", "--CardPer2TextPadding", "--CardPer3TextPadding", "--CardOption1ZagolovokTextPadding", "--CardOption2ZagolovokTextPadding", "--CardOption3ZagolovokTextPadding", "--CardOption4ZagolovokTextPadding", "--CardOption1TextTextPadding", "--CardOption2TextTextPadding", "--CardOption3TextTextPadding", "--CardOption4TextTextPadding", "--CardMainTextTextPaddingT", "--CardDopTextTextPaddingT", "--CardDownTextTextPadding", "--ListPaddingT", "--ListPaddingR", "--ListPaddingB", "--ListPaddingL", "--CardPadding", "--CardMainTextTextPaddingR", "--CardMainTextTextPaddingB", "--CardMainTextTextPaddingL", "--CardDopTextTextPaddingR", "--CardDopTextTextPaddingB", "--CardDopTextTextPaddingL"];
     const bordwrRadiusNames = ["--CardZagolovok┌", "--CardZagolovok┐", "--CardZagolovok┘", "--CardZagolovok└", "--CardOption1┌", "--CardOption1┐", "--CardOption1┘", "--CardOption1└", "--CardOption2┌", "--CardOption2┐", "--CardOption2┘", "--CardOption2└", "--CardOption3┌", "--CardOption3┐", "--CardOption3┘", "--CardOption3└", "--CardOption4┌", "--CardOption4┐", "--CardOption4┘", "--CardOption4└", "--CardAllText┌", "--CardAllText┐", "--CardAllText┘", "--CardAllText└"];
@@ -97,12 +105,11 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
     const [sizePole, setSizesPole] = useState([18,15,15,15,80,2,15]);
     const [minMax, setMinMax] = useState([8, 12]);
     const [blockMinMax, setBlockMinMax] = useState(false);
-    const [sizeText, setSizesText] = useState([14, 11, 11, 11, 10, 10, 10, 10, 11, 11, 11, 11, 14, 20, 5, 200, 5, 200, 264, 20, 264, 70, 70, 70, 70, 200]);
+    const [sizeText, setSizesText] = useState([14, 11, 11, 11, 10, 10, 10, 10, 11, 11, 11, 11, 14, 20, 5, 200, 5, 200, 264, 20, 264, 70, 70, 70, 70, 110]);
     const [paddingText, setPaddingText] = useState([2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 10, 10, 10, 10, 9, 2, 2, 2, 2, 2, 2]);
     const [alignValue, setAlignValue] = useState([2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 1]);
     const [borderRadiusValue, setBorderRadiusValue] = useState([11, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 11]);
     const [kolvo, setKolvo] = useState([3,3]);
-    const [targetBackgroundNumber, setTargetBackgroundNumber] = useState(5);
     const [targetTypeCardNumber, setTargetTypeCardNumber] = useState(0);
     const perepolnen: boolean[] = [];
     const [perepolnenText, setPerepolnenText] = useState('');
@@ -116,6 +123,9 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
     const [isCSVRedactor, setIsCSVRedactor] = useState(false);
     const [settingString, setSettingString] = useState("");
     const [rubahaCaseNumber, setRubahaCaseNumber] = useState(2);
+    const [targetBackgroundNumber, setTargetBackgroundNumber] = useState(5);
+    const [ramkaCaseNumber, setRamkaCaseNumber] = useState(2);
+    const [targetRamkaNumber, setTargetRamkaNumber] = useState(5);
     const setTarget = (a: number, b: boolean) => {
         const M = [];
         for (let i = 0; i < targetOption.length; i++) M[i] = false;
@@ -146,10 +156,10 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
         setNewCard(Car);
     }, [newCSV]);
     useEffect(() => {
-        for (let i = 0; i < 40; i++) document.getElementById("ThisIsColorsConst")?.style.setProperty(colorsNames[i], colors[i]);
+        for (let i = 0; i < colorsNames.length; i++) document.getElementById("ThisIsColorsConst")?.style.setProperty(colorsNames[i], colors[i]);
     }, [colors]);
     useEffect(() => {
-        for (let i = 0; i < 30; i++) document.getElementById("ThisIsColorsConst")?.style.setProperty(sizePoleNames[i], String(sizePole[i]) + 'px' );
+        for (let i = 0; i < sizePoleNames.length; i++) document.getElementById("ThisIsColorsConst")?.style.setProperty(sizePoleNames[i], String(sizePole[i]) + 'px' );
     }, [sizePole]);
     useEffect(() => {
         document.getElementById("ThisIsColorsConst")?.style.setProperty("--h", String(kolvo[0]) );
@@ -159,17 +169,17 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
         document.getElementById("ThisIsColorsConst")?.style.setProperty("--LineCut", lineCut ? '1px' : '0px' );
     }, [lineCut]);
     useEffect(() => {
-        for (let i = 0; i < 30; i++) document.getElementById("ThisIsColorsConst")?.style.setProperty(sizeTextNames[i], String(sizeText[i]) + 'px');
+        for (let i = 0; i < sizeTextNames.length; i++) document.getElementById("ThisIsColorsConst")?.style.setProperty(sizeTextNames[i], String(sizeText[i]) + 'px');
         document.getElementById("ThisIsColorsConst")?.style.setProperty(sizeTextNames[25], String(sizeText[25] / 100));
     }, [sizeText]);
     useEffect(() => {
-        for (let i = 0; i < 30; i++) document.getElementById("ThisIsColorsConst")?.style.setProperty(alignNames[i], String(getAlignText(alignValue[i])));
+        for (let i = 0; i < alignNames.length; i++) document.getElementById("ThisIsColorsConst")?.style.setProperty(alignNames[i], String(getAlignText(alignValue[i])));
     }, [alignValue]);
     useEffect(() => {
-        for (let i = 0; i < 30; i++) document.getElementById("ThisIsColorsConst")?.style.setProperty(paddingNames[i], String(paddingText[i]) + 'px');
+        for (let i = 0; i < paddingNames.length; i++) document.getElementById("ThisIsColorsConst")?.style.setProperty(paddingNames[i], String(paddingText[i]) + 'px');
     }, [paddingText]);
     useEffect(() => {
-        for (let i = 0; i < 30; i++) document.getElementById("ThisIsColorsConst")?.style.setProperty(bordwrRadiusNames[i], String(borderRadiusValue[i]) + 'px');
+        for (let i = 0; i < bordwrRadiusNames.length; i++) document.getElementById("ThisIsColorsConst")?.style.setProperty(bordwrRadiusNames[i], String(borderRadiusValue[i]) + 'px');
     }, [bordwrRadiusNames]);
     const getAlignText = (number: number) => {
         switch (number) {
@@ -222,6 +232,7 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
         if (V[34]) M[34] = M[33];
         if (V[35]) M[35] = M[33];
         if (V[36]) M[36] = M[33];
+        if (V[37]) M[37] = M[28];
         setColors(M);
     };
     const setSizePole = (a: number, b: number, vlog?: boolean) => {
@@ -1170,9 +1181,36 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
             default:
                 return (<div></div>);
         }
-        return (
-            <div></div>
-        );
+    }
+    const getRamkaImg = (PoleStr: string) => {
+        let A = Number(PoleStr); 
+        if (A == undefined || A == 0 || A > 8 || Number.isNaN(A)) {
+            A = targetRamkaNumber;
+        }
+        if (A < 0 && A > -13) {
+            const r = pytRamka[0 - A - 1];
+            return (
+                <img src={r!=undefined ? URL.createObjectURL(r) : undefined} alt="" />
+            );
+        }
+        switch (A) {
+            case 1:
+                return (<RamkaBase />);
+            case 2:
+                return (<RamkaGolovastic />);
+            case 3:
+                return (<RamkaNebrejnaja />);
+            case 4:
+                return (<RamkaUzor1 />);
+            case 5:
+                return (<RamkaUzor2 />);
+            case 6:
+                return (<RamkaPazl />);
+            case 7:
+                return (<RamkaCvety />);
+            default:
+                return (<div></div>);
+        }
     }
     const getCards = () => {
         let sumLists = [];
@@ -1194,7 +1232,10 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                                                     if (cards.length >= kolvo[1] * kolvo[0] * index + kolvo[1] * index2 + kolvo[1] - index3) {
                                                         return (
                                                             <div className={style.Card} key={index*kolvo[1]*kolvo[0] + index2*kolvo[1] + kolvo[1] - index3} >
-                                                                <CardSpell targetFont={String(fontMas[targetFont2])} NumbersExist={myNumbers} isBack={true} keyt={index * kolvo[1] * kolvo[0] + index2 * kolvo[1] + kolvo[1] - index3} cardType={targetTypeCardNumber} Pole={cards[kolvo[1] * kolvo[0] * index + kolvo[1] * index2 + kolvo[1] - index3 -1]}>{getBackCardImg(cards[kolvo[1]*kolvo[0] * index + kolvo[1] * index2 + kolvo[1] - index3-1][16])}</CardSpell>
+                                                                <CardSpell targetFont={String(fontMas[targetFont2])} NumbersExist={myNumbers} isBack={true} keyt={index * kolvo[1] * kolvo[0] + index2 * kolvo[1] + kolvo[1] - index3} cardType={targetTypeCardNumber} Pole={cards[kolvo[1] * kolvo[0] * index + kolvo[1] * index2 + kolvo[1] - index3 -1]}>
+                                                                    {getBackCardImg(cards[kolvo[1] * kolvo[0] * index + kolvo[1] * index2 + kolvo[1] - index3 - 1][16])}
+                                                                    {getRamkaImg(cards[kolvo[1] * kolvo[0] * index + kolvo[1] * index2 + kolvo[1] - index3 - 1][17])}
+                                                                </CardSpell>
                                                             </div>
                                                         );
                                                     }
@@ -1327,7 +1368,67 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                 </div>
             </div>
         );
+    };
+    const setPytiRamka = (num: number) => {
+        return (
+            <div className={style.InputFile}>
+                <label htmlFor={`inputfileR + ${0 - num -1}`}><Download/></label>
+                <input type="file" name="" id={`inputfileR + ${0 - num - 1}`} onInput={(e) => {
+                    const file = (e.target as HTMLInputElement);
+                    const R = file?.files;
+                    if (R != null) {
+                        const T = pytRamka;
+                        T[0 - num -1] = R[0];
+                        setPytRamka(T);
+                    }
+                    let r = targetBackgroundNumber; 
+                    setTargetRamkaNumber(-999999);
+                    setTimeout(( a) => {
+                        setTargetRamkaNumber(a);
+                    }, 300 , r);
+                }} />
+            </div>
+        );
     }
+    const getRamkaCase = () => {
+        const Elements = [
+            <OptionCardImg name={"Своя"} d={true} targetThis={targetRamkaNumber == -12} setTarget={setTargetRamkaNumber} number={-12} img={pytRamka[11] != undefined ? URL.createObjectURL(pytRamka[11]) : undefined}><div>{setPytiRamka(-12)}</div></OptionCardImg>,
+            <OptionCardImg name={"Своя"} d={true} targetThis={targetRamkaNumber == -11} setTarget={setTargetRamkaNumber} number={-11} img={pytRamka[10] != undefined ? URL.createObjectURL(pytRamka[10]) : undefined}><div>{setPytiRamka(-11)}</div></OptionCardImg>,
+            <OptionCardImg name={"Своя"} d={true} targetThis={targetRamkaNumber == -10} setTarget={setTargetRamkaNumber} number={-10} img={pytRamka[9] != undefined ? URL.createObjectURL(pytRamka[9]) : undefined}><div>{setPytiRamka(-10)}</div></OptionCardImg>,
+            <OptionCardImg name={"Своя"} d={true} targetThis={targetRamkaNumber == -9} setTarget={setTargetRamkaNumber} number={-9} img={pytRamka[8] != undefined ? URL.createObjectURL(pytRamka[8]) : undefined}><div>{setPytiRamka(-9)}</div></OptionCardImg>,
+            <OptionCardImg name={"Своя"} d={true} targetThis={targetRamkaNumber == -8} setTarget={setTargetRamkaNumber} number={-8} img={pytRamka[7] != undefined ? URL.createObjectURL(pytRamka[7]) : undefined}><div>{setPytiRamka(-8)}</div></OptionCardImg>,
+            <OptionCardImg name={"Своя"} d={true} targetThis={targetRamkaNumber == -7} setTarget={setTargetRamkaNumber} number={-7} img={pytRamka[6] != undefined ? URL.createObjectURL(pytRamka[6]) : undefined}><div>{setPytiRamka(-7)}</div></OptionCardImg>,
+            <OptionCardImg name={"Своя"} d={true} targetThis={targetRamkaNumber == -6} setTarget={setTargetRamkaNumber} number={-6} img={pytRamka[5] != undefined ? URL.createObjectURL(pytRamka[5]) : undefined}><div>{setPytiRamka(-6)}</div></OptionCardImg>,
+            <OptionCardImg name={"Своя"} d={true} targetThis={targetRamkaNumber == -5} setTarget={setTargetRamkaNumber} number={-5} img={pytRamka[4] != undefined ? URL.createObjectURL(pytRamka[4]) : undefined}><div>{setPytiRamka(-5)}</div></OptionCardImg>,
+            <OptionCardImg name={"Своя"} d={true} targetThis={targetRamkaNumber == -4} setTarget={setTargetRamkaNumber} number={-4} img={pytRamka[3] != undefined ? URL.createObjectURL(pytRamka[3]) : undefined}><div>{setPytiRamka(-4)}</div></OptionCardImg>,
+            <OptionCardImg name={"Своя"} d={true} targetThis={targetRamkaNumber == -3} setTarget={setTargetRamkaNumber} number={-3} img={pytRamka[2] != undefined ? URL.createObjectURL(pytRamka[2]) : undefined}><div>{setPytiRamka(-3)}</div></OptionCardImg>,
+            <OptionCardImg name={"Своя"} d={true} targetThis={targetRamkaNumber == -2} setTarget={setTargetRamkaNumber} number={-2} img={pytRamka[1] != undefined ? URL.createObjectURL(pytRamka[1]) : undefined}><div>{setPytiRamka(-2)}</div></OptionCardImg>,
+            <OptionCardImg name={"Своя"} d={true} targetThis={targetRamkaNumber == -1} setTarget={setTargetRamkaNumber} number={-1} img={pytRamka[0] != undefined ? URL.createObjectURL(pytRamka[0]) : undefined}><div>{setPytiRamka(-1)}</div></OptionCardImg>,
+            <OptionCardImg name={"Базовая"} targetThis={targetRamkaNumber == 1} setTarget={setTargetRamkaNumber} number={1} >{getRamkaImg('1')}</OptionCardImg>,
+            <OptionCardImg name={"Головастики"} targetThis={targetRamkaNumber == 2} setTarget={setTargetRamkaNumber} number={2} >{getRamkaImg('2')}</OptionCardImg>,
+            <OptionCardImg name={"Небрежная"} targetThis={targetRamkaNumber == 3} setTarget={setTargetRamkaNumber} number={3} >{getRamkaImg('3')}</OptionCardImg>,
+            <OptionCardImg name={"Пазлы"} targetThis={targetRamkaNumber == 4} setTarget={setTargetRamkaNumber} number={4} >{getRamkaImg('4')}</OptionCardImg>,
+            <OptionCardImg name={"Узор1"} targetThis={targetRamkaNumber == 5} setTarget={setTargetRamkaNumber} number={5} >{getRamkaImg('5')}</OptionCardImg>,
+            <OptionCardImg name={"Узор2"} targetThis={targetRamkaNumber == 6} setTarget={setTargetRamkaNumber} number={6} >{getRamkaImg('6')}</OptionCardImg>,
+            <OptionCardImg name={"Цветы"} targetThis={targetRamkaNumber == 7} setTarget={setTargetRamkaNumber} number={7} >{getRamkaImg('7')}</OptionCardImg>,
+        ];
+        return (
+            <div>
+                <div className={style.LineSetting}>
+                    {Elements[ramkaCaseNumber * 6]}
+                    {Elements[ramkaCaseNumber * 6 + 1]}
+                </div>
+                <div className={style.LineSetting}>
+                    {Elements[ramkaCaseNumber * 6 + 2]}
+                    {Elements[ramkaCaseNumber * 6 + 3]}
+                </div>
+                <div className={style.LineSetting}>
+                    {Elements[ramkaCaseNumber * 6 + 4]}
+                    {Elements[ramkaCaseNumber * 6 + 5]}
+                </div>
+            </div>
+        );
+    };
     return (
         <div className={style.Main} id={"ThisIsColorsConst"}>
             <div className={style.Viu + ' ' + (showOptions ? style.OpenOptionViu : '')}>
@@ -1612,7 +1713,7 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                     </OptionCase>
                     <OptionCase nameSetting={'Подгонка описания'} targetThis={targetOption[8]} setTarget={setTarget} number={8}>
                         <div>
-                            <OptionSize text={"% Высота строки (от 0 до 200y)"} size={sizeText[25]} number={25} setSize={setSizeText} min={0} max={200} block={blockSizeText[25]} setBlock={setBlocSizeText} />
+                            <OptionSize text={"% Высота строки (от 0 до 200)"} size={sizeText[25]} number={25} setSize={setSizeText} min={0} max={200} block={blockSizeText[25]} setBlock={setBlocSizeText} />
                             <OptionSize text={"Минимумальный размер"} size={minMax[0]} number={0} setSize={setMinMaxs} min={0} max={blockMinMax ? 99 : minMax[1]} block={false} setBlock={setBlocMinMax} />
                             <OptionSize textAs={"Как минимум"} text={"Максимум"} size={minMax[1]} number={1} setSize={setMinMaxs} min={minMax[0]} max={99} block={blockMinMax} setBlock={setBlocMinMax} />
                             <div className={style.ButtonMinMax} onClick={() => {
@@ -1635,7 +1736,17 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                             {getRubahaCase()}
                         </>
                     </OptionCase>
-                    <OptionCase nameSetting={'Настроки рубашки'} targetThis={targetOption[10]} setTarget={setTarget} number={10}>
+                    <OptionCase nameSetting={'Тип рамки'} targetThis={targetOption[10]} setTarget={setTarget} number={10}>
+                        <>
+                            <div className={style.RubahaBackNext}>
+                                <div>{ramkaCaseNumber > 0 ? <button onClick={() => { setRamkaCaseNumber(ramkaCaseNumber - 1) }}>Назад</button> : null}</div>
+                                <p>страница {ramkaCaseNumber + 1}</p>
+                                <div>{ramkaCaseNumber < 9 ? <button onClick={() => { setRamkaCaseNumber(ramkaCaseNumber + 1) }}>Вперед</button> : null}</div>
+                            </div>
+                            {getRamkaCase()}
+                        </>
+                    </OptionCase>
+                    <OptionCase nameSetting={'Настроки рубашки'} targetThis={targetOption[11]} setTarget={setTarget} number={11}>
                         <div>
                             <OptionColor text={"Фон листа"} textAs={"Как рубаха 1"} color={colors[27]} number={27} setColor={setColor} block={blockColor[27]} setBlock={setBlocColor} name={colorsNames[27]} />
                             <OptionColor text={"Рубаха 1"} textAs={"Как края"} color={colors[28]} number={28} setColor={setColor} block={blockColor[28]} setBlock={setBlocColor} name={colorsNames[28]} />
@@ -1643,6 +1754,11 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                             <OptionColor text={"Рубаха 3"} color={colors[30]} number={30} setColor={setColor} block={blockColor[30]} setBlock={setBlocColor} name={colorsNames[30]} />
                             <OptionColor text={"Рубаха 4"} color={colors[31]} number={31} setColor={setColor} block={blockColor[31]} setBlock={setBlocColor} name={colorsNames[31]} />
                             <OptionColor text={"Рубаха 5"} color={colors[32]} number={32} setColor={setColor} block={blockColor[32]} setBlock={setBlocColor} name={colorsNames[32]} />
+                            <OptionColor text={"Рамка 1"} textAs={"Как рубаха 1"} color={colors[37]} number={37} setColor={setColor} block={blockColor[37]} setBlock={setBlocColor} name={colorsNames[37]} />
+                            <OptionColor text={"Рамка 2"} color={colors[38]} number={38} setColor={setColor} block={blockColor[38]} setBlock={setBlocColor} name={colorsNames[38]} />
+                            <OptionColor text={"Рамка 3"} color={colors[39]} number={39} setColor={setColor} block={blockColor[39]} setBlock={setBlocColor} name={colorsNames[39]} />
+                            <OptionColor text={"Рамка 4"} color={colors[40]} number={40} setColor={setColor} block={blockColor[40]} setBlock={setBlocColor} name={colorsNames[40]} />
+                            <OptionColor text={"Рамка 5"} color={colors[41]} number={41} setColor={setColor} block={blockColor[41]} setBlock={setBlocColor} name={colorsNames[41]} />
                             <div className={style.NumbersExists}><div className={style.Exists} onClick={() => {setMyNumbers([!myNumbers[0],myNumbers[1],myNumbers[2],myNumbers[3]])}}> {"___"} {myNumbers[0] && <div/>}</div> <p>{"Цифра 1"}</p> </div>
                             <div className={style.NumbersExists}><div className={style.Exists} onClick={() => {setMyNumbers([myNumbers[0],!myNumbers[1],myNumbers[2],myNumbers[3]])}}> {"___"} {myNumbers[1] && <div/>}</div> <p>{"Цифра 2"}</p> </div>
                             <div className={style.NumbersExists}><div className={style.Exists} onClick={() => {setMyNumbers([myNumbers[0],myNumbers[1],!myNumbers[2],myNumbers[3]])}}> {"___"} {myNumbers[2] && <div/>}</div> <p>{"Цифра 3"}</p> </div>
@@ -2772,7 +2888,7 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                     : <div className={style.AroundTwoCards}>
                         <div className={style.TwoCards}>
                             <div className={style.OneCard + ' ' + (targetTypeCardNumber == 0 ||targetTypeCardNumber == 1 ||targetTypeCardNumber == 2 ||targetTypeCardNumber == 3 ? null : style.Horisont)}><CardSpell targetFont={String(fontMas[targetFont1])} startPerepolnen={startPerepolnen} keyt={-1} plusPerepolnen={plusPerepolnen} minMax={minMax} cardType={targetTypeCardNumber} Pole={newCard} setPole={setPoles}/></div>
-                            <div className={style.OneCard + ' ' + (targetTypeCardNumber == 0 ||targetTypeCardNumber == 1 ||targetTypeCardNumber == 2 ||targetTypeCardNumber == 3 ? null : style.Horisont)}><CardSpell targetFont={String(fontMas[targetFont2])} NumbersExist={myNumbers} isBack={true} keyt={-1} cardType={targetTypeCardNumber} Pole={newCard} setPole={setPoles}>{getBackCardImg(newCard[16])}</CardSpell></div>
+                            <div className={style.OneCard + ' ' + (targetTypeCardNumber == 0 ||targetTypeCardNumber == 1 ||targetTypeCardNumber == 2 ||targetTypeCardNumber == 3 ? null : style.Horisont)}><CardSpell targetFont={String(fontMas[targetFont2])} NumbersExist={myNumbers} isBack={true} keyt={-1} cardType={targetTypeCardNumber} Pole={newCard} setPole={setPoles}>{getBackCardImg(newCard[16])}{getRamkaImg(newCard[17])}</CardSpell></div>
                             <div className={style.CardSelection}>
                                 <div>
                                     <input placeholder='Заголовок' type="text" value={newCard[0]} onChange={(e) => { const A = newCard; A[0] = e.target.value;  setPoles(A)}} />

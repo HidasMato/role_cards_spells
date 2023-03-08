@@ -65,10 +65,12 @@
     position: relative;
     white-space: pre;
     img {
+        position: absolute;
         height: 100%;
         width: 100%;   
     }
     svg {
+        position: absolute;
         height: 100%;
         width: 100%;   
     }
