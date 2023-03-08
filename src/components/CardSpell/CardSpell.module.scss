@@ -215,7 +215,7 @@ textarea {
             flex-direction: column;
             justify-content: space-between;
             .MainText {
-                line-height: 10px;
+                line-height: var(--LineHeight);
                 width: 100%;
                 color: var(--CardMainTextColor);
                 text-align: var(--CardMainTextTextAlign);
@@ -223,6 +223,7 @@ textarea {
             }
             .Dop {
                 .DopText {
+                    line-height: var(--LineHeight);
                     color: var(--CardDopTextColor);
                     width: 100%;
                     text-align: var(--CardDopTextTextAlign);
