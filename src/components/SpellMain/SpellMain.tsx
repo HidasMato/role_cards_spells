@@ -97,7 +97,7 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
     const [sizePole, setSizesPole] = useState([18,15,15,15,80,2,15]);
     const [minMax, setMinMax] = useState([8, 12]);
     const [blockMinMax, setBlockMinMax] = useState(false);
-    const [sizeText, setSizesText] = useState([14, 11, 11, 11, 10, 10, 10, 10, 11, 11, 11, 11, 14, 20, 5, 200, 5, 200, 264, 20, 264, 70, 70, 70, 70, 1.1]);
+    const [sizeText, setSizesText] = useState([14, 11, 11, 11, 10, 10, 10, 10, 11, 11, 11, 11, 14, 20, 5, 200, 5, 200, 264, 20, 264, 70, 70, 70, 70, 200]);
     const [paddingText, setPaddingText] = useState([2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 10, 10, 10, 10, 9, 2, 2, 2, 2, 2, 2]);
     const [alignValue, setAlignValue] = useState([2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 1]);
     const [borderRadiusValue, setBorderRadiusValue] = useState([11, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 11]);
@@ -160,7 +160,7 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
     }, [lineCut]);
     useEffect(() => {
         for (let i = 0; i < 30; i++) document.getElementById("ThisIsColorsConst")?.style.setProperty(sizeTextNames[i], String(sizeText[i]) + 'px');
-        document.getElementById("ThisIsColorsConst")?.style.setProperty(sizeTextNames[25], String(sizeText[25]));
+        document.getElementById("ThisIsColorsConst")?.style.setProperty(sizeTextNames[25], String(sizeText[25] / 100));
     }, [sizeText]);
     useEffect(() => {
         for (let i = 0; i < 30; i++) document.getElementById("ThisIsColorsConst")?.style.setProperty(alignNames[i], String(getAlignText(alignValue[i])));
@@ -1190,27 +1190,29 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                                         {
                                             Array.from(Array(kolvo[1]).keys()).map((a, index3) => {
                                                 if (isBack) {
-                                                    if(cards.length >= kolvo[1]*kolvo[0] * index + kolvo[0] * index2 + kolvo[1] - index3 ) {
+                                                    console.log(index3,cards.length,kolvo[1] * kolvo[0] * index + kolvo[1] * index2 + kolvo[1] - index3);
+                                                    if (cards.length >= kolvo[1] * kolvo[0] * index + kolvo[1] * index2 + kolvo[1] - index3) {
                                                         return (
-                                                            <div className={style.Card} key={index*kolvo[1]*kolvo[0] + index2*kolvo[0] + kolvo[1] - index3} >
-                                                                <CardSpell targetFont={String(fontMas[targetFont2])} NumbersExist={myNumbers} isBack={true} keyt={index * kolvo[1] * kolvo[0] + index2 * kolvo[0] + kolvo[1] - index3} cardType={targetTypeCardNumber} Pole={cards[kolvo[1] * kolvo[0] * index + kolvo[0] * index2 + kolvo[1] - index3 -1]}>{getBackCardImg(cards[kolvo[1]*kolvo[0] * index + kolvo[0] * index2 + kolvo[1] - index3-1][16])}</CardSpell>
+                                                            <div className={style.Card} key={index*kolvo[1]*kolvo[0] + index2*kolvo[1] + kolvo[1] - index3} >
+                                                                <CardSpell targetFont={String(fontMas[targetFont2])} NumbersExist={myNumbers} isBack={true} keyt={index * kolvo[1] * kolvo[0] + index2 * kolvo[1] + kolvo[1] - index3} cardType={targetTypeCardNumber} Pole={cards[kolvo[1] * kolvo[0] * index + kolvo[1] * index2 + kolvo[1] - index3 -1]}>{getBackCardImg(cards[kolvo[1]*kolvo[0] * index + kolvo[1] * index2 + kolvo[1] - index3-1][16])}</CardSpell>
                                                             </div>
                                                         );
                                                     }
                                                     return (
-                                                        <div className={style.Card } key={"List" + index + " Line" + index2 + " Card" + (kolvo[1] - index3)} >
+                                                        <div className={style.Card } key={index*kolvo[1]*kolvo[0] + index2*kolvo[1] + kolvo[1] - index3} >
                                                         </div>
                                                     );
                                                 } else {
-                                                    if(cards.length > kolvo[1]*kolvo[0] * index + kolvo[0] * index2 + index3) {
+                                                    console.log(cards.length,kolvo[1] * index2, index3);
+                                                    if(cards.length > kolvo[1]*kolvo[0] * index + kolvo[1] * index2 + index3) {
                                                         return (
-                                                            <div className={style.Card} key={index*kolvo[1]*kolvo[0] + index2*kolvo[0] + index3} >
-                                                                <CardSpell targetFont={String(fontMas[targetFont1])} startPerepolnen={startPerepolnen} keyt={index*kolvo[1]*kolvo[0] + index2*kolvo[0] + index3} plusPerepolnen = {plusPerepolnen} minMax = {minMax} cardType={targetTypeCardNumber} Pole={cards[kolvo[1]*kolvo[0] * index + kolvo[0] * index2 + index3]} />
+                                                            <div className={style.Card} key={index*kolvo[1]*kolvo[0] + index2*kolvo[1] + index3} >
+                                                                <CardSpell targetFont={String(fontMas[targetFont1])} startPerepolnen={startPerepolnen} keyt={index*kolvo[1]*kolvo[0] + index2*kolvo[1] + index3} plusPerepolnen = {plusPerepolnen} minMax = {minMax} cardType={targetTypeCardNumber} Pole={cards[kolvo[1]*kolvo[0] * index + kolvo[1] * index2 + index3]} />
                                                             </div>
                                                         );
                                                     }
                                                     return (
-                                                        <div className={style.Card} key={"List" + index + " Line" + index2 + " Card" + index3} >
+                                                        <div className={style.Card} key={index*kolvo[1]*kolvo[0] + index2*kolvo[1] + index3} >
                                                         </div>
                                                     );
                                                 }
@@ -1610,7 +1612,7 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                     </OptionCase>
                     <OptionCase nameSetting={'Подгонка описания'} targetThis={targetOption[8]} setTarget={setTarget} number={8}>
                         <div>
-                            <OptionSize text={"Высота строки (от 0 до 2)"} size={sizeText[25]} number={25} setSize={setSizeText} min={0} max={2} block={blockSizeText[25]} setBlock={setBlocSizeText} />
+                            <OptionSize text={"% Высота строки (от 0 до 200y)"} size={sizeText[25]} number={25} setSize={setSizeText} min={0} max={200} block={blockSizeText[25]} setBlock={setBlocSizeText} />
                             <OptionSize text={"Минимумальный размер"} size={minMax[0]} number={0} setSize={setMinMaxs} min={0} max={blockMinMax ? 99 : minMax[1]} block={false} setBlock={setBlocMinMax} />
                             <OptionSize textAs={"Как минимум"} text={"Максимум"} size={minMax[1]} number={1} setSize={setMinMaxs} min={minMax[0]} max={99} block={blockMinMax} setBlock={setBlocMinMax} />
                             <div className={style.ButtonMinMax} onClick={() => {
