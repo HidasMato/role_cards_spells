@@ -64,6 +64,7 @@
     width: 100%;
     position: relative;
     white-space: pre;
+    overflow: hidden;
     img {
         position: absolute;
         height: 100%;
@@ -101,18 +102,6 @@
         left: var(--Number4H);
         font-size: var(--Number4Kegl);
         color: var(--Number4);
-    }
-}
-.Round {
-    svg {
-        transform: rotate(90deg);
-        transform-origin: 0% 0%;
-        position: absolute;
-        top: 0;
-        left: calc((297mm - var(--ListPaddingT) - var(--ListPaddingB)) / var(--h));
-        width: calc((210mm - var(--ListPaddingR) - var(--ListPaddingL)) / var(--w));
-        height: calc((297mm - var(--ListPaddingT) - var(--ListPaddingB)) / var(--h));
-        
     }
 }
 input {
@@ -296,6 +285,7 @@ textarea {
     .Options1d1Line {
         display: flex;
         flex-direction: row;
+        justify-content: start;
         height: calc(var(--CardOptionHeigth)/4 - var(--CardOptionBorder) / 4 * 3);
         width: 100%;
         div {
@@ -371,9 +361,9 @@ textarea {
         color: var(--CardOption1ZColor);
         font-size: var(--CardOptionZagolovokTextFont1);
         .OptionZagolovok {
+            padding: 0 var(--CardOption1ZagolovokTextPaddingR) 0 var(--CardOption1ZagolovokTextPaddingL);
             div {
                 text-align: var(--CardOption1ZagolovokTextAlign);
-                padding: 0 var(--CardOption1ZagolovokTextPadding);
                 width: 100%;
             }
         }
@@ -387,9 +377,9 @@ textarea {
         color: var(--CardOption2ZColor);
         font-size: var(--CardOptionZagolovokTextFont2);
         .OptionZagolovok {
+                padding: 0 var(--CardOption2ZagolovokTextPaddingR) 0 var(--CardOption2ZagolovokTextPaddingL);
             div {
                 text-align: var(--CardOption2ZagolovokTextAlign);
-                padding: 0 var(--CardOption2ZagolovokTextPadding);
                 width: 100%;
             }
         }
@@ -403,9 +393,9 @@ textarea {
         color: var(--CardOption3ZColor);
         font-size: var(--CardOptionZagolovokTextFont3);
         .OptionZagolovok {
+                padding: 0 var(--CardOption3ZagolovokTextPaddingR) 0 var(--CardOption3ZagolovokTextPaddingL);
             div {
                 text-align: var(--CardOption3ZagolovokTextAlign);
-                padding: 0 var(--CardOption3ZagolovokTextPadding);
                 width: 100%;
             }
         }
@@ -419,9 +409,9 @@ textarea {
         color: var(--CardOption4ZColor);
         font-size: var(--CardOptionZagolovokTextFont4);
         .OptionZagolovok {
+                padding: 0 var(--CardOption4ZagolovokTextPaddingR) 0 var(--CardOption4ZagolovokTextPaddingL);
             div {
                 text-align: var(--CardOption4ZagolovokTextAlign);
-                padding: 0 var(--CardOption4ZagolovokTextPadding);
                 width: 100%;
             }
         }
@@ -432,7 +422,7 @@ textarea {
         div {
             width: 100%;
             text-align: var(--CardOption1TextTextAlign);
-            padding: 0 var(--CardOption1TextTextPadding);
+            padding: 0 var(--CardOption1TextTextPaddingR) 0 var(--CardOption1TextTextPaddingL);
         }
     }
     .Option2TextColor {
@@ -441,7 +431,7 @@ textarea {
         div {
             width: 100%;
             text-align: var(--CardOption2TextTextAlign);
-            padding: 0 var(--CardOption2TextTextPadding);
+            padding: 0 var(--CardOption2TextTextPaddingR) 0 var(--CardOption2TextTextPaddingL);
         }
     }
     .Option3TextColor {
@@ -450,7 +440,7 @@ textarea {
         div {
             width: 100%;
             text-align: var(--CardOption3TextTextAlign);
-            padding: 0 var(--CardOption3TextTextPadding);
+            padding: 0 var(--CardOption3TextTextPaddingR) 0 var(--CardOption3TextTextPaddingL);
         }
     }
     .Option4TextColor {
@@ -459,7 +449,7 @@ textarea {
         div {
             width: 100%;
             text-align: var(--CardOption4TextTextAlign);
-            padding: 0 var(--CardOption4TextTextPadding);
+            padding: 0 var(--CardOption4TextTextPaddingR) 0 var(--CardOption4TextTextPaddingL);
         }
     }
 }

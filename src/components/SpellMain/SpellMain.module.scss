@@ -390,15 +390,14 @@
                 }
             }
         }
+        .BackList {
+            padding: var(--ListPaddingT) var(--ListPaddingL) var(--ListPaddingB) var(--ListPaddingR);
+        }
         @media print {
             .List {
                 margin: 0;
                 break-inside: avoid;
             }
-        }
-        .ListHorisont {
-            width: 297mm;
-            height: 210mm;
         }
     }
     .ListDown {
@@ -617,14 +616,22 @@
     --CardPer1TextPadding: 1mm;
     --CardPer2TextPadding: 1mm;
     --CardPer3TextPadding: 1mm;
-    --CardOption1ZagolovokTextPadding: 1mm;
-    --CardOption2ZagolovokTextPadding: 1mm;
-    --CardOption3ZagolovokTextPadding: 1mm;
-    --CardOption4ZagolovokTextPadding: 1mm;
-    --CardOption1TextTextPadding: 1mm;
-    --CardOption2TextTextPadding: 1mm;
-    --CardOption3TextTextPadding: 1mm;
-    --CardOption4TextTextPadding: 1mm;
+    --CardOption1ZagolovokTextPaddingL: 1mm;
+    --CardOption2ZagolovokTextPaddingL: 1mm;
+    --CardOption3ZagolovokTextPaddingL: 1mm;
+    --CardOption4ZagolovokTextPaddingL: 1mm;
+    --CardOption1ZagolovokTextPaddingR: 1mm;
+    --CardOption2ZagolovokTextPaddingR: 1mm;
+    --CardOption3ZagolovokTextPaddingR: 1mm;
+    --CardOption4ZagolovokTextPaddingR: 1mm;
+    --CardOption1TextTextPaddingL: 1mm;
+    --CardOption2TextTextPaddingL: 1mm;
+    --CardOption3TextTextPaddingL: 1mm;
+    --CardOption4TextTextPaddingL: 1mm;
+    --CardOption1TextTextPaddingR: 1mm;
+    --CardOption2TextTextPaddingR: 1mm;
+    --CardOption3TextTextPaddingR: 1mm;
+    --CardOption4TextTextPaddingR: 1mm;
     --CardMainTextTextPaddingT: 1mm;
     --CardMainTextTextPaddingR: 1mm;
     --CardMainTextTextPaddingB: 1mm;

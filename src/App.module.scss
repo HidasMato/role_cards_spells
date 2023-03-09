@@ -20,10 +20,35 @@
         justify-content: space-between;
         align-items: center;
         padding: 0 1vh;
+        .Opis {
+            white-space: pre;
+            padding: 1vh;
+            height: max-content;
+            width: min-content;
+            min-width: 21vh;
+            text-align: center;
+            background-color: var(--color3);
+            border: 0.1vh solid var(--color6);
+            border-radius: 4vh;
+            position: absolute;
+            right: 0;
+            top: 8vh;
+            color: var(--color6);
+            font-size: 2.3vh;
+            z-index: 8;
+        }
         .Slk {
             height: 100%;
             padding-top: 1vh;
             display: flex;
+            .U {
+                color: var(--color6);
+                font-size: 2.3vh;
+                line-height: 1;
+                padding-right: 1vh;
+                white-space: pre;
+                text-align: end;
+            }
             .Icon1 {
                 height: 5vh;
                 width:8vh;

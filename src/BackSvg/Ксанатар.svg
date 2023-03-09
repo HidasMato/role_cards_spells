@@ -8,7 +8,8 @@ preserveAspectRatio="none"
 xmlnsxodm="http://www.corel.com/coreldraw/odm/2003">
  <g id="Слой_x0020_1">
   <metadata id="CorelCorpID_0Corel-Layer"/>
-  <rect fill="var(--Rubaha1)" x="9.99" y="9.99" width="18557.43" height="26187.51"/>
+  <rect fill="var(--Rubaha2)" x="-0" width="18557.41" height="26187.49"/>
+  <path fill="var(--Rubaha1)" d="M1400.51 1991.92l0 22203.64c0,321.88 263.34,585.2 585.19,585.2l14586.01 0c321.87,0 585.19,-263.33 585.19,-585.2l0 -22203.64c0,-321.87 -263.33,-585.19 -585.19,-585.19l-14586.01 0c-321.86,0 -585.19,263.33 -585.19,585.19z"/>
   <g id="База">
    <polygon fill="none" stroke="var(--Rubaha1)" strokeWidth="19.98" strokeMiterlimit="22.9256" points="9275.14,1813.47 13014.77,7456.12 16754.35,13098.76 13014.77,18741.39 9275.14,24384.05 5535.52,18741.39 1795.94,13098.76 5535.52,7456.12 "/>
    <polygon fill="none" stroke="var(--Rubaha1)" strokeWidth="19.98" strokeMiterlimit="22.9256" points="9275.14,2112.51 12886.73,7605.64 16498.28,13098.76 12886.73,18591.87 9275.14,24085 5663.56,18591.87 2052.01,13098.76 5663.56,7605.64 "/>

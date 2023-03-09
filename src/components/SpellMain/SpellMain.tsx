@@ -94,19 +94,19 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
     const sizeTextNames = ["--CardZagolovokTextFont","--CardPer1TextFont","--CardPer2TextFont","--CardPer3TextFont","--CardOptionZagolovokTextFont1","--CardOptionZagolovokTextFont2","--CardOptionZagolovokTextFont3","--CardOptionZagolovokTextFont4","--CardOptionTextTextFont1","--CardOptionTextTextFont2","--CardOptionTextTextFont3","--CardOptionTextTextFont4","--CardDownTextFont","--Number1H","--Number1V","--Number2H","--Number2V","--Number3H","--Number3V","--Number4H","--Number4V", "--Number1Kegl", "--Number2Kegl", "--Number3Kegl", "--Number4Kegl", "--LineHeight"];
     const colorsNames = ["--CardColorBackcground", "--CardZagolovokBackgroundColor", "--CardZagolovokTextColor", "--CardPer1BackgroundColor", "--CardPer1TextColor", "--CardPer2BackgroundColor", "--CardPer2TextColor", "--CardPer3BackgroundColor", "--CardPer3TextColor", "--CardOptionPalki", "--CardOption1Background", "--CardOption2Background", "--CardOption3Background", "--CardOption4Background", "--CardOption1ZColor", "--CardOption2ZColor", "--CardOption3ZColor", "--CardOption4ZColor", "--CardOption1TColor", "--CardOption2TColor", "--CardOption3TColor", "--CardOption4TColor", "--CardMainBackgroundColor", "--CardMainTextColor", "--CardDopBackgroundColor", "--CardDopTextColor", "--CardDownTextColor", "--ListColor", "--Rubaha1", "--Rubaha2", "--Rubaha3", "--Rubaha4", "--Rubaha5", "--Number1", "--Number2", "--Number3", "--Number4", "--Ramka1", "--Ramka2", "--Ramka3", "--Ramka4", "--Ramka5"];
     const alignNames = ["--CardZagolovokTextAlign", "--CardPer1TextAlign", "--CardPer2TextAlign", "--CardPer3TextAlign", "--CardOption1ZagolovokTextAlign", "--CardOption2ZagolovokTextAlign", "--CardOption3ZagolovokTextAlign", "--CardOption4ZagolovokTextAlign", "--CardOption1TextTextAlign", "--CardOption2TextTextAlign", "--CardOption3TextTextAlign", "--CardOption4TextTextAlign", "--CardMainTextTextAlign", "--CardDopTextTextAlign", "--CardDownTextTextAlign"];
-    const paddingNames = ["--CardZagolovokTextPadding", "--CardPer1TextPadding", "--CardPer2TextPadding", "--CardPer3TextPadding", "--CardOption1ZagolovokTextPadding", "--CardOption2ZagolovokTextPadding", "--CardOption3ZagolovokTextPadding", "--CardOption4ZagolovokTextPadding", "--CardOption1TextTextPadding", "--CardOption2TextTextPadding", "--CardOption3TextTextPadding", "--CardOption4TextTextPadding", "--CardMainTextTextPaddingT", "--CardDopTextTextPaddingT", "--CardDownTextTextPadding", "--ListPaddingT", "--ListPaddingR", "--ListPaddingB", "--ListPaddingL", "--CardPadding", "--CardMainTextTextPaddingR", "--CardMainTextTextPaddingB", "--CardMainTextTextPaddingL", "--CardDopTextTextPaddingR", "--CardDopTextTextPaddingB", "--CardDopTextTextPaddingL"];
+    const paddingNames = ["--CardZagolovokTextPadding", "--CardPer1TextPadding", "--CardPer2TextPadding", "--CardPer3TextPadding", "--CardOption1ZagolovokTextPaddingR", "--CardOption2ZagolovokTextPaddingR", "--CardOption3ZagolovokTextPaddingR", "--CardOption4ZagolovokTextPaddingR", "--CardOption1TextTextPaddingR", "--CardOption2TextTextPaddingR", "--CardOption3TextTextPaddingR", "--CardOption4TextTextPaddingR", "--CardMainTextTextPaddingT", "--CardDopTextTextPaddingT", "--CardDownTextTextPadding", "--ListPaddingT", "--ListPaddingR", "--ListPaddingB", "--ListPaddingL", "--CardPadding", "--CardMainTextTextPaddingR", "--CardMainTextTextPaddingB", "--CardMainTextTextPaddingL", "--CardDopTextTextPaddingR", "--CardDopTextTextPaddingB", "--CardDopTextTextPaddingL", "--CardOption1ZagolovokTextPaddingL", "--CardOption2ZagolovokTextPaddingL", "--CardOption3ZagolovokTextPaddingL", "--CardOption4ZagolovokTextPaddingL", "--CardOption1TextTextPaddingL", "--CardOption2TextTextPaddingL", "--CardOption3TextTextPaddingL", "--CardOption4TextTextPaddingL"];
     const bordwrRadiusNames = ["--CardZagolovok┌", "--CardZagolovok┐", "--CardZagolovok┘", "--CardZagolovok└", "--CardOption1┌", "--CardOption1┐", "--CardOption1┘", "--CardOption1└", "--CardOption2┌", "--CardOption2┐", "--CardOption2┘", "--CardOption2└", "--CardOption3┌", "--CardOption3┐", "--CardOption3┘", "--CardOption3└", "--CardOption4┌", "--CardOption4┐", "--CardOption4┘", "--CardOption4└", "--CardAllText┌", "--CardAllText┐", "--CardAllText┘", "--CardAllText└"];
     const [blockColor, setBlockColor] = useState([false, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, false, false, false, true, true, true, true, true]);
     const [blockSizePole, setBlockSizePole] = useState([false, false, true, true, false, false, false, false, false, false, false, false, false, false]);
     const [blockSizeText, setBlockSizeText] = useState([false, false, true, true, false, true, true, true, false, true, true, true, true, false, false, false, false, false, false, false, false, false, true, true, true, false]);
-    const [blockPaddingText, setBlockPaddingText] = useState([false, false, true, true, false, true, true, true, true, true, true, true, false, true, true, false, true, true, true, false, true, true, true, true, true, true]);
+    const [blockPaddingText, setBlockPaddingText] = useState([false, false, true, true, false, true, true, true, true, true, true, true, false, true, true, false, true, true, true, false, true, true, true, true, true, true, false, false, false, false, false, false, false, false]);
     const [blockAlignValue, setBlockAlignValue] = useState([false, false, true, true, false, true, true, true, true, true, true, true, false, true, false, false, false, false, false, false, false, false, false, false, false]);
     const [blockBorderRadius, setBlockBorderRadius] = useState([false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]);
     const [sizePole, setSizesPole] = useState([18,15,15,15,80,2,15]);
     const [minMax, setMinMax] = useState([8, 12]);
     const [blockMinMax, setBlockMinMax] = useState(false);
     const [sizeText, setSizesText] = useState([14, 11, 11, 11, 10, 10, 10, 10, 11, 11, 11, 11, 14, 20, 5, 200, 5, 200, 264, 20, 264, 70, 70, 70, 70, 110]);
-    const [paddingText, setPaddingText] = useState([2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 10, 10, 10, 10, 9, 2, 2, 2, 2, 2, 2]);
+    const [paddingText, setPaddingText] = useState([2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 10, 10, 10, 10, 9, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0]);
     const [alignValue, setAlignValue] = useState([2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 1]);
     const [borderRadiusValue, setBorderRadiusValue] = useState([11, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 11]);
     const [kolvo, setKolvo] = useState([3,3]);
@@ -125,7 +125,7 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
     const [rubahaCaseNumber, setRubahaCaseNumber] = useState(2);
     const [targetBackgroundNumber, setTargetBackgroundNumber] = useState(5);
     const [ramkaCaseNumber, setRamkaCaseNumber] = useState(2);
-    const [targetRamkaNumber, setTargetRamkaNumber] = useState(5);
+    const [targetRamkaNumber, setTargetRamkaNumber] = useState(1);
     const setTarget = (a: number, b: boolean) => {
         const M = [];
         for (let i = 0; i < targetOption.length; i++) M[i] = false;
@@ -144,6 +144,7 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
         r = r + kolvo[0] + ',' + kolvo[1] + ',';
         r = r + targetBackgroundNumber + ',';
         r = r + targetTypeCardNumber + ',';
+        r = r + targetRamkaNumber + ',';
         for (let i = 0; i < myNumbers.length; i++) r = r + myNumbers[i] + ',';
         r = r + targetFont1 + ',';
         r = r + targetFont2 + ',';
@@ -295,6 +296,13 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
         if (V[23]) M[23] = M[13];
         if (V[24]) M[24] = M[13];
         if (V[25]) M[25] = M[13];
+        if (V[27]) M[27] = M[26];
+        if (V[28]) M[28] = M[26];
+        if (V[29]) M[29] = M[26];
+        if (V[30]) M[30] = M[26];
+        if (V[31]) M[31] = M[30];
+        if (V[32]) M[32] = M[30];
+        if (V[33]) M[33] = M[30];
         setPaddingText(M);
     };
     const setAlignsValue = (a: number, b: number, vlog?: boolean) => {
@@ -967,7 +975,7 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
     }
     const setPoles = (text: string[]) => {
         let R = '';
-        for (let i = 0; i < 17; i++) R = R + '\"' + text[i]?.replaceAll('\"', '\"\"')?.replaceAll('\n', 'Џ') + '\"' + ';';
+        for (let i = 0; i < 18; i++) R = R + '\"' + text[i]?.replaceAll('\"', '\"\"')?.replaceAll('\n', 'Џ') + '\"' + ';';
         setNewCSV(R);
         setNewCard(text);
     }
@@ -1015,7 +1023,7 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
         URL.revokeObjectURL(url);
     };
     const getCardFromCSVLine = (CSV: string, C: string[], pointStart: number, pointEnd: number, newCSV: string) => {
-        for (let i = 0; pointStart<pointEnd || i<17; i++) {
+        for (let i = 0; pointStart<pointEnd || i<18; i++) {
             C[i] = '';
             if (pointEnd <= pointStart) {
                 C[i] = '';
@@ -1220,7 +1228,7 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                 {
                     sumLists.map((a, index) => {
                     return (
-                        <div className={style.List  + ' ' + (targetTypeCardNumber == 0 ||targetTypeCardNumber == 1 ||targetTypeCardNumber == 2 ||targetTypeCardNumber == 3 ? null : style.ListHorisont)} key={"List" + index}>
+                        <div className={style.List + ' ' + (isBack? style.BackList : null)} key={"List" + index}>
                             {
                                 Array.from(Array(kolvo[0]).keys()).map((a, index2) => {
                                     return (
@@ -1525,6 +1533,9 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                         points = pointe + 1;
                         pointe = r.indexOf(',', points);
                         setTargetTypeCardNumber(Number(r.slice(points, pointe)));
+                        points = pointe + 1;
+                        pointe = r.indexOf(',', points);
+                        setTargetRamkaNumber(Number(r.slice(points, pointe)));
                         let myNumbersN: boolean[] = [];
                         for (let i = 0; i < myNumbers.length; i++) {
                             points = pointe + 1;
@@ -1664,14 +1675,22 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                             <OptionSize text={"Полоса 1"} size={paddingText[1]} number={1} setSize={setPaddinText} min={0} max={199} block={blockPaddingText[1]} setBlock={setBlocPaddingText} />
                             <OptionSize textAs={"Как полоса 1"} text={"Полоса 2"} size={paddingText[2]} number={2} setSize={setPaddinText} min={0} max={199} block={blockPaddingText[2]} setBlock={setBlocPaddingText} />
                             <OptionSize textAs={"Как полоса 1"} text={"Полоса 3"} size={paddingText[3]} number={3} setSize={setPaddinText} min={0} max={199} block={blockPaddingText[3]} setBlock={setBlocPaddingText} />
-                            <OptionSize text={"Заголовок опции 1"} size={paddingText[4]} number={4} setSize={setPaddinText} min={0} max={199} block={blockPaddingText[4]} setBlock={setBlocPaddingText} />
-                            <OptionSize text={"Заголовок опции 2"} textAs={"Как опция 1"} size={paddingText[5]} number={5} setSize={setPaddinText} min={0} max={199} block={blockPaddingText[5]} setBlock={setBlocPaddingText} />
-                            <OptionSize text={"Заголовок опции 3"} textAs={"Как опция 1"} size={paddingText[6]} number={6} setSize={setPaddinText} min={0} max={199} block={blockPaddingText[6]} setBlock={setBlocPaddingText} />
-                            <OptionSize text={"Заголовок опции 4"} textAs={"Как опция 1"} size={paddingText[7]} number={7} setSize={setPaddinText} min={0} max={199} block={blockPaddingText[7]} setBlock={setBlocPaddingText} />
-                            <OptionSize text={"Текст опции 1"}textAs={"Как загол 1"}  size={paddingText[8]} number={8} setSize={setPaddinText} min={0} max={199} block={blockPaddingText[8]} setBlock={setBlocPaddingText} />
-                            <OptionSize text={"Текст опции 2"} textAs={"Как опция 1"} size={paddingText[9]} number={9} setSize={setPaddinText} min={0} max={199} block={blockPaddingText[9]} setBlock={setBlocPaddingText} />
-                            <OptionSize text={"Текст опции 3"} textAs={"Как опция 1"} size={paddingText[10]} number={10} setSize={setPaddinText} min={0} max={199} block={blockPaddingText[10]} setBlock={setBlocPaddingText} />
-                            <OptionSize text={"Текст опции 4"} textAs={"Как опция 1"} size={paddingText[11]} number={11} setSize={setPaddinText} min={0} max={199} block={blockPaddingText[11]} setBlock={setBlocPaddingText} />
+                            <OptionSize text={"Загол опции 1 право"} size={paddingText[4]} number={4} setSize={setPaddinText} min={0} max={350} block={blockPaddingText[4]} setBlock={setBlocPaddingText} />
+                            <OptionSize text={"Загол опции 2 право"} textAs={"Как опц 1"} size={paddingText[5]} number={5} setSize={setPaddinText} min={0} max={350} block={blockPaddingText[5]} setBlock={setBlocPaddingText} />
+                            <OptionSize text={"Загол опции 3 право"} textAs={"Как опц 1"} size={paddingText[6]} number={6} setSize={setPaddinText} min={0} max={350} block={blockPaddingText[6]} setBlock={setBlocPaddingText} />
+                            <OptionSize text={"Загол опции 4 право"} textAs={"Как опц 1"} size={paddingText[7]} number={7} setSize={setPaddinText} min={0} max={350} block={blockPaddingText[7]} setBlock={setBlocPaddingText} />
+                            <OptionSize text={"Загол опции 1 лево"} size={paddingText[26]} number={26} setSize={setPaddinText} min={0} max={350} block={blockPaddingText[26]} setBlock={setBlocPaddingText} />
+                            <OptionSize text={"Загол опции 2 лево"} textAs={"Как опц 1"} size={paddingText[27]} number={27} setSize={setPaddinText} min={0} max={350} block={blockPaddingText[27]} setBlock={setBlocPaddingText} />
+                            <OptionSize text={"Загол опции 3 лево"} textAs={"Как опц 1"} size={paddingText[28]} number={28} setSize={setPaddinText} min={0} max={350} block={blockPaddingText[28]} setBlock={setBlocPaddingText} />
+                            <OptionSize text={"Загол опции 4 лево"} textAs={"Как опц 1"} size={paddingText[29]} number={29} setSize={setPaddinText} min={0} max={350} block={blockPaddingText[29]} setBlock={setBlocPaddingText} />
+                            <OptionSize text={"Текст опции 1 право"}textAs={"Как загол 1"}  size={paddingText[8]} number={8} setSize={setPaddinText} min={0} max={350} block={blockPaddingText[8]} setBlock={setBlocPaddingText} />
+                            <OptionSize text={"Текст опции 2 право"} textAs={"Как опц 1"} size={paddingText[9]} number={9} setSize={setPaddinText} min={0} max={350} block={blockPaddingText[9]} setBlock={setBlocPaddingText} />
+                            <OptionSize text={"Текст опции 3 право"} textAs={"Как опц 1"} size={paddingText[10]} number={10} setSize={setPaddinText} min={0} max={350} block={blockPaddingText[10]} setBlock={setBlocPaddingText} />
+                            <OptionSize text={"Текст опции 4 право"} textAs={"Как опц 1"} size={paddingText[11]} number={11} setSize={setPaddinText} min={0} max={350} block={blockPaddingText[11]} setBlock={setBlocPaddingText} />
+                            <OptionSize text={"Текст опции 1 лево"}textAs={"Как загол 1"}  size={paddingText[30]} number={30} setSize={setPaddinText} min={0} max={350} block={blockPaddingText[30]} setBlock={setBlocPaddingText} />
+                            <OptionSize text={"Текст опции 2 лево"} textAs={"Как опц 1"} size={paddingText[31]} number={31} setSize={setPaddinText} min={0} max={350} block={blockPaddingText[31]} setBlock={setBlocPaddingText} />
+                            <OptionSize text={"Текст опции 3 лево"} textAs={"Как опц 1"} size={paddingText[32]} number={32} setSize={setPaddinText} min={0} max={350} block={blockPaddingText[32]} setBlock={setBlocPaddingText} />
+                            <OptionSize text={"Текст опции 4 лево"} textAs={"Как опц 1"} size={paddingText[33]} number={33} setSize={setPaddinText} min={0} max={350} block={blockPaddingText[33]} setBlock={setBlocPaddingText} />
                             <OptionSize text={"Главный текст верх"} size={paddingText[12]} number={12} setSize={setPaddinText} min={0} max={199} block={blockPaddingText[12]} setBlock={setBlocPaddingText} />
                             <OptionSize text={"Главный текст право"} textAs={"Как верх"} size={paddingText[20]} number={20} setSize={setPaddinText} min={0} max={199} block={blockPaddingText[20]} setBlock={setBlocPaddingText} />
                             <OptionSize text={"Главный текст низ"} textAs={"Как верх"} size={paddingText[21]} number={21} setSize={setPaddinText} min={0} max={199} block={blockPaddingText[21]} setBlock={setBlocPaddingText} />
@@ -1800,7 +1819,7 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                                     <div className={style.Download} onClick={() => {
                                         let R = '';
                                         const A: string[] = [...cards[Number((document.getElementById('CTRLC') as HTMLInputElement)?.value)]];
-                                        for (let i = 0; i < 17; i++) R = R + '\"' + A[i].replaceAll('\"', '\"\"').replaceAll('\n', 'Џ') + '\"' + ';';
+                                        for (let i = 0; i < 18; i++) R = R + '\"' + A[i].replaceAll('\"', '\"\"').replaceAll('\n', 'Џ') + '\"' + ';';
                                         R = getCardFromCSVLine(R, A, 0, R.length - 1, '');
                                         setNewCSV(R);
                                         setNewCard(A);
@@ -2908,6 +2927,7 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                                     <input placeholder='Подпись' type="text" value={newCard[14]} onChange={(e) => { const A = newCard; A[14] = e.target.value;  setPoles(A)}} />
                                     <input placeholder='Номер на рубахе' type="text" value={newCard[15]} onChange={(e) => { const A = newCard; A[15] = e.target.value;  setPoles(A)}} />
                                     <input placeholder='Номер рубахи' type="text" value={newCard[16]} onChange={(e) => { const A = newCard; A[16] = e.target.value;  setPoles(A)}} />
+                                    <input placeholder='Номер рамки' type="text" value={newCard[17]} onChange={(e) => { const A = newCard; A[17] = e.target.value;  setPoles(A)}} />
                                 </div>
                             </div>
                         </div>
@@ -2916,5 +2936,4 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
         </div>
     );
 }
-
 export default SpellMain;
