@@ -304,20 +304,22 @@
             }
             .RedactorCase {
                 display: flex;
+                .Title {
+                    position: absolute;
+                    width: 100%;
+                }
                 .Base {
                     background-color: var(--color3);
                     border: 0.1vh solid var(--color6);
                     border-radius: 4vh;
                     height: 21vh;
                     width: 25vh;
-                    .Title {
-                        width: 22vh;
-                    }
+                    position: relative;
                     .BaseTips {
-                        border-radius:  1.5vh 1.5vh 4vh 4vh;
+                        border-radius: 1.5vh 1.5vh  4vh 4vh;
                         padding: 1vh 1vh 1vh 1vh;
-                        margin-top: 2vh;
-                        height: calc(100% - 2vh);
+                        margin: 12% 0 5% 0;
+                        height: 83%;
                         width: 100%;
                         overflow-y: scroll;
                         overflow-x: hidden;
@@ -331,9 +333,6 @@
                     margin-left: 1vh;
                     width: calc(100% - 16vh - 1vh);
                     position: relative;
-                    .Title {
-                        width: calc(100vw - 69vh - 3.5vh);
-                    }
                     .CSVText {
                         border-radius:  1.5vh 1.5vh 4vh 4vh;
                         padding: 1vh 1vh 1vh 1vh;
