@@ -126,6 +126,7 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
     const [targetBackgroundNumber, setTargetBackgroundNumber] = useState(5);
     const [ramkaCaseNumber, setRamkaCaseNumber] = useState(2);
     const [targetRamkaNumber, setTargetRamkaNumber] = useState(1);
+    const [needUpdate, setNeedUpdate] = useState(false);
     const setTarget = (a: number, b: boolean) => {
         const M = [];
         for (let i = 0; i < targetOption.length; i++) M[i] = false;
@@ -995,6 +996,9 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
     useEffect(() => {
         makeCardsFromCSV();
     }, [makeCSV]);
+    useEffect(()=> {
+        setNeedUpdate(true);
+    },[CSV]);
     useEffect(() => {
         let flag = true;
         if (perepolnen.length != 0)
@@ -1064,6 +1068,11 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
         }
         return newCSV;
     };
+    const setNU = () => {
+        setTimeout(() => {
+            setNeedUpdate(false);
+        }, 300);
+    };
     const makeCardsFromCSV = () => {
         let nowPoint = 0, nextEnter = 0, endPoint = CSV.length - 1;
         let cardNumber = 0, newCSV= '';
@@ -1079,6 +1088,7 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
         if (document.getElementById('CTRLV') as HTMLInputElement != undefined) (document.getElementById('CTRLV') as HTMLInputElement).value = String (cardNumber);
         setCards(C);
         setCSV(newCSV);
+        setNU();
     }
     const getBackCardImg = (PoleStr: string) => {
         let A = Number(PoleStr); 
@@ -2892,9 +2902,10 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                         <div className={style.Buttons}>
                             <input className={style.DownloadInput} type="file" id="InputFile" onChange={readFile}/>
                             <label className={style.Download} htmlFor="InputFile">Загрузить файл</label>
-                                <div className={style.Download} onClick={() => {
-                                    setMakeCSV(makeCSV + 1);
-                                }}>Обновить карточки</div>
+                            <div className={style.Obnova}>
+                                    <div className={style.Download} onClick={() => { setMakeCSV(makeCSV + 1) }}>Обновить карточки</div>
+                                    {needUpdate ? <div className={style.NeedUpdate}>!</div> : null}
+                            </div>
                             <div className={style.Download} onClick={downloadFile}>Скачать файл</div>
                         </div>
                         </div>

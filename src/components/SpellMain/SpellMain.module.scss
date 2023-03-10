@@ -211,6 +211,22 @@
             position: absolute;
             display: flex;
             justify-content: space-around;
+            .Obnova {
+                min-width: 23vh;
+                justify-content: center;
+                display: flex;
+                .NeedUpdate {
+                    width: 2vh;
+                    height: 100%;
+                    margin-left: 0.5vh;
+                    background-color: var(--color5);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+
+                }
+            }
             .DownloadInput {
                 display:none;
             }
