@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/role_cards_spells/static/css/main.33ef69c1.css",
-    "main.js": "/role_cards_spells/static/js/main.5e416cb8.js",
+    "main.css": "/role_cards_spells/static/css/main.a96d7184.css",
+    "main.js": "/role_cards_spells/static/js/main.f0f84b8c.js",
     "static/media/Zaychik-Regular.ttf": "/role_cards_spells/static/media/Zaychik-Regular.173a33b768ea315638ad.ttf",
     "static/media/MorningBreeze-Light.otf": "/role_cards_spells/static/media/MorningBreeze-Light.823ad7a2f9b297e86b3b.otf",
     "static/media/Bookerly Italic.ttf": "/role_cards_spells/static/media/Bookerly Italic.e10808b250fc36b9d0b9.ttf",
@@ -49,8 +49,6 @@
     "static/media/7.svg": "/role_cards_spells/static/media/7.fdc04b5d32a1a99f20e85bf29523b58e.svg",
     "static/media/4.svg": "/role_cards_spells/static/media/4.e89e5d72b3c0d35f796950df01a5520b.svg",
     "static/media/8.svg": "/role_cards_spells/static/media/8.7b08de27b89c9767a54baa9639afe53f.svg",
-    "static/media/9.svg": "/role_cards_spells/static/media/9.7c71ba0b4661f6b509610e41790f013e.svg",
-    "static/media/10.svg": "/role_cards_spells/static/media/10.9a8b2aa379da78f34aba317e7c03ef12.svg",
     "static/media/1.svg": "/role_cards_spells/static/media/1.2609e2cff0a5f4203687620786d4946f.svg",
     "static/media/2.svg": "/role_cards_spells/static/media/2.db918d70364638adf1c0a33947f43b08.svg",
     "static/media/Варвар.svg": "/role_cards_spells/static/media/Варвар.1088c5c1abcc1b85134a9a8c6d0f3ace.svg",
@@ -102,11 +100,11 @@
     "static/media/Change.svg": "/role_cards_spells/static/media/Change.d2ee68cc10dd187f05c77dcb242a8ce6.svg",
     "static/media/Базовая.svg": "/role_cards_spells/static/media/Базовая.6a38bf64a0171468a45d7a40adf6dc9a.svg",
     "index.html": "/role_cards_spells/index.html",
-    "main.33ef69c1.css.map": "/role_cards_spells/static/css/main.33ef69c1.css.map",
-    "main.5e416cb8.js.map": "/role_cards_spells/static/js/main.5e416cb8.js.map"
+    "main.a96d7184.css.map": "/role_cards_spells/static/css/main.a96d7184.css.map",
+    "main.f0f84b8c.js.map": "/role_cards_spells/static/js/main.f0f84b8c.js.map"
   },
   "entrypoints": [
-    "static/css/main.33ef69c1.css",
-    "static/js/main.5e416cb8.js"
+    "static/css/main.a96d7184.css",
+    "static/js/main.f0f84b8c.js"
   ]
 }
