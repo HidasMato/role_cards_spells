@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/role_cards_spells/static/css/main.a96d7184.css",
-    "main.js": "/role_cards_spells/static/js/main.f0f84b8c.js",
+    "main.js": "/role_cards_spells/static/js/main.cf1a314c.js",
     "static/media/Zaychik-Regular.ttf": "/role_cards_spells/static/media/Zaychik-Regular.173a33b768ea315638ad.ttf",
     "static/media/MorningBreeze-Light.otf": "/role_cards_spells/static/media/MorningBreeze-Light.823ad7a2f9b297e86b3b.otf",
     "static/media/Bookerly Italic.ttf": "/role_cards_spells/static/media/Bookerly Italic.e10808b250fc36b9d0b9.ttf",
@@ -29,6 +29,7 @@
     "static/media/Индийская танцовщица.svg": "/role_cards_spells/static/media/Индийская танцовщица.100b927ca7851ed239d3050d62e728d9.svg",
     "static/media/Воплощение.svg": "/role_cards_spells/static/media/Воплощение.c4380a8402e9f4bfac14357922da3aa7.svg",
     "static/media/HellasDustCyrillic.otf": "/role_cards_spells/static/media/HellasDustCyrillic.73dcd44159ed19bfe45d.otf",
+    "static/media/Утопленница.svg": "/role_cards_spells/static/media/Утопленница.8c0f8d1e37c5c19d9b3ef9cc6f200667.svg",
     "static/media/Жрец.svg": "/role_cards_spells/static/media/Жрец.752afb297f81be1dbcb354c4a83e0e0c.svg",
     "static/media/Напиток Тропический.svg": "/role_cards_spells/static/media/Напиток Тропический.a6984774c013b0464fa55a177bfd7294.svg",
     "static/media/Мистик.svg": "/role_cards_spells/static/media/Мистик.48a03e8a22eb9c891f9845f7ea66f970.svg",
@@ -74,8 +75,8 @@
     "static/media/Шестерня 1.svg": "/role_cards_spells/static/media/Шестерня 1.862d7ce72ed1e5346f202e88afd54e1b.svg",
     "static/media/Напиток Шипящий.svg": "/role_cards_spells/static/media/Напиток Шипящий.1c68ec60b285ae813b6ddc19eb120c82.svg",
     "static/media/Square_Meal_RUS_by_Slavchansky.ttf": "/role_cards_spells/static/media/Square_Meal_RUS_by_Slavchansky.b7eccccc3a209d8075c9.ttf",
-    "static/media/Ксанатар.svg": "/role_cards_spells/static/media/Ксанатар.bdbc4d85aed14d2f30cfc7c47baa3045.svg",
     "static/media/Рамка с цветами.svg": "/role_cards_spells/static/media/Рамка с цветами.c3831fa86e384989ba90166a002e04eb.svg",
+    "static/media/Ксанатар.svg": "/role_cards_spells/static/media/Ксанатар.930291c80d6fde317fb2387c52799ed3.svg",
     "static/media/GULAG Pavljenko.otf": "/role_cards_spells/static/media/GULAG Pavljenko.56f6f5a149ae9256a131.otf",
     "static/media/Шестерня 2.svg": "/role_cards_spells/static/media/Шестерня 2.cff43b0e693558e14036930be0ffd47c.svg",
     "static/media/Элементаль.svg": "/role_cards_spells/static/media/Элементаль.ec46af646383b615d1f41c0f98807f5e.svg",
@@ -101,10 +102,10 @@
     "static/media/Базовая.svg": "/role_cards_spells/static/media/Базовая.6a38bf64a0171468a45d7a40adf6dc9a.svg",
     "index.html": "/role_cards_spells/index.html",
     "main.a96d7184.css.map": "/role_cards_spells/static/css/main.a96d7184.css.map",
-    "main.f0f84b8c.js.map": "/role_cards_spells/static/js/main.f0f84b8c.js.map"
+    "main.cf1a314c.js.map": "/role_cards_spells/static/js/main.cf1a314c.js.map"
   },
   "entrypoints": [
     "static/css/main.a96d7184.css",
-    "static/js/main.f0f84b8c.js"
+    "static/js/main.cf1a314c.js"
   ]
 }
