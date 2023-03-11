@@ -9,8 +9,6 @@ import spellCard5 from '../../images/Spell/5.svg';
 import spellCard6 from '../../images/Spell/6.svg';
 import spellCard7 from '../../images/Spell/7.svg';
 import spellCard8 from '../../images/Spell/8.svg';
-import spellCard9 from '../../images/Spell/9.svg';
-import spellCard10 from '../../images/Spell/10.svg';
 import OptionCase from '../OptionCase/OptionCase';
 import OptionCardImg from '../OptionCardImg/OptionCardImg';
 import OptionColor from '../OptionColor/OptionColor';
@@ -70,6 +68,7 @@ import { ReactComponent as IndiTanec } from '../../BackSvg/Индийская т
 import { ReactComponent as Koteika } from '../../BackSvg/Котейка.svg';
 import { ReactComponent as MetlaKotelShlapa } from '../../BackSvg/Метла Котелок Шляпа.svg';
 import { ReactComponent as TanecDama } from '../../BackSvg/Танцующая дама.svg';
+import { ReactComponent as Utoplennica } from '../../BackSvg/Утопленница.svg';
 import BaseTip from '../BaseTip/BaseTip';
 import BaseTipCase from '../BaseTipCase/BaseTipCase';
 import CardSpell from '../CardSpell/CardSpell';
@@ -99,7 +98,7 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
     const [blockColor, setBlockColor] = useState([false, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, false, false, false, true, true, true, true, true]);
     const [blockSizePole, setBlockSizePole] = useState([false, false, true, true, false, false, false, false, false, false, false, false, false, false]);
     const [blockSizeText, setBlockSizeText] = useState([false, false, true, true, false, true, true, true, false, true, true, true, true, false, false, false, false, false, false, false, false, false, true, true, true, false]);
-    const [blockPaddingText, setBlockPaddingText] = useState([false, false, true, true, false, true, true, true, true, true, true, true, false, true, true, false, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true]);
+    const [blockPaddingText, setBlockPaddingText] = useState([false, false, true, true, false, true, true, true, true, true, true, true, false, true, true, false, true, true, true, false, true, true, true, true, true, true, false, true, true, true, true, true, true, true]);
     const [blockAlignValue, setBlockAlignValue] = useState([false, false, true, true, false, true, true, true, true, true, true, true, false, true, false, false, false, false, false, false, false, false, false, false, false]);
     const [blockBorderRadius, setBlockBorderRadius] = useState([false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]);
     const [sizePole, setSizesPole] = useState([18,15,15,15,80,2,15]);
@@ -340,8 +339,8 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
         if (V[11]) M[11] = M[8];
         if (V[12]) M[12] = M[4];
         if (V[13]) M[13] = M[12];
-        if (V[14]) M[14] = M[13];
-        if (V[15]) M[15] = M[14];
+        if (V[14]) M[14] = M[12];
+        if (V[15]) M[15] = M[12];
         if (V[16]) M[16] = M[4];
         if (V[17]) M[17] = M[16];
         if (V[18]) M[18] = M[16];
@@ -1092,7 +1091,7 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
     }
     const getBackCardImg = (PoleStr: string) => {
         let A = Number(PoleStr); 
-        if (A == undefined || A == 0 || A > 47 || Number.isNaN(A)) {
+        if (A == undefined || A == 0 || A > 48 || Number.isNaN(A)) {
             A = targetBackgroundNumber;
         }
         if (A < 0 && A > -13) {
@@ -1196,6 +1195,8 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                 return (<Shesternya2 />);
             case 47:
                 return (<TanecDama />);
+            case 48:
+                return (<Utoplennica />);
             default:
                 return (<div></div>);
         }
@@ -1332,6 +1333,8 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
             <OptionCardImg name={"Жрец"} targetThis={targetBackgroundNumber == 6} setTarget={setTargetBackgroundNumber} number={6} >{getBackCardImg('6')}</OptionCardImg>,
             <OptionCardImg name={"Колдун"} targetThis={targetBackgroundNumber == 7} setTarget={setTargetBackgroundNumber} number={7} >{getBackCardImg('7')}</OptionCardImg>,
             <OptionCardImg name={"Ксанатар"} targetThis={targetBackgroundNumber == 8} setTarget={setTargetBackgroundNumber} number={8} >{getBackCardImg('8')}</OptionCardImg>,
+            <OptionCardImg name={"Монах"} targetThis={targetBackgroundNumber == 9} setTarget={setTargetBackgroundNumber} number={9} >{getBackCardImg('9')}</OptionCardImg>,
+            <OptionCardImg name={"Мистик"} targetThis={targetBackgroundNumber == 10} setTarget={setTargetBackgroundNumber} number={10} >{getBackCardImg('10')}</OptionCardImg>,
             <OptionCardImg name={"Паладин"} targetThis={targetBackgroundNumber == 11} setTarget={setTargetBackgroundNumber} number={11} >{getBackCardImg('11')}</OptionCardImg>,
             <OptionCardImg name={"Следопыт"} targetThis={targetBackgroundNumber == 12} setTarget={setTargetBackgroundNumber} number={12} >{getBackCardImg('12')}</OptionCardImg>,
             <OptionCardImg name={"Чародей"} targetThis={targetBackgroundNumber == 13} setTarget={setTargetBackgroundNumber} number={13} >{getBackCardImg('13')}</OptionCardImg>,
@@ -1369,6 +1372,7 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
             <OptionCardImg name={"Шестерня 1"} targetThis={targetBackgroundNumber == 45} setTarget={setTargetBackgroundNumber} number={45} >{getBackCardImg('45')}</OptionCardImg>,
             <OptionCardImg name={"Шестерня 2"} targetThis={targetBackgroundNumber == 46} setTarget={setTargetBackgroundNumber} number={46} >{getBackCardImg('46')}</OptionCardImg>,
             <OptionCardImg name={"Танцующая дама"} targetThis={targetBackgroundNumber == 47} setTarget={setTargetBackgroundNumber} number={47} >{getBackCardImg('47')}</OptionCardImg>,
+            <OptionCardImg name={"Утопленница"} targetThis={targetBackgroundNumber == 48} setTarget={setTargetBackgroundNumber} number={48} >{getBackCardImg('48')}</OptionCardImg>,
         ];
         return (
             <div>
@@ -1580,10 +1584,6 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                             <div className={style.LineSetting}>
                                 <OptionCardImg numHide={true} img={spellCard7} name={"7"} targetThis={targetTypeCardNumber == 6} setTarget={setTargetTypeCardNumber} number={6} ></OptionCardImg>
                                 <OptionCardImg numHide={true} img={spellCard8} name={"8"} targetThis={targetTypeCardNumber == 7} setTarget={setTargetTypeCardNumber} number={7} ></OptionCardImg>
-                            </div>
-                            <div className={style.LineSetting}>
-                                <OptionCardImg numHide={true} img={spellCard9} name={"9"} targetThis={targetTypeCardNumber == 8} setTarget={setTargetTypeCardNumber} number={8} ></OptionCardImg>
-                                <OptionCardImg numHide={true} img={spellCard10} name={"10"} targetThis={targetTypeCardNumber == 9} setTarget={setTargetTypeCardNumber} number={9} ></OptionCardImg>
                             </div>
                         </>
                     </OptionCase>
@@ -2917,8 +2917,8 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                     ? <div className={style.Lists + ' ' + (showRedactor ? style.ListDown : '') + ' ' + (showOptions ? style.ListRigth : '')}> {getCards()} </div>
                     : <div className={style.AroundTwoCards}>
                         <div className={style.TwoCards}>
-                            <div className={style.OneCard + ' ' + (targetTypeCardNumber == 0 ||targetTypeCardNumber == 1 ||targetTypeCardNumber == 2 ||targetTypeCardNumber == 3 ? null : style.Horisont)}><CardSpell targetFont={String(fontMas[targetFont1])} startPerepolnen={startPerepolnen} keyt={-1} plusPerepolnen={plusPerepolnen} minMax={minMax} cardType={targetTypeCardNumber} Pole={newCard} setPole={setPoles}/></div>
-                            <div className={style.OneCard + ' ' + (targetTypeCardNumber == 0 ||targetTypeCardNumber == 1 ||targetTypeCardNumber == 2 ||targetTypeCardNumber == 3 ? null : style.Horisont)}><CardSpell targetFont={String(fontMas[targetFont2])} NumbersExist={myNumbers} isBack={true} keyt={-1} cardType={targetTypeCardNumber} Pole={newCard} setPole={setPoles}>{getBackCardImg(newCard[16])}{getRamkaImg(newCard[17])}</CardSpell></div>
+                            <div className={style.OneCard}><CardSpell targetFont={String(fontMas[targetFont1])} startPerepolnen={startPerepolnen} keyt={-1} plusPerepolnen={plusPerepolnen} minMax={minMax} cardType={targetTypeCardNumber} Pole={newCard} setPole={setPoles}/></div>
+                            <div className={style.OneCard}><CardSpell targetFont={String(fontMas[targetFont2])} NumbersExist={myNumbers} isBack={true} keyt={-1} cardType={targetTypeCardNumber} Pole={newCard} setPole={setPoles}>{getBackCardImg(newCard[16])}{getRamkaImg(newCard[17])}</CardSpell></div>
                             <div className={style.CardSelection}>
                                 <div>
                                     <input placeholder='Заголовок' type="text" value={newCard[0]} onChange={(e) => { const A = newCard; A[0] = e.target.value;  setPoles(A)}} />

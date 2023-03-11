@@ -152,33 +152,7 @@ const Card = ({setPole, targetFont, NumbersExist, isBack, keyt, cardType, Pole, 
                 </div>
             );
         };
-        const getOptions910 = () => {
-            return (
-                <div className={style.Options22}>
-                    <div className={style.Options2hor}>
-                        <div className={style.Options1d2Line + ' ' + style.BcgrOpt1}>
-                            <div className={style.OptionZagolovok}><div>{getPole(2)}</div></div>
-                            <div className={style.OptionText + ' ' + style.Option1TextColor}><div>{getPole(3)}</div></div>
-                        </div>
-                        <div className={style.Options1d2Line + ' ' + style.BcgrOpt2}>
-                            <div className={style.OptionZagolovok}><div>{getPole(4)}</div></div>
-                            <div className={style.OptionText + ' ' + style.Option2TextColor}><div>{getPole(5)}</div></div>
-                        </div>
-                    </div>
-                    <div className={style.Options2hor}>
-                        <div className={style.Options1d2Line + ' ' + style.BcgrOpt3}>
-                            <div className={style.OptionZagolovok}><div>{getPole(6)}</div></div>
-                            <div className={style.OptionText + ' ' + style.Option3TextColor}><div>{getPole(7)}</div></div>
-                        </div>
-                        <div className={style.Options1d2Line + ' ' + style.BcgrOpt4}>
-                            <div className={style.OptionZagolovok}><div>{getPole(8)}</div></div>
-                            <div className={style.OptionText + ' ' + style.Option4TextColor}><div>{getPole(9)}</div></div>
-                        </div>
-                    </div>
-                </div>
-            );
-        };
-        if (cardType == 0 || cardType == 1 || cardType == 2 || cardType == 3 || cardType == 6 || cardType == 7 || cardType == 8 || cardType == 9) {
+        if (cardType == 0 || cardType == 1 || cardType == 2 || cardType == 3 || cardType == 6 || cardType == 7) {
                 return (
                     <div className={style.Main + ' ' + style[targetFont]}>
                         <div className={style.Zagolovok}>{getPole(0)}</div>
@@ -186,8 +160,7 @@ const Card = ({setPole, targetFont, NumbersExist, isBack, keyt, cardType, Pole, 
                         {cardType == 0 ? getOptions12() : null}
                         {cardType == 2 ? getOptions34() : null}
                         {cardType == 6 ? getOptions78() : null}
-                        {cardType == 8 ? getOptions910() : null}
-                        {cardType == 0 || cardType == 2 || cardType == 6 || cardType == 8 ? <div className={style.Per1}>{getPole(10)}</div> : null}
+                        {cardType == 0 || cardType == 2 || cardType == 6 ? <div className={style.Per1}>{getPole(10)}</div> : null}
                         <div className={style.AllText} id={"Card " + keyt}>
                             <div className={style.TextSizeControll} id={"CardControl " + keyt}>
                                 <div className={style.MainText}>{getPole(11)}</div>
@@ -199,11 +172,10 @@ const Card = ({setPole, targetFont, NumbersExist, isBack, keyt, cardType, Pole, 
                                 : null}
                             </div>
                         </div>
-                        {cardType == 1 || cardType == 3|| cardType == 7|| cardType == 9 ? <div className={style.Per1}>{getPole(10)}</div> : null}
+                        {cardType == 1 || cardType == 3|| cardType == 7 ? <div className={style.Per1}>{getPole(10)}</div> : null}
                         {cardType == 3 ? getOptions34() : null}
                         {cardType == 1 ? getOptions12() : null}
                         {cardType == 7 ? getOptions78() : null}
-                        {cardType == 9 ? getOptions910() : null}
                         <div className={style.DowtText}><div>{getPole(14)}</div></div>
                     </div>
                 );

@@ -442,10 +442,6 @@
                 height: calc((296.5mm - var(--ListPaddingT) - var(--ListPaddingB) ) / var(--h));
                 width: calc((210mm - var(--ListPaddingR) - var(--ListPaddingL) ) / var(--w));
             }
-            .Horisont {
-                height: calc((210mm - var(--ListPaddingT) - var(--ListPaddingB)) / var(--h));
-                width: calc((296.5mm - var(--ListPaddingR) - var(--ListPaddingL) ) / var(--w));
-            }
             .CardSelection {
                 margin-left: calc(2vh + var(--ListPaddingR) );
                 width: 40vh;
