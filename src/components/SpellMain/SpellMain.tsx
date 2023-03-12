@@ -69,6 +69,8 @@ import { ReactComponent as Koteika } from '../../BackSvg/Котейка.svg';
 import { ReactComponent as MetlaKotelShlapa } from '../../BackSvg/Метла Котелок Шляпа.svg';
 import { ReactComponent as TanecDama } from '../../BackSvg/Танцующая дама.svg';
 import { ReactComponent as Utoplennica } from '../../BackSvg/Утопленница.svg';
+import { ReactComponent as MyjOlen } from '../../BackSvg/Мужик олень.svg';
+import { ReactComponent as Rosa } from '../../BackSvg/Роза.svg';
 import BaseTip from '../BaseTip/BaseTip';
 import BaseTipCase from '../BaseTipCase/BaseTipCase';
 import CardSpell from '../CardSpell/CardSpell';
@@ -1091,7 +1093,7 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
     }
     const getBackCardImg = (PoleStr: string) => {
         let A = Number(PoleStr); 
-        if (A == undefined || A == 0 || A > 48 || Number.isNaN(A)) {
+        if (A == undefined || A == 0 || A > 50 || Number.isNaN(A)) {
             A = targetBackgroundNumber;
         }
         if (A < 0 && A > -13) {
@@ -1197,6 +1199,10 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                 return (<TanecDama />);
             case 48:
                 return (<Utoplennica />);
+            case 49:
+                return (<MyjOlen />);
+            case 50:
+                return (<Rosa />);
             default:
                 return (<div></div>);
         }
@@ -1373,6 +1379,8 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
             <OptionCardImg name={"Шестерня 2"} targetThis={targetBackgroundNumber == 46} setTarget={setTargetBackgroundNumber} number={46} >{getBackCardImg('46')}</OptionCardImg>,
             <OptionCardImg name={"Танцующая дама"} targetThis={targetBackgroundNumber == 47} setTarget={setTargetBackgroundNumber} number={47} >{getBackCardImg('47')}</OptionCardImg>,
             <OptionCardImg name={"Утопленница"} targetThis={targetBackgroundNumber == 48} setTarget={setTargetBackgroundNumber} number={48} >{getBackCardImg('48')}</OptionCardImg>,
+            <OptionCardImg name={"Мужик олень"} targetThis={targetBackgroundNumber == 49} setTarget={setTargetBackgroundNumber} number={49} >{getBackCardImg('49')}</OptionCardImg>,
+            <OptionCardImg name={"Роза"} targetThis={targetBackgroundNumber == 50} setTarget={setTargetBackgroundNumber} number={50} >{getBackCardImg('50')}</OptionCardImg>,
         ];
         return (
             <div>
@@ -1760,7 +1768,7 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                             <div className={style.RubahaBackNext}>
                                 <div>{rubahaCaseNumber > 0 ? <button onClick={() => { setRubahaCaseNumber(rubahaCaseNumber - 1) }}>Назад</button> : null}</div>
                                 <p>страница {rubahaCaseNumber + 1}</p>
-                                <div>{rubahaCaseNumber < 9 ? <button onClick={() => { setRubahaCaseNumber(rubahaCaseNumber + 1) }}>Вперед</button> : null}</div>
+                                <div>{rubahaCaseNumber < 10 ? <button onClick={() => { setRubahaCaseNumber(rubahaCaseNumber + 1) }}>Вперед</button> : null}</div>
                             </div>
                             {getRubahaCase()}
                         </>
