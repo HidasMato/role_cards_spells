@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/role_cards_spells/static/css/main.a96d7184.css",
-    "main.js": "/role_cards_spells/static/js/main.185065bd.js",
+    "main.js": "/role_cards_spells/static/js/main.6257f08b.js",
     "static/media/Zaychik-Regular.ttf": "/role_cards_spells/static/media/Zaychik-Regular.173a33b768ea315638ad.ttf",
     "static/media/MorningBreeze-Light.otf": "/role_cards_spells/static/media/MorningBreeze-Light.823ad7a2f9b297e86b3b.otf",
     "static/media/Bookerly Italic.ttf": "/role_cards_spells/static/media/Bookerly Italic.e10808b250fc36b9d0b9.ttf",
@@ -70,6 +70,7 @@
     "static/media/Напиток Пенный.svg": "/role_cards_spells/static/media/Напиток Пенный.68854c6be41f89f0f1d226fee4a333f4.svg",
     "static/media/Следопыт.svg": "/role_cards_spells/static/media/Следопыт.edf2b630db39c1c0dd57d250e9946fd2.svg",
     "static/media/Африканска леди в танце.svg": "/role_cards_spells/static/media/Африканска леди в танце.af7704c7096cc7deac9c98ce683236ba.svg",
+    "static/media/Роза.svg": "/role_cards_spells/static/media/Роза.9c42d6bb200d7028697d095c5bd628ca.svg",
     "static/media/Метла Котелок Шляпа.svg": "/role_cards_spells/static/media/Метла Котелок Шляпа.80d1e4bc1761bd25e0892a8cc551e4a0.svg",
     "static/media/Африканский мужик в танце.svg": "/role_cards_spells/static/media/Африканский мужик в танце.4580413e60c1696966b4e61425e8fa4c.svg",
     "static/media/Бард.svg": "/role_cards_spells/static/media/Бард.8924db3ed2cbeb6497cf15cfc63502e9.svg",
@@ -103,10 +104,10 @@
     "static/media/Базовая.svg": "/role_cards_spells/static/media/Базовая.6a38bf64a0171468a45d7a40adf6dc9a.svg",
     "index.html": "/role_cards_spells/index.html",
     "main.a96d7184.css.map": "/role_cards_spells/static/css/main.a96d7184.css.map",
-    "main.185065bd.js.map": "/role_cards_spells/static/js/main.185065bd.js.map"
+    "main.6257f08b.js.map": "/role_cards_spells/static/js/main.6257f08b.js.map"
   },
   "entrypoints": [
     "static/css/main.a96d7184.css",
-    "static/js/main.185065bd.js"
+    "static/js/main.6257f08b.js"
   ]
 }
