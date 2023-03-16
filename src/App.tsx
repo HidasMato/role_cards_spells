@@ -67,7 +67,7 @@ const App = () => {
                 </div>
                 <div className={style.Slk}>
                     <div className={style.U}>{"Ссылки на ресурсы:\nЏ"}</div>
-                    <a onMouseOver={()=>{setShowMyOpis([true,false,false])}} onMouseOut={()=>{setShowMyOpis([false,false,false])}} target="_blank" href="https://vk.com/dnd_card"><VK className={style.Icon1}/></a>
+                    <a onMouseOver={()=>{setShowMyOpis([true,false,false])}} onMouseOut={()=>{setShowMyOpis([false,false,false])}} target="_blank" href="https://vk.com/role_cards"><VK className={style.Icon1}/></a>
                     <a onMouseOver={()=>{setShowMyOpis([false,true,false])}} onMouseOut={()=>{setShowMyOpis([false,false,false])}} target="_blank" href="https://github.com/HidasMato/role_cards_spells"><GH className={style.Icon2}/></a>
                     <a onMouseOver={()=>{setShowMyOpis([false,false,true])}} onMouseOut={()=>{setShowMyOpis([false,false,false])}} target="_blank" href="https://disk.yandex.ru/d/KOAY4OmjDpAmQg"><YD className={style.Icon3} /></a>
                 </div>

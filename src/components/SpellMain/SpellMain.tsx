@@ -1437,9 +1437,9 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
             <OptionCardImg name={"Базовая"} targetThis={targetRamkaNumber == 1} setTarget={setTargetRamkaNumber} number={1} >{getRamkaImg('1')}</OptionCardImg>,
             <OptionCardImg name={"Головастики"} targetThis={targetRamkaNumber == 2} setTarget={setTargetRamkaNumber} number={2} >{getRamkaImg('2')}</OptionCardImg>,
             <OptionCardImg name={"Небрежная"} targetThis={targetRamkaNumber == 3} setTarget={setTargetRamkaNumber} number={3} >{getRamkaImg('3')}</OptionCardImg>,
-            <OptionCardImg name={"Пазлы"} targetThis={targetRamkaNumber == 4} setTarget={setTargetRamkaNumber} number={4} >{getRamkaImg('4')}</OptionCardImg>,
-            <OptionCardImg name={"Узор1"} targetThis={targetRamkaNumber == 5} setTarget={setTargetRamkaNumber} number={5} >{getRamkaImg('5')}</OptionCardImg>,
-            <OptionCardImg name={"Узор2"} targetThis={targetRamkaNumber == 6} setTarget={setTargetRamkaNumber} number={6} >{getRamkaImg('6')}</OptionCardImg>,
+            <OptionCardImg name={"Узор1"} targetThis={targetRamkaNumber == 4} setTarget={setTargetRamkaNumber} number={4} >{getRamkaImg('4')}</OptionCardImg>,
+            <OptionCardImg name={"Узор2"} targetThis={targetRamkaNumber == 5} setTarget={setTargetRamkaNumber} number={5} >{getRamkaImg('5')}</OptionCardImg>,
+            <OptionCardImg name={"Пазлы"} targetThis={targetRamkaNumber == 6} setTarget={setTargetRamkaNumber} number={6} >{getRamkaImg('6')}</OptionCardImg>,
             <OptionCardImg name={"Цветы"} targetThis={targetRamkaNumber == 7} setTarget={setTargetRamkaNumber} number={7} >{getRamkaImg('7')}</OptionCardImg>,
         ];
         return (
