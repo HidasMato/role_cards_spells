@@ -129,7 +129,7 @@ textarea {
     background-color: var(--CardColorBackcground);
     border-right: var(--LineCut) solid var(--ListColor);
     border-bottom: var(--LineCut) solid var(--ListColor);
-    padding: var(--CardPadding);
+    padding: var(--CardPaddingT) var(--CardPaddingR) var(--CardPaddingB) var(--CardPaddingL);
     .Zagolovok {
         overflow: hidden;
         background-color: var(--CardZagolovokBackgroundColor);

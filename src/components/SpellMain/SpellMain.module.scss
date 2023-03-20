@@ -391,8 +391,8 @@
         .List{
             margin: 2vh;
             margin-right: 14vh;
-            height: 296.5mm;
-            width: 210mm;
+            height: var(--ListH);
+            width: var(--ListW);
             background-color: var(--ListColor);
             padding: var(--ListPaddingT) var(--ListPaddingR) var(--ListPaddingB) var(--ListPaddingL);
             .LineCards {
@@ -439,8 +439,8 @@
             height: max-content;
             width: max-content;
             .OneCard {
-                height: calc((296.5mm - var(--ListPaddingT) - var(--ListPaddingB) ) / var(--h));
-                width: calc((210mm - var(--ListPaddingR) - var(--ListPaddingL) ) / var(--w));
+                height: calc((var(--ListH) - var(--ListPaddingT) - var(--ListPaddingB) ) / var(--h));
+                width: calc((var(--ListW) - var(--ListPaddingR) - var(--ListPaddingL) ) / var(--w));
             }
             .CardSelection {
                 margin-left: calc(2vh + var(--ListPaddingR) );
@@ -622,7 +622,10 @@
     --ListPaddingR: 14px;
     --ListPaddingB: 14px;
     --ListPaddingL: 14px;
-    --CardPadding: 14px;
+    --CardPaddingT: 14px;
+    --CardPaddingR: 14px;
+    --CardPaddingB: 14px;
+    --CardPaddingL: 14px;
     --CardZagolovokTextPadding: 1mm;
     --CardPer1TextPadding: 1mm;
     --CardPer2TextPadding: 1mm;
@@ -706,6 +709,8 @@
     --Number4Kegl: 40px;
     --w: 3;
     --h: 3;
+    --ListH: 297mm;
+    --ListW: 210mm;
     @media print {    
         .Lists {
             height: max-content;
