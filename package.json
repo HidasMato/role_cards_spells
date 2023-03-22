@@ -1,7 +1,7 @@
 {
-  "name": "role_cards",
+  "name": "role_cards_spells",
   "version": "0.1.0",
-  "homepage": "https://hidasmato.github.io/role_cards",
+  "homepage": "https://hidasmato.github.io/role_cards_spells",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
