@@ -2945,8 +2945,8 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                     ? <div className={style.Lists + ' ' + (showRedactor ? style.ListDown : '') + ' ' + (showOptions ? style.ListRigth : '')}> {getCards()} </div>
                     : <div className={style.AroundTwoCards}>
                         <div className={style.TwoCards}>
-                            <div className={style.OneCard}><CardSpell targetFont={String(fontMas[targetFont1])} startPerepolnen={startPerepolnen} keyt={-1} plusPerepolnen={plusPerepolnen} minMax={minMax} cardType={targetTypeCardNumber} Pole={newCard} setPole={setPoles}/></div>
-                            <div className={style.OneCard}><CardSpell targetFont={String(fontMas[targetFont2])} NumbersExist={myNumbers} isBack={true} keyt={-1} cardType={targetTypeCardNumber} Pole={newCard} setPole={setPoles}>{getBackCardImg(newCard[16])}{getRamkaImg(newCard[17])}</CardSpell></div>
+                            <div className={style.OneCard}><CardSpell targetFont={String(fontMas[targetFont1])} startPerepolnen={startPerepolnen} keyt={-1} plusPerepolnen={plusPerepolnen} minMax={minMax} cardType={targetTypeCardNumber} Pole={newCard}/></div>
+                            <div className={style.OneCard}><CardSpell targetFont={String(fontMas[targetFont2])} NumbersExist={myNumbers} isBack={true} keyt={-1} cardType={targetTypeCardNumber} Pole={newCard}>{getBackCardImg(newCard[16])}{getRamkaImg(newCard[17])}</CardSpell></div>
                             <div className={style.CardSelection}>
                                 <div>
                                     <input placeholder='Заголовок' type="text" value={newCard[0]} onChange={(e) => { const A = newCard; A[0] = e.target.value;  setPoles(A)}} />

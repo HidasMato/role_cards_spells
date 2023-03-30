@@ -11,9 +11,8 @@ type AlertProps = {
     children?: JSX.Element[];
     NumbersExist?: boolean[];
     targetFont: string;
-    setPole?: (text: string[]) => void;
 };
-const Card = ({setPole, targetFont, NumbersExist, isBack, keyt, cardType, Pole, minMax, plusPerepolnen, startPerepolnen, children}: AlertProps): JSX.Element => {
+const Card = ({ targetFont, NumbersExist, isBack, keyt, cardType, Pole, minMax, plusPerepolnen, startPerepolnen, children}: AlertProps): JSX.Element => {
     let descriptionMain, descriptionText;
     useEffect(() => {
         descriptionMain = document.getElementById("Card " + keyt);

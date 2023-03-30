@@ -62,6 +62,7 @@ const App = () => {
                         <div className={style.TypesList}>
                             <a target="_blank" href="https://hidasmato.github.io/role_cards/"><div className={style.Type}>Главная</div></a>
                             <div className={style.Type} onClick={() => { setShowTypes(false)}}>Заклинания</div>
+                            <a target="_blank" href="https://hidasmato.github.io/role_cards_items/"><div className={style.Type}>Предметы</div></a>
                         </div>
                     }
                 </div>
