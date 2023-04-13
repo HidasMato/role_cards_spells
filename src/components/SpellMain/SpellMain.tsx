@@ -165,8 +165,7 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
         const A = document.getElementById("ThisIsColorsConst");
         if (A) for (let i = 0; i < sizePoleNames.length; i++) A.style.setProperty(sizePoleNames[i], String(sizePole[i]) + 'px');
         if (A) A.style.setProperty(sizePoleNames[7], String(sizePole[7] - 0.5) + 'mm');    
-        if (A) A.style.setProperty(sizePoleNames[8], String(sizePole[8]) + 'mm');    
-        console.log(sizePole[7]);
+        if (A) A.style.setProperty(sizePoleNames[8], String(sizePole[8]) + 'mm');
     }, [sizePole]);
     useEffect(() => {
         document.getElementById("ThisIsColorsConst")?.style.setProperty("--h", String(kolvo[0]) );
@@ -252,7 +251,6 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
         setSizesPole(M);
     };
     const setKolv = (a: number, b: number) => {
-        console.log(kolvo);
         const K = [...kolvo];
         K[a] = b;
         setKolvo(K);
@@ -970,8 +968,8 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
         };
         let A = '';
         if (numbers.length != 0) {
-            A = spells[level as keyof sp][0];
-            for (let i = 0; i < numbers.length - 1; i++) {
+            A = spells[level as keyof sp][numbers[0]];
+            for (let i = 1; i < numbers.length; i++) {
                 A = A + '\n' + spells[level as keyof sp][numbers[i]];
             }
         }
@@ -1260,7 +1258,6 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                                         {
                                             Array.from(Array(kolvo[1]).keys()).map((a, index3) => {
                                                 if (isBack) {
-                                                    console.log(index3,cards.length,kolvo[1] * kolvo[0] * index + kolvo[1] * index2 + kolvo[1] - index3);
                                                     if (cards.length >= kolvo[1] * kolvo[0] * index + kolvo[1] * index2 + kolvo[1] - index3) {
                                                         return (
                                                             <div className={style.Card} key={index*kolvo[1]*kolvo[0] + index2*kolvo[1] + kolvo[1] - index3} >
@@ -1276,7 +1273,6 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                                                         </div>
                                                     );
                                                 } else {
-                                                    console.log(cards.length,kolvo[1] * index2, index3);
                                                     if(cards.length > kolvo[1]*kolvo[0] * index + kolvo[1] * index2 + index3) {
                                                         return (
                                                             <div className={style.Card} key={index*kolvo[1]*kolvo[0] + index2*kolvo[1] + index3} >
@@ -1540,12 +1536,10 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                         }
                         setAlignValue(alignValueN);
                         let borderRadiusValueN: number[] = [];
-                        console.log(borderRadiusValue);
                         for (let i = 0; i < borderRadiusValue.length; i++) {
                             points = pointe + 1;
                             pointe = r.indexOf(',', points);
                             borderRadiusValueN[i] =Number(r.slice(points, pointe));
-                            console.log(r.slice(points, pointe));
                         }
                         let KolvoN: number[] = [];
                         setBorderRadiusValue(borderRadiusValueN);
