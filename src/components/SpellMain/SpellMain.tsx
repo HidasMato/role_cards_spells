@@ -1896,9 +1896,9 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                                     <>
                                         <BaseTipCase name={"Книга игрока"} number={19} openThis={openThisBaseCase} setOpenThis={setOpenThisBaseCas}>
                                         <>
-                                            <BaseTip name={"Заговор"} level={0} numbers={[1,10,27,34,36,37,38,45]} nameCard={'Бард'} setTargetBase={setOpenThisBas}/>
+                                            <BaseTip name={"Заговор"} level={0} numbers={[2,6,8,9,18,19,25,27,30,33,40]} nameCard={'Бард'} setTargetBase={setOpenThisBas}/>
                                             <BaseTip name={"Уровень 1"} level={1} numbers={[1,5,10,15,19,21,29,30,32,36,37,40,42,43,46,48,52,53,59,66,73]} nameCard={'Бард'} setTargetBase={setOpenThisBas}/>
-                                            <BaseTip name={"Уровень 2"} level={2} numbers={[4,6,8,10,1,14,26,31,35,39,40,41,43,53,55,58,65,66,74,81,83,84]} nameCard={'Бард'} setTargetBase={setOpenThisBas}/>
+                                            <BaseTip name={"Уровень 2"} level={2} numbers={[4,6,8,10,12,14,26,31,35,39,40,41,43,53,55,58,65,66,74,81,83,84]} nameCard={'Бард'} setTargetBase={setOpenThisBas}/>
                                             <BaseTip name={"Уровень 3"} level={3} numbers={[7,15,21,32,33,36,40,43,55,56,58,59,60,61,69,72]} nameCard={'Бард'} setTargetBase={setOpenThisBas}/>
                                             <BaseTip name={"Уровень 4"} level={4} numbers={[8,20,27,30,31,39,42,43]} nameCard={'Бард'} setTargetBase={setOpenThisBas}/>
                                             <BaseTip name={"Уровень 5"} level={5} numbers={[1,5,11,13,19,21,22,26,30,31,32,34,42,43,59,61]} nameCard={'Бард'} setTargetBase={setOpenThisBas}/>
@@ -1947,7 +1947,7 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                                         <BaseTipCase name={"Книга игрока"} number={24} openThis={openThisBaseCase} setOpenThis={setOpenThisBaseCas}>
                                         <>
                                             <BaseTip name={"Заговор"} level={0} numbers={[0,2,6,8,15,17,18,19,23,25,27,30,33,40,44,45]} nameCard={'Волшебник'} setTargetBase={setOpenThisBas}/>
-                                            <BaseTip name={"Уровень 1"} level={1} numbers={[1,4,5,6,17,21,22,31,32,36,37,40,41.43,46,48,51,52,54,57,58,61,63,65,66,69,70.73,74,77]} nameCard={'Волшебник'} setTargetBase={setOpenThisBas}/>
+                                            <BaseTip name={"Уровень 1"} level={1} numbers={[1,4,5,6,17,21,22,31,32,36,37,40,41,43,46,48,51,52,54,57,58,61,63,65,66,69,70,73,74,77]} nameCard={'Волшебник'} setTargetBase={setOpenThisBas}/>
                                             <BaseTip name={"Уровень 2"} level={2} numbers={[3,4,6,8,9,10,12,14,26,27,29,30,32,35,37,38,39,41,43,44,46,47,48,55,57,62,64,69,73,75,76,77,78,81]} nameCard={'Волшебник'} setTargetBase={setOpenThisBas}/>
                                             <BaseTip name={"Уровень 3"} level={3} numbers={[5,6,7,13,14,15,18,21,22,26,27,30,32,33,34,36,39,40,42,43,45,53,55,56,60,64,69,70,72]} nameCard={'Волшебник'} setTargetBase={setOpenThisBas}/>
                                             <BaseTip name={"Уровень 4"} level={4} numbers={[4,5,7,8,10,13,14,15,16,17,18,19,20,23,24,25,27,30,31,38,43,47,50]} nameCard={'Волшебник'} setTargetBase={setOpenThisBas}/>
@@ -2111,7 +2111,7 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                                     <>
                                         <BaseTipCase name={"Книга игрока"} number={3} openThis={openThisBaseCase} setOpenThis={setOpenThisBaseCas}>
                                         <>
-                                            <BaseTip name={"Заговор"} level={0} numbers={[1,10,27,34,36,37,38,45]} nameCard={'Друид'} setTargetBase={setOpenThisBas}/>
+                                            <BaseTip name={"Заговор"} level={0} numbers={[7,10,27,34,36,37,38,45]} nameCard={'Друид'} setTargetBase={setOpenThisBas}/>
                                             <BaseTip name={"Уровень 1"} level={1} numbers={[5,19,29,30,38,40,42,44,46,47,57,59,66,68,70,76]} nameCard={'Друид'} setTargetBase={setOpenThisBas}/>
                                             <BaseTip name={"Уровень 2"} level={2} numbers={[0,13,15,17,20,28,31,53,54,55,57,58,62,65,73,81,83,85]} nameCard={'Друид'} setTargetBase={setOpenThisBas}/>
                                             <BaseTip name={"Уровень 3"} level={3} numbers={[10,14,27,39,49,51,55,59,60,61,63,67,71]} nameCard={'Друид'} setTargetBase={setOpenThisBas}/>
@@ -2137,7 +2137,7 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                                         </BaseTipCase>
                                         <BaseTipCase name={"Ксантар"} number={5} openThis={openThisBaseCase} setOpenThis={setOpenThisBaseCas}>
                                         <>
-                                            <BaseTip name={"Заговор"} level={0} numbers={[1,3,16,21,24,22,28,35,41,43]} nameCard={'Друид'} setTargetBase={setOpenThisBas} />
+                                            <BaseTip name={"Заговор"} level={0} numbers={[1,3,16,21,22,24,28,35,41,43]} nameCard={'Друид'} setTargetBase={setOpenThisBas} />
                                             <BaseTip name={"Уровень 1"} level={1} numbers={[18,23,27,50,64]} nameCard={'Друид'} setTargetBase={setOpenThisBas} />
                                             <BaseTip name={"Уровень 2"} level={2} numbers={[21,23,34,63,82]} nameCard={'Друид'} setTargetBase={setOpenThisBas} />
                                             <BaseTip name={"Уровень 3"} level={3} numbers={[3,16,54,57]} nameCard={'Друид'} setTargetBase={setOpenThisBas} />
@@ -2253,7 +2253,7 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                                             <BaseTip name={"Уровень 2"} level={2} numbers={[2,3,11,12,20,31,33,37,40,45,52,54,55,74,81,83,84]} nameCard={'Жрец'} setTargetBase={setOpenThisBas}/>
                                             <BaseTip name={"Уровень 3"} level={3} numbers={[4,5,10,12,14,22,24,28,36,40,43,55,56,58,60,63,64,65,71,72]} nameCard={'Жрец'} setTargetBase={setOpenThisBas}/>
                                             <BaseTip name={"Уровень 4"} level={4} numbers={[5,12,13,15,30,32,42,44]} nameCard={'Жрец'} setTargetBase={setOpenThisBas}/>
-                                            <BaseTip name={"Уровень 5"} level={5} numbers={[5,10,11,1,22,23,24,26,28,30,32,46,49]} nameCard={'Жрец'} setTargetBase={setOpenThisBas}/>
+                                            <BaseTip name={"Уровень 5"} level={5} numbers={[5,10,11,21,22,23,24,26,28,30,32,46,49]} nameCard={'Жрец'} setTargetBase={setOpenThisBas}/>
                                             <BaseTip name={"Уровень 6"} level={6} numbers={[5,6,22,23,26,27,28,38,41,42]} nameCard={'Жрец'} setTargetBase={setOpenThisBas}/>
                                             <BaseTip name={"Уровень 7"} level={7} numbers={[0,2,6,11,14,17,25,27]} nameCard={'Жрец'} setTargetBase={setOpenThisBas}/>
                                             <BaseTip name={"Уровень 8"} level={8} numbers={[1,3,7,15]} nameCard={'Жрец'} setTargetBase={setOpenThisBas}/>
@@ -2749,8 +2749,8 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                                         <>
                                             <BaseTip name={"Уровень 1"} level={1} numbers={[44,49]} nameCard={'Следопыт'} setTargetBase={setOpenThisBas}/>
                                             <BaseTip name={"Уровень 2"} level={2} numbers={[30,52,57,59,83]} nameCard={'Следопыт'} setTargetBase={setOpenThisBas}/>
-                                            <BaseTip name={"Уровень 3"} level={3} numbers={[3,48,63,68]} nameCard={'Следопыт'} setTargetBase={setOpenThisBas}/>
-                                            <BaseTip name={"Уровень 4"} level={4} numbers={[28,38]} nameCard={'Следопыт'} setTargetBase={setOpenThisBas}/>
+                                            <BaseTip name={"Уровень 3"} level={3} numbers={[4,48,63,68]} nameCard={'Следопыт'} setTargetBase={setOpenThisBas}/>
+                                            <BaseTip name={"Уровень 4"} level={4} numbers={[28,36]} nameCard={'Следопыт'} setTargetBase={setOpenThisBas}/>
                                             <BaseTip name={"Уровень 5"} level={5} numbers={[5]} nameCard={'Следопыт'} setTargetBase={setOpenThisBas}/>
                                         </>
                                         </BaseTipCase>
@@ -2852,7 +2852,7 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                                             <BaseTip name={"Заговор"} level={0} numbers={[1,16,21,22,28,35,41,43]} nameCard={'Чародей'} setTargetBase={setOpenThisBas}/>
                                             <BaseTip name={"Уровень 1"} level={1} numbers={[18,26,27,50,67]} nameCard={'Чародей'} setTargetBase={setOpenThisBas}/>
                                             <BaseTip name={"Уровень 2"} level={2} numbers={[16,21,22,49,50,60,63,70,72,82]} nameCard={'Чародей'} setTargetBase={setOpenThisBas}/>
-                                            <BaseTip name={"Уровень 3"} level={3} numbers={[3,9,11,16,25,54,57]} nameCard={'Чародей'} setTargetBase={setOpenThisBas}/>
+                                            <BaseTip name={"Уровень 3"} level={3} numbers={[3,9,11,16,17,25,54,57]} nameCard={'Чародей'} setTargetBase={setOpenThisBas}/>
                                             <BaseTip name={"Уровень 4"} level={4} numbers={[2,6,11,26,46]} nameCard={'Чародей'} setTargetBase={setOpenThisBas}/>
                                             <BaseTip name={"Уровень 5"} level={5} numbers={[2,7,15,25,52,56,60]} nameCard={'Чародей'} setTargetBase={setOpenThisBas}/>
                                             <BaseTip name={"Уровень 6"} level={6} numbers={[12,15,16,17,18,35]} nameCard={'Чародей'} setTargetBase={setOpenThisBas}/>
@@ -2884,11 +2884,12 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                                         </BaseTipCase>
                                         <BaseTipCase name={"Абер. разум"} number={109} openThis={openThisBaseCase} setOpenThis={setOpenThisBaseCas}>
                                         <>
-                                            <BaseTip name={"Уровень 1"} level={1} numbers={[]} nameCard={'Чародей - аберрантный разум'} setTargetBase={setOpenThisBas} />
-                                            <BaseTip name={"Уровень 2"} level={2} numbers={[]} nameCard={'Чародей - аберрантный разум'} setTargetBase={setOpenThisBas} />
-                                            <BaseTip name={"Уровень 3"} level={3} numbers={[]} nameCard={'Чародей - аберрантный разум'} setTargetBase={setOpenThisBas} />
-                                            <BaseTip name={"Уровень 4"} level={4} numbers={[]} nameCard={'Чародей - аберрантный разум'} setTargetBase={setOpenThisBas} />
-                                            <BaseTip name={"Уровень 5"} level={5} numbers={[]} nameCard={'Чародей - аберрантный разум'} setTargetBase={setOpenThisBas} />
+                                            <BaseTip name={"Уровень 1 (З)"} level={0} numbers={[29]} nameCard={'Чародей - аберрантный разум'} setTargetBase={setOpenThisBas} />
+                                            <BaseTip name={"Уровень 1"} level={1} numbers={[15,60]} nameCard={'Чародей - аберрантный разум'} setTargetBase={setOpenThisBas} />
+                                            <BaseTip name={"Уровень 2"} level={2} numbers={[41,84]} nameCard={'Чародей - аберрантный разум'} setTargetBase={setOpenThisBas} />
+                                            <BaseTip name={"Уровень 3"} level={3} numbers={[8,43]} nameCard={'Чародей - аберрантный разум'} setTargetBase={setOpenThisBas} />
+                                            <BaseTip name={"Уровень 4"} level={4} numbers={[34,50]} nameCard={'Чародей - аберрантный разум'} setTargetBase={setOpenThisBas} />
+                                            <BaseTip name={"Уровень 5"} level={5} numbers={[20,57]} nameCard={'Чародей - аберрантный разум'} setTargetBase={setOpenThisBas} />
                                         </>
                                         </BaseTipCase>
                                         <BaseTipCase name={"Заводная душа"} number={110} openThis={openThisBaseCase} setOpenThis={setOpenThisBaseCas}>
