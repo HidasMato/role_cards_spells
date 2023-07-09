@@ -1664,7 +1664,7 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                             <OptionSize text={"мм Высота листа"} size={sizePole[7]} number={7} setSize={setSizePole} min={50} max={500} block={blockSizePole[7]} setBlock={setBlocSizePole} />
                             <OptionSize text={"мм Ширина листа"} size={sizePole[8]} number={8} setSize={setSizePole} min={50} max={500} block={blockSizePole[8]} setBlock={setBlocSizePole} />
                             <div className={style.ButtonMinMax} onClick={() => {
-                                const A = {...sizePole};
+                                const A = [...sizePole];
                                 A[7] = 297;
                                 A[8] = 210;
                                 setSizesPole(A);

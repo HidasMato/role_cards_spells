@@ -5,7 +5,7 @@
 https://hidasmato.github.io/role_cards_spells/<br>
 <br>
 Группа ВК, в которой можно задать вопросы<br>
-https://vk.com/dnd_card<br>
+https://vk.com/role_cards<br>
 <br>
 Папка, в которой есть справка и все доступные обратные картинки из программы в формате png, svg и cdr<br>
 https://disk.yandex.ru/d/KOAY4OmjDpAmQg<br>
