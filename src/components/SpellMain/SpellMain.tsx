@@ -100,14 +100,14 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
     const [blockColor, setBlockColor] = useState([false, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, false, false, false, true, true, true, true, true]);
     const [blockSizePole, setBlockSizePole] = useState([false, false, true, true, false, false, false, false, false]);
     const [blockSizeText, setBlockSizeText] = useState([false, false, true, true, false, true, true, true, true, true, true, true, true, false, false, false, false, false, false, false, false, false, true, true, true, false]);
-    const [blockPaddingText, setBlockPaddingText] = useState([false, false, true, true, false, true, true, true, false, true, true, true, false, true, true, false, true, true, true, false, false, true, true, true, true, true, false, true, true, true, false, true, true, true, true, true, true]);
+    const [blockPaddingText, setBlockPaddingText] = useState([false, false, true, true, false, true, true, true, false, true, true, true, false, true, true, false, false, false, true, false, false, true, true, true, true, true, false, true, true, true, false, true, true, true, true, true, true]);
     const [blockAlignValue, setBlockAlignValue] = useState([false, false, true, true, false, true, true, true, true, true, true, true, false, true, false, false, false, false, false, false, false, false, false, false, false]);
     const [blockBorderRadius, setBlockBorderRadius] = useState([false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]);
     const [sizePole, setSizesPole] = useState([18,15,15,15,80,2,15,297,210]);
     const [minMax, setMinMax] = useState([9, 9]);
     const [blockMinMax, setBlockMinMax] = useState(false);
     const [sizeText, setSizesText] = useState([14, 11, 11, 11, 10, 10, 10, 10, 10, 10, 10, 10, 14, 20, 5, 200, 5, 200, 264, 20, 264, 70, 70, 70, 70, 110]);
-    const [paddingText, setPaddingText] = useState([2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 10, 10, 10, 10, 9, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 9, 9, 9]);
+    const [paddingText, setPaddingText] = useState([2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 40, 20, 50, 20, 9, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 9, 9, 9]);
     const [alignValue, setAlignValue] = useState([2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 1]);
     const [borderRadiusValue, setBorderRadiusValue] = useState([11, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 11]);
     const [kolvo, setKolvo] = useState([3,3]);
@@ -133,25 +133,6 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
         M[a] = b;
         setTargetOptions(M);
     };
-    // useEffect(() => {
-    //     let r = '';
-    //     for (let i = 0; i < colors.length; i++) r = r + colors[i] + ',';
-    //     for (let i = 0; i < sizePole.length; i++) r = r + sizePole[i] + ',';
-    //     for (let i = 0; i < minMax.length; i++) r = r + minMax[i] + ',';
-    //     for (let i = 0; i < sizeText.length; i++) r = r + sizeText[i] + ',';
-    //     for (let i = 0; i < paddingText.length; i++) r = r + paddingText[i] + ',';
-    //     for (let i = 0; i < alignValue.length; i++) r = r + alignValue[i] + ',';
-    //     for (let i = 0; i < borderRadiusValue.length; i++) r = r + borderRadiusValue[i] + ',';
-    //     r = r + kolvo[0] + ',' + kolvo[1] + ',';
-    //     r = r + targetBackgroundNumber + ',';
-    //     r = r + targetTypeCardNumber + ',';
-    //     r = r + targetRamkaNumber + ',';
-    //     for (let i = 0; i < myNumbers.length; i++) r = r + myNumbers[i] + ',';
-    //     r = r + targetFont1 + ',';
-    //     r = r + targetFont2 + ',';
-    //     r = r + lineCut + ',';
-    //     setSettingString(r);
-    // }, [lineCut, colors, sizePole, minMax, sizeText, paddingText, alignValue, borderRadiusValue, kolvo, targetBackgroundNumber, targetTypeCardNumber, myNumbers, targetFont1, targetFont2]);
     useEffect(() => {
         let Car :string[] = [];
         getCardFromCSVLine(newCSV, Car, 0, newCSV.length - 1, '');
@@ -290,9 +271,8 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
         if (V[11]) M[11] = M[8];
         if (V[13]) M[13] = M[12];
         if (V[14]) M[14] = M[0];
-        if (V[16]) M[16] = M[15];
         if (V[17]) M[17] = M[15];
-        if (V[18]) M[18] = M[15];
+        if (V[18]) M[18] = M[16];
         if (V[21]) M[21] = M[12];
         if (V[22]) M[22] = M[20];
         if (V[23]) M[23] = M[20];
@@ -1713,9 +1693,9 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                     <OptionCase nameSetting={'Отступы'} targetThis={targetOption[6]} setTarget={setTarget} number={6}>
                         <div>
                             <OptionSize text={"Верхнее поле листа"} size={paddingText[15]} number={15} setSize={setPaddinText} min={0} max={400} block={blockPaddingText[15]} setBlock={setBlocPaddingText} />
-                            <OptionSize text={"Правое поле листа"} textAs={"Как верхнее"} size={paddingText[16]} number={16} setSize={setPaddinText} min={0} max={400} block={blockPaddingText[16]} setBlock={setBlocPaddingText} />
+                            <OptionSize text={"Правое поле листа"} size={paddingText[16]} number={16} setSize={setPaddinText} min={0} max={400} block={blockPaddingText[16]} setBlock={setBlocPaddingText} />
                             <OptionSize text={"Нижнее поле листа"} textAs={"Как верхнее"} size={paddingText[17]} number={17} setSize={setPaddinText} min={0} max={400} block={blockPaddingText[17]} setBlock={setBlocPaddingText} />
-                            <OptionSize text={"Левое поле листа"} textAs={"Как верхнее"} size={paddingText[18]} number={18} setSize={setPaddinText} min={0} max={400} block={blockPaddingText[18]} setBlock={setBlocPaddingText} />
+                            <OptionSize text={"Левое поле листа"} textAs={"Как правое"} size={paddingText[18]} number={18} setSize={setPaddinText} min={0} max={400} block={blockPaddingText[18]} setBlock={setBlocPaddingText} />
                             <OptionSize text={"Обводка карточки верх"} size={paddingText[19]} number={19} setSize={setPaddinText} min={0} max={199} block={blockPaddingText[19]} setBlock={setBlocPaddingText} />
                             <OptionSize text={"Об карточки право"} textAs={"Как верх"} size={paddingText[34]} number={34} setSize={setPaddinText} min={0} max={199} block={blockPaddingText[34]} setBlock={setBlocPaddingText} />
                             <OptionSize text={"Об карточки низ"} textAs={"Как верх"} size={paddingText[35]} number={35} setSize={setPaddinText} min={0} max={199} block={blockPaddingText[35]} setBlock={setBlocPaddingText} />
