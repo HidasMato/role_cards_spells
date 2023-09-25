@@ -6,13 +6,33 @@
     width: 100vw;
     background-color: var(--color2);
     .Window {
-        height: 93%;
+        height: 90%;
         width: 100%;
         overflow-y: hidden;
         overflow-y: hidden;
     }
+    .Down {
+        height: 3%;
+        width: 100%;
+        background-color: var(--color1);
+        border-top: 0.2vh solid var(--color6);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1vh;
+        padding-right: 1vh;
+        overflow:hidden;
+        .U {
+            height: min-content;
+            color: var(--color6);
+            font-size: 1.7vh;
+            line-height: 1;
+            white-space: pre;
+        }
+    }
     .Up {
-        height: 7vh;
+        overflow:hidden;
+        height: 7%;
         width: 100%;
         background-color: var(--color1);
         border-bottom: 0.2vh solid var(--color6);
@@ -72,7 +92,7 @@
                 max-height: 20vh;
                 background-color: var(--color1);
                 width: 37vh;
-                overflow-y: hidden;
+                overflow-y: scroll;
                 overflow-x: hidden;
                 border-radius: 0 0 2vh 2vh;
                 padding-bottom: 0.5vh;
@@ -88,6 +108,9 @@
                     background-color: var(--color4);
                     cursor: pointer;
                 }
+            }
+            .TypesList::-webkit-scrollbar {
+                display: none;
             }
             .Block {
                 height: 100%;
@@ -149,46 +172,12 @@
         .Window {
             height: auto;
         }
+        .Down {
+            display: none;
+        }
     }
 }
-.App {
-  text-align: center;
-}
 
-.AppLogo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .AppLogo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.AppHeader {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.AppLink {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 @font-face {
     font-family: "BookerlyBold";
     src: local("BookerlyBold"),url("./fonts/Bookerly\ Bold.ttf") format("truetype");

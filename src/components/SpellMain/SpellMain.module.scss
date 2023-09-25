@@ -78,20 +78,26 @@
             }
             .RubahaBackNext {
                 display: flex;
-                p {
-                    width: 30%;
-                }
-                div {
-                    width: 35%;
+
+                .p {
                     display: flex;
                     justify-content: center;
+                    width: 40%;
+                }
+
+                .but {
+                    width: 30%;
+                    display: flex;
+                    justify-content: center;
+
                     button {
-                        width: 80%;
+                        width: 90%;
                         background-color: var(--color1);
                         border: 0.1vh solid var(--color6);
                         border-radius: 4vh;
                         padding: 0 2vh;
                     }
+
                     button:hover {
                         cursor: pointer;
                         background-color: var(--color5);
@@ -435,7 +441,7 @@
         height: 100%;
         width: 100%;
         overflow-y: scroll;
-        padding-right: 50vh;
+        padding-right: 18vh;
         padding-bottom: 38vh;
         .TwoCards {
             padding: calc(2vh + var(--ListPaddingT)) calc(2vh + var(--ListPaddingR)) calc(2vh + var(--ListPaddingB)) calc(2vh + var(--ListPaddingL));
@@ -484,6 +490,9 @@
                 }
             }
         }
+    }
+    .AddPadRig {
+        padding-right: 64vh;
     }
     .Viu {
         ::selection {

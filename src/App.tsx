@@ -63,6 +63,7 @@ const App = () => {
                             <a target="_blank" href="https://hidasmato.github.io/role_cards/"><div className={style.Type}>Главная</div></a>
                             <div className={style.Type} onClick={() => { setShowTypes(false)}}>Заклинания</div>
                             <a target="_blank" href="https://hidasmato.github.io/role_cards_items/"><div className={style.Type}>Предметы</div></a>
+                            <a target="_blank" href="https://hidasmato.github.io/role_cards_creatures/"><div className={style.Type}>Существа</div></a>
                         </div>
                     }
                 </div>
@@ -78,6 +79,10 @@ const App = () => {
             </div>
             <div className={style.Window}>
                 <SpellMain />
+            </div>
+            <div className={style.Down}>
+                <div className={style.U}>{"Для печати карточек нажать CTRL + P, поставить галочку печати фона"}</div>
+                <div className={style.U}>{"Материальное спасибо на замену картриджа: 2202 2022 2252 9913 (сбер)"}</div>
             </div>
         </div>
     );
