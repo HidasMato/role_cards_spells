@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/role_cards_spells/static/css/main.43d6f92c.css",
-    "main.js": "/role_cards_spells/static/js/main.2e251134.js",
+    "main.css": "/role_cards_spells/static/css/main.5197a843.css",
+    "main.js": "/role_cards_spells/static/js/main.9fbef246.js",
     "static/media/Zaychik-Regular.ttf": "/role_cards_spells/static/media/Zaychik-Regular.173a33b768ea315638ad.ttf",
     "static/media/MorningBreeze-Light.otf": "/role_cards_spells/static/media/MorningBreeze-Light.823ad7a2f9b297e86b3b.otf",
     "static/media/Bookerly Italic.ttf": "/role_cards_spells/static/media/Bookerly Italic.e10808b250fc36b9d0b9.ttf",
@@ -99,15 +99,16 @@
     "static/media/Align_center_font_awesome.svg": "/role_cards_spells/static/media/Align_center_font_awesome.9af5d979bed188f162cfaf220b2e7f9e.svg",
     "static/media/VK.svg": "/role_cards_spells/static/media/VK.3e60d4ac6239f020fcab393903993970.svg",
     "static/media/ArrowDown.svg": "/role_cards_spells/static/media/ArrowDown.55f4f7a2b5985acce14255ab5cfaa5be.svg",
+    "static/media/Boosty.svg": "/role_cards_spells/static/media/Boosty.7412879df1b69c45bac8e98b21bdda17.svg",
     "static/media/Change.svg": "/role_cards_spells/static/media/Change.d2ee68cc10dd187f05c77dcb242a8ce6.svg",
     "static/media/Download.svg": "/role_cards_spells/static/media/Download.2c12be50f262402ed0b6824ddad9d049.svg",
     "static/media/Базовая.svg": "/role_cards_spells/static/media/Базовая.95af2d456bf98fe91d38ffcab061e9c1.svg",
     "index.html": "/role_cards_spells/index.html",
-    "main.43d6f92c.css.map": "/role_cards_spells/static/css/main.43d6f92c.css.map",
-    "main.2e251134.js.map": "/role_cards_spells/static/js/main.2e251134.js.map"
+    "main.5197a843.css.map": "/role_cards_spells/static/css/main.5197a843.css.map",
+    "main.9fbef246.js.map": "/role_cards_spells/static/js/main.9fbef246.js.map"
   },
   "entrypoints": [
-    "static/css/main.43d6f92c.css",
-    "static/js/main.2e251134.js"
+    "static/css/main.5197a843.css",
+    "static/js/main.9fbef246.js"
   ]
 }
