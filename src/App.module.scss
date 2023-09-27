@@ -22,6 +22,7 @@
         padding: 0 1vh;
         padding-right: 1vh;
         overflow:hidden;
+        overflow-x: scroll;
         .U {
             height: min-content;
             color: var(--color6);
@@ -30,8 +31,12 @@
             white-space: pre;
         }
     }
+    .Down::-webkit-scrollbar {
+        display: none;
+    }
     .Up {
         overflow:hidden;
+        overflow-x: scroll;
         height: 7%;
         width: 100%;
         background-color: var(--color1);
@@ -58,6 +63,7 @@
             z-index: 8;
         }
         .Slk {
+            margin-left: 1vh;
             height: 100%;
             padding-top: 1vh;
             display: flex;
@@ -80,6 +86,10 @@
             .Icon3 {
                 height: 5vh;
                 width: 8vh;
+            }
+            .Icon4 {
+                height: 5vh;
+                width: 5vh;
             }
         }
         .MainChose {
@@ -108,9 +118,6 @@
                     background-color: var(--color4);
                     cursor: pointer;
                 }
-            }
-            .TypesList::-webkit-scrollbar {
-                display: none;
             }
             .Block {
                 height: 100%;
@@ -158,6 +165,9 @@
                 }
             }
         }
+    }
+    .Up::-webkit-scrollbar {
+        display: none;
     }
     --color1: #E1CDC6;
     --color2: #F1E9E6;
