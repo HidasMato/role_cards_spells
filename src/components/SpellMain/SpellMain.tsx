@@ -1478,7 +1478,7 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                                 let r = myNewSetting + settingName + ':';
                                 for (let i = 0; i < myStringMas.length; i++)
                                     r = r + myStringMas[i] + ',';
-                                r = r.slice(0, r.length - 1) + '\n';
+                                r = r + '\n';
                                 return r;
                             };
                             let myNewSetting = '';
