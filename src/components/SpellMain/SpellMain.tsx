@@ -1526,7 +1526,7 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                                     if (start != -1) {
                                         for (start; start < end - 1 && start != -1;) {
                                             let next = myString.indexOf(',', start + 1);
-                                            if (next > end) next = end;
+                                            if (next > end || next == -1) next = end;
                                             if (typeof Mas[0] == 'string') Mas[count] = myString.slice(start + 1, next);
                                             if (typeof Mas[0] == 'number') Mas[count] = Number(myString.slice(start + 1, next));
                                             if (typeof Mas[0] == 'boolean') Mas[count] = (myString.slice(start + 1, next) == 'false') ? false : true;
