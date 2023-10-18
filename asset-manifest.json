@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/role_cards_spells/static/css/main.5197a843.css",
-    "main.js": "/role_cards_spells/static/js/main.8c0926f1.js",
+    "main.css": "/role_cards_spells/static/css/main.a3bc573c.css",
+    "main.js": "/role_cards_spells/static/js/main.fd6b17a1.js",
     "static/media/Zaychik-Regular.ttf": "/role_cards_spells/static/media/Zaychik-Regular.173a33b768ea315638ad.ttf",
     "static/media/MorningBreeze-Light.otf": "/role_cards_spells/static/media/MorningBreeze-Light.823ad7a2f9b297e86b3b.otf",
     "static/media/Bookerly Italic.ttf": "/role_cards_spells/static/media/Bookerly Italic.e10808b250fc36b9d0b9.ttf",
@@ -91,24 +91,24 @@
     "static/media/zarubkaType-Regular.ttf": "/role_cards_spells/static/media/zarubkaType-Regular.18b0d708fa0e261287a3.ttf",
     "static/media/Пазлы.svg": "/role_cards_spells/static/media/Пазлы.084a76968bb0e9a9f8fb94b5097a0fae.svg",
     "static/media/Setting.svg": "/role_cards_spells/static/media/Setting.c5293a91e0900a696f9d2652eab11712.svg",
-    "static/media/GH.svg": "/role_cards_spells/static/media/GH.eb56b18895192763c96f0129ffb9d85f.svg",
-    "static/media/YD.svg": "/role_cards_spells/static/media/YD.37a58d66815c3f5ea1a3580d4598ef99.svg",
     "static/media/Align_left_font_awesome.svg": "/role_cards_spells/static/media/Align_left_font_awesome.3445ff927c32ab174c468e174e93272a.svg",
     "static/media/Align_justify_font_awesome.svg": "/role_cards_spells/static/media/Align_justify_font_awesome.598ca22be58a6b64b9fa9a6ca4ca8265.svg",
     "static/media/Align_right_font_awesome.svg": "/role_cards_spells/static/media/Align_right_font_awesome.49eddd955a845d2ebdeeb38baaccdc13.svg",
+    "static/media/YD.svg": "/role_cards_spells/static/media/YD.04a51b7b309d796a014733ca0aa7731f.svg",
     "static/media/Align_center_font_awesome.svg": "/role_cards_spells/static/media/Align_center_font_awesome.9af5d979bed188f162cfaf220b2e7f9e.svg",
-    "static/media/VK.svg": "/role_cards_spells/static/media/VK.3e60d4ac6239f020fcab393903993970.svg",
+    "static/media/GH.svg": "/role_cards_spells/static/media/GH.064f827277760e936a17793cff9b48f5.svg",
     "static/media/ArrowDown.svg": "/role_cards_spells/static/media/ArrowDown.55f4f7a2b5985acce14255ab5cfaa5be.svg",
+    "static/media/VK.svg": "/role_cards_spells/static/media/VK.10241c38c058c0a5cf4bf20ebe0a9fc6.svg",
     "static/media/Boosty.svg": "/role_cards_spells/static/media/Boosty.7412879df1b69c45bac8e98b21bdda17.svg",
     "static/media/Change.svg": "/role_cards_spells/static/media/Change.d2ee68cc10dd187f05c77dcb242a8ce6.svg",
     "static/media/Download.svg": "/role_cards_spells/static/media/Download.2c12be50f262402ed0b6824ddad9d049.svg",
     "static/media/Базовая.svg": "/role_cards_spells/static/media/Базовая.95af2d456bf98fe91d38ffcab061e9c1.svg",
     "index.html": "/role_cards_spells/index.html",
-    "main.5197a843.css.map": "/role_cards_spells/static/css/main.5197a843.css.map",
-    "main.8c0926f1.js.map": "/role_cards_spells/static/js/main.8c0926f1.js.map"
+    "main.a3bc573c.css.map": "/role_cards_spells/static/css/main.a3bc573c.css.map",
+    "main.fd6b17a1.js.map": "/role_cards_spells/static/js/main.fd6b17a1.js.map"
   },
   "entrypoints": [
-    "static/css/main.5197a843.css",
-    "static/js/main.8c0926f1.js"
+    "static/css/main.a3bc573c.css",
+    "static/js/main.fd6b17a1.js"
   ]
 }
