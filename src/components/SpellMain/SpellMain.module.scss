@@ -415,9 +415,6 @@
                 }
             }
         }
-        .BackList {
-            padding: var(--ListPaddingT) var(--ListPaddingL) var(--ListPaddingB) var(--ListPaddingR);
-        }
         @media print {
             .List {
                 margin: 0;

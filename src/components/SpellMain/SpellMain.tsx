@@ -145,7 +145,7 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
         const A = document.getElementById("ThisIsColorsConst");
         if (A) for (let i = 0; i < sizePoleNames.length; i++) A.style.setProperty(sizePoleNames[i], String(sizePole[i]) + 'px');
         if (A) A.style.setProperty(sizePoleNames[7], String(sizePole[7] - 0.5) + 'mm');
-        if (A) A.style.setProperty(sizePoleNames[8], String(sizePole[8]) + 'mm');
+        if (A) A.style.setProperty(sizePoleNames[8], String(sizePole[8] - 0.5) + 'mm');
     }, [sizePole]);
     useEffect(() => {
         document.getElementById("ThisIsColorsConst")?.style.setProperty("--h", String(kolvo[0]));
@@ -1231,7 +1231,7 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                 {
                     sumLists.map((a, index) => {
                         return (
-                            <div className={style.List + ' ' + (isBack ? style.BackList : null)} key={"List" + index}>
+                            <div className={style.List} key={"List" + index}>
                                 {
                                     Array.from(Array(kolvo[0]).keys()).map((a, index2) => {
                                         return (
@@ -1504,6 +1504,8 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                             myNewSetting = ToString(myNewSetting, [blockMinMax], 'blockMinMax');
                             myNewSetting = ToString(myNewSetting, myNumbers, 'myNumbers');
                             myNewSetting = ToString(myNewSetting, [lineCut], 'lineCut');
+                            myNewSetting = ToString(myNewSetting, [targetBackgroundNumber], 'targetBackgroundNumber');
+                            myNewSetting = ToString(myNewSetting, [targetRamkaNumber], 'targetRamkaNumber');
                             let blob = new Blob(["\ufeff", myNewSetting], { type: "text;charset=windows-1251" });
                             const url = URL.createObjectURL(blob);
                             const anchor = document.createElement('a');
@@ -1562,9 +1564,12 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                                         setBlockSizeText((FromFile(r as string, 'blockSizeText', [...blockSizeText]) as boolean[]));
                                         setBlockAlignValue((FromFile(r as string, 'blockAlignValue', [...blockAlignValue]) as boolean[]));
                                         setBlockBorderRadius((FromFile(r as string, 'blockBorderRadius', [...blockBorderRadius]) as boolean[]));
+                                        setBlockPaddingText((FromFile(r as string, 'blockPaddingText', [...blockPaddingText]) as boolean[]));
                                         setBlockMinMax((FromFile(r as string, 'blockMinMax', [blockMinMax]) as boolean[])[0]);
                                         setMyNumbers((FromFile(r as string, 'myNumbers', [...myNumbers]) as boolean[]));
                                         setLineCut((FromFile(r as string, 'lineCut', [lineCut]) as boolean[])[0]);
+                                        setTargetBackgroundNumber((FromFile(r as string, 'targetBackgroundNumber', [targetBackgroundNumber]) as number[])[0]);
+                                        setTargetRamkaNumber((FromFile(r as string, 'targetRamkaNumber', [targetRamkaNumber]) as number[])[0]);
                                     }
                                 };
                                 (document.getElementById("mySettingInputFile") as HTMLInputElement).value = "";

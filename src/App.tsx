@@ -78,7 +78,7 @@ const App = () => {
                 {showMyOpis[0] ? <div className={style.Opis}>{"Группа ВК\nЗдесь можно задать вопросы\nУзнать новости"}</div> : null}
                 {showMyOpis[1] ? <div className={style.Opis}>{"Гитхаб\nЗдесь можно посмотреть код"}</div> : null}
                 {showMyOpis[2] ? <div className={style.Opis}>{"Яндекс диск\nЗдесь лежат картинки"}</div> : null}
-                {showMyOpis[3] ? <div className={style.Opis}>{"Бусти\nЗдесь можно задать вопросы\nУзнать новости\nКинуть денежку (опционально)"}</div> : null}
+                {showMyOpis[3] ? <div className={style.Opis}>{"Бусти\nЗдесь можно задать вопросы\nУзнать новости\nКинуть в меня денежку"}</div> : null}
             </div>
             <div className={style.Window}>
                 <SpellMain />
