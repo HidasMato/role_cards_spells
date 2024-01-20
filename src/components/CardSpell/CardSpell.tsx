@@ -16,7 +16,8 @@ const Card = ({ targetFont, NumbersExist, isBack, keyt, cardType, Pole, minMax, 
     let descriptionMain, descriptionText;
     useEffect(() => {
         descriptionMain = document.getElementById("Card " + keyt);
-        descriptionText = document.getElementById("CardControl " + keyt);;
+        descriptionText = document.getElementById("CardControl " + keyt);
+        if(descriptionText) descriptionText.style.justifyContent = 'start';
         if (descriptionText && descriptionMain) {
             let size = minMax? minMax[1] : 10;
             descriptionText.style.fontSize = size + 'px';
@@ -30,6 +31,7 @@ const Card = ({ targetFont, NumbersExist, isBack, keyt, cardType, Pole, minMax, 
             else {
                 if (plusPerepolnen) plusPerepolnen(keyt, false);
             }
+            descriptionText.style.justifyContent = 'space-between';
         }
     }, [startPerepolnen]);
     const getPole = (num: number) => {
