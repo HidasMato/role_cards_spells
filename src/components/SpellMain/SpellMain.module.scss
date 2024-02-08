@@ -1,13 +1,14 @@
-
 .Main {
     width: 100%;
     height: 100%;
-    background-color:var(--color2);
+    background-color: var(--color2);
     color: var(--color6);
     position: relative;
+
     .HideWindow {
         display: none;
     }
+
     .OptionsSetting {
         position: absolute;
         height: 3vh;
@@ -16,16 +17,20 @@
         top: 2vh;
         z-index: 3;
     }
+
     .OptionsSetting:hover {
         cursor: pointer;
     }
+
     .Options {
         ::selection {
             background: #704c35;
         }
+
         ::-moz-selection {
             background: #704c35;
         }
+
         z-index: 3;
         overflow-y: hidden;
         position: absolute;
@@ -38,15 +43,18 @@
         border: 0.1vh solid var(--color6);
         border-radius: 4vh;
         padding: 0 1vh;
+
         .Hide {
             padding-right: 1vh;
             font-size: 1.5vh;
             display: flex;
             justify-content: end;
+
             .Text:hover {
                 cursor: pointer;
             }
         }
+
         .OpionsCase {
             overflow-y: scroll;
             height: 100%;
@@ -55,10 +63,12 @@
             display: flex;
             align-items: center;
             flex-direction: column;
+
             .SettingDownload {
                 display: flex;
                 width: 100%;
                 justify-content: start;
+
                 .But {
                     margin-left: 2vh;
                     background-color: var(--color3);
@@ -68,14 +78,17 @@
                     border-radius: 2vh;
                     font-size: 2vh;
                 }
+
                 .But:hover {
                     background-color: var(--color5);
                     cursor: pointer;
                 }
+
                 .Hide {
                     display: none;
                 }
             }
+
             .RubahaBackNext {
                 display: flex;
 
@@ -104,6 +117,7 @@
                     }
                 }
             }
+
             .FontChose {
                 input {
                     width: 6vh;
@@ -113,31 +127,37 @@
                     border-radius: 1vh;
                     margin-bottom: 1vh;
                 }
+
                 input:focus {
                     margin-bottom: 1vh;
                     outline-width: 0;
                     background-color: var(--color4);
                 }
             }
+
             .LineSetting {
                 svg {
                     height: 90%;
                     width: 60%;
                 }
+
                 display: flex;
                 justify-content: space-between;
                 padding: 0.7vh 0;
             }
+
             .InputFile {
                 overflow: hidden;
                 display: flex;
                 align-items: baseline;
                 white-space: nowrap;
                 margin-bottom: 1vh;
+
                 svg {
                     height: 90%;
                     width: 90%;
                 }
+
                 label {
                     padding: 0.5vh;
                     margin-right: 0.5vh;
@@ -148,42 +168,57 @@
                     height: 4vh;
                     width: 4vh;
                 }
+
                 input {
                     display: none;
                 }
+
                 label:hover {
                     cursor: pointer;
                     background-color: var(--color5);
                 }
+
                 label:active {
                     cursor: pointer;
                     background-color: var(--color4);
                 }
             }
+
             .Perepolnen {
                 white-space: pre;
             }
         }
+
         ::-webkit-scrollbar {
             width: 0;
             height: 0;
         }
+
+        @-moz-document url-prefix() {
+            .OpionsCase {
+                scrollbar-width: none;
+            }
+        }
+
         .ButtonMinMax {
             display: flex;
             justify-content: center;
             padding: 1vh 0;
+
             div {
                 background: var(--color1);
                 border: 0.2vh solid var(--color6);
                 border-radius: 4vh;
                 padding: 0 1vh;
             }
+
             div:hover {
                 cursor: pointer;
                 background: var(--color5)
             }
         }
     }
+
     .RedactorSetting {
         z-index: 4;
         position: absolute;
@@ -192,28 +227,34 @@
         bottom: 2vh;
         left: 2vh;
     }
+
     .RedactorSetting:hover {
         cursor: pointer;
     }
+
     .RedactorAll {
         ::selection {
             background: #704c35;
         }
+
         ::-moz-selection {
             background: #704c35;
         }
+
         z-index: 3;
         position: absolute;
         bottom: 0;
         left: 0;
         width: calc(100vw - 50vh - 3vh);
         margin: 1vh;
+
         .Title {
             font-size: 2vh;
             position: fixed;
             width: calc(100vw - 50vh - 3vh);
             text-align: center;
         }
+
         .Buttons {
             font-size: 1.8vh;
             bottom: -1vh;
@@ -221,10 +262,12 @@
             position: absolute;
             display: flex;
             justify-content: space-around;
+
             .Obnova {
                 min-width: 23vh;
                 justify-content: center;
                 display: flex;
+
                 .NeedUpdate {
                     width: 2vh;
                     height: 100%;
@@ -237,20 +280,24 @@
 
                 }
             }
+
             .DownloadInput {
-                display:none;
+                display: none;
             }
+
             .Download {
                 border: 0.1vh solid var(--color6);
                 background-color: var(--color1);
                 border-radius: 2vh;
                 padding: 0 1vh;
             }
+
             .Download:hover {
                 cursor: pointer;
                 background-color: var(--color5);
             }
         }
+
         .CSVLine {
             width: 100%;
             border-radius: 2vh;
@@ -258,6 +305,7 @@
             background-color: var(--color1);
             padding: 1vh;
             margin-bottom: 2vh;
+
             .InputPlace {
                 background-color: var(--color3);
                 border: 0.1vh solid var(--color6);
@@ -266,31 +314,37 @@
                 position: relative;
                 padding-bottom: 1vh;
                 margin-bottom: 1vh;
+
                 .Buttons {
                     bottom: -1.5vh;
+
                     div {
                         display: flex;
                     }
+
                     input {
                         width: 6vh;
                         bottom: 0;
                         background-color: var(--color1);
                         color: var(--color6);
-                        border-radius: 1vh ;
+                        border-radius: 1vh;
                         border: 0.1vh solid var(--color6);
                     }
+
                     input:focus {
                         outline-width: 0;
                         background-color: var(--color4);
                     }
                 }
+
                 .CSVText {
-                    border-radius:  1.5vh 1.5vh 4vh 4vh;
+                    border-radius: 1.5vh 1.5vh 4vh 4vh;
                     padding: 1vh 1vh 1vh 1vh;
                     margin-top: 2vh;
                     width: 100%;
                     overflow-y: scroll;
                     overflow-x: hidden;
+
                     input {
                         font-size: 1.5vh;
                         resize: none;
@@ -302,16 +356,19 @@
                         color: var(--color6);
                         padding: 0 1vh;
                     }
+
                     textarea:focus {
                         outline: none !important;
                     }
                 }
             }
+
             ::-webkit-scrollbar {
                 width: 0;
                 height: 0;
             }
         }
+
         .Redactor {
             width: 100%;
             border-radius: 4vh;
@@ -319,21 +376,26 @@
             height: 25vh;
             background-color: var(--color1);
             padding: 0 1vh;
+
             .Hide {
                 padding-right: 1vh;
                 font-size: 1.5vh;
                 display: flex;
                 justify-content: end;
+
                 .Text:hover {
                     cursor: pointer;
                 }
             }
+
             .RedactorCase {
                 display: flex;
+
                 .Title {
                     position: absolute;
                     width: 100%;
                 }
+
                 .Base {
                     background-color: var(--color3);
                     border: 0.1vh solid var(--color6);
@@ -341,8 +403,9 @@
                     height: 21vh;
                     width: 25vh;
                     position: relative;
+
                     .BaseTips {
-                        border-radius: 1.5vh 1.5vh  4vh 4vh;
+                        border-radius: 1.5vh 1.5vh 4vh 4vh;
                         padding: 1vh 1vh 1vh 1vh;
                         margin: 12% 0 5% 0;
                         height: 83%;
@@ -350,7 +413,14 @@
                         overflow-y: scroll;
                         overflow-x: hidden;
                     }
+
+                    @-moz-document url-prefix() {
+                        .BaseTips {
+                            scrollbar-width: none;
+                        }
+                    }
                 }
+
                 .InputPlace {
                     background-color: var(--color3);
                     border: 0.1vh solid var(--color6);
@@ -359,14 +429,16 @@
                     margin-left: 1vh;
                     width: calc(100% - 16vh - 1vh);
                     position: relative;
+
                     .CSVText {
-                        border-radius:  1.5vh 1.5vh 4vh 4vh;
+                        border-radius: 1.5vh 1.5vh 4vh 4vh;
                         padding: 1vh 1vh 1vh 1vh;
                         margin-top: 2vh;
                         height: calc(100% - 2vh);
                         width: 100%;
                         overflow-y: scroll;
                         overflow-x: hidden;
+
                         textarea {
                             font-size: 1.5vh;
                             resize: none;
@@ -379,11 +451,19 @@
                             color: var(--color6);
                             padding: 0 1vh;
                         }
+
                         textarea:focus {
                             outline: none !important;
                         }
                     }
+
+                    @-moz-document url-prefix() {
+                        .CSVText {
+                            scrollbar-width: none;
+                        }
+                    }
                 }
+
                 ::-webkit-scrollbar {
                     width: 0;
                     height: 0;
@@ -391,30 +471,36 @@
             }
         }
     }
+
     .BigWidth {
         width: calc(100% - 4vh);
     }
+
     .Lists {
         height: 100%;
         width: 100%;
         overflow-y: scroll;
-        .List{
+
+        .List {
             margin: 2vh;
             margin-right: 14vh;
             height: var(--ListH);
             width: var(--ListW);
             background-color: var(--ListColor);
             padding: var(--ListPaddingT) var(--ListPaddingR) var(--ListPaddingB) var(--ListPaddingL);
+
             .LineCards {
                 width: 100%;
                 display: flex;
                 height: calc(100% / var(--h));
+
                 .Card {
                     height: 100%;
                     width: calc(100% / var(--w));
                 }
             }
         }
+
         @media print {
             .List {
                 margin: 0;
@@ -422,42 +508,51 @@
             }
         }
     }
+
     .ListDown {
         padding-bottom: 26vh;
     }
+
     .ListRigth {
         padding-right: 54vh;
     }
+
     .AroundTwoCards {
         ::selection {
             background: #704c35;
         }
+
         ::-moz-selection {
             background: #704c35;
         }
+
         height: 100%;
         width: 100%;
         overflow-y: scroll;
         padding-right: 18vh;
         padding-bottom: 38vh;
+
         .TwoCards {
             padding: calc(2vh + var(--ListPaddingT)) calc(2vh + var(--ListPaddingR)) calc(2vh + var(--ListPaddingB)) calc(2vh + var(--ListPaddingL));
             display: flex;
             height: max-content;
             width: max-content;
+
             .OneCard {
-                height: calc((var(--ListH) - var(--ListPaddingT) - var(--ListPaddingB) ) / var(--h));
-                width: calc((var(--ListW) - var(--ListPaddingR) - var(--ListPaddingL) ) / var(--w));
+                height: calc((var(--ListH) - var(--ListPaddingT) - var(--ListPaddingB)) / var(--h));
+                width: calc((var(--ListW) - var(--ListPaddingR) - var(--ListPaddingL)) / var(--w));
             }
+
             .CardSelection {
-                margin-left: calc(2vh + var(--ListPaddingR) );
+                margin-left: calc(2vh + var(--ListPaddingR));
                 width: 40vh;
                 height: max-content;
                 background-color: var(--color1);
                 border: 0.1vh solid var(--color6);
                 border-radius: 2vh;
-                padding:1vh;
+                padding: 1vh;
                 font-size: 2vh;
+
                 div {
                     height: max-content;
                     background-color: var(--color3);
@@ -465,44 +560,56 @@
                     border-radius: 2vh;
                     width: 100%;
                     padding: 1vh;
-                    input, textarea {
+
+                    input,
+                    textarea {
                         width: 100%;
                         background-color: var(--color1);
                         border-radius: 2vh;
                         margin-bottom: 0.5vh;
                         padding: 0 0.5vh;
                     }
+
                     ::-webkit-input-placeholder {
                         color: var(--color3);
                     }
-                    input:hover, textarea:hover {
+
+                    input:hover,
+                    textarea:hover {
                         cursor: pointer;
                         background-color: var(--color5);
                     }
-                    input:active, textarea:active {
+
+                    input:active,
+                    textarea:active {
                         cursor: pointer;
                         background-color: var(--color4);
                     }
-                    
+
                 }
             }
         }
     }
+
     .AddPadRig {
         padding-right: 64vh;
     }
+
     .Viu {
         ::selection {
             background: #704c35;
         }
+
         ::-moz-selection {
             background: #704c35;
         }
+
         position: absolute;
         z-index: 3;
         right: 6vh;
         top: 1vh;
         text-align: center;
+
         .ChangeCardViu {
             margin-bottom: 2vh;
             display: flex;
@@ -513,6 +620,7 @@
             border: 0.1vh solid var(--color6);
             border-radius: 2vh;
             overflow: hidden;
+
             .RubahaViu {
                 font-size: 2vh;
                 height: 50%;
@@ -521,31 +629,38 @@
                 justify-content: center;
                 align-items: center;
             }
+
             .RubahaViu:hover {
                 cursor: pointer;
                 background-color: var(--color5);
             }
+
             .OnHover {
                 background-color: var(--color4);
             }
         }
+
         .BigViu {
             height: 12vh;
         }
     }
+
     .OpenOptionViu {
         right: 52vh;
     }
+
     .NumbersExists {
         display: flex;
         align-items: center;
         padding: 1vh 0;
+
         .Exists {
             background-color: var(--color1);
             border: 0.1vh solid var(--color6);
             overflow: hidden;
             color: transparent;
             position: relative;
+
             div {
                 position: absolute;
                 right: 0.2vh;
@@ -555,14 +670,17 @@
                 background-color: var(--color6);
             }
         }
+
         .Exists:hover {
             cursor: pointer;
             background-color: var(--color5);
         }
+
         p {
             padding: 0 1vh;
         }
     }
+
     --ListColor: rgb(255, 255, 255);
     --CardColorBackcground: rgb(0, 0, 0);
     --CardZagolovokBackgroundColor: rgb(255, 255, 255);
@@ -721,45 +839,56 @@
     --h: 3;
     --ListH: 297mm;
     --ListW: 210mm;
-    @media print {    
+
+    @media print {
         .Lists {
             height: max-content;
             margin: 0;
             padding: 0;
             overflow: auto;
         }
+
         .CardSelection {
             display: none;
         }
+
         .OptionsSetting {
             display: none;
         }
+
         .Options {
             display: none;
         }
+
         .RedactorSetting {
             display: none;
         }
+
         .RedactorAll {
             display: none;
         }
+
         .ChangeCardViu {
             display: none;
         }
+
         .Viu {
             display: none;
         }
     }
 }
+
 @page {
     margin: 0;
 }
-@media print { 
+
+@media print {
     .Main {
         width: auto;
         height: max-content;
         padding: 0;
     }
+
     // .Menu {
     //     display: none;
     // }

@@ -5,12 +5,15 @@
     height: 100vh;
     width: 100vw;
     background-color: var(--color2);
+
     .Window {
         height: 90%;
         width: 100%;
         overflow-y: hidden;
         overflow-y: hidden;
     }
+
+
     .Down {
         height: 3%;
         width: 100%;
@@ -21,8 +24,9 @@
         align-items: center;
         padding: 0 1vh;
         padding-right: 1vh;
-        overflow:hidden;
+        overflow: hidden;
         overflow-x: scroll;
+
         .U {
             height: min-content;
             color: var(--color6);
@@ -31,11 +35,19 @@
             white-space: pre;
         }
     }
+
+    @-moz-document url-prefix() {
+        .Down {
+            scrollbar-width: none;
+        }
+    }
+
     .Down::-webkit-scrollbar {
         display: none;
     }
+
     .Up {
-        overflow:hidden;
+        overflow: hidden;
         overflow-x: scroll;
         height: 7%;
         width: 100%;
@@ -45,6 +57,7 @@
         justify-content: space-between;
         align-items: center;
         padding: 0 1vh;
+
         .Opis {
             white-space: pre;
             padding: 1vh;
@@ -62,11 +75,13 @@
             font-size: 2.3vh;
             z-index: 8;
         }
+
         .Slk {
             margin-left: 1vh;
             height: 100%;
             padding-top: 1vh;
             display: flex;
+
             .U {
                 color: var(--color6);
                 font-size: 2.3vh;
@@ -75,32 +90,38 @@
                 white-space: pre;
                 text-align: end;
             }
+
             .Icon1 {
                 height: 5vh;
-                width:5vh;
-                margin-left:1vh;
+                width: 5vh;
+                margin-left: 1vh;
             }
+
             .Icon2 {
                 height: 5vh;
                 width: 5.5vh;
-                margin-left:1vh;
+                margin-left: 1vh;
             }
+
             .Icon3 {
                 height: 5vh;
                 width: 8vh;
-                margin-left:1vh;
+                margin-left: 1vh;
             }
+
             .Icon4 {
                 height: 5vh;
                 width: 5vh;
-                margin-left:1vh;
+                margin-left: 1vh;
             }
         }
+
         .MainChose {
             font-size: 3vh;
             color: var(--color6);
             height: 100%;
-            .TypesList{
+
+            .TypesList {
                 position: absolute;
                 z-index: 4;
                 max-height: 20vh;
@@ -110,6 +131,7 @@
                 overflow-x: hidden;
                 border-radius: 0 0 2vh 2vh;
                 padding-bottom: 0.5vh;
+
                 .Type {
                     margin: 0.5vh 0.5vh 0.5vh 0.5vh;
                     padding: 0.5vh 0.5vh 0.5vh 0.5vh;
@@ -118,26 +140,30 @@
                     overflow-x: hidden;
                     background-color: var(--color3);
                 }
+
                 .Type:hover {
                     background-color: var(--color4);
                     cursor: pointer;
                 }
             }
+
             .Block {
                 height: 100%;
                 display: flex;
                 align-items: center;
+
                 .Chose {
                     width: 32vh;
                     height: 80%;
                     overflow-x: hidden;
                     overflow-y: hidden;
-                    background-color:var(--color3);
+                    background-color: var(--color3);
                     border-radius: 40vh 12vh 56vh 20vh;
                     border: 0.1vh solid var(--color6);
                     display: flex;
                     justify-content: center;
                     align-items: center;
+
                     .ChoseIn {
                         overflow-x: hidden;
                         overflow-y: hidden;
@@ -148,6 +174,7 @@
                         width: 29vh;
                     }
                 }
+
                 .Change {
                     height: 80%;
                     width: 10vh;
@@ -158,11 +185,13 @@
                     padding-left: 0.7vh;
                     display: flex;
                     align-items: center;
+
                     .IMG {
                         height: 80%;
                         width: 42%;
                     }
                 }
+
                 .Change:hover {
                     background-color: var(--color4);
                     cursor: pointer;
@@ -170,22 +199,33 @@
             }
         }
     }
+
+    @-moz-document url-prefix() {
+        .Up {
+            scrollbar-width: none;
+        }
+    }
+
     .Up::-webkit-scrollbar {
         display: none;
     }
+
     --color1: #E1CDC6;
     --color2: #F1E9E6;
     --color3: #F8E3CF;
     --color4: #F2B892;
     --color5: #F19A71;
     --color6: #AA796C;
+
     @media print {
         .Up {
             display: none;
         }
+
         .Window {
             height: auto;
         }
+
         .Down {
             display: none;
         }
@@ -194,110 +234,133 @@
 
 @font-face {
     font-family: "BookerlyBold";
-    src: local("BookerlyBold"),url("./fonts/Bookerly\ Bold.ttf") format("truetype");
+    src: local("BookerlyBold"), url("./fonts/Bookerly\ Bold.ttf") format("truetype");
     font-weight: bold;
 }
+
 @font-face {
     font-family: "BookerlyBoldItalic";
-    src: local("BookerlyBoldItalic"),url("./fonts/Bookerly\ Bold\ Italic.ttf") format("truetype");
+    src: local("BookerlyBoldItalic"), url("./fonts/Bookerly\ Bold\ Italic.ttf") format("truetype");
     font-weight: bold;
     font-style: italic;
 }
+
 @font-face {
     font-family: "BookerlyDisplayBoldItalic";
-    src: local("BookerlyDisplayBoldItalic"),url("./fonts/Bookerly\ Display\ Bold\ Italic.ttf") format("truetype");
+    src: local("BookerlyDisplayBoldItalic"), url("./fonts/Bookerly\ Display\ Bold\ Italic.ttf") format("truetype");
     font-weight: bold;
     font-style: italic;
 }
+
 @font-face {
     font-family: "BookerlyDisplayBold";
-    src: local("BookerlyDisplayBold"),url("./fonts/Bookerly\ Display\ Bold.ttf") format("truetype");
+    src: local("BookerlyDisplayBold"), url("./fonts/Bookerly\ Display\ Bold.ttf") format("truetype");
     font-weight: bold;
 }
+
 @font-face {
     font-family: "BookerlyDisplayItalic";
-    src: local("BookerlyDisplayItalic"),url("./fonts/Bookerly\ Display\ Italic.ttf") format("truetype");
+    src: local("BookerlyDisplayItalic"), url("./fonts/Bookerly\ Display\ Italic.ttf") format("truetype");
     font-style: italic;
 }
+
 @font-face {
     font-family: "BookerlyDisplay";
-    src: local("BookerlyDisplay"),url("./fonts/Bookerly\ Display.ttf") format("truetype");
+    src: local("BookerlyDisplay"), url("./fonts/Bookerly\ Display.ttf") format("truetype");
 }
+
 @font-face {
     font-family: "BookerlyItalic";
-    src: local("BookerlyItalic"),url("./fonts/Bookerly\ Italic.ttf") format("truetype");
+    src: local("BookerlyItalic"), url("./fonts/Bookerly\ Italic.ttf") format("truetype");
     font-style: italic;
 }
+
 @font-face {
     font-family: "BookerlyLCDItalic";
-    src: local("BookerlyLCDItalic"),url("./fonts/Bookerly\ LCD\ Italic.ttf") format("truetype");
+    src: local("BookerlyLCDItalic"), url("./fonts/Bookerly\ LCD\ Italic.ttf") format("truetype");
     font-style: italic;
 }
+
 @font-face {
     font-family: "BookerlyLCDLightItalic";
-    src: local("BookerlyLCDLightItalic"),url("./fonts/Bookerly\ LCD \Light\ Italic.ttf") format("truetype");
+    src: local("BookerlyLCDLightItalic"), url("./fonts/Bookerly\ LCD \Light\ Italic.ttf") format("truetype");
     font-style: italic;
 }
+
 @font-face {
     font-family: "BookerlyLightItalic";
-    src: local("BookerlyLightItalic"),url("./fonts/Bookerly\ Light\ Italic.ttf") format("truetype");
+    src: local("BookerlyLightItalic"), url("./fonts/Bookerly\ Light\ Italic.ttf") format("truetype");
     font-style: italic;
 }
+
 @font-face {
     font-family: "BookerlyLight";
-    src: local("BookerlyLight"),url("./fonts/Bookerly\ Light.ttf") format("truetype");
+    src: local("BookerlyLight"), url("./fonts/Bookerly\ Light.ttf") format("truetype");
 }
+
 @font-face {
     font-family: "Bookerly";
-    src: local("Bookerly"),url("./fonts/Bookerly.ttf") format("truetype");
+    src: local("Bookerly"), url("./fonts/Bookerly.ttf") format("truetype");
 }
+
 @font-face {
     font-family: "EtnaFreeFont";
-    src: local("EtnaFreeFont"),url("./fonts/etna-free-font.otf") format("opentype");
+    src: local("EtnaFreeFont"), url("./fonts/etna-free-font.otf") format("opentype");
 }
+
 @font-face {
     font-family: "GogonoCocoaMochiCyrillic";
-    src: local("GogonoCocoaMochiCyrillic"),url("./fonts/gogono-cocoa-mochi-cyrillic.otf") format("opentype");
+    src: local("GogonoCocoaMochiCyrillic"), url("./fonts/gogono-cocoa-mochi-cyrillic.otf") format("opentype");
 }
+
 @font-face {
     font-family: "GULAGPavljenko";
-    src: local("GULAGPavljenko"),url("./fonts/GULAG\ Pavljenko.otf") format("opentype");
+    src: local("GULAGPavljenko"), url("./fonts/GULAG\ Pavljenko.otf") format("opentype");
 }
+
 @font-face {
     font-family: "HellasDustCyrillic";
-    src: local("HellasDustCyrillic"),url("./fonts/HellasDustCyrillic.otf") format("opentype");
+    src: local("HellasDustCyrillic"), url("./fonts/HellasDustCyrillic.otf") format("opentype");
 }
+
 @font-face {
     font-family: "MorningBreezeBold";
-    src: local("MorningBreezeBold"),url("./fonts/MorningBreeze-Bold.otf") format("opentype");
+    src: local("MorningBreezeBold"), url("./fonts/MorningBreeze-Bold.otf") format("opentype");
     font-weight: bold;
 }
+
 @font-face {
     font-family: "MorningBreezeItalic";
-    src: local("MorningBreezeItalic"),url("./fonts/MorningBreeze-Italic.otf") format("opentype");
+    src: local("MorningBreezeItalic"), url("./fonts/MorningBreeze-Italic.otf") format("opentype");
     font-style: italic;
 }
+
 @font-face {
     font-family: "MorningBreezeLight";
-    src: local("MorningBreezeLight"),url("./fonts/MorningBreeze-Light.otf") format("opentype");
+    src: local("MorningBreezeLight"), url("./fonts/MorningBreeze-Light.otf") format("opentype");
 }
+
 @font-face {
     font-family: "MorningBreeze";
-    src: local("MorningBreeze"),url("./fonts/MorningBreeze.otf") format("opentype");
+    src: local("MorningBreeze"), url("./fonts/MorningBreeze.otf") format("opentype");
 }
+
 @font-face {
     font-family: "OldSoviet";
-    src: local("OldSoviet"),url("./fonts/Old-Soviet.otf") format("opentype");
+    src: local("OldSoviet"), url("./fonts/Old-Soviet.otf") format("opentype");
 }
+
 @font-face {
     font-family: "SquareMeal";
-    src: local("SquareMeal"),url("./fonts/Square_Meal_RUS_by_Slavchansky.ttf") format("truetype");
+    src: local("SquareMeal"), url("./fonts/Square_Meal_RUS_by_Slavchansky.ttf") format("truetype");
 }
+
 @font-face {
     font-family: "ZarubkaTypeRegular";
-    src: local("ZarubkaTypeRegular"),url("./fonts/zarubkaType-Regular.ttf") format("truetype");
+    src: local("ZarubkaTypeRegular"), url("./fonts/zarubkaType-Regular.ttf") format("truetype");
 }
+
 @font-face {
     font-family: "ZaychikRegular";
-    src: local("ZaychikRegular"),url("./fonts/Zaychik-Regular.ttf") format("truetype");
+    src: local("ZaychikRegular"), url("./fonts/Zaychik-Regular.ttf") format("truetype");
 }
