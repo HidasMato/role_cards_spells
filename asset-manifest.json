@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/role_cards_spells/static/css/main.9f06c1f6.css",
-    "main.js": "/role_cards_spells/static/js/main.ebb7eb24.js",
+    "main.css": "/role_cards_spells/static/css/main.153e37ef.css",
+    "main.js": "/role_cards_spells/static/js/main.94552ade.js",
     "static/media/Zaychik-Regular.ttf": "/role_cards_spells/static/media/Zaychik-Regular.173a33b768ea315638ad.ttf",
     "static/media/MorningBreeze-Light.otf": "/role_cards_spells/static/media/MorningBreeze-Light.823ad7a2f9b297e86b3b.otf",
     "static/media/Bookerly Italic.ttf": "/role_cards_spells/static/media/Bookerly Italic.e10808b250fc36b9d0b9.ttf",
@@ -104,11 +104,11 @@
     "static/media/Change.svg": "/role_cards_spells/static/media/Change.e64d68a7972d27f6b473f0c45fbedaa2.svg",
     "static/media/Базовая.svg": "/role_cards_spells/static/media/Базовая.6a38bf64a0171468a45d7a40adf6dc9a.svg",
     "index.html": "/role_cards_spells/index.html",
-    "main.9f06c1f6.css.map": "/role_cards_spells/static/css/main.9f06c1f6.css.map",
-    "main.ebb7eb24.js.map": "/role_cards_spells/static/js/main.ebb7eb24.js.map"
+    "main.153e37ef.css.map": "/role_cards_spells/static/css/main.153e37ef.css.map",
+    "main.94552ade.js.map": "/role_cards_spells/static/js/main.94552ade.js.map"
   },
   "entrypoints": [
-    "static/css/main.9f06c1f6.css",
-    "static/js/main.ebb7eb24.js"
+    "static/css/main.153e37ef.css",
+    "static/js/main.94552ade.js"
   ]
 }
