@@ -10,9 +10,8 @@ type AlertProps = {
     isBack?: boolean;
     children?: JSX.Element[];
     NumbersExist?: boolean[];
-    targetFont: string;
 };
-const Card = ({ targetFont, NumbersExist, isBack, keyt, cardType, Pole, minMax, plusPerepolnen, startPerepolnen, children}: AlertProps): JSX.Element => {
+const Card = ({  NumbersExist, isBack, keyt, cardType, Pole, minMax, plusPerepolnen, startPerepolnen, children}: AlertProps): JSX.Element => {
     let descriptionMain, descriptionText;
     useEffect(() => {
         descriptionMain = document.getElementById("Card " + keyt);
@@ -39,7 +38,7 @@ const Card = ({ targetFont, NumbersExist, isBack, keyt, cardType, Pole, minMax, 
     };
     if (isBack) {
         return (
-            <div className={style.BackMain + ' ' + style[targetFont]}>
+            <div className={style.BackMain}>
                 {children ? children[0] : null}
                 {children ? children[1] : null}
                 {NumbersExist?.[0] ? <div className={style.Num1}>{getPole(15)}</div> : null}
@@ -48,17 +47,6 @@ const Card = ({ targetFont, NumbersExist, isBack, keyt, cardType, Pole, minMax, 
                 {NumbersExist?.[3] ? <div className={style.Num4}>{getPole(15)}</div> : null}
             </div>
         );
-        // else if (cardType == 4 || cardType == 5 || cardType == 6 || cardType == 7 || cardType == 8 || cardType == 9) {
-        //     return (
-        //         <div className={style.BackMain + ' ' + style[targetFont] + ' ' + style.Round}>
-        //             {children}
-        //             {NumbersExist?.[0]? <div className={style.Num1}>{getPole(15)}</div> : null}
-        //             {NumbersExist?.[1]? <div className={style.Num2}>{getPole(15)}</div> : null}
-        //             {NumbersExist?.[2]? <div className={style.Num3}>{getPole(15)}</div> : null}
-        //             {NumbersExist?.[3]? <div className={style.Num4}>{getPole(15)}</div> : null}
-        //         </div>
-        //     )
-        // }
     }
     else {
         const getOptions12 = () => {
@@ -155,7 +143,7 @@ const Card = ({ targetFont, NumbersExist, isBack, keyt, cardType, Pole, minMax, 
         };
         if (cardType == 0 || cardType == 1 || cardType == 2 || cardType == 3 || cardType == 6 || cardType == 7) {
                 return (
-                    <div className={style.Main + ' ' + style[targetFont]}>
+                    <div className={style.Main }>
                         <div className={style.Zagolovok}>{getPole(0)}</div>
                         <div className={style.School}>{getPole(1)}</div>
                         {cardType == 0 ? getOptions12() : null}
@@ -182,7 +170,7 @@ const Card = ({ targetFont, NumbersExist, isBack, keyt, cardType, Pole, minMax, 
                 );
         } else if (cardType == 4 || cardType == 5) {
             return (
-                <div className={style.Main + ' ' + style[targetFont]}>
+                <div className={style.Main }>
                     <div className={style.Zagolovok}><div>{getPole(0)}</div></div>
                     <div className={style.School}>{getPole(1)}</div>
                     <div className={style.BigDescription}>

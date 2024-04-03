@@ -1,32 +1,49 @@
 .Main {
     width: 100%;
     display: flex;
+    justify-content: space-between;
     padding: 1vh 0;
     font-size: 100%;
-    .Input {
-        width: 6vh;
+
+    .Select {
+        width: 20vh;
+        font-weight: 600;
         bottom: 0;
         background-color: var(--color1);
         color: var(--color6);
         border-radius: 1vh;
+
+        option:checked {
+            background: #be9a83;
+            color: #704c35;
+        }
+
+        option:hover {
+            box-shadow: 0 0 10px 100px #4ddc3b inset;
+        }
     }
-    .Input:focus {
+
+    .Select:focus {
         outline-width: 0;
         background-color: var(--color4);
     }
+
     .Text {
         padding: 0 1vh;
     }
+
     .As {
         background: var(--color1);
         border: 0.2vh solid var(--color6);
         border-radius: 4vh;
         padding: 0 1vh;
     }
+
     .As:hover {
         cursor: pointer;
         background: var(--color5)
     }
+
     .AsTarget {
         background: var(--color4);
     }

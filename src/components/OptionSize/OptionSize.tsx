@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import style from './OptionSize.module.scss';
 type AlertProps = {
     setSize: (a: number, b: number) => void;

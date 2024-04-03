@@ -1,102 +1,62 @@
 
-.BookerlyBold {
-    font-family: "BookerlyBold";
-}
-.BookerlyBoldItalic {
-    font-family: "BookerlyBoldItalic";
-}
-.BookerlyDisplayBoldItalic {
-    font-family: "BookerlyDisplayBoldItalic";
-}
-.BookerlyDisplay {
-    font-family: "BookerlyDisplay";
-}
-.BookerlyItalic {
-    font-family: "BookerlyItalic";
-}
-.BookerlyLightItalic {
-    font-family: "BookerlyLightItalic";
-}
-.BookerlyLight {
-    font-family: "BookerlyLight";
-}
-.Bookerly {
-    font-family: "Bookerly";
-}
-.EtnaFreeFont {
-    font-family: "EtnaFreeFont";
-}
-.GogonoCocoaMochiCyrillic {
-    font-family: "GogonoCocoaMochiCyrillic";
-}
-.GULAGPavljenko {
-    font-family: "GULAGPavljenko";
-}
-.HellasDustCyrillic {
-    font-family: "HellasDustCyrillic";
-}
-.MorningBreezeBold {
-    font-family: "MorningBreezeBold";
-}
-.MorningBreezeItalic {
-    font-family: "MorningBreezeItalic";
-}
-.MorningBreezeLight {
-    font-family: "MorningBreezeLight";
-}
-.MorningBreeze {
-    font-family: "MorningBreeze";
-}
-.OldSoviet {
-    font-family: "OldSoviet";
-}
-.SquareMeal {
-    font-family: "SquareMeal";
-}
-.ZarubkaTypeRegular {
-    font-family: "ZarubkaTypeRegular";
-}
-.ZaychikRegular {
-    font-family: "ZaychikRegular";
-}
+
 .BackMain {
+    font-family: var(--MyCardBackFont);
     height: 100%;
     width: 100%;
     position: relative;
     white-space: pre;
     overflow: hidden;
+
     img {
         position: absolute;
         height: 100%;
-        width: 100%;   
+        width: 100%;
     }
+
     svg {
         position: absolute;
         height: 100%;
-        width: 100%;   
+        width: 100%;
     }
+
     .Num1 {
+        font-family: var(--Num1Font);
         position: absolute;
         top: var(--Number1V);
         left: var(--Number1H);
         font-size: var(--Number1Kegl);
         color: var(--Number1);
+        transform: rotate(var(--Degree1));
+        transform-origin: center;
     }
+
     .Num2 {
+        font-family: var(--Num2Font);
+        transform: rotate(var(--Degree2));
+        transform-origin: center;
         position: absolute;
         top: var(--Number2V);
         left: var(--Number2H);
         font-size: var(--Number2Kegl);
         color: var(--Number2);
     }
+
     .Num3 {
+        font-family: var(--Num3Font);
+        transform: rotate(var(--Degree3));
+        transform-origin: center;
         position: absolute;
         top: var(--Number3V);
         left: var(--Number3H);
         font-size: var(--Number3Kegl);
         color: var(--Number3);
     }
+
     .Num4 {
+        font-family: var(--Num4Font);
+        transform: rotate(var(--Degree4));
+        transform-origin: center;
         position: absolute;
         top: var(--Number4V);
         left: var(--Number4H);
@@ -104,6 +64,7 @@
         color: var(--Number4);
     }
 }
+
 input {
     background-color: inherit;
     color: inherit;
@@ -111,6 +72,7 @@ input {
     width: inherit;
     height: inherit;
 }
+
 textarea {
     background-color: inherit;
     color: inherit;
@@ -120,9 +82,11 @@ textarea {
     resize: none;
     outline: none !important;
 }
+
 .Main {
+    font-family: var(--MyCardFaceFont);
     line-height: 1;
-    overflow:hidden;
+    overflow: hidden;
     white-space: pre;
     width: 100%;
     height: 100%;
@@ -130,7 +94,9 @@ textarea {
     border-right: var(--LineCut) solid var(--ListColor);
     border-bottom: var(--LineCut) solid var(--ListColor);
     padding: var(--CardPaddingT) var(--CardPaddingR) var(--CardPaddingB) var(--CardPaddingL);
+
     .Zagolovok {
+        font-family: var(--ZagFont);
         overflow: hidden;
         background-color: var(--CardZagolovokBackgroundColor);
         border-top-right-radius: var(--CardZagolovok┐);
@@ -146,9 +112,11 @@ textarea {
         justify-content: var(--CardZagolovokTextAlign);
         align-items: center;
     }
+
     .School {
+        font-family: var(--Pol1Font);
         width: 100%;
-        overflow:hidden;
+        overflow: hidden;
         height: var(--CardPer1H);
         font-size: var(--CardPer1TextFont);
         color: var(--CardPer1TextColor);
@@ -159,9 +127,11 @@ textarea {
         align-items: center;
         text-align: var(--CardPer1TextAlign);
     }
+
     .Per1 {
+        font-family: var(--Pol2Font);
         white-space: pre;
-        overflow:hidden;
+        overflow: hidden;
         width: 100%;
         color: var(--CardPer2TextColor);
         padding: 0 var(--CardPer2TextPadding);
@@ -173,22 +143,27 @@ textarea {
         align-items: center;
         text-align: var(--CardPer2TextAlign);
     }
+
     .BigDescription {
         height: calc(100% - var(--CardZagolovokTextSize) - var(--CardPer1H) - var(--CardDownTextSize));
         display: flex;
+
         .Per1 {
             padding: var(--CardPer2TextPadding) 0;
             height: 100%;
             width: var(--CardPer2H);
+
             .A {
                 transform: rotate(270deg);
             }
         }
+
         .AllText {
             width: calc(100% - var(--CardPer2H) - var(--CardOptionHeigth));
             height: 100%;
         }
     }
+
     .AllText {
         border-top-right-radius: var(--CardAllText┐);
         border-top-left-radius: var(--CardAllText┌);
@@ -199,21 +174,26 @@ textarea {
         height: calc(100% - var(--CardZagolovokTextSize) - var(--CardPer2H) - var(--CardPer1H) - var(--CardOptionHeigth) - var(--CardDownTextSize));
         background-color: var(--CardMainBackgroundColor);
         overflow: hidden;
+
         .TextSizeControll {
             width: 100%;
             height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+
             .MainText {
+                font-family: var(--TextFont);
                 line-height: var(--LineHeight);
                 width: 100%;
                 color: var(--CardMainTextColor);
                 text-align: var(--CardMainTextTextAlign);
                 padding: var(--CardMainTextTextPaddingT) var(--CardMainTextTextPaddingR) var(--CardMainTextTextPaddingB) var(--CardMainTextTextPaddingL);
             }
+
             .Dop {
                 .DopText {
+                    font-family: var(--TextDopFont);
                     line-height: var(--LineHeight);
                     color: var(--CardDopTextColor);
                     width: 100%;
@@ -221,9 +201,11 @@ textarea {
                     background-color: var(--CardDopBackgroundColor);
                     padding: var(--CardDopTextTextPaddingT) var(--CardDopTextTextPaddingR) var(--CardDopTextTextPaddingB) var(--CardDopTextTextPaddingL);
                 }
+
                 .Per2 {
+                    font-family: var(--Pol3Font);
                     white-space: pre;
-                    overflow:hidden;
+                    overflow: hidden;
                     width: 100%;
                     color: var(--CardPer3TextColor);
                     padding: 0 var(--CardPer3TextPadding);
@@ -238,6 +220,7 @@ textarea {
             }
         }
     }
+
     .Options41ver {
         background-color: var(--CardOptionPalki);
         width: 100%;
@@ -246,6 +229,7 @@ textarea {
         height: var(--CardOptionHeigth);
         justify-content: space-between;
     }
+
     .Options14ver {
         background-color: var(--CardOptionPalki);
         width: var(--CardOptionHeigth);
@@ -254,6 +238,7 @@ textarea {
         height: 100%;
         justify-content: space-between;
     }
+
     .Options41hor {
         background-color: var(--CardOptionPalki);
         width: 100%;
@@ -262,12 +247,14 @@ textarea {
         height: var(--CardOptionHeigth);
         justify-content: space-between;
     }
+
     .Options22 {
         display: flex;
         flex-direction: column;
         height: var(--CardOptionHeigth);
         justify-content: space-between;
         background-color: var(--CardOptionPalki);
+
         .Options2hor {
             display: flex;
             justify-content: space-between;
@@ -276,31 +263,37 @@ textarea {
             overflow: hidden;
         }
     }
+
     .OptionZagolovok {
         display: flex;
         align-items: center;
         width: 100%;
         overflow: hidden;
     }
+
     .Options1d1Line {
         display: flex;
         flex-direction: row;
         justify-content: start;
         height: calc(var(--CardOptionHeigth)/4 - var(--CardOptionBorder) / 4 * 3);
         width: 100%;
+
         div {
             width: auto;
         }
     }
+
     .Options1d2Line {
         div {
             width: auto;
         }
+
         display: flex;
         flex-direction: row;
         height: calc(var(--CardOptionHeigth)/2 - var(--CardOptionBorder) / 2);
         width: calc(50% - var(--CardOptionBorder)/2);
     }
+
     .Options1d1 {
         display: flex;
         flex-direction: column;
@@ -308,18 +301,21 @@ textarea {
         width: 100%;
         height: calc(25% - var(--CardOptionBorder) / 4 * 3);
     }
+
     .Options1d2 {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         width: calc(50% - var(--CardOptionBorder) / 2);
     }
+
     .Options1d4 {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         width: calc(25% - var(--CardOptionBorder) / 4 * 3);
     }
+
     .OptionText {
         padding: 0 var(--CardOptionTextTextPadding);
         justify-content: var(--CardOptionTextTextAlign);
@@ -327,19 +323,25 @@ textarea {
         align-items: center;
         overflow: hidden;
     }
+
     .OptionText1 {
         height: var(--CardOptionTextTextSize1);
     }
+
     .OptionText2 {
         height: var(--CardOptionTextTextSize2);
     }
+
     .OptionText3 {
         height: var(--CardOptionTextTextSize3);
     }
+
     .OptionText4 {
         height: var(--CardOptionTextTextSize4);
     }
+
     .DowtText {
+        font-family: var(--DownFont);
         height: var(--CardDownTextSize);
         font-size: var(--CardDownTextFont);
         color: var(--CardDownTextColor);
@@ -347,11 +349,13 @@ textarea {
         display: flex;
         align-items: end;
         padding: 0 var(--CardDownTextTextPadding);
-        width:100%;
+        width: 100%;
+
         div {
             width: 100%;
         }
     }
+
     .BcgrOpt1 {
         border-top-right-radius: var(--CardOption1┐);
         border-top-left-radius: var(--CardOption1┌);
@@ -360,14 +364,18 @@ textarea {
         background-color: var(--CardOption1Background);
         color: var(--CardOption1ZColor);
         font-size: var(--CardOptionZagolovokTextFont1);
+        font-family: var(--Opt1ZagolovokFont);
+
         .OptionZagolovok {
             padding: 0 var(--CardOption1ZagolovokTextPaddingR) 0 var(--CardOption1ZagolovokTextPaddingL);
+
             div {
                 text-align: var(--CardOption1ZagolovokTextAlign);
                 width: 100%;
             }
         }
     }
+
     .BcgrOpt2 {
         border-top-right-radius: var(--CardOption2┐);
         border-top-left-radius: var(--CardOption2┌);
@@ -376,14 +384,18 @@ textarea {
         background-color: var(--CardOption2Background);
         color: var(--CardOption2ZColor);
         font-size: var(--CardOptionZagolovokTextFont2);
+        font-family: var(--Opt2ZagolovokFont);
+
         .OptionZagolovok {
-                padding: 0 var(--CardOption2ZagolovokTextPaddingR) 0 var(--CardOption2ZagolovokTextPaddingL);
+            padding: 0 var(--CardOption2ZagolovokTextPaddingR) 0 var(--CardOption2ZagolovokTextPaddingL);
+
             div {
                 text-align: var(--CardOption2ZagolovokTextAlign);
                 width: 100%;
             }
         }
     }
+
     .BcgrOpt3 {
         border-top-right-radius: var(--CardOption3┐);
         border-top-left-radius: var(--CardOption3┌);
@@ -392,14 +404,18 @@ textarea {
         background-color: var(--CardOption3Background);
         color: var(--CardOption3ZColor);
         font-size: var(--CardOptionZagolovokTextFont3);
+        font-family: var(--Opt3ZagolovokFont);
+
         .OptionZagolovok {
-                padding: 0 var(--CardOption3ZagolovokTextPaddingR) 0 var(--CardOption3ZagolovokTextPaddingL);
+            padding: 0 var(--CardOption3ZagolovokTextPaddingR) 0 var(--CardOption3ZagolovokTextPaddingL);
+
             div {
                 text-align: var(--CardOption3ZagolovokTextAlign);
                 width: 100%;
             }
         }
     }
+
     .BcgrOpt4 {
         border-top-right-radius: var(--CardOption4┐);
         border-top-left-radius: var(--CardOption4┌);
@@ -408,44 +424,59 @@ textarea {
         background-color: var(--CardOption4Background);
         color: var(--CardOption4ZColor);
         font-size: var(--CardOptionZagolovokTextFont4);
+        font-family: var(--Opt4ZagolovokFont);
+
         .OptionZagolovok {
-                padding: 0 var(--CardOption4ZagolovokTextPaddingR) 0 var(--CardOption4ZagolovokTextPaddingL);
+            padding: 0 var(--CardOption4ZagolovokTextPaddingR) 0 var(--CardOption4ZagolovokTextPaddingL);
+
             div {
                 text-align: var(--CardOption4ZagolovokTextAlign);
                 width: 100%;
             }
         }
     }
+
     .Option1TextColor {
         color: var(--CardOption1TColor);
         font-size: var(--CardOptionTextTextFont1);
+        font-family: var(--Opt1TextFont);
+
         div {
             width: 100%;
             text-align: var(--CardOption1TextTextAlign);
             padding: 0 var(--CardOption1TextTextPaddingR) 0 var(--CardOption1TextTextPaddingL);
         }
     }
+
     .Option2TextColor {
         color: var(--CardOption2TColor);
         font-size: var(--CardOptionTextTextFont2);
+        font-family: var(--Opt2TextFont);
+
         div {
             width: 100%;
             text-align: var(--CardOption2TextTextAlign);
             padding: 0 var(--CardOption2TextTextPaddingR) 0 var(--CardOption2TextTextPaddingL);
         }
     }
+
     .Option3TextColor {
         color: var(--CardOption3TColor);
         font-size: var(--CardOptionTextTextFont3);
+        font-family: var(--Opt3TextFont);
+
         div {
             width: 100%;
             text-align: var(--CardOption3TextTextAlign);
             padding: 0 var(--CardOption3TextTextPaddingR) 0 var(--CardOption3TextTextPaddingL);
         }
     }
+
     .Option4TextColor {
         color: var(--CardOption4TColor);
         font-size: var(--CardOptionTextTextFont4);
+        font-family: var(--Opt4TextFont);
+
         div {
             width: 100%;
             text-align: var(--CardOption4TextTextAlign);

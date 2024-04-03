@@ -1,3 +1,4 @@
+/* eslint-disable eqeqeq */
 import React, { useEffect, useState } from 'react';
 import style from './SpellMain.module.scss';
 import { ReactComponent as Setting } from '../../images/Setting.svg';
@@ -75,6 +76,7 @@ import BaseTip from '../BaseTip/BaseTip';
 import BaseTipCase from '../BaseTipCase/BaseTipCase';
 import CardSpell from '../CardSpell/CardSpell';
 import OptionAllain from '../OptionAllain/OptionAllain';
+import OptionFont from '../OptionFont/OptionFont';
 type AlertProps = {
 };
 const SpellMain = ({ }: AlertProps): JSX.Element => {
@@ -89,8 +91,13 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
     const [pyt, setPyt] = useState<File[] | undefined[]>([]);
     const [pytRamka, setPytRamka] = useState<File[] | undefined[]>([]);
     const [openThisBaseCase, setOpenThisBaseCase] = useState([false, false, false, false, false, false, false, false]);
-    const [targetOption, setTargetOptions] = useState([false, false, false, false, false, false, false, false, false, false, false]);
+    const [targetOption, setTargetOptions] = useState([false, false, false, false, false, false, false, false, false, false, false, false]);
     const [colors, setColors] = useState(["#000000", "#ffffff", "#000000", "#000000", "#ffffff", "#000000", "#ffffff", "#000000", "#ffffff", "#000000", "#ffffff", "#ffffff", "#ffffff", "#ffffff", "#000000", "#000000", "#000000", "#000000", "#000000", "#000000", "#000000", "#000000", "#ffffff", "#000000", "#ffffff", "#000000", "#ffffff", "#ffffff", "#000000", "#ffffff", "#000000", "#ffffff", "#000000", "#000000", "#000000", "#000000", "#000000", "#000000", "#5266ff", "#ff4747", "#6aff57", "#000000"]);
+    const [listMyFonts, setListMyFonts] = useState(["По умолчанию", "BookerlyBold", "BookerlyBoldItalic", "BookerlyDisplayBoldItalic", "BookerlyDisplayBold", "BookerlyDisplayItalic", "BookerlyDisplay", "BookerlyItalic", "BookerlyLCDItalic", "BookerlyLCDLightItalic", "BookerlyLightItalic", "BookerlyLight", "Bookerly", "EtnaFreeFont", "GogonoCocoaMochiCyrillic", "GULAGPavljenko", "HellasDustCyrillic", "MorningBreezeBold", "MorningBreezeItalic", "MorningBreezeLight", "MorningBreeze", "OldSoviet", "SquareMeal", "ZarubkaTypeRegular", "ZaychikRegular"]);
+    const [myFonts, setMyFonts] = useState([0]);
+    const [myDeg, setMyDeg] = useState([0, 0, 0, 0, 0, 100]);
+    const myDegNames = ['--Degree', '--Degree1', '--Degree2', '--Degree3', '--Degree4', '--Mashtab'];
+    const myFontsNames = ["--ZagFont", "--Pol1Font", "--Pol2Font", "--Pol3Font", "--Opt1TextFont", "--Opt2TextFont", "--Opt3TextFont", "--Opt4TextFont", "--Opt1ZagolovokFont", "--Opt2ZagolovokFont", "--Opt3ZagolovokFont", "--Opt4ZagolovokFont", "--DownFont", "--TextFont", "--TextDopFont", "--Num1Font", "--Num2Font", "--Num3Font", "--Num4Font"];
     const sizePoleNames = ["--CardZagolovokTextSize", "--CardPer1H", "--CardPer2H", "--CardPer3H", "--CardOptionHeigth", "--CardOptionBorder", "--CardDownTextSize", "--ListH", "--ListW"];
     const sizeTextNames = ["--CardZagolovokTextFont", "--CardPer1TextFont", "--CardPer2TextFont", "--CardPer3TextFont", "--CardOptionZagolovokTextFont1", "--CardOptionZagolovokTextFont2", "--CardOptionZagolovokTextFont3", "--CardOptionZagolovokTextFont4", "--CardOptionTextTextFont1", "--CardOptionTextTextFont2", "--CardOptionTextTextFont3", "--CardOptionTextTextFont4", "--CardDownTextFont", "--Number1H", "--Number1V", "--Number2H", "--Number2V", "--Number3H", "--Number3V", "--Number4H", "--Number4V", "--Number1Kegl", "--Number2Kegl", "--Number3Kegl", "--Number4Kegl", "--LineHeight"];
     const colorsNames = ["--CardColorBackcground", "--CardZagolovokBackgroundColor", "--CardZagolovokTextColor", "--CardPer1BackgroundColor", "--CardPer1TextColor", "--CardPer2BackgroundColor", "--CardPer2TextColor", "--CardPer3BackgroundColor", "--CardPer3TextColor", "--CardOptionPalki", "--CardOption1Background", "--CardOption2Background", "--CardOption3Background", "--CardOption4Background", "--CardOption1ZColor", "--CardOption2ZColor", "--CardOption3ZColor", "--CardOption4ZColor", "--CardOption1TColor", "--CardOption2TColor", "--CardOption3TColor", "--CardOption4TColor", "--CardMainBackgroundColor", "--CardMainTextColor", "--CardDopBackgroundColor", "--CardDopTextColor", "--CardDownTextColor", "--ListColor", "--Rubaha1", "--Rubaha2", "--Rubaha3", "--Rubaha4", "--Rubaha5", "--Number1", "--Number2", "--Number3", "--Number4", "--Ramka1", "--Ramka2", "--Ramka3", "--Ramka4", "--Ramka5"];
@@ -116,11 +123,11 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
     const [perepolnenText, setPerepolnenText] = useState('');
     const [startPerepolnen, setStartPerepolnen] = useState(0);
     const [isBack, setIsBack] = useState(false);
+    const [showMyFonts, setShowMyFonts] = useState(false);
     const [lineCut, setLineCut] = useState(true);
     const [myNumbers, setMyNumbers] = useState([true, false, true, false]);
-    const fontMas = ["BookerlyBold", "BookerlyBoldItalic", "BookerlyDisplayBoldItalic", "BookerlyDisplay", "BookerlyItalic", "BookerlyLightItalic", "BookerlyLight", "Bookerly", "EtnaFreeFont", "GogonoCocoaMochiCyrillic", "GULAGPavljenko", "HellasDustCyrillic", "MorningBreezeBold", "MorningBreezeItalic", "MorningBreezeLight", "MorningBreeze", "OldSoviet", "SquareMeal", "ZarubkaTypeRegular", "ZaychikRegular"];
-    const [targetFont1, setTargetFont1] = useState(7);
-    const [targetFont2, setTargetFont2] = useState(7);
+    const [targetFont1, setTargetFont1] = useState(14);
+    const [targetFont2, setTargetFont2] = useState(23);
     const [isCSVRedactor, setIsCSVRedactor] = useState(false);
     const [rubahaCaseNumber, setRubahaCaseNumber] = useState(2);
     const [targetBackgroundNumber, setTargetBackgroundNumber] = useState(5);
@@ -142,11 +149,28 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
         for (let i = 0; i < colorsNames.length; i++) document.getElementById("ThisIsColorsConst")?.style.setProperty(colorsNames[i], colors[i]);
     }, [colors]);
     useEffect(() => {
+        document.getElementById("ThisIsColorsConst")?.style.setProperty('--MyCardFaceFont', listMyFonts[targetFont1 + 1]);
+    }, [targetFont1]);
+    useEffect(() => {
+        document.getElementById("ThisIsColorsConst")?.style.setProperty('--MyCardBackFont', listMyFonts[targetFont2 + 1]);
+    }, [targetFont2]);
+    useEffect(() => {
+        console.log(myFonts)
+        for (let i = 0; i < myFontsNames.length; i++) document.getElementById("ThisIsColorsConst")?.style.setProperty(myFontsNames[i],
+            myFonts[i] ? `"${listMyFonts[myFonts[i]]}"` : "inherit"
+        );
+    }, [myFonts]);
+    useEffect(() => {
         const A = document.getElementById("ThisIsColorsConst");
         if (A) for (let i = 0; i < sizePoleNames.length; i++) A.style.setProperty(sizePoleNames[i], String(sizePole[i]) + 'px');
         if (A) A.style.setProperty(sizePoleNames[7], String(sizePole[7] - 0.5) + 'mm');
         if (A) A.style.setProperty(sizePoleNames[8], String(sizePole[8] - 0.5) + 'mm');
     }, [sizePole]);
+    useEffect(() => {
+        const A = document.getElementById("ThisIsColorsConst");
+        if (A) for (let i = 0; i < myDegNames.length; i++) A.style.setProperty(myDegNames[i], String(myDeg[i]) + 'deg');
+        if (A) A.style.setProperty(myDegNames[5], String(myDeg[5]));
+    }, [myDeg]);
     useEffect(() => {
         document.getElementById("ThisIsColorsConst")?.style.setProperty("--h", String(kolvo[0]));
         document.getElementById("ThisIsColorsConst")?.style.setProperty("--w", String(kolvo[1]));
@@ -164,6 +188,9 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
     useEffect(() => {
         for (let i = 0; i < paddingNames.length; i++) document.getElementById("ThisIsColorsConst")?.style.setProperty(paddingNames[i], String(paddingText[i]) + 'px');
     }, [paddingText]);
+    useEffect(() => {
+        for (let i = 0; i < bordwrRadiusNames.length; i++) document.getElementById("ThisIsColorsConst")?.style.setProperty(bordwrRadiusNames[i], String(borderRadiusValue[i]) + 'px');
+    }, [bordwrRadiusNames]);
     useEffect(() => {
         for (let i = 0; i < bordwrRadiusNames.length; i++) document.getElementById("ThisIsColorsConst")?.style.setProperty(bordwrRadiusNames[i], String(borderRadiusValue[i]) + 'px');
     }, [bordwrRadiusNames]);
@@ -229,6 +256,16 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
         if (V[2]) M[2] = M[1];
         if (V[3]) M[3] = M[1];
         setSizesPole(M);
+    };
+    const setDeg = (a: number, b: number, vlog?: boolean) => {
+        const M = [...myDeg];
+        M[a] = b;
+        setMyDeg(M);
+    };
+    const setFontsValues = (a: number, b: number, vlog?: boolean) => {
+        const M = [...myFonts];
+        M[a] = b;
+        setMyFonts(M);
     };
     const setKolv = (a: number, b: number) => {
         const K = [...kolvo];
@@ -1242,7 +1279,7 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                                                             if (cards.length >= kolvo[1] * kolvo[0] * index + kolvo[1] * index2 + kolvo[1] - index3) {
                                                                 return (
                                                                     <div className={style.Card} key={index * kolvo[1] * kolvo[0] + index2 * kolvo[1] + kolvo[1] - index3} >
-                                                                        <CardSpell targetFont={String(fontMas[targetFont2])} NumbersExist={myNumbers} isBack={true} keyt={index * kolvo[1] * kolvo[0] + index2 * kolvo[1] + kolvo[1] - index3} cardType={targetTypeCardNumber} Pole={cards[kolvo[1] * kolvo[0] * index + kolvo[1] * index2 + kolvo[1] - index3 - 1]}>
+                                                                        <CardSpell NumbersExist={myNumbers} isBack={true} keyt={index * kolvo[1] * kolvo[0] + index2 * kolvo[1] + kolvo[1] - index3} cardType={targetTypeCardNumber} Pole={cards[kolvo[1] * kolvo[0] * index + kolvo[1] * index2 + kolvo[1] - index3 - 1]}>
                                                                             {getBackCardImg(cards[kolvo[1] * kolvo[0] * index + kolvo[1] * index2 + kolvo[1] - index3 - 1][16])}
                                                                             {getRamkaImg(cards[kolvo[1] * kolvo[0] * index + kolvo[1] * index2 + kolvo[1] - index3 - 1][17])}
                                                                         </CardSpell>
@@ -1257,7 +1294,7 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                                                             if (cards.length > kolvo[1] * kolvo[0] * index + kolvo[1] * index2 + index3) {
                                                                 return (
                                                                     <div className={style.Card} key={index * kolvo[1] * kolvo[0] + index2 * kolvo[1] + index3} >
-                                                                        <CardSpell targetFont={String(fontMas[targetFont1])} startPerepolnen={startPerepolnen} keyt={index * kolvo[1] * kolvo[0] + index2 * kolvo[1] + index3} plusPerepolnen={plusPerepolnen} minMax={minMax} cardType={targetTypeCardNumber} Pole={cards[kolvo[1] * kolvo[0] * index + kolvo[1] * index2 + index3]} />
+                                                                        <CardSpell startPerepolnen={startPerepolnen} keyt={index * kolvo[1] * kolvo[0] + index2 * kolvo[1] + index3} plusPerepolnen={plusPerepolnen} minMax={minMax} cardType={targetTypeCardNumber} Pole={cards[kolvo[1] * kolvo[0] * index + kolvo[1] * index2 + index3]} />
                                                                     </div>
                                                                 );
                                                             }
@@ -1577,6 +1614,55 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                         }} />
                         <label className={style.But} htmlFor="mySettingInputFile">{'Загрузить'}</label>
                     </div>
+                    <OptionCase nameSetting={'Выбор шрифтов проекта'} targetThis={targetOption[12]} setTarget={setTarget} number={12}>
+                        <div>
+                            <div>Добавить шрифт в проект</div>
+                            <div>Для загрузки нового шрифта вам нужно выбрать файл шрифта на своем компьютере. Скачать файлы шрифта можно в интернете, например тут <a target="_blank" href="https://fonts-online.ru/fonts" >https://fonts-online.ru/fonts</a> </div>
+                            <input type="file" name="qwert" id="qwer" onChange={async (e) => {
+                                const fontName = e.target.files?.[0].name || "new Font";
+                                const myFont = new FontFace(
+                                    fontName,
+                                    await e.target.files?.[0].arrayBuffer() || "url()",
+                                );
+                                document.fonts.add(myFont);
+                                const myApp = document.getElementById('App')
+                                if (myApp) {
+                                    if (!listMyFonts.includes(fontName)) {
+                                        setListMyFonts([...listMyFonts, fontName])
+                                    }
+                                }
+                            }} />
+                            <div className={style.FontShow} onClick={() => {
+                                setShowMyFonts(!showMyFonts);
+                            }}>{'Шрифты уже в проекте: ' + (showMyFonts ? 'Скрыть' : 'Показать')}</div>
+                            {showMyFonts &&
+                                <div>
+                                    {listMyFonts.map(val => {
+                                        return <div key={val}>{val}</div>
+                                    })}
+                                </div>}
+                            <div>Проставленные здесь значения полностью перекрывают значения по умолчанию. В значениях по умолчанию на вкладках размер текста и настройка рубашки также присутствуют новые шрифты</div>
+                            <OptionFont myFonts={listMyFonts} optName={"Заголовок"} number={0} values={myFonts} setFonts={setFontsValues} />
+                            <OptionFont myFonts={listMyFonts} optName={"Полоса 1"} number={1} values={myFonts} setFonts={setFontsValues} />
+                            <OptionFont myFonts={listMyFonts} optName={"Полоса 2"} number={2} values={myFonts} setFonts={setFontsValues} />
+                            <OptionFont myFonts={listMyFonts} optName={"Полоса 3"} number={3} values={myFonts} setFonts={setFontsValues} />
+                            <OptionFont myFonts={listMyFonts} optName={"Текст опции 1"} number={4} values={myFonts} setFonts={setFontsValues} />
+                            <OptionFont myFonts={listMyFonts} optName={"Текст опции 2"} number={5} values={myFonts} setFonts={setFontsValues} />
+                            <OptionFont myFonts={listMyFonts} optName={"Текст опции 3"} number={6} values={myFonts} setFonts={setFontsValues} />
+                            <OptionFont myFonts={listMyFonts} optName={"Текст опции 4"} number={7} values={myFonts} setFonts={setFontsValues} />
+                            <OptionFont myFonts={listMyFonts} optName={"Заг опции 1"} number={8} values={myFonts} setFonts={setFontsValues} />
+                            <OptionFont myFonts={listMyFonts} optName={"Заг опции 2"} number={9} values={myFonts} setFonts={setFontsValues} />
+                            <OptionFont myFonts={listMyFonts} optName={"Заг опции 3"} number={10} values={myFonts} setFonts={setFontsValues} />
+                            <OptionFont myFonts={listMyFonts} optName={"Заг опции 4"} number={11} values={myFonts} setFonts={setFontsValues} />
+                            <OptionFont myFonts={listMyFonts} optName={"Подпись"} number={12} values={myFonts} setFonts={setFontsValues} />
+                            <OptionFont myFonts={listMyFonts} optName={"Текст"} number={13} values={myFonts} setFonts={setFontsValues} />
+                            <OptionFont myFonts={listMyFonts} optName={"Доп текст"} number={14} values={myFonts} setFonts={setFontsValues} />
+                            <OptionFont myFonts={listMyFonts} optName={"Цифра 1"} number={15} values={myFonts} setFonts={setFontsValues} />
+                            <OptionFont myFonts={listMyFonts} optName={"Цифра 2"} number={16} values={myFonts} setFonts={setFontsValues} />
+                            <OptionFont myFonts={listMyFonts} optName={"Цифра 3"} number={17} values={myFonts} setFonts={setFontsValues} />
+                            <OptionFont myFonts={listMyFonts} optName={"Цифра 4"} number={18} values={myFonts} setFonts={setFontsValues} />
+                        </div>
+                    </OptionCase>
                     <OptionCase nameSetting={'Вид карточек'} targetThis={targetOption[0]} setTarget={setTarget} number={0}>
                         <>
                             <div className={style.LineSetting}>
@@ -1659,7 +1745,7 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                     </OptionCase>
                     <OptionCase nameSetting={'Размеры текста'} targetThis={targetOption[4]} setTarget={setTarget} number={4}>
                         <div>
-                            <div className={style.FontChose}><div>№ <input type="number" name="" id="" value={targetFont1} min={0} max={19} onChange={(e) => { setTargetFont1(Number(e.target.value)) }} />{"Шрифта "}</div>{fontMas[targetFont1]}</div>
+                            <div className={style.FontChose}><div>№ <input type="number" name="" id="" value={targetFont1} min={1} max={listMyFonts.length - 1} onChange={(e) => { setTargetFont1(Number(e.target.value)) }} />{"Шрифта "}</div>{listMyFonts[targetFont1]}</div>
                             <OptionSize text={"Заголовок"} size={sizeText[0]} number={0} setSize={setSizeText} min={0} max={99} block={blockSizeText[0]} setBlock={setBlocSizeText} />
                             <OptionSize text={"Полоса 1"} size={sizeText[1]} number={1} setSize={setSizeText} min={0} max={99} block={blockSizeText[1]} setBlock={setBlocSizeText} />
                             <OptionSize textAs={"Как полоса 1"} text={"Полоса 2"} size={sizeText[2]} number={2} setSize={setSizeText} min={0} max={99} block={blockSizeText[2]} setBlock={setBlocSizeText} />
@@ -1812,11 +1898,14 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                             <OptionColor text={"Рамка 3"} color={colors[39]} number={39} setColor={setColor} block={blockColor[39]} setBlock={setBlocColor} name={colorsNames[39]} />
                             <OptionColor text={"Рамка 4"} color={colors[40]} number={40} setColor={setColor} block={blockColor[40]} setBlock={setBlocColor} name={colorsNames[40]} />
                             <OptionColor text={"Рамка 5"} color={colors[41]} number={41} setColor={setColor} block={blockColor[41]} setBlock={setBlocColor} name={colorsNames[41]} />
+                            {"Работает только на некоторых обложках. Я так себе горизонтальные карточки делала"}
+                            <OptionSize text={"Поворот картинки"} size={myDeg[0]} number={0} setSize={setDeg} min={-360} max={360} block={false} setBlock={() => { }} />
+                            <OptionSize text={"Маштаб картиники"} size={myDeg[5]} number={5} setSize={setDeg} min={0} max={500} block={false} setBlock={() => { }} />
                             <div className={style.NumbersExists}><div className={style.Exists} onClick={() => { setMyNumbers([!myNumbers[0], myNumbers[1], myNumbers[2], myNumbers[3]]) }}> {"___"} {myNumbers[0] && <div />}</div> <p>{"Цифра 1"}</p> </div>
                             <div className={style.NumbersExists}><div className={style.Exists} onClick={() => { setMyNumbers([myNumbers[0], !myNumbers[1], myNumbers[2], myNumbers[3]]) }}> {"___"} {myNumbers[1] && <div />}</div> <p>{"Цифра 2"}</p> </div>
                             <div className={style.NumbersExists}><div className={style.Exists} onClick={() => { setMyNumbers([myNumbers[0], myNumbers[1], !myNumbers[2], myNumbers[3]]) }}> {"___"} {myNumbers[2] && <div />}</div> <p>{"Цифра 3"}</p> </div>
                             <div className={style.NumbersExists}><div className={style.Exists} onClick={() => { setMyNumbers([myNumbers[0], myNumbers[1], myNumbers[2], !myNumbers[3]]) }}> {"___"} {myNumbers[3] && <div />}</div> <p>{"Цифра 4"}</p> </div>
-                            <div className={style.FontChose}><div>№ <input type="number" name="" id="" value={targetFont2} min={0} max={19} onChange={(e) => { setTargetFont2(Number(e.target.value)) }} />{"Шрифта "}</div>{fontMas[targetFont2]}</div>
+                            <div className={style.FontChose}><div>№ <input type="number" name="" id="" value={targetFont2} min={1} max={listMyFonts.length - 1} onChange={(e) => { setTargetFont2(Number(e.target.value)) }} />{"Шрифта "}</div>{listMyFonts[targetFont2]}</div>
                             <OptionSize text={"Цифра 1 горизонталь"} size={sizeText[13]} number={13} setSize={setSizeText} min={-100} max={996 / kolvo[0]} block={blockSizeText[13]} setBlock={setBlocSizeText} />
                             <OptionSize text={"Цифра 1 вертикаль"} size={sizeText[14]} number={14} setSize={setSizeText} min={-100} max={996 / kolvo[1]} block={blockSizeText[14]} setBlock={setBlocSizeText} />
                             <OptionSize text={"Цифра 2 горизонталь"} size={sizeText[15]} number={15} setSize={setSizeText} min={-100} max={996 / kolvo[0]} block={blockSizeText[15]} setBlock={setBlocSizeText} />
@@ -1833,6 +1922,10 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                             <OptionColor text={"Цвет цифры 2"} textAs={"Как цифра 1"} color={colors[34]} number={34} setColor={setColor} block={blockColor[34]} setBlock={setBlocColor} name={colorsNames[34]} />
                             <OptionColor text={"Цвет цифры 3"} textAs={"Как цифра 1"} color={colors[35]} number={35} setColor={setColor} block={blockColor[35]} setBlock={setBlocColor} name={colorsNames[35]} />
                             <OptionColor text={"Цвет цифры 4"} textAs={"Как цифра 1"} color={colors[36]} number={36} setColor={setColor} block={blockColor[36]} setBlock={setBlocColor} name={colorsNames[36]} />
+                            <OptionSize text={"Поворот цифры 1"} size={myDeg[1]} number={1} setSize={setDeg} min={-360} max={360} block={false} setBlock={() => { }} />
+                            <OptionSize text={"Поворот цифры 2"} size={myDeg[2]} number={2} setSize={setDeg} min={-360} max={360} block={false} setBlock={() => { }} />
+                            <OptionSize text={"Поворот цифры 3"} size={myDeg[3]} number={3} setSize={setDeg} min={-360} max={360} block={false} setBlock={() => { }} />
+                            <OptionSize text={"Поворот цифры 4"} size={myDeg[4]} number={4} setSize={setDeg} min={-360} max={360} block={false} setBlock={() => { }} />
                         </div>
                     </OptionCase>
                 </div>
@@ -3213,8 +3306,8 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                     ? <div className={style.Lists + ' ' + (showRedactor ? style.ListDown : '') + ' ' + (showOptions ? style.ListRigth : '')}> {getCards()} </div>
                     : <div className={style.AroundTwoCards + (showOptions ? ' ' + style.AddPadRig : '')}>
                         <div className={style.TwoCards}>
-                            <div className={style.OneCard}><CardSpell targetFont={String(fontMas[targetFont1])} startPerepolnen={startPerepolnen} keyt={-1} plusPerepolnen={plusPerepolnen} minMax={minMax} cardType={targetTypeCardNumber} Pole={newCard} /></div>
-                            <div className={style.OneCard}><CardSpell targetFont={String(fontMas[targetFont2])} NumbersExist={myNumbers} isBack={true} keyt={-1} cardType={targetTypeCardNumber} Pole={newCard}>{getBackCardImg(newCard[16])}{getRamkaImg(newCard[17])}</CardSpell></div>
+                            <div className={style.OneCard}><CardSpell startPerepolnen={startPerepolnen} keyt={-1} plusPerepolnen={plusPerepolnen} minMax={minMax} cardType={targetTypeCardNumber} Pole={newCard} /></div>
+                            <div className={style.OneCard}><CardSpell NumbersExist={myNumbers} isBack={true} keyt={-1} cardType={targetTypeCardNumber} Pole={newCard}>{getBackCardImg(newCard[16])}{getRamkaImg(newCard[17])}</CardSpell></div>
                             <div className={style.CardSelection}>
                                 <div>
                                     <input placeholder='Заголовок' type="text" value={newCard[0]} onChange={(e) => { const A = newCard; A[0] = e.target.value; setPoles(A) }} />
