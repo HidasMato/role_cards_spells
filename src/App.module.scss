@@ -35,6 +35,12 @@
         }
     }
 
+    @-moz-document url-prefix() {
+        .Down {
+            scrollbar-width: none;
+        }
+    }
+
     .Down::-webkit-scrollbar {
         display: none;
     }
@@ -190,6 +196,12 @@
                     cursor: pointer;
                 }
             }
+        }
+    }
+
+    @-moz-document url-prefix() {
+        .Up {
+            scrollbar-width: none;
         }
     }
 
