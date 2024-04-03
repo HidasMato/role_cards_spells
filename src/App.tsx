@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import React, { Dispatch, SetStateAction, useEffect, useRef, useState } from 'react';
 import { ReactComponent as Change } from './images/Change.svg';
 import style from './App.module.scss';
@@ -29,7 +30,7 @@ import './fonts/Zaychik-Regular.ttf';
 
 const App = () => {
     const [showTypes, setShowTypes] = useState(false);
-    const [showMyOpis, setShowMyOpis] = useState([false,false,false]);
+    const [showMyOpis, setShowMyOpis] = useState([false, false, false]);
     const ref = useRef<HTMLDivElement>(null);
     useEffect(() => {
         const checkIfClickedOutside = (e: any) => {
@@ -62,7 +63,7 @@ const App = () => {
                         showTypes &&
                         <div className={style.TypesList}>
                             <a target="_blank" href="https://hidasmato.github.io/role_cards/"><div className={style.Type}>Главная</div></a>
-                            <div className={style.Type} onClick={() => { setShowTypes(false)}}>Заклинания</div>
+                            <div className={style.Type} onClick={() => { setShowTypes(false) }}>Заклинания</div>
                             <a target="_blank" href="https://hidasmato.github.io/role_cards_items/"><div className={style.Type}>Предметы</div></a>
                             <a target="_blank" href="https://hidasmato.github.io/role_cards_creatures/"><div className={style.Type}>Существа (БЕТА)</div></a>
                         </div>
@@ -78,7 +79,7 @@ const App = () => {
                 {showMyOpis[0] ? <div className={style.Opis}>{"Группа ВК\nЗдесь можно задать вопросы\nУзнать новости"}</div> : null}
                 {showMyOpis[1] ? <div className={style.Opis}>{"Гитхаб\nЗдесь можно посмотреть код"}</div> : null}
                 {showMyOpis[2] ? <div className={style.Opis}>{"Яндекс диск\nЗдесь лежат картинки"}</div> : null}
-                {showMyOpis[3] ? <div className={style.Opis}>{"Бусти\nЗдесь можно задать вопросы\nУзнать новости\nКинуть в меня денежку"}</div> : null}
+                {showMyOpis[3] ? <div className={style.Opis}>{"Бусти\nЗдесь можно задать вопросы\nУзнать новости\nКинуть в меня денежку\nСюда тоже можно:\n2202 2036 0804 7264"}</div> : null}
             </div>
             <div className={style.Window}>
                 <SpellMain />
