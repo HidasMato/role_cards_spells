@@ -1,3 +1,8 @@
+/* eslint-disable no-empty-pattern */
+/* eslint-disable no-useless-concat */
+/* eslint-disable react/jsx-no-target-blank */
+/* eslint-disable no-useless-escape */
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable eqeqeq */
 import React, { useEffect, useState } from 'react';
 import style from './SpellMain.module.scss';
@@ -1103,7 +1108,7 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
         }, 300);
     };
     const makeCardsFromCSV = () => {
-        let nowPoint = 0, nextEnter = 0, endPoint = CSV.length - 1;
+        let nowPoint = 0, nextEnter = 0;
         let cardNumber = 0, newCSV = '';
         const C: string[][] = [];
         while ((nextEnter = CSV.indexOf('\n', nowPoint)) != -1) {

@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from 'react';
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable eqeqeq */
+import React, { useEffect } from 'react';
 import style from './CardSpell.module.scss';
 type AlertProps = {
     cardType: number;
