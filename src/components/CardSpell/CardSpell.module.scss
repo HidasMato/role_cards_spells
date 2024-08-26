@@ -2,6 +2,8 @@
 
 .BackMain {
     font-family: var(--MyCardBackFont);
+    border-right: var(--LineCutBack) solid var(--ListColor);
+    border-bottom: var(--LineCutBack) solid var(--ListColor);
     height: 100%;
     width: 100%;
     position: relative;

@@ -130,6 +130,7 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
     const [isBack, setIsBack] = useState(false);
     const [showMyFonts, setShowMyFonts] = useState(false);
     const [lineCut, setLineCut] = useState(true);
+    const [lineCutBack, setLineCutBack] = useState(true);
     const [myNumbers, setMyNumbers] = useState([true, false, true, false]);
     const [targetFont1, setTargetFont1] = useState(14);
     const [targetFont2, setTargetFont2] = useState(23);
@@ -183,6 +184,9 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
     useEffect(() => {
         document.getElementById("ThisIsColorsConst")?.style.setProperty("--LineCut", lineCut ? '1px' : '0px');
     }, [lineCut]);
+    useEffect(() => {
+        document.getElementById("ThisIsColorsConst")?.style.setProperty("--LineCutBack", lineCutBack ? '1px' : '0px');
+    }, [lineCutBack]);
     useEffect(() => {
         for (let i = 0; i < sizeTextNames.length; i++) document.getElementById("ThisIsColorsConst")?.style.setProperty(sizeTextNames[i], String(sizeText[i]) + 'px');
         document.getElementById("ThisIsColorsConst")?.style.setProperty(sizeTextNames[25], String(sizeText[25] / 100));
@@ -1551,6 +1555,7 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                             myNewSetting = ToString(myNewSetting, [blockMinMax], 'blockMinMax');
                             myNewSetting = ToString(myNewSetting, myNumbers, 'myNumbers');
                             myNewSetting = ToString(myNewSetting, [lineCut], 'lineCut');
+                            myNewSetting = ToString(myNewSetting, [lineCutBack], 'lineCutBack');
                             myNewSetting = ToString(myNewSetting, [targetBackgroundNumber], 'targetBackgroundNumber');
                             myNewSetting = ToString(myNewSetting, [targetRamkaNumber], 'targetRamkaNumber');
                             let blob = new Blob(["\ufeff", myNewSetting], { type: "text;charset=windows-1251" });
@@ -1615,6 +1620,7 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                                         setBlockMinMax((FromFile(r as string, 'blockMinMax', [blockMinMax]) as boolean[])[0]);
                                         setMyNumbers((FromFile(r as string, 'myNumbers', [...myNumbers]) as boolean[]));
                                         setLineCut((FromFile(r as string, 'lineCut', [lineCut]) as boolean[])[0]);
+                                        setLineCutBack((FromFile(r as string, 'lineCutBack', [lineCutBack]) as boolean[])[0]);
                                         setTargetBackgroundNumber((FromFile(r as string, 'targetBackgroundNumber', [targetBackgroundNumber]) as number[])[0]);
                                         setTargetRamkaNumber((FromFile(r as string, 'targetRamkaNumber', [targetRamkaNumber]) as number[])[0]);
                                     }
@@ -1741,6 +1747,7 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                             <OptionSize text={"Между опциями"} size={sizePole[5]} number={5} setSize={setSizePole} min={0} max={40} block={blockSizePole[5]} setBlock={setBlocSizePole} />
                             <OptionSize text={"Нижняя подпись"} size={sizePole[6]} number={6} setSize={setSizePole} min={0} max={90} block={blockSizePole[6]} setBlock={setBlocSizePole} />
                             <div className={style.NumbersExists}><div className={style.Exists} onClick={() => { setLineCut(!lineCut) }}> {"___"} {lineCut && <div />}</div> <p>{"Линия разрезки (лицо)"}</p> </div>
+                            <div className={style.NumbersExists}><div className={style.Exists} onClick={() => { setLineCutBack(!lineCutBack) }}> {"___"} {lineCutBack && <div />}</div> <p>{"Линия разрезки (зад)"}</p> </div>
                             <OptionSize text={"мм Высота листа"} size={sizePole[7]} number={7} setSize={setSizePole} min={50} max={500} block={blockSizePole[7]} setBlock={setBlocSizePole} />
                             <OptionSize text={"мм Ширина листа"} size={sizePole[8]} number={8} setSize={setSizePole} min={50} max={500} block={blockSizePole[8]} setBlock={setBlocSizePole} />
                             <div className={style.ButtonMinMax} onClick={() => {
