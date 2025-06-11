@@ -77,6 +77,7 @@ import { ReactComponent as TanecDama } from '../../BackSvg/Танцующая д
 import { ReactComponent as Utoplennica } from '../../BackSvg/Утопленница.svg';
 import { ReactComponent as MyjOlen } from '../../BackSvg/Мужик олень.svg';
 import { ReactComponent as Rosa } from '../../BackSvg/Роза.svg';
+import { ReactComponent as Tykva } from '../../BackSvg/Тыковка.svg';
 import BaseTip from '../BaseTip/BaseTip';
 import BaseTipCase from '../BaseTipCase/BaseTipCase';
 import CardSpell from '../CardSpell/CardSpell';
@@ -98,7 +99,7 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
     const [openThisBaseCase, setOpenThisBaseCase] = useState([false, false, false, false, false, false, false, false]);
     const [targetOption, setTargetOptions] = useState([false, false, false, false, false, false, false, false, false, false, false, false]);
     const [colors, setColors] = useState(["#000000", "#ffffff", "#000000", "#000000", "#ffffff", "#000000", "#ffffff", "#000000", "#ffffff", "#000000", "#ffffff", "#ffffff", "#ffffff", "#ffffff", "#000000", "#000000", "#000000", "#000000", "#000000", "#000000", "#000000", "#000000", "#ffffff", "#000000", "#ffffff", "#000000", "#ffffff", "#ffffff", "#000000", "#ffffff", "#000000", "#ffffff", "#000000", "#000000", "#000000", "#000000", "#000000", "#000000", "#5266ff", "#ff4747", "#6aff57", "#000000"]);
-    const [listMyFonts, setListMyFonts] = useState(["По умолчанию", "BookerlyBold", "BookerlyBoldItalic", "BookerlyDisplayBoldItalic", "BookerlyDisplayBold", "BookerlyDisplayItalic", "BookerlyDisplay", "BookerlyItalic", "BookerlyLCDItalic", "BookerlyLCDLightItalic", "BookerlyLightItalic", "BookerlyLight", "Bookerly", "EtnaFreeFont", "GogonoCocoaMochiCyrillic", "GULAGPavljenko", "HellasDustCyrillic", "MorningBreezeBold", "MorningBreezeItalic", "MorningBreezeLight", "MorningBreeze", "OldSoviet", "SquareMeal", "ZarubkaTypeRegular", "ZaychikRegular"]);
+    const [listMyFonts, setListMyFonts] = useState(["По умолчанию", "BookerlyBold", "BookerlyDisplayBoldItalic", "BookerlyDisplayBold", "BookerlyDisplayItalic", "BookerlyDisplay", "BookerlyItalic", "BookerlyLCDItalic", "BookerlyLCDLightItalic", "BookerlyLightItalic", "BookerlyLight", "Bookerly", "EtnaFreeFont", "GogonoCocoaMochiCyrillic", "GULAGPavljenko", "HellasDustCyrillic", "MorningBreezeBold", "MorningBreezeItalic", "MorningBreezeLight", "MorningBreeze", "OldSoviet", "SquareMeal", "ZarubkaTypeRegular", "ZaychikRegular"]);
     const [myFonts, setMyFonts] = useState([0]);
     const [myDeg, setMyDeg] = useState([0, 0, 0, 0, 0, 100]);
     const myDegNames = ['--Degree', '--Degree1', '--Degree2', '--Degree3', '--Degree4', '--Mashtab'];
@@ -155,13 +156,12 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
         for (let i = 0; i < colorsNames.length; i++) document.getElementById("ThisIsColorsConst")?.style.setProperty(colorsNames[i], colors[i]);
     }, [colors]);
     useEffect(() => {
-        document.getElementById("ThisIsColorsConst")?.style.setProperty('--MyCardFaceFont', listMyFonts[targetFont1 + 1]);
+        document.getElementById("ThisIsColorsConst")?.style.setProperty('--MyCardFaceFont', "'" + listMyFonts[targetFont1] + "'" );
     }, [targetFont1]);
     useEffect(() => {
-        document.getElementById("ThisIsColorsConst")?.style.setProperty('--MyCardBackFont', listMyFonts[targetFont2 + 1]);
+        document.getElementById("ThisIsColorsConst")?.style.setProperty('--MyCardBackFont', "'"  + listMyFonts[targetFont2] + "'" );
     }, [targetFont2]);
     useEffect(() => {
-        console.log(myFonts)
         for (let i = 0; i < myFontsNames.length; i++) document.getElementById("ThisIsColorsConst")?.style.setProperty(myFontsNames[i],
             myFonts[i] ? `"${listMyFonts[myFonts[i]]}"` : "inherit"
         );
@@ -1130,7 +1130,7 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
     }
     const getBackCardImg = (PoleStr: string) => {
         let A = Number(PoleStr);
-        if (A == undefined || A == 0 || A > 50 || Number.isNaN(A)) {
+        if (A == undefined || A == 0 || A > 51 || Number.isNaN(A)) {
             A = targetBackgroundNumber;
         }
         if (A < 0 && A > -13) {
@@ -1240,6 +1240,8 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                 return (<MyjOlen />);
             case 50:
                 return (<Rosa />);
+            case 51:
+                return (<Tykva />);
             default:
                 return (<div></div>);
         }
@@ -1416,6 +1418,7 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
             <OptionCardImg name={"Утопленница"} targetThis={targetBackgroundNumber == 48} setTarget={setTargetBackgroundNumber} number={48} >{getBackCardImg('48')}</OptionCardImg>,
             <OptionCardImg name={"Мужик олень"} targetThis={targetBackgroundNumber == 49} setTarget={setTargetBackgroundNumber} number={49} >{getBackCardImg('49')}</OptionCardImg>,
             <OptionCardImg name={"Роза"} targetThis={targetBackgroundNumber == 50} setTarget={setTargetBackgroundNumber} number={50} >{getBackCardImg('50')}</OptionCardImg>,
+            <OptionCardImg name={"Тыковка для Кеиллушки"} targetThis={targetBackgroundNumber == 51} setTarget={setTargetBackgroundNumber} number={51} >{getBackCardImg('51')}</OptionCardImg>,
         ];
         return (
             <div>
