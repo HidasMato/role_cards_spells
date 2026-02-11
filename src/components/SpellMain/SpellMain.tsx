@@ -807,69 +807,69 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
     }
     const getRubahaCase = () => {
         const Elements = [
-            <OptionCardImg name={"Своя"} d={true} targetThis={targetBackgroundNumber == -12} setTarget={setTargetBackgroundNumber} key={-12} img={pyt[11] ? URL.createObjectURL(pyt[11]) : undefined}><div>{setPyti(-12)}</div></OptionCardImg>,
-            <OptionCardImg name={"Своя"} d={true} targetThis={targetBackgroundNumber == -11} setTarget={setTargetBackgroundNumber} key={-11} img={pyt[10] ? URL.createObjectURL(pyt[10]) : undefined}><div>{setPyti(-11)}</div></OptionCardImg>,
-            <OptionCardImg name={"Своя"} d={true} targetThis={targetBackgroundNumber == -10} setTarget={setTargetBackgroundNumber} key={-10} img={pyt[9] ? URL.createObjectURL(pyt[9]) : undefined}><div>{setPyti(-10)}</div></OptionCardImg>,
-            <OptionCardImg name={"Своя"} d={true} targetThis={targetBackgroundNumber == -9} setTarget={setTargetBackgroundNumber} key={-9} img={pyt[8] ? URL.createObjectURL(pyt[8]) : undefined}><div>{setPyti(-9)}</div></OptionCardImg>,
-            <OptionCardImg name={"Своя"} d={true} targetThis={targetBackgroundNumber == -8} setTarget={setTargetBackgroundNumber} key={-8} img={pyt[7] ? URL.createObjectURL(pyt[7]) : undefined}><div>{setPyti(-8)}</div></OptionCardImg>,
-            <OptionCardImg name={"Своя"} d={true} targetThis={targetBackgroundNumber == -7} setTarget={setTargetBackgroundNumber} key={-7} img={pyt[6] ? URL.createObjectURL(pyt[6]) : undefined}><div>{setPyti(-7)}</div></OptionCardImg>,
-            <OptionCardImg name={"Своя"} d={true} targetThis={targetBackgroundNumber == -6} setTarget={setTargetBackgroundNumber} key={-6} img={pyt[5] ? URL.createObjectURL(pyt[5]) : undefined}><div>{setPyti(-6)}</div></OptionCardImg>,
-            <OptionCardImg name={"Своя"} d={true} targetThis={targetBackgroundNumber == -5} setTarget={setTargetBackgroundNumber} key={-5} img={pyt[4] ? URL.createObjectURL(pyt[4]) : undefined}><div>{setPyti(-5)}</div></OptionCardImg>,
-            <OptionCardImg name={"Своя"} d={true} targetThis={targetBackgroundNumber == -4} setTarget={setTargetBackgroundNumber} key={-4} img={pyt[3] ? URL.createObjectURL(pyt[3]) : undefined}><div>{setPyti(-4)}</div></OptionCardImg>,
-            <OptionCardImg name={"Своя"} d={true} targetThis={targetBackgroundNumber == -3} setTarget={setTargetBackgroundNumber} key={-3} img={pyt[2] ? URL.createObjectURL(pyt[2]) : undefined}><div>{setPyti(-3)}</div></OptionCardImg>,
-            <OptionCardImg name={"Своя"} d={true} targetThis={targetBackgroundNumber == -2} setTarget={setTargetBackgroundNumber} key={-2} img={pyt[1] ? URL.createObjectURL(pyt[1]) : undefined}><div>{setPyti(-2)}</div></OptionCardImg>,
-            <OptionCardImg name={"Своя"} d={true} targetThis={targetBackgroundNumber == -1} setTarget={setTargetBackgroundNumber} key={-1} img={pyt[0] ? URL.createObjectURL(pyt[0]) : undefined}><div>{setPyti(-1)}</div></OptionCardImg>,
-            <OptionCardImg name={"Бард"} targetThis={targetBackgroundNumber == 1} setTarget={setTargetBackgroundNumber} key={1} >{getBackCardImg('1')}</OptionCardImg>,
-            <OptionCardImg name={"Варвар"} targetThis={targetBackgroundNumber == 2} setTarget={setTargetBackgroundNumber} key={2} >{getBackCardImg('2')}</OptionCardImg>,
-            <OptionCardImg name={"Военка"} targetThis={targetBackgroundNumber == 3} setTarget={setTargetBackgroundNumber} key={3} >{getBackCardImg('3')}</OptionCardImg>,
-            <OptionCardImg name={"Волшебник"} targetThis={targetBackgroundNumber == 4} setTarget={setTargetBackgroundNumber} key={4} >{getBackCardImg('4')}</OptionCardImg>,
-            <OptionCardImg name={"Друид"} targetThis={targetBackgroundNumber == 5} setTarget={setTargetBackgroundNumber} key={5} >{getBackCardImg('5')}</OptionCardImg>,
-            <OptionCardImg name={"Жрец"} targetThis={targetBackgroundNumber == 6} setTarget={setTargetBackgroundNumber} key={6} >{getBackCardImg('6')}</OptionCardImg>,
-            <OptionCardImg name={"Колдун"} targetThis={targetBackgroundNumber == 7} setTarget={setTargetBackgroundNumber} key={7} >{getBackCardImg('7')}</OptionCardImg>,
-            <OptionCardImg name={"Ксанатар"} targetThis={targetBackgroundNumber == 8} setTarget={setTargetBackgroundNumber} key={8} >{getBackCardImg('8')}</OptionCardImg>,
-            <OptionCardImg name={"Монах"} targetThis={targetBackgroundNumber == 9} setTarget={setTargetBackgroundNumber} key={9} >{getBackCardImg('9')}</OptionCardImg>,
-            <OptionCardImg name={"Мистик"} targetThis={targetBackgroundNumber == 10} setTarget={setTargetBackgroundNumber} key={10} >{getBackCardImg('10')}</OptionCardImg>,
-            <OptionCardImg name={"Паладин"} targetThis={targetBackgroundNumber == 11} setTarget={setTargetBackgroundNumber} key={11} >{getBackCardImg('11')}</OptionCardImg>,
-            <OptionCardImg name={"Следопыт"} targetThis={targetBackgroundNumber == 12} setTarget={setTargetBackgroundNumber} key={12} >{getBackCardImg('12')}</OptionCardImg>,
-            <OptionCardImg name={"Чародей"} targetThis={targetBackgroundNumber == 13} setTarget={setTargetBackgroundNumber} key={13} >{getBackCardImg('13')}</OptionCardImg>,
-            <OptionCardImg name={"Элементаль"} targetThis={targetBackgroundNumber == 14} setTarget={setTargetBackgroundNumber} key={14} >{getBackCardImg('14')}</OptionCardImg>,
-            <OptionCardImg name={"Воплощение"} targetThis={targetBackgroundNumber == 15} setTarget={setTargetBackgroundNumber} key={15} >{getBackCardImg('15')}</OptionCardImg>,
-            <OptionCardImg name={"Вызов"} targetThis={targetBackgroundNumber == 16} setTarget={setTargetBackgroundNumber} key={16} >{getBackCardImg('16')}</OptionCardImg>,
-            <OptionCardImg name={"Иллюзия"} targetThis={targetBackgroundNumber == 17} setTarget={setTargetBackgroundNumber} key={17} >{getBackCardImg('17')}</OptionCardImg>,
-            <OptionCardImg name={"Некромантия"} targetThis={targetBackgroundNumber == 18} setTarget={setTargetBackgroundNumber} key={18} >{getBackCardImg('18')}</OptionCardImg>,
-            <OptionCardImg name={"Ограждение"} targetThis={targetBackgroundNumber == 19} setTarget={setTargetBackgroundNumber} key={19} >{getBackCardImg('19')}</OptionCardImg>,
-            <OptionCardImg name={"Очарование"} targetThis={targetBackgroundNumber == 20} setTarget={setTargetBackgroundNumber} key={20} >{getBackCardImg('20')}</OptionCardImg>,
-            <OptionCardImg name={"Преобразование"} targetThis={targetBackgroundNumber == 21} setTarget={setTargetBackgroundNumber} key={21} >{getBackCardImg('21')}</OptionCardImg>,
-            <OptionCardImg name={"Прорицание"} targetThis={targetBackgroundNumber == 22} setTarget={setTargetBackgroundNumber} key={22} >{getBackCardImg('22')}</OptionCardImg>,
-            <OptionCardImg name={"Африканская леди"} targetThis={targetBackgroundNumber == 23} setTarget={setTargetBackgroundNumber} key={23} >{getBackCardImg('23')}</OptionCardImg>,
-            <OptionCardImg name={"Африканская леди в танце"} targetThis={targetBackgroundNumber == 24} setTarget={setTargetBackgroundNumber} key={24} >{getBackCardImg('24')}</OptionCardImg>,
-            <OptionCardImg name={"Африкански мужик в танце"} targetThis={targetBackgroundNumber == 25} setTarget={setTargetBackgroundNumber} key={25} >{getBackCardImg('25')}</OptionCardImg>,
-            <OptionCardImg name={"Валькирия"} targetThis={targetBackgroundNumber == 26} setTarget={setTargetBackgroundNumber} key={26} >{getBackCardImg('26')}</OptionCardImg>,
-            <OptionCardImg name={"Ведьмочка"} targetThis={targetBackgroundNumber == 27} setTarget={setTargetBackgroundNumber} key={27} >{getBackCardImg('27')}</OptionCardImg>,
-            <OptionCardImg name={"Волк"} targetThis={targetBackgroundNumber == 28} setTarget={setTargetBackgroundNumber} key={28} >{getBackCardImg('28')}</OptionCardImg>,
-            <OptionCardImg name={"Гавайская леди"} targetThis={targetBackgroundNumber == 29} setTarget={setTargetBackgroundNumber} key={29} >{getBackCardImg('29')}</OptionCardImg>,
-            <OptionCardImg name={"Дракон"} targetThis={targetBackgroundNumber == 30} setTarget={setTargetBackgroundNumber} key={30} >{getBackCardImg('30')}</OptionCardImg>,
-            <OptionCardImg name={"Жук"} targetThis={targetBackgroundNumber == 31} setTarget={setTargetBackgroundNumber} key={31} >{getBackCardImg('31')}</OptionCardImg>,
-            <OptionCardImg name={"Жук 2"} targetThis={targetBackgroundNumber == 32} setTarget={setTargetBackgroundNumber} key={32} >{getBackCardImg('32')}</OptionCardImg>,
-            <OptionCardImg name={"Жук-Бабочка"} targetThis={targetBackgroundNumber == 33} setTarget={setTargetBackgroundNumber} key={33} >{getBackCardImg('33')}</OptionCardImg>,
-            <OptionCardImg name={"Жук-Оса"} targetThis={targetBackgroundNumber == 34} setTarget={setTargetBackgroundNumber} key={34} >{getBackCardImg('34')}</OptionCardImg>,
-            <OptionCardImg name={"Индийская танцовщица"} targetThis={targetBackgroundNumber == 35} setTarget={setTargetBackgroundNumber} key={35} >{getBackCardImg('35')}</OptionCardImg>,
-            <OptionCardImg name={"Котейка"} targetThis={targetBackgroundNumber == 36} setTarget={setTargetBackgroundNumber} key={36} >{getBackCardImg('36')}</OptionCardImg>,
-            <OptionCardImg name={"Метла Котел Шляпа"} targetThis={targetBackgroundNumber == 37} setTarget={setTargetBackgroundNumber} key={37} >{getBackCardImg('37')}</OptionCardImg>,
-            <OptionCardImg name={"Мужик с барабанами"} targetThis={targetBackgroundNumber == 38} setTarget={setTargetBackgroundNumber} key={38} >{getBackCardImg('38')}</OptionCardImg>,
-            <OptionCardImg name={"Напиток пенный"} targetThis={targetBackgroundNumber == 39} setTarget={setTargetBackgroundNumber} key={39} >{getBackCardImg('39')}</OptionCardImg>,
-            <OptionCardImg name={"Напиток тропически"} targetThis={targetBackgroundNumber == 40} setTarget={setTargetBackgroundNumber} key={40} >{getBackCardImg('40')}</OptionCardImg>,
-            <OptionCardImg name={"Напиток шипящий"} targetThis={targetBackgroundNumber == 41} setTarget={setTargetBackgroundNumber} key={41} >{getBackCardImg('41')}</OptionCardImg>,
-            <OptionCardImg name={"Огненный меч"} targetThis={targetBackgroundNumber == 42} setTarget={setTargetBackgroundNumber} key={42} >{getBackCardImg('42')}</OptionCardImg>,
-            <OptionCardImg name={"Сигла мелек таус"} targetThis={targetBackgroundNumber == 43} setTarget={setTargetBackgroundNumber} key={43} >{getBackCardImg('43')}</OptionCardImg>,
-            <OptionCardImg name={"Совушка"} targetThis={targetBackgroundNumber == 44} setTarget={setTargetBackgroundNumber} key={44} >{getBackCardImg('44')}</OptionCardImg>,
-            <OptionCardImg name={"Шестерня 1"} targetThis={targetBackgroundNumber == 45} setTarget={setTargetBackgroundNumber} key={45} >{getBackCardImg('45')}</OptionCardImg>,
-            <OptionCardImg name={"Шестерня 2"} targetThis={targetBackgroundNumber == 46} setTarget={setTargetBackgroundNumber} key={46} >{getBackCardImg('46')}</OptionCardImg>,
-            <OptionCardImg name={"Танцующая дама"} targetThis={targetBackgroundNumber == 47} setTarget={setTargetBackgroundNumber} key={47} >{getBackCardImg('47')}</OptionCardImg>,
-            <OptionCardImg name={"Утопленница"} targetThis={targetBackgroundNumber == 48} setTarget={setTargetBackgroundNumber} key={48} >{getBackCardImg('48')}</OptionCardImg>,
-            <OptionCardImg name={"Мужик олень"} targetThis={targetBackgroundNumber == 49} setTarget={setTargetBackgroundNumber} key={49} >{getBackCardImg('49')}</OptionCardImg>,
-            <OptionCardImg name={"Роза"} targetThis={targetBackgroundNumber == 50} setTarget={setTargetBackgroundNumber} key={50} >{getBackCardImg('50')}</OptionCardImg>,
-            <OptionCardImg name={"Тыковка для Кеиллушки"} targetThis={targetBackgroundNumber == 51} setTarget={setTargetBackgroundNumber} key={51} >{getBackCardImg('51')}</OptionCardImg>,
+            <OptionCardImg name={"Своя"} d={true} targetThis={targetBackgroundNumber == -12} setTarget={setTargetBackgroundNumber} number={-12} img={pyt[11] ? URL.createObjectURL(pyt[11]) : undefined}><div>{setPyti(-12)}</div></OptionCardImg>,
+            <OptionCardImg name={"Своя"} d={true} targetThis={targetBackgroundNumber == -11} setTarget={setTargetBackgroundNumber} number={-11} img={pyt[10] ? URL.createObjectURL(pyt[10]) : undefined}><div>{setPyti(-11)}</div></OptionCardImg>,
+            <OptionCardImg name={"Своя"} d={true} targetThis={targetBackgroundNumber == -10} setTarget={setTargetBackgroundNumber} number={-10} img={pyt[9] ? URL.createObjectURL(pyt[9]) : undefined}><div>{setPyti(-10)}</div></OptionCardImg>,
+            <OptionCardImg name={"Своя"} d={true} targetThis={targetBackgroundNumber == -9} setTarget={setTargetBackgroundNumber} number={-9} img={pyt[8] ? URL.createObjectURL(pyt[8]) : undefined}><div>{setPyti(-9)}</div></OptionCardImg>,
+            <OptionCardImg name={"Своя"} d={true} targetThis={targetBackgroundNumber == -8} setTarget={setTargetBackgroundNumber} number={-8} img={pyt[7] ? URL.createObjectURL(pyt[7]) : undefined}><div>{setPyti(-8)}</div></OptionCardImg>,
+            <OptionCardImg name={"Своя"} d={true} targetThis={targetBackgroundNumber == -7} setTarget={setTargetBackgroundNumber} number={-7} img={pyt[6] ? URL.createObjectURL(pyt[6]) : undefined}><div>{setPyti(-7)}</div></OptionCardImg>,
+            <OptionCardImg name={"Своя"} d={true} targetThis={targetBackgroundNumber == -6} setTarget={setTargetBackgroundNumber} number={-6} img={pyt[5] ? URL.createObjectURL(pyt[5]) : undefined}><div>{setPyti(-6)}</div></OptionCardImg>,
+            <OptionCardImg name={"Своя"} d={true} targetThis={targetBackgroundNumber == -5} setTarget={setTargetBackgroundNumber} number={-5} img={pyt[4] ? URL.createObjectURL(pyt[4]) : undefined}><div>{setPyti(-5)}</div></OptionCardImg>,
+            <OptionCardImg name={"Своя"} d={true} targetThis={targetBackgroundNumber == -4} setTarget={setTargetBackgroundNumber} number={-4} img={pyt[3] ? URL.createObjectURL(pyt[3]) : undefined}><div>{setPyti(-4)}</div></OptionCardImg>,
+            <OptionCardImg name={"Своя"} d={true} targetThis={targetBackgroundNumber == -3} setTarget={setTargetBackgroundNumber} number={-3} img={pyt[2] ? URL.createObjectURL(pyt[2]) : undefined}><div>{setPyti(-3)}</div></OptionCardImg>,
+            <OptionCardImg name={"Своя"} d={true} targetThis={targetBackgroundNumber == -2} setTarget={setTargetBackgroundNumber} number={-2} img={pyt[1] ? URL.createObjectURL(pyt[1]) : undefined}><div>{setPyti(-2)}</div></OptionCardImg>,
+            <OptionCardImg name={"Своя"} d={true} targetThis={targetBackgroundNumber == -1} setTarget={setTargetBackgroundNumber} number={-1} img={pyt[0] ? URL.createObjectURL(pyt[0]) : undefined}><div>{setPyti(-1)}</div></OptionCardImg>,
+            <OptionCardImg name={"Бард"} targetThis={targetBackgroundNumber == 1} setTarget={setTargetBackgroundNumber} number={1} >{getBackCardImg('1')}</OptionCardImg>,
+            <OptionCardImg name={"Варвар"} targetThis={targetBackgroundNumber == 2} setTarget={setTargetBackgroundNumber} number={2} >{getBackCardImg('2')}</OptionCardImg>,
+            <OptionCardImg name={"Военка"} targetThis={targetBackgroundNumber == 3} setTarget={setTargetBackgroundNumber} number={3} >{getBackCardImg('3')}</OptionCardImg>,
+            <OptionCardImg name={"Волшебник"} targetThis={targetBackgroundNumber == 4} setTarget={setTargetBackgroundNumber} number={4} >{getBackCardImg('4')}</OptionCardImg>,
+            <OptionCardImg name={"Друид"} targetThis={targetBackgroundNumber == 5} setTarget={setTargetBackgroundNumber} number={5} >{getBackCardImg('5')}</OptionCardImg>,
+            <OptionCardImg name={"Жрец"} targetThis={targetBackgroundNumber == 6} setTarget={setTargetBackgroundNumber} number={6} >{getBackCardImg('6')}</OptionCardImg>,
+            <OptionCardImg name={"Колдун"} targetThis={targetBackgroundNumber == 7} setTarget={setTargetBackgroundNumber} number={7} >{getBackCardImg('7')}</OptionCardImg>,
+            <OptionCardImg name={"Ксанатар"} targetThis={targetBackgroundNumber == 8} setTarget={setTargetBackgroundNumber} number={8} >{getBackCardImg('8')}</OptionCardImg>,
+            <OptionCardImg name={"Монах"} targetThis={targetBackgroundNumber == 9} setTarget={setTargetBackgroundNumber} number={9} >{getBackCardImg('9')}</OptionCardImg>,
+            <OptionCardImg name={"Мистик"} targetThis={targetBackgroundNumber == 10} setTarget={setTargetBackgroundNumber} number={10} >{getBackCardImg('10')}</OptionCardImg>,
+            <OptionCardImg name={"Паладин"} targetThis={targetBackgroundNumber == 11} setTarget={setTargetBackgroundNumber} number={11} >{getBackCardImg('11')}</OptionCardImg>,
+            <OptionCardImg name={"Следопыт"} targetThis={targetBackgroundNumber == 12} setTarget={setTargetBackgroundNumber} number={12} >{getBackCardImg('12')}</OptionCardImg>,
+            <OptionCardImg name={"Чародей"} targetThis={targetBackgroundNumber == 13} setTarget={setTargetBackgroundNumber} number={13} >{getBackCardImg('13')}</OptionCardImg>,
+            <OptionCardImg name={"Элементаль"} targetThis={targetBackgroundNumber == 14} setTarget={setTargetBackgroundNumber} number={14} >{getBackCardImg('14')}</OptionCardImg>,
+            <OptionCardImg name={"Воплощение"} targetThis={targetBackgroundNumber == 15} setTarget={setTargetBackgroundNumber} number={15} >{getBackCardImg('15')}</OptionCardImg>,
+            <OptionCardImg name={"Вызов"} targetThis={targetBackgroundNumber == 16} setTarget={setTargetBackgroundNumber} number={16} >{getBackCardImg('16')}</OptionCardImg>,
+            <OptionCardImg name={"Иллюзия"} targetThis={targetBackgroundNumber == 17} setTarget={setTargetBackgroundNumber} number={17} >{getBackCardImg('17')}</OptionCardImg>,
+            <OptionCardImg name={"Некромантия"} targetThis={targetBackgroundNumber == 18} setTarget={setTargetBackgroundNumber} number={18} >{getBackCardImg('18')}</OptionCardImg>,
+            <OptionCardImg name={"Ограждение"} targetThis={targetBackgroundNumber == 19} setTarget={setTargetBackgroundNumber} number={19} >{getBackCardImg('19')}</OptionCardImg>,
+            <OptionCardImg name={"Очарование"} targetThis={targetBackgroundNumber == 20} setTarget={setTargetBackgroundNumber} number={20} >{getBackCardImg('20')}</OptionCardImg>,
+            <OptionCardImg name={"Преобразование"} targetThis={targetBackgroundNumber == 21} setTarget={setTargetBackgroundNumber} number={21} >{getBackCardImg('21')}</OptionCardImg>,
+            <OptionCardImg name={"Прорицание"} targetThis={targetBackgroundNumber == 22} setTarget={setTargetBackgroundNumber} number={22} >{getBackCardImg('22')}</OptionCardImg>,
+            <OptionCardImg name={"Африканская леди"} targetThis={targetBackgroundNumber == 23} setTarget={setTargetBackgroundNumber} number={23} >{getBackCardImg('23')}</OptionCardImg>,
+            <OptionCardImg name={"Африканская леди в танце"} targetThis={targetBackgroundNumber == 24} setTarget={setTargetBackgroundNumber} number={24} >{getBackCardImg('24')}</OptionCardImg>,
+            <OptionCardImg name={"Африкански мужик в танце"} targetThis={targetBackgroundNumber == 25} setTarget={setTargetBackgroundNumber} number={25} >{getBackCardImg('25')}</OptionCardImg>,
+            <OptionCardImg name={"Валькирия"} targetThis={targetBackgroundNumber == 26} setTarget={setTargetBackgroundNumber} number={26} >{getBackCardImg('26')}</OptionCardImg>,
+            <OptionCardImg name={"Ведьмочка"} targetThis={targetBackgroundNumber == 27} setTarget={setTargetBackgroundNumber} number={27} >{getBackCardImg('27')}</OptionCardImg>,
+            <OptionCardImg name={"Волк"} targetThis={targetBackgroundNumber == 28} setTarget={setTargetBackgroundNumber} number={28} >{getBackCardImg('28')}</OptionCardImg>,
+            <OptionCardImg name={"Гавайская леди"} targetThis={targetBackgroundNumber == 29} setTarget={setTargetBackgroundNumber} number={29} >{getBackCardImg('29')}</OptionCardImg>,
+            <OptionCardImg name={"Дракон"} targetThis={targetBackgroundNumber == 30} setTarget={setTargetBackgroundNumber} number={30} >{getBackCardImg('30')}</OptionCardImg>,
+            <OptionCardImg name={"Жук"} targetThis={targetBackgroundNumber == 31} setTarget={setTargetBackgroundNumber} number={31} >{getBackCardImg('31')}</OptionCardImg>,
+            <OptionCardImg name={"Жук 2"} targetThis={targetBackgroundNumber == 32} setTarget={setTargetBackgroundNumber} number={32} >{getBackCardImg('32')}</OptionCardImg>,
+            <OptionCardImg name={"Жук-Бабочка"} targetThis={targetBackgroundNumber == 33} setTarget={setTargetBackgroundNumber} number={33} >{getBackCardImg('33')}</OptionCardImg>,
+            <OptionCardImg name={"Жук-Оса"} targetThis={targetBackgroundNumber == 34} setTarget={setTargetBackgroundNumber} number={34} >{getBackCardImg('34')}</OptionCardImg>,
+            <OptionCardImg name={"Индийская танцовщица"} targetThis={targetBackgroundNumber == 35} setTarget={setTargetBackgroundNumber} number={35} >{getBackCardImg('35')}</OptionCardImg>,
+            <OptionCardImg name={"Котейка"} targetThis={targetBackgroundNumber == 36} setTarget={setTargetBackgroundNumber} number={36} >{getBackCardImg('36')}</OptionCardImg>,
+            <OptionCardImg name={"Метла Котел Шляпа"} targetThis={targetBackgroundNumber == 37} setTarget={setTargetBackgroundNumber} number={37} >{getBackCardImg('37')}</OptionCardImg>,
+            <OptionCardImg name={"Мужик с барабанами"} targetThis={targetBackgroundNumber == 38} setTarget={setTargetBackgroundNumber} number={38} >{getBackCardImg('38')}</OptionCardImg>,
+            <OptionCardImg name={"Напиток пенный"} targetThis={targetBackgroundNumber == 39} setTarget={setTargetBackgroundNumber} number={39} >{getBackCardImg('39')}</OptionCardImg>,
+            <OptionCardImg name={"Напиток тропически"} targetThis={targetBackgroundNumber == 40} setTarget={setTargetBackgroundNumber} number={40} >{getBackCardImg('40')}</OptionCardImg>,
+            <OptionCardImg name={"Напиток шипящий"} targetThis={targetBackgroundNumber == 41} setTarget={setTargetBackgroundNumber} number={41} >{getBackCardImg('41')}</OptionCardImg>,
+            <OptionCardImg name={"Огненный меч"} targetThis={targetBackgroundNumber == 42} setTarget={setTargetBackgroundNumber} number={42} >{getBackCardImg('42')}</OptionCardImg>,
+            <OptionCardImg name={"Сигла мелек таус"} targetThis={targetBackgroundNumber == 43} setTarget={setTargetBackgroundNumber} number={43} >{getBackCardImg('43')}</OptionCardImg>,
+            <OptionCardImg name={"Совушка"} targetThis={targetBackgroundNumber == 44} setTarget={setTargetBackgroundNumber} number={44} >{getBackCardImg('44')}</OptionCardImg>,
+            <OptionCardImg name={"Шестерня 1"} targetThis={targetBackgroundNumber == 45} setTarget={setTargetBackgroundNumber} number={45} >{getBackCardImg('45')}</OptionCardImg>,
+            <OptionCardImg name={"Шестерня 2"} targetThis={targetBackgroundNumber == 46} setTarget={setTargetBackgroundNumber} number={46} >{getBackCardImg('46')}</OptionCardImg>,
+            <OptionCardImg name={"Танцующая дама"} targetThis={targetBackgroundNumber == 47} setTarget={setTargetBackgroundNumber} number={47} >{getBackCardImg('47')}</OptionCardImg>,
+            <OptionCardImg name={"Утопленница"} targetThis={targetBackgroundNumber == 48} setTarget={setTargetBackgroundNumber} number={48} >{getBackCardImg('48')}</OptionCardImg>,
+            <OptionCardImg name={"Мужик олень"} targetThis={targetBackgroundNumber == 49} setTarget={setTargetBackgroundNumber} number={49} >{getBackCardImg('49')}</OptionCardImg>,
+            <OptionCardImg name={"Роза"} targetThis={targetBackgroundNumber == 50} setTarget={setTargetBackgroundNumber} number={50} >{getBackCardImg('50')}</OptionCardImg>,
+            <OptionCardImg name={"Тыковка для Кеиллушки"} targetThis={targetBackgroundNumber == 51} setTarget={setTargetBackgroundNumber} number={51} >{getBackCardImg('51')}</OptionCardImg>,
         ];
         return (
             <div>
@@ -911,25 +911,25 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
     }
     const getRamkaCase = () => {
         const Elements = [
-            <OptionCardImg name={"Своя"} d={true} targetThis={targetRamkaNumber == -12} setTarget={setTargetRamkaNumber} key={-12} img={pytRamka[11] ? URL.createObjectURL(pytRamka[11]) : undefined}><div>{setPytiRamka(-12)}</div></OptionCardImg>,
-            <OptionCardImg name={"Своя"} d={true} targetThis={targetRamkaNumber == -11} setTarget={setTargetRamkaNumber} key={-11} img={pytRamka[10] ? URL.createObjectURL(pytRamka[10]) : undefined}><div>{setPytiRamka(-11)}</div></OptionCardImg>,
-            <OptionCardImg name={"Своя"} d={true} targetThis={targetRamkaNumber == -10} setTarget={setTargetRamkaNumber} key={-10} img={pytRamka[9] ? URL.createObjectURL(pytRamka[9]) : undefined}><div>{setPytiRamka(-10)}</div></OptionCardImg>,
-            <OptionCardImg name={"Своя"} d={true} targetThis={targetRamkaNumber == -9} setTarget={setTargetRamkaNumber} key={-9} img={pytRamka[8] ? URL.createObjectURL(pytRamka[8]) : undefined}><div>{setPytiRamka(-9)}</div></OptionCardImg>,
-            <OptionCardImg name={"Своя"} d={true} targetThis={targetRamkaNumber == -8} setTarget={setTargetRamkaNumber} key={-8} img={pytRamka[7] ? URL.createObjectURL(pytRamka[7]) : undefined}><div>{setPytiRamka(-8)}</div></OptionCardImg>,
-            <OptionCardImg name={"Своя"} d={true} targetThis={targetRamkaNumber == -7} setTarget={setTargetRamkaNumber} key={-7} img={pytRamka[6] ? URL.createObjectURL(pytRamka[6]) : undefined}><div>{setPytiRamka(-7)}</div></OptionCardImg>,
-            <OptionCardImg name={"Своя"} d={true} targetThis={targetRamkaNumber == -6} setTarget={setTargetRamkaNumber} key={-6} img={pytRamka[5] ? URL.createObjectURL(pytRamka[5]) : undefined}><div>{setPytiRamka(-6)}</div></OptionCardImg>,
-            <OptionCardImg name={"Своя"} d={true} targetThis={targetRamkaNumber == -5} setTarget={setTargetRamkaNumber} key={-5} img={pytRamka[4] ? URL.createObjectURL(pytRamka[4]) : undefined}><div>{setPytiRamka(-5)}</div></OptionCardImg>,
-            <OptionCardImg name={"Своя"} d={true} targetThis={targetRamkaNumber == -4} setTarget={setTargetRamkaNumber} key={-4} img={pytRamka[3] ? URL.createObjectURL(pytRamka[3]) : undefined}><div>{setPytiRamka(-4)}</div></OptionCardImg>,
-            <OptionCardImg name={"Своя"} d={true} targetThis={targetRamkaNumber == -3} setTarget={setTargetRamkaNumber} key={-3} img={pytRamka[2] ? URL.createObjectURL(pytRamka[2]) : undefined}><div>{setPytiRamka(-3)}</div></OptionCardImg>,
-            <OptionCardImg name={"Своя"} d={true} targetThis={targetRamkaNumber == -2} setTarget={setTargetRamkaNumber} key={-2} img={pytRamka[1] ? URL.createObjectURL(pytRamka[1]) : undefined}><div>{setPytiRamka(-2)}</div></OptionCardImg>,
-            <OptionCardImg name={"Своя"} d={true} targetThis={targetRamkaNumber == -1} setTarget={setTargetRamkaNumber} key={-1} img={pytRamka[0] ? URL.createObjectURL(pytRamka[0]) : undefined}><div>{setPytiRamka(-1)}</div></OptionCardImg>,
-            <OptionCardImg name={"Базовая"} targetThis={targetRamkaNumber == 1} setTarget={setTargetRamkaNumber} key={1} >{getRamkaImg('1')}</OptionCardImg>,
-            <OptionCardImg name={"Головастики"} targetThis={targetRamkaNumber == 2} setTarget={setTargetRamkaNumber} key={2} >{getRamkaImg('2')}</OptionCardImg>,
-            <OptionCardImg name={"Небрежная"} targetThis={targetRamkaNumber == 3} setTarget={setTargetRamkaNumber} key={3} >{getRamkaImg('3')}</OptionCardImg>,
-            <OptionCardImg name={"Узор1"} targetThis={targetRamkaNumber == 4} setTarget={setTargetRamkaNumber} key={4} >{getRamkaImg('4')}</OptionCardImg>,
-            <OptionCardImg name={"Узор2"} targetThis={targetRamkaNumber == 5} setTarget={setTargetRamkaNumber} key={5} >{getRamkaImg('5')}</OptionCardImg>,
-            <OptionCardImg name={"Пазлы"} targetThis={targetRamkaNumber == 6} setTarget={setTargetRamkaNumber} key={6} >{getRamkaImg('6')}</OptionCardImg>,
-            <OptionCardImg name={"Цветы"} targetThis={targetRamkaNumber == 7} setTarget={setTargetRamkaNumber} key={7} >{getRamkaImg('7')}</OptionCardImg>,
+            <OptionCardImg name={"Своя"} d={true} targetThis={targetRamkaNumber == -12} setTarget={setTargetRamkaNumber} number={-12} img={pytRamka[11] ? URL.createObjectURL(pytRamka[11]) : undefined}><div>{setPytiRamka(-12)}</div></OptionCardImg>,
+            <OptionCardImg name={"Своя"} d={true} targetThis={targetRamkaNumber == -11} setTarget={setTargetRamkaNumber} number={-11} img={pytRamka[10] ? URL.createObjectURL(pytRamka[10]) : undefined}><div>{setPytiRamka(-11)}</div></OptionCardImg>,
+            <OptionCardImg name={"Своя"} d={true} targetThis={targetRamkaNumber == -10} setTarget={setTargetRamkaNumber} number={-10} img={pytRamka[9] ? URL.createObjectURL(pytRamka[9]) : undefined}><div>{setPytiRamka(-10)}</div></OptionCardImg>,
+            <OptionCardImg name={"Своя"} d={true} targetThis={targetRamkaNumber == -9} setTarget={setTargetRamkaNumber} number={-9} img={pytRamka[8] ? URL.createObjectURL(pytRamka[8]) : undefined}><div>{setPytiRamka(-9)}</div></OptionCardImg>,
+            <OptionCardImg name={"Своя"} d={true} targetThis={targetRamkaNumber == -8} setTarget={setTargetRamkaNumber} number={-8} img={pytRamka[7] ? URL.createObjectURL(pytRamka[7]) : undefined}><div>{setPytiRamka(-8)}</div></OptionCardImg>,
+            <OptionCardImg name={"Своя"} d={true} targetThis={targetRamkaNumber == -7} setTarget={setTargetRamkaNumber} number={-7} img={pytRamka[6] ? URL.createObjectURL(pytRamka[6]) : undefined}><div>{setPytiRamka(-7)}</div></OptionCardImg>,
+            <OptionCardImg name={"Своя"} d={true} targetThis={targetRamkaNumber == -6} setTarget={setTargetRamkaNumber} number={-6} img={pytRamka[5] ? URL.createObjectURL(pytRamka[5]) : undefined}><div>{setPytiRamka(-6)}</div></OptionCardImg>,
+            <OptionCardImg name={"Своя"} d={true} targetThis={targetRamkaNumber == -5} setTarget={setTargetRamkaNumber} number={-5} img={pytRamka[4] ? URL.createObjectURL(pytRamka[4]) : undefined}><div>{setPytiRamka(-5)}</div></OptionCardImg>,
+            <OptionCardImg name={"Своя"} d={true} targetThis={targetRamkaNumber == -4} setTarget={setTargetRamkaNumber} number={-4} img={pytRamka[3] ? URL.createObjectURL(pytRamka[3]) : undefined}><div>{setPytiRamka(-4)}</div></OptionCardImg>,
+            <OptionCardImg name={"Своя"} d={true} targetThis={targetRamkaNumber == -3} setTarget={setTargetRamkaNumber} number={-3} img={pytRamka[2] ? URL.createObjectURL(pytRamka[2]) : undefined}><div>{setPytiRamka(-3)}</div></OptionCardImg>,
+            <OptionCardImg name={"Своя"} d={true} targetThis={targetRamkaNumber == -2} setTarget={setTargetRamkaNumber} number={-2} img={pytRamka[1] ? URL.createObjectURL(pytRamka[1]) : undefined}><div>{setPytiRamka(-2)}</div></OptionCardImg>,
+            <OptionCardImg name={"Своя"} d={true} targetThis={targetRamkaNumber == -1} setTarget={setTargetRamkaNumber} number={-1} img={pytRamka[0] ? URL.createObjectURL(pytRamka[0]) : undefined}><div>{setPytiRamka(-1)}</div></OptionCardImg>,
+            <OptionCardImg name={"Базовая"} targetThis={targetRamkaNumber == 1} setTarget={setTargetRamkaNumber} number={1} >{getRamkaImg('1')}</OptionCardImg>,
+            <OptionCardImg name={"Головастики"} targetThis={targetRamkaNumber == 2} setTarget={setTargetRamkaNumber} number={2} >{getRamkaImg('2')}</OptionCardImg>,
+            <OptionCardImg name={"Небрежная"} targetThis={targetRamkaNumber == 3} setTarget={setTargetRamkaNumber} number={3} >{getRamkaImg('3')}</OptionCardImg>,
+            <OptionCardImg name={"Узор1"} targetThis={targetRamkaNumber == 4} setTarget={setTargetRamkaNumber} number={4} >{getRamkaImg('4')}</OptionCardImg>,
+            <OptionCardImg name={"Узор2"} targetThis={targetRamkaNumber == 5} setTarget={setTargetRamkaNumber} number={5} >{getRamkaImg('5')}</OptionCardImg>,
+            <OptionCardImg name={"Пазлы"} targetThis={targetRamkaNumber == 6} setTarget={setTargetRamkaNumber} number={6} >{getRamkaImg('6')}</OptionCardImg>,
+            <OptionCardImg name={"Цветы"} targetThis={targetRamkaNumber == 7} setTarget={setTargetRamkaNumber} number={7} >{getRamkaImg('7')}</OptionCardImg>,
         ];
         return (
             <div>
@@ -1136,20 +1136,20 @@ const SpellMain = ({ }: AlertProps): JSX.Element => {
                     <OptionCase nameSetting={'Вид карточек'} targetThis={targetOption[0]} setTarget={setTarget} number={0}>
                         <>
                             <div className={style.LineSetting}>
-                                <OptionCardImg numHide={true} img={spellCard1} name={"1"} targetThis={targetTypeCardNumber == 0} setTarget={setTargetTypeCardNumber} key={0} ></OptionCardImg>
-                                <OptionCardImg numHide={true} img={spellCard2} name={"2"} targetThis={targetTypeCardNumber == 1} setTarget={setTargetTypeCardNumber} key={1} ></OptionCardImg>
+                                <OptionCardImg numHide={true} img={spellCard1} name={"1"} targetThis={targetTypeCardNumber == 0} setTarget={setTargetTypeCardNumber} number={0} ></OptionCardImg>
+                                <OptionCardImg numHide={true} img={spellCard2} name={"2"} targetThis={targetTypeCardNumber == 1} setTarget={setTargetTypeCardNumber} number={1} ></OptionCardImg>
                             </div>
                             <div className={style.LineSetting}>
-                                <OptionCardImg numHide={true} img={spellCard3} name={"3"} targetThis={targetTypeCardNumber == 2} setTarget={setTargetTypeCardNumber} key={2} ></OptionCardImg>
-                                <OptionCardImg numHide={true} img={spellCard4} name={"4"} targetThis={targetTypeCardNumber == 3} setTarget={setTargetTypeCardNumber} key={3} ></OptionCardImg>
+                                <OptionCardImg numHide={true} img={spellCard3} name={"3"} targetThis={targetTypeCardNumber == 2} setTarget={setTargetTypeCardNumber} number={2} ></OptionCardImg>
+                                <OptionCardImg numHide={true} img={spellCard4} name={"4"} targetThis={targetTypeCardNumber == 3} setTarget={setTargetTypeCardNumber} number={3} ></OptionCardImg>
                             </div>
                             <div className={style.LineSetting}>
-                                <OptionCardImg numHide={true} img={spellCard5} name={"5"} targetThis={targetTypeCardNumber == 4} setTarget={setTargetTypeCardNumber} key={4} ></OptionCardImg>
-                                <OptionCardImg numHide={true} img={spellCard6} name={"6"} targetThis={targetTypeCardNumber == 5} setTarget={setTargetTypeCardNumber} key={5} ></OptionCardImg>
+                                <OptionCardImg numHide={true} img={spellCard5} name={"5"} targetThis={targetTypeCardNumber == 4} setTarget={setTargetTypeCardNumber} number={4} ></OptionCardImg>
+                                <OptionCardImg numHide={true} img={spellCard6} name={"6"} targetThis={targetTypeCardNumber == 5} setTarget={setTargetTypeCardNumber} number={5} ></OptionCardImg>
                             </div>
                             <div className={style.LineSetting}>
-                                <OptionCardImg numHide={true} img={spellCard7} name={"7"} targetThis={targetTypeCardNumber == 6} setTarget={setTargetTypeCardNumber} key={6} ></OptionCardImg>
-                                <OptionCardImg numHide={true} img={spellCard8} name={"8"} targetThis={targetTypeCardNumber == 7} setTarget={setTargetTypeCardNumber} key={7} ></OptionCardImg>
+                                <OptionCardImg numHide={true} img={spellCard7} name={"7"} targetThis={targetTypeCardNumber == 6} setTarget={setTargetTypeCardNumber} number={6} ></OptionCardImg>
+                                <OptionCardImg numHide={true} img={spellCard8} name={"8"} targetThis={targetTypeCardNumber == 7} setTarget={setTargetTypeCardNumber} number={7} ></OptionCardImg>
                             </div>
                         </>
                     </OptionCase>
